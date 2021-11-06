@@ -37,7 +37,7 @@ void APIRequest::readyRead() {
         articleList = doc.object();
         QJsonArray tempArr = articleList["articles"].toArray();
         articleArr = tempArr;
-        qDebug()<<tempArr;
+        //qDebug()<<tempArr;
 
     };
 }

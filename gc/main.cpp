@@ -1,7 +1,11 @@
 #include <QApplication>
+#include <iostream>
 #include "calendarWidget.h"
+#include "event.h"
 
+using namespace std;
 using namespace calendar;
+using namespace event;
 
 int main(int argc, char *argv[])
 {
@@ -10,5 +14,39 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 	calendarWidget c;
 	c.show();
+
+	QString m, ty;
+	QTime t;
+	QDate d;
+	Event *e;
+
+	for(int i = 0; i < 10; i++){
+		m = QString("Workout");
+		ty = QString("Notification");
+		t = QTime::currentTime();
+		d = QDate::currentDate();
+		e = new Event(m, ty, t, d);
+		/*cout << */c.insertEvent(*e);// << endl;
+		cout << e->getId() << endl;
+	}
+/*
+	m = QString("NULL");
+	ty = QString("NULL");
+	t = QTime::currentTime();
+	d = QDate::currentDate();
+	e = Event(m, ty, t, d);
+	c.insertEvent(e);
+
+	for(int i = 0; i < 3; i ++){
+		m = QString("Workout");
+		ty = QString("Notification");
+		t = QTime::currentTime();
+		d = QDate::currentDate();
+		e = Event(m, ty, t, d);
+		e.setId(i);
+		cout << c.deleteEvent(e); //<< endl;
+	}*/
+	
+
 	return app.exec();
 }

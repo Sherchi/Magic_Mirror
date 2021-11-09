@@ -14,6 +14,9 @@
 #include <QDateEdit>
 #include <QLabel>
 #include <QTextEdit>
+#include <QMap>
+#include <QList>
+#include "event.h"
 
 namespace calendar
 {
@@ -22,18 +25,25 @@ namespace calendar
 		Q_OBJECT
 		public:
 		calendarWidget(QWidget *parent = nullptr);
+		bool insertEvent(event::Event &e);
+		bool deleteEvent(event::Event &e);
 
 		private slots:
 		void dateChanged();
+		
+		signals:
+		void eventUpdated();
 
 		private:
+		int currentId;
 		QCalendarWidget *calendar;
 		QGroupBox *calendarGroupBox, *informationGroupBox;
 		QDateEdit *dateSelection;
 		QGridLayout *calendarLayout, *informationLayout;
 		QLabel *currentDateLabel;
 		QTextEdit *currentDateInformation;
+		QMap<QDate, QList<event::Event>> *eventMap;
 		void createCalendarBox();
-		void createInformationBox();
+		void createInformationBox();		
 	};
 }

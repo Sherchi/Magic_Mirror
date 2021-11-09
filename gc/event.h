@@ -9,6 +9,7 @@
 
 #include <QString>
 #include <QTime>
+#include <QDate>
 
 namespace event
 {
@@ -16,22 +17,29 @@ namespace event
 	{
 		public:
 			explicit Event();
-			explicit Event(QString m, QString type, QTime t);
+			explicit Event(QString &m, QString &type, QTime &t, QDate &d);
 			explicit Event(const Event &e);
 			void operator = (const Event &e);
+			bool operator == (const Event &other) const;
 			~Event();
-			QString getMessage();
-			QString getType();
-			QTime getTime();
-			void setMessage(QString m);
-			void setType(QString t);
-			void setTime(QTime t);
+			QString getMessage() const;
+			QString getType() const;
+			QTime getTime() const;
+			QDate getDate() const;
+			int getId() const;
+			void setMessage(QString &m);
+			void setType(QString &t);
+			void setTime(QTime &t);
+			void setDate(QDate &d);
 			void setNotified(bool b);
-			bool hasNotified();
+			void setId(int i);
+			bool hasNotified() const;
 			bool hasPassed();
 		private:
 			QString *message, *type;
 			QTime *time;
+			QDate *date;
+			int eventId = 0;
 			bool notified;
 	};
 }

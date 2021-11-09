@@ -15,63 +15,91 @@ Event::Event()
 	message = new QString();
 	type = new QString();
 	time = new QTime();
+	date = new QDate();
 	notified = false;
 }
 
-Event::Event(QString m, QString type, QTime t)
+Event::Event(QString &m, QString &type, QTime &t, QDate &d)
 {
-	message = m;
-	this.type = type;
-	time = t;
+	message = new QString(m);
+	this->type = new QString(type);
+	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
+	date = new QDate(d.year(), d.month(), d.day());
 	notified = false;
 }
 
 Event::Event(const Event &e)
 {
-	message = e->getMessage();
-	type = e->getType();
-	time = e->getTime();
-	notified = e->hasNotified();
+	message = new QString(e.getMessage());
+	type = new QString(e.getType());
+	QTime t = e.getTime();
+	QDate d = e.getDate();
+	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
+	date = new QDate(d.year(), d.month(), d.day());
+	notified = e.hasNotified();
 }
 
 void Event::operator = (const Event &e)
 {
-	message = e->getMessage();
-	type = e->getType();
-	time = e->getTime();
-	notified = e->hasNotified();
+	message = new QString(e.getMessage());
+	type = new QString(e.getType());
+	QTime t = e.getTime();
+	QDate d = e.getDate();
+	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
+	date = new QDate(d.year(), d.month(), d.day());
+	notified = e.hasNotified();
+}
+
+bool Event::operator == (const Event &other) const
+{
+	return eventId == other.getId();
 }
 
 Event::~Event(){};
 
-QString Event::getMessage()
+QString Event::getMessage() const
 {
-	return message;
+	QString *s = message;
+	return *s;
 }
 
-QString Event::getType()
+QString Event::getType() const
 {
-	return type;
+	QString *t = type;
+	return *t;
 }
 
-QTime Event::getTime()
+QTime Event::getTime() const
 {
-	return time
+	QTime *t = new QTime(time->hour(), time->minute(), time->second(), time->msec());
+	return *t;
 }
 
-void Event::setMessage(QString m)
+QDate Event::getDate() const
 {
-	message = m;
+	QDate *d = new QDate(date->year(), date->month(), date->day());
+	return *d;
 }
 
-void Event::setType(QString t)
+int Event::getId() const
 {
-	type = t;
+	return eventId;
 }
 
-void Event::setTime(QTime t)
+void Event::setMessage(QString &m)
 {
-	time = QTime(t.hour(), t.minute(), t.second(), t.msec());
+	message = &m;
+}
+
+void Event::setType(QString &t)
+{
+	type = &t;
+}
+
+void Event::setTime(QTime &t)
+{
+	delete time;
+	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
 }
 
 void Event::setNotified(bool b)
@@ -79,13 +107,18 @@ void Event::setNotified(bool b)
 	notified = b;
 }
 
-bool Event::hasNotified()
+void Event::setId(int i)
+{
+	eventId = i;
+}
+
+bool Event::hasNotified() const
 {
 	return notified;
 }
 
-bool hasPassed()
+bool Event::hasPassed()
 {
-	return time >= QTime::currentTime();
+	return *date >= QDate::currentDate() && *time >= QTime::currentTime();
 }
 

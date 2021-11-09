@@ -7,13 +7,19 @@
 //
 
 #include <QDate>
+#include <string>
+#include <iostream>
 #include "calendarWidget.h"
 
+using namespace std;
 using namespace calendar;
+using namespace event;
 
 // Constructor. 600:300 is probably the best for this calendar widget since QCalendarWidget has fixed size
 calendarWidget::calendarWidget(QWidget *parent) : QWidget(parent)
 {
+	currentId = 1;
+
 	createCalendarBox();
 	createInformationBox();
 
@@ -22,7 +28,7 @@ calendarWidget::calendarWidget(QWidget *parent) : QWidget(parent)
 	layout->addWidget(informationGroupBox, 0, 1);
 	setLayout(layout);
 
-	resize(600, 300);
+	resize(650, 300);
 
 	setWindowTitle(tr("Calendar Widget"));
 }
@@ -30,6 +36,7 @@ calendarWidget::calendarWidget(QWidget *parent) : QWidget(parent)
 // Create the QGroupBox that contains the calendar and a way to change the date, the Calendar is also clickable.
 void calendarWidget::createCalendarBox()
 {
+	eventMap = new QMap<QDate, QList<Event>>();
 	calendarGroupBox = new QGroupBox(tr("Calendar"));
 
 	calendar = new QCalendarWidget;
@@ -66,11 +73,70 @@ void calendarWidget::createInformationBox()
 	informationLayout = new QGridLayout;
 	informationLayout->addWidget(currentDateInformation, 0, 0, Qt::AlignCenter);
 	informationGroupBox->setLayout(informationLayout);
+	
+	connect(this, &calendarWidget::eventUpdated, this, &calendarWidget::dateChanged);
 }
+
+bool calendarWidget::insertEvent(Event &e)
+{
+	if(eventMap->contains(e.getDate())){
+		if(!eventMap->value(e.getDate()).contains(e)){
+			QList<Event> l = eventMap->take(e.getDate());
+			e.setId(currentId);
+			l.append(e);
+			eventMap->insert(e.getDate(), l);
+			currentId++;
+			emit eventUpdated();
+			return true;
+		}	
+		else return false;
+	}
+	else{
+		QList<Event> *l = new QList<Event>();
+		e.setId(currentId);
+		l->append(e);
+		eventMap->insert(e.getDate(), *l);
+		currentId++;
+		emit eventUpdated();
+		return true;
+	}
+}
+
+bool calendarWidget::deleteEvent(Event &e)
+{
+	if(eventMap->contains(e.getDate())){
+		if(eventMap->value(e.getDate()).contains(e)){
+			QList<Event> l = eventMap->take(e.getDate());
+			l.removeOne(e);
+			eventMap->insert(e.getDate(), l);
+			emit eventUpdated();
+			return true;
+		}
+	}
+	return false;	
+}	
 
 // Called when the date menu has changed
 void calendarWidget::dateChanged()
 {
 	dateSelection->setDate(calendar->selectedDate());
 	informationGroupBox->setTitle(calendar->selectedDate().toString("On ddd, MMM dd yyyy"));
+
+	if(!eventMap->value(calendar->selectedDate()).isEmpty()){
+		const QList<Event> &l = eventMap->value(calendar->selectedDate());
+		currentDateInformation->clear();
+		for(int i = 0; i < l.length(); i++){
+			const Event &e = l.at(i);
+			QString s = QString("Event ") + QString::number(i+1) + "\n";
+			s += QString("Event id: ") + QString::number(e.getId()) + "\n";
+			s += QString("Event type: ") + e.getType() + "\n";
+			s += QString("Event time: ") + e.getDate().toString(QString("yyyy/MM/dd  ")) + e.getTime().toString(QString("HH:mm:ss t\n"));
+			s += QString("Event message: \n") + e.getMessage();
+			s += QString("\n\n");
+			currentDateInformation->append(s);
+		}
+	}
+	else{
+		currentDateInformation->setPlainText(QString("Nothing for today"));
+	}
 }

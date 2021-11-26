@@ -8,7 +8,10 @@
 #include "../News/APIRequest.h"
 #include "../News/articleData.h"
 #include "../Weather/getWeather.h"
+#include "../Webcam/Camera.h"
+#include "../Date_and_Time/clock.h"
 
+#include <iostream>
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QGraphicsScene>
@@ -21,13 +24,18 @@
 #include <QCalendarWidget>
 #include <QDate>
 #include <QJsonArray>
-#include <boost/asio.hpp>
-#include <boost/date_time/posix_time/posix_time.hpp>
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QGraphicsProxyWidget>
+
+namespace Ui{
+    class MainWindow;
+}
 
 class MainWindow : public QMainWindow{
 Q_OBJECT
 
-public : explicit MainWindow(QWidget *parent = nullptr);
+public : explicit MainWindow(int screenWidth, int screenHeight, QWidget *parent = 0);
 
 public :
     ~MainWindow();
@@ -47,12 +55,21 @@ private slots :
     void showTime();
     void configureCalendar();
     void updateCalendar();
+    void configureCamera();
 
 private :
+    int screenWidth;
+    int screenHeight;
     QVector<articleData> headlines;
     int storiesIndex;
+    QLabel *newsLabel;
     APIRequest *newsApi;
     getWeather *weather;
+    clk::Clock *clock;
+    QLabel *timeLabel;
+    Camera *camera;
+    QGraphicsScene *scene;
+    QGraphicsView *view;
     QGridLayout *gridLayout;
 };
 

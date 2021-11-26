@@ -5,9 +5,19 @@
 
 int storiesIndex = 0;
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
+MainWindow::MainWindow(int screenWidth, int screenHeight, QWidget *parent) : QMainWindow(parent){
+    this->screenWidth = screenWidth;
+    this->screenHeight = screenHeight;
+
     gridLayout = new QGridLayout;
     newsApi = new APIRequest;
+    newsLabel = new QLabel("");
+    storiesIndex = 0;
+    scene = new QGraphicsScene(0, 0, screenWidth, screenHeight); //initalizes the scene size to an arbitrary size for testing purposes
+    view = new QGraphicsView;
+
+    view->setScene(scene);
+    setCentralWidget(view);
 }
 
 void MainWindow::start(){
@@ -15,10 +25,19 @@ void MainWindow::start(){
 }
 
 void MainWindow::configure(){
+
     configureWeather();
-    configureNews();
+//    configureNews();
     configureClock();
     configureCalendar();
+    configureCamera();
+
+    //this needs to go after configureCamera() otherwise the camera feed goes over the overlay
+    QWidget *overlay = new QWidget;
+    overlay->setLayout(gridLayout); //passes the layout to a generic QWidget
+    overlay->setFixedSize(this->screenWidth, this->screenHeight); //this works
+    overlay->setAttribute(Qt::WA_TranslucentBackground); //makes the background translucent so that the camera can be seen underneath
+    QGraphicsProxyWidget *proxyWidget = scene->addWidget(overlay); //adds that widget to the QGraphicsScene
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updater()));
@@ -42,7 +61,7 @@ void MainWindow::configureWeather() {
     QString temperature = QString::number(weather->getTemperature());
 
     auto *image = new QPixmap;
-    image->load("./Bootstrapper/Images/" + imageName + ".png"); //loads the image from the URL
+    image->load("/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/Bootstrapper/Images/" + imageName + ".png"); //loads the image from the URL
     auto *imageLabel = new QLabel;
     imageLabel->setPixmap(image->scaled(250, 250, Qt::KeepAspectRatio)); //scales the image so that it doesn't take up the whole window
 
@@ -50,6 +69,7 @@ void MainWindow::configureWeather() {
     auto font = new QFont();
     font->setPointSize(72);
     temp->setFont(*font);
+
 
     hbox->addWidget(imageLabel);
     hbox->addWidget(temp);
@@ -63,6 +83,7 @@ void MainWindow::updateWeather() {
 
 }
 
+//TODO: Move this function to the weather class and have it return this. This doesn't need to be here
 QString MainWindow::parseWeather(QString description) { //responsible for handling the weather descriptions
     QString imageName;
     //returns the name of an image that can be used to show the weather
@@ -96,12 +117,8 @@ QString MainWindow::parseWeather(QString description) { //responsible for handli
         imageName = "Snowing";
         return imageName;
     }
-    else if((QString::compare(description, "atmosphere", Qt::CaseInsensitive) == 0)){
+    else { //anything else here should just be classified as foggy since that can be used for all of the possible atmosphere conditions
         imageName = "Foggy";
-        return imageName;
-    }
-    else{
-        imageName = "No Image Found";
         return imageName;
     }
 }
@@ -124,16 +141,16 @@ void MainWindow::configureNews(){ //we can use the news object and have a thing 
 }
 
 void MainWindow::scrollNews(){ //handles the scrolling of the news headlines
-    auto label = new QLabel(headlines[::storiesIndex].getTitle());
+    newsLabel->setText(headlines[storiesIndex].getTitle());
 
     auto font = new QFont();
     font->setPointSize(14);
-    label->setFont(*font);
+    newsLabel->setFont(*font);
 
-    gridLayout->addWidget(label, 1, 1);
-    ::storiesIndex++;
-    if(::storiesIndex == headlines.size()){
-        ::storiesIndex = 0;
+    gridLayout->addWidget(newsLabel, 1, 1);
+    storiesIndex++;
+    if(storiesIndex == headlines.size()){
+        storiesIndex = 0;
     }
 }
 
@@ -141,7 +158,16 @@ void MainWindow::updateNews(){
 
 }
 
+void MainWindow::configureCamera() {
+    camera = new Camera(screenWidth, screenHeight);
+    //we can use row 0, column 1 in the grid layout for testing purposes for now
+    scene->addItem(camera->getVideoItem());
+}
+
 void MainWindow::configureClock() { //configures the digital clock
+    clock = new clk::Clock();
+    timeLabel = new QLabel("");
+
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
     timer->start(1000);
@@ -150,20 +176,14 @@ void MainWindow::configureClock() { //configures the digital clock
 }
 
 void MainWindow::showTime(){ //responsible for drawing the time to the screen
-    QTime time = QTime::currentTime();
-    QString string = time.toString("hh:mm");
-
-    if((time.second() % 2) == 0){
-        string[2] = ' ';
-    }
-
-    QLabel *label = new QLabel(string);
+    clock->update();
+    timeLabel->setText(clock->getStrTime());
 
     auto font = new QFont();
     font->setPointSize(20);
-    label->setFont(*font);
+    timeLabel->setFont(*font);
 
-    gridLayout->addWidget(label, 0, 2);
+    gridLayout->addWidget(timeLabel, 0, 2);
 }
 
 void MainWindow::configureCalendar(){ //responsible for drawing the calendar to the screen
@@ -188,5 +208,12 @@ QGridLayout* MainWindow::getLayout() {
 }
 
 MainWindow::~MainWindow(){
+    delete newsLabel;
+    delete newsApi;
+    delete weather;
+    delete clock;
+    delete timeLabel;
+    camera->stop();
+    delete camera;
     delete gridLayout;
 }

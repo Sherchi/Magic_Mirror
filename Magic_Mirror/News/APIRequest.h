@@ -44,8 +44,6 @@ public slots:
 public:
     QJsonArray getJsonArr();
     void get(QString location);
-
-
 };
 
 

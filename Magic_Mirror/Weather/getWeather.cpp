@@ -61,7 +61,6 @@ void getWeather::parseWeather() {
     // Storing the parsed values into the class' local variables of types double and QString.
     tempResult = temp.toDouble();
     weatherResult = mainWeather.toString();
-    std::cout << tempResult << std::endl;
 
     // this code can be used to see what was parsed for debugging purposes:
     /*

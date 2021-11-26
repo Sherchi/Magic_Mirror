@@ -13,9 +13,9 @@
 #include <QString>
 #include <QEventLoop>
 
-namespace Ui {
-    class MainWindow;
-}
+//namespace Ui {
+//    class MainWindow;
+//}
 
 class getWeather : public QObject
 {

@@ -1,26 +1,29 @@
 #include <iostream>
 #include <QApplication>
 #include <QWidget>
+#include <QScreen>
 #include "MainWindow.h"
 
 int main(int argc, char *argv[]) {
-    QApplication app(argc, argv);
-    auto *mainWindow = new MainWindow;
-    auto *window = new QWidget;
+    auto *app = new QApplication(argc, argv);
+
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect screenGeometry = screen->geometry();
+    int height = screenGeometry.height();
+    int width = screenGeometry.width();
+
+    auto *mainWindow = new MainWindow(width, height);
 
     mainWindow->configure();
+    mainWindow->setWindowState(Qt::WindowMaximized);
+    mainWindow->show();
 
-    window->setStyleSheet("background-color:white;");
-    window->setLayout(mainWindow->getLayout());
-    window->setWindowState(Qt::WindowMaximized);
-    window->show();
+//    mainWindow->showFullScreen(); //shows the window in complete full screen mode without the top or sidebars or anything
 
-//    window->showFullScreen(); //shows the window in complete full screen mode without the top or sidebars or anything
+    int ret = app->exec();
 
-    int ret = app.exec();
-
+    delete app;
     delete mainWindow;
-    delete window;
 
     return ret;
 }

@@ -39,7 +39,8 @@ UserSystem::~UserSystem() {
 //RETURN:
 //none, function is void
 void UserSystem::loadUsers() {
-    std::string path = "../useraccounts";
+//    std::string path = "../useraccounts";
+    std::string path = "/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/useraccounts"; //temp for testing in CLion
     //vector to store list of users in the useraccount directory
     std::vector<std::string> files_in_folder;
 
@@ -224,7 +225,7 @@ int UserSystem::createUser(std::string username, std::string password, bool admi
             }
             else
             {
-                std::string file_path ="../useraccounts/"+username+".json";
+                std::string file_path ="/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/useraccounts/"+username+".json";
                 Json::Value object;
                 object["username"] = username;
                 object["password"] = password;

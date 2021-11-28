@@ -1,35 +1,64 @@
-//
-// Created by nolan on 2021-11-03.
-//
+/*
+ * @brief This class brings all of the widgets together into a single window.
+ *
+ * This class uses all of the other widgets and draws them to the screen over the camera feed.
+ *
+ * @authors Nolan Morris.
+ *
+*/
 #include "MainWindow.h"
 
-int storiesIndex = 0;
-
+/*
+ * @brief Constructor of the class
+ *
+ * This constructor initializes all of the widgets needed for the overlay and the camera feed.
+ * It also initializes other variables such as the dimensions of the screen for dynamic sizing determined at run time
+ * and the stories index used to scroll the news stories at the bottom of the overlay.
+ *
+ * @param screenWidth Screen Width pulled from the Qapplication.
+ * @param screenHeight Screen Height pulled from the Qapplication.
+ * @param parent A null parent widget.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ *
+ */
 MainWindow::MainWindow(int screenWidth, int screenHeight, QWidget *parent) : QMainWindow(parent){
+
     this->screenWidth = screenWidth;
     this->screenHeight = screenHeight;
-
     gridLayout = new QGridLayout;
-    newsApi = new APIRequest;
-    newsLabel = new QLabel("");
-    storiesIndex = 0;
-    scene = new QGraphicsScene(0, 0, screenWidth, screenHeight); //initalizes the scene size to an arbitrary size for testing purposes
+
+    scene = new QGraphicsScene(); //initalizes the scene size to an arbitrary size for testing purposes
+    scene->setSceneRect(0, 0, screenWidth, screenHeight);
     view = new QGraphicsView;
 
     view->setScene(scene);
     setCentralWidget(view);
 }
 
-void MainWindow::start(){
-    updater();
-}
-
+/*
+ * @brief Calls all individual configuration methods and starts the updater class
+ *
+ * This function will call all of the configure functions for each of the widgets. It will also configure the graphics sceene
+ * to allow for the widgets to be placed overtop of the camera feed. Finally it is also responsible for calling the
+ * update() function which is responsible for reconfiguring and updating the widgets after a set amount of time in order
+ * to ensure the information being displayed is up to date.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ *
+ * */
 void MainWindow::configure(){
-
     configureWeather();
-//    configureNews();
+    configureNews();
     configureClock();
     configureCalendar();
+    configureUserSystem();
     configureCamera();
 
     //this needs to go after configureCamera() otherwise the camera feed goes over the overlay
@@ -41,178 +70,151 @@ void MainWindow::configure(){
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updater()));
-    timer->start(10000);
+    timer->start(1800000); //updates every half hour
 }
 
-void MainWindow::updater() {
-    updateWeather();
-    updateNews();
-    updateCalendar();
+/*
+ * @brief Updates each of the widgets after a set amount of time.
+ *
+ * This function is responsible for reconfiguring the widgets that need to updated after a set amount of time to ensure
+ * the information being displayed is up to date.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ *
+ * */
+void MainWindow::updater() { //reconfigures both the weather and the news widgets in order to update them
+    configureWeather();
+    configureNews();
     std::cout << "All modules updated" << std::endl;
 }
 
+/*
+ * @brief This function is responsible for configuring the weather widget.
+ *
+ * This function will configure a WeatherWidget to display weather information to the user. It will show both the
+ * current weather conditions and the current temperature.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris, Nathan Dinatale.
+ *
+ * */
 void MainWindow::configureWeather() {
-    auto *hbox = new QHBoxLayout;
-
-    weather = new getWeather; //creating and accessing weather module
-    weather->fetchWeather("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7ffedcbb88ebcf7876bc827343f9f05f");
-
-    QString imageName = parseWeather(weather->getWeatherDescription());
-    QString temperature = QString::number(weather->getTemperature());
-
-    auto *image = new QPixmap;
-    image->load("/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/Bootstrapper/Images/" + imageName + ".png"); //loads the image from the URL
-    auto *imageLabel = new QLabel;
-    imageLabel->setPixmap(image->scaled(250, 250, Qt::KeepAspectRatio)); //scales the image so that it doesn't take up the whole window
-
-    auto temp = new QLabel((temperature + " C"));
-    auto font = new QFont();
-    font->setPointSize(72);
-    temp->setFont(*font);
-
-
-    hbox->addWidget(imageLabel);
-    hbox->addWidget(temp);
-    hbox->addStretch(); //changes the spacing between elements in this layout
-    hbox->setSpacing(10);
-
-    gridLayout->addLayout(hbox, 0, 0);
+    weather = new WeatherWidget;
+    gridLayout->addWidget(weather, 0, 0);
 }
 
-void MainWindow::updateWeather() {
-
-}
-
-//TODO: Move this function to the weather class and have it return this. This doesn't need to be here
-QString MainWindow::parseWeather(QString description) { //responsible for handling the weather descriptions
-    QString imageName;
-    //returns the name of an image that can be used to show the weather
-    if((QString::compare(description, "clear", Qt::CaseInsensitive) == 0)){
-        if(QTime::currentTime() > QTime(18,00,00,00)){
-            imageName = "Night";
-            return imageName;
-        }
-        else{
-            imageName = "Sunny";
-            return imageName;
-        }
-    }
-    else if((QString::compare(description, "drizzle", Qt::CaseInsensitive) == 0)){
-        imageName = "Drizzle";
-        return imageName;
-    }
-    else if((QString::compare(description, "clouds", Qt::CaseInsensitive) == 0)){
-        imageName = "Cloudy";
-        return imageName;
-    }
-    else if((QString::compare(description, "rain", Qt::CaseInsensitive) == 0)){
-        imageName = "Raining";
-        return imageName;
-    }
-    else if((QString::compare(description, "thunderstorm", Qt::CaseInsensitive) == 0)){
-        imageName = "Thunderstorm";
-        return imageName;
-    }
-    else if((QString::compare(description, "snow", Qt::CaseInsensitive) == 0)){
-        imageName = "Snowing";
-        return imageName;
-    }
-    else { //anything else here should just be classified as foggy since that can be used for all of the possible atmosphere conditions
-        imageName = "Foggy";
-        return imageName;
-    }
-}
-
+/*
+ * @brief This function is responsible for configuring the news widget.
+ *
+ * This function will configure a NewsWidget to display the news information to the user. It will show a brief
+ * description of the article, the headline, and the image associated with the article.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris, Darwin Shiyi Liao.
+ * */
+//TODO clickability of the news articles
 void MainWindow::configureNews(){ //we can use the news object and have a thing where we return an accumulation of headlines
-    newsApi->get("https://gnews.io/api/v4/top-headlines?&lang=en&country=ca&max=10&token=9aadf377ffbec1aa1d09e593b43262c5");
-
-    QJsonArray storiesArray = newsApi->getJsonArr();
-
-    for(int i = 0; i < 10; i++){
-        articleData article(storiesArray[i].toObject());
-        headlines.append(article);
-    }
-
-    QTimer *timer = new QTimer(this); //creates a timer so that the news stories will scoll after a set amount of time
-    connect(timer, SIGNAL(timeout()), this, SLOT(scrollNews()));
-    timer->start(5000);
-
-    scrollNews(); //draws the first story so that we can skip waiting for the timer
+    newsWidget = new NewsWidget;
+    gridLayout->addWidget(newsWidget, 2, 1, Qt::AlignBottom);
 }
 
-void MainWindow::scrollNews(){ //handles the scrolling of the news headlines
-    newsLabel->setText(headlines[storiesIndex].getTitle());
-
-    auto font = new QFont();
-    font->setPointSize(14);
-    newsLabel->setFont(*font);
-
-    gridLayout->addWidget(newsLabel, 1, 1);
-    storiesIndex++;
-    if(storiesIndex == headlines.size()){
-        storiesIndex = 0;
-    }
-}
-
-void MainWindow::updateNews(){
-
-}
-
+/*
+ * @brief This function is responsible for configuring the camera feed
+ *
+ * This function will use a Camera object to get a camera feed from the users webcam and display it with the correct
+ * screen sizes so that the camera is the entire background of the widget.
+ *
+ * @param No parametrs.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ * */
 void MainWindow::configureCamera() {
     camera = new Camera(screenWidth, screenHeight);
     //we can use row 0, column 1 in the grid layout for testing purposes for now
     scene->addItem(camera->getVideoItem());
 }
 
+/*
+ * @brief This function is responsible for configuring the clock
+ *
+ * This funciton will use a ClockWidget object to display the current date and time to the user. It will also update
+ * every second.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris, Yifei Zhang.
+ * */
 void MainWindow::configureClock() { //configures the digital clock
-    clock = new clk::Clock();
-    timeLabel = new QLabel("");
-
-    QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
-    timer->start(1000);
-
-    showTime(); //draws the inital clock so that we can skip waiting for the timer
+    clockWidget = new ClockWidget();
+    gridLayout->addWidget(clockWidget, 1, 2, Qt::AlignRight);
 }
 
-void MainWindow::showTime(){ //responsible for drawing the time to the screen
-    clock->update();
-    timeLabel->setText(clock->getStrTime());
-
-    auto font = new QFont();
-    font->setPointSize(20);
-    timeLabel->setFont(*font);
-
-    gridLayout->addWidget(timeLabel, 0, 2);
-}
-
+/*
+ * @brief This function is responsible for displaying the calendar to the user
+ *
+ * This function will configure the calendarWidget to display the calendar to the user that they can use to see the
+ * current date.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris, Yifei Zhang.
+ * */
 void MainWindow::configureCalendar(){ //responsible for drawing the calendar to the screen
-    auto calendar = new QCalendarWidget();
-    calendar->setMinimumDate(QDate(2000, 1, 1));
-    calendar->setMaximumDate(QDate(2050, 1, 1));
-
-    calendar->setMaximumHeight(500);
-    calendar->setMaximumWidth(500);
-
-    calendar->setStyleSheet("background-color:grey");
-
-    gridLayout->addWidget(calendar, 1, 2);
+    calendarWidget = new CalendarWidget();
+    gridLayout->addWidget(calendarWidget, 2, 2, Qt::AlignRight);
 }
 
-void MainWindow::updateCalendar() {
-
+/*
+ * @brief This function is responsible for displaying the account icon to the user
+ *
+ * This function will configure the userSystemWidget to display the account icon that the user can use to login to their
+ * account.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris, Peter Nicholaas Meijer.
+ * */
+//TODO Change the files paths in the userSystem class to relative paths before using qmake
+void MainWindow::configureUserSystem() {
+    //use 0, 2 for the position of the image
+    userSystemWidget = new UserSystemWidget;
+    gridLayout->addWidget(userSystemWidget, 0, 2, Qt::AlignRight);
 }
 
-QGridLayout* MainWindow::getLayout() {
-    return gridLayout;
-}
-
+/*
+ * @brief Destructor for the class
+ *
+ * This will release the memory for any global variables that are used in this class.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ * */
 MainWindow::~MainWindow(){
-    delete newsLabel;
-    delete newsApi;
+    delete newsWidget;
+    delete clockWidget;
+    delete calendarWidget;
     delete weather;
-    delete clock;
-    delete timeLabel;
     camera->stop();
     delete camera;
     delete gridLayout;

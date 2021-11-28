@@ -4,6 +4,7 @@
 // Constructor for the getWeather object
 getWeather::getWeather(QWidget *parent)
 {
+    celsius = true; //by default, returns temp in celsius
 }
 
 // This function will fetch the weather from the provided url using an API key from openweather.org
@@ -74,10 +75,33 @@ void getWeather::parseWeather() {
 
 }
 double getWeather::getTemperature(){
-    return tempResult - 273.15; //converts temp to celsius
+    return round(tempResult - 273.15); //converts temp to celsius
 }
 
 QString getWeather::getWeatherDescription(){
     return weatherResult;
+}
+
+QString getWeather::convert(QString temp) {
+    QStringList pieces = temp.split(" ");
+    temp = pieces.value(0);
+    QString ret;
+
+    if(celsius){ //if the temp is in celsius, convert to fahrenheit
+        double result = (temp.toInt() * (9.0/5.0)) + 32.0;
+        result = round(result);
+        std::cout << result << std::endl;
+        ret = QString::number(result);
+        celsius = false;
+        return ret + " F";
+    }
+    else{ //if the temp is in fahrenheit, convert to celsius
+        double result = (temp.toDouble() - 32.0) * (5.0/9.0);
+        result = round(result);
+        std::cout << result << std::endl;
+        ret = QString::number(result);
+        celsius = true;
+        return ret + " C";
+    }
 }
 

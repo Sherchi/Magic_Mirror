@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <cmath>
+
 #include <QObject>
 #include <QMainWindow>
 #include <QPushButton>
@@ -21,13 +23,18 @@ class getWeather : public QObject
 {
 Q_OBJECT public:
     explicit getWeather(QWidget *parent = nullptr);
+
 public:
     void fetchWeather(QString url);
     double getTemperature();
     QString getWeatherDescription();
+    QString convert(QString);
+
 private slots:
     void parseWeather();
+
 private:
+    bool celsius;
     double tempResult;
     QString weatherResult;
 };

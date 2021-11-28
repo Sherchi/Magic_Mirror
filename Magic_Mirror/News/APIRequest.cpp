@@ -7,6 +7,7 @@
 //Init
 APIRequest::APIRequest(QObject *parent){
     QByteArray data;
+    QByteArray imgData;
     QJsonObject articleList;
 
 
@@ -14,10 +15,13 @@ APIRequest::APIRequest(QObject *parent){
 //Sends a Get request to the Location specified
 void APIRequest::get(QString location) {
     qInfo()<<"Getting Data from Web...";
-    QNetworkReply *reply = manager.get(QNetworkRequest(QUrl(location)));
+
+    QByteArray tempBA;
+    tempBA += location;
+    QNetworkReply *reply = manager.get(QNetworkRequest(QUrl::fromUserInput(location)));
     QEventLoop loop;
-    connect(reply,&QNetworkReply::finished,this,&APIRequest::managerFinished);
-    connect(reply,&QNetworkReply::readyRead,this,&APIRequest::readyRead);
+    //connect(reply,&QNetworkReply::finished,this,&APIRequest::managerFinished);
+    connect(reply,&QNetworkReply::finished,this,&APIRequest::readyRead);
     connect(reply,&QNetworkReply::readyRead,&loop,&QEventLoop::quit);
     loop.exec();
 
@@ -28,21 +32,25 @@ void APIRequest::get(QString location) {
 //      And then format the info into an array.
 //  Strips away unneccesary Data (Total amount of articles in world, etc.)
 void APIRequest::readyRead() {
-    qInfo()<<"ReadyRead";
+    //qInfo()<<"ReadyRead";
     QNetworkReply *reply= qobject_cast<QNetworkReply*>(sender());
     if(reply){
-        qDebug()<<"REPLY IS RECEIVED";
+        //qDebug()<<"REPLY IS RECEIVED";
         data = reply->readAll();
         auto doc = QJsonDocument::fromJson(data);
         articleList = doc.object();
         QJsonArray tempArr = articleList["articles"].toArray();
         articleArr = tempArr;
+
+
         //qDebug()<<tempArr;
 
+        reply->deleteLater();
     };
 }
 
-//The Check if request is finished
+//The Check if request is finished ...
+// Should never be finished unless main program exits since it will be called every X min..
 void APIRequest::managerFinished() {
     ;
 

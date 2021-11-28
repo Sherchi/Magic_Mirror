@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
     mainWindow->setWindowState(Qt::WindowMaximized);
     mainWindow->show();
 
-//    mainWindow->showFullScreen(); //shows the window in complete full screen mode without the top or sidebars or anything
+    mainWindow->showFullScreen(); //shows the window in complete full screen mode without the top or sidebars or anything
 
     int ret = app->exec();
 

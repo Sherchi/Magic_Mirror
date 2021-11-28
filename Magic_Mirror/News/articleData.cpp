@@ -2,7 +2,9 @@
 // Created by darwin on 2021-11-06.
 //
 
+#include <iostream>
 #include "articleData.h"
+#include "imgDownloader.h"
 
 //Default Constructor
 articleData::articleData() = default;
@@ -17,7 +19,14 @@ articleData::articleData(QJsonObject data) {
     content = data.value("content").toString();
     url = data.value("url").toString();
     img = data.value("image").toString();
+    imgDownloader downloader;
+    downloader.download(img);
+    imgPM = downloader.getPixmap();
 
+}
+
+articleData::~articleData() {
+    ;
 }
 
 //Returns Content
@@ -32,8 +41,12 @@ QString articleData::getDesc() {
 }
 
 //Returns PreviewImage URL
-QString articleData::getImage() {
+QString articleData::getImageURL(){
     return img;
+}
+
+QPixmap* articleData::getPixmap() {
+    return &imgPM;
 }
 
 //Returns Title

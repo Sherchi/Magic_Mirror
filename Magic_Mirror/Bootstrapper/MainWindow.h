@@ -5,11 +5,12 @@
 #ifndef MAGIC_MIRROR_MAINWINDOW_H
 #define MAGIC_MIRROR_MAINWINDOW_H
 
-#include "../News/APIRequest.h"
-#include "../News/articleData.h"
-#include "../Weather/getWeather.h"
 #include "../Webcam/Camera.h"
-#include "../Date_and_Time/clock.h"
+#include "../Date_and_Time/ClockWidget/ClockWidget.h"
+#include "../Date_and_Time/CalendarWidget/CalendarWidget.h"
+#include "../News/NewsWidget/NewsWidget.h"
+#include "../Weather/WeatherWidget/WeatherWidget.h"
+#include "../User_System/UserSystemWidget/UserSystemWidget.h"
 
 #include <iostream>
 #include <QGridLayout>
@@ -21,9 +22,11 @@
 #include <QFont>
 #include <QVector>
 #include <QTimer>
-#include <QCalendarWidget>
 #include <QDate>
 #include <QJsonArray>
+#include <QTextEdit>
+#include <QLineEdit>
+#include <QPushButton>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsProxyWidget>
@@ -40,33 +43,29 @@ public : explicit MainWindow(int screenWidth, int screenHeight, QWidget *parent 
 public :
     ~MainWindow();
     void configure();
-    QGridLayout* getLayout();
-    void start();
 
 private slots :
     void updater();
     void configureWeather();
-    void updateWeather();
-    QString parseWeather(QString);
     void configureNews();
-    void scrollNews();
-    void updateNews();
     void configureClock();
-    void showTime();
     void configureCalendar();
-    void updateCalendar();
     void configureCamera();
+    void configureUserSystem();
 
 private :
     int screenWidth;
     int screenHeight;
-    QVector<articleData> headlines;
-    int storiesIndex;
-    QLabel *newsLabel;
-    APIRequest *newsApi;
-    getWeather *weather;
-    clk::Clock *clock;
-    QLabel *timeLabel;
+
+    NewsWidget *newsWidget;
+
+    UserSystemWidget *userSystemWidget;
+
+    WeatherWidget *weather;
+
+    ClockWidget *clockWidget;
+    CalendarWidget *calendarWidget;
+
     Camera *camera;
     QGraphicsScene *scene;
     QGraphicsView *view;

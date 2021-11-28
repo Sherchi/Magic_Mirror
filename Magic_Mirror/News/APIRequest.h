@@ -10,6 +10,7 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QAuthenticator>
+#include <QPixmap>
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QJsonDocument>
@@ -25,6 +26,7 @@ Q_OBJECT public:
 // ready to be read.
 private slots:
     void readyRead();
+
 
 //Network Manager, The data from request, and some
 // Json stuff to temperarily hold some values
@@ -44,6 +46,8 @@ public slots:
 public:
     QJsonArray getJsonArr();
     void get(QString location);
+
+
 };
 
 

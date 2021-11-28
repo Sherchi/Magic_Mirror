@@ -1,4 +1,0 @@
-/home/darwin/Desktop/Clion/NewsProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/darwin/Desktop/Clion/NewsProject/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/darwin/Desktop/Clion/NewsProject/cmake-build-debug/CMakeFiles/NewsProject.dir
-/home/darwin/Desktop/Clion/NewsProject/cmake-build-debug/CMakeFiles/NewsProject_autogen.dir

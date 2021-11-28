@@ -8,6 +8,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include <QPixmap>
 #include <QVector>
 #include <QString>
 
@@ -21,15 +22,19 @@ private:
     QString content;
     QString url;
     QString img;
+    QPixmap imgPM;
+
 
 public:
     articleData();
     articleData(QJsonObject data);
+    ~articleData();
     QString getTitle();
-    QString  getDesc();
-    QString  getContent();
-    QString  getURL();
-    QString  getImage();
+    QString getDesc();
+    QString getContent();
+    QString getURL();
+    QString getImageURL();
+    QPixmap* getPixmap();
 
 };
 

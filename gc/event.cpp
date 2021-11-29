@@ -12,6 +12,7 @@ using namespace event;
 
 Event::Event()
 {
+	eventId = 0;
 	message = new QString();
 	type = new QString();
 	time = new QTime();
@@ -21,6 +22,7 @@ Event::Event()
 
 Event::Event(QString &m, QString &type, QTime &t, QDate &d)
 {
+	eventId = 0;
 	message = new QString(m);
 	this->type = new QString(type);
 	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
@@ -36,6 +38,7 @@ Event::Event(const Event &e)
 	QDate d = e.getDate();
 	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
 	date = new QDate(d.year(), d.month(), d.day());
+	eventId = e.getId();
 	notified = e.hasNotified();
 }
 
@@ -47,6 +50,7 @@ void Event::operator = (const Event &e)
 	QDate d = e.getDate();
 	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
 	date = new QDate(d.year(), d.month(), d.day());
+	eventId = e.getId();
 	notified = e.hasNotified();
 }
 
@@ -107,7 +111,7 @@ void Event::setNotified(bool b)
 	notified = b;
 }
 
-void Event::setId(int i)
+void Event::setId(int &i)
 {
 	eventId = i;
 }

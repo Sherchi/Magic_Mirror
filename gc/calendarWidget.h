@@ -15,7 +15,7 @@
 #include <QLabel>
 #include <QTextEdit>
 #include <QMap>
-#include <QList>
+#include <QVector>
 #include "event.h"
 
 namespace calendar
@@ -35,14 +35,14 @@ namespace calendar
 		void eventUpdated();
 
 		private:
-		int currentId;
+		static int currentId;
 		QCalendarWidget *calendar;
 		QGroupBox *calendarGroupBox, *informationGroupBox;
 		QDateEdit *dateSelection;
 		QGridLayout *calendarLayout, *informationLayout;
 		QLabel *currentDateLabel;
 		QTextEdit *currentDateInformation;
-		QMap<QDate, QList<event::Event>> *eventMap;
+		QMap<QDate, QVector<event::Event>> *eventMap;
 		void createCalendarBox();
 		void createInformationBox();		
 	};

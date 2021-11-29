@@ -32,7 +32,7 @@ namespace event
 			void setTime(QTime &t);
 			void setDate(QDate &d);
 			void setNotified(bool b);
-			void setId(int i);
+			void setId(int &i);
 			bool hasNotified() const;
 			bool hasPassed();
 		private:

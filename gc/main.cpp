@@ -18,34 +18,41 @@ int main(int argc, char *argv[])
 	QString m, ty;
 	QTime t;
 	QDate d;
-	Event *e;
+	Event e;
 
 	for(int i = 0; i < 10; i++){
 		m = QString("Workout");
 		ty = QString("Notification");
 		t = QTime::currentTime();
 		d = QDate::currentDate();
-		e = new Event(m, ty, t, d);
-		/*cout << */c.insertEvent(*e);// << endl;
-		cout << e->getId() << endl;
+		e = Event(m, ty, t, d);
+		/*cout << */c.insertEvent(e);// << endl;
 	}
-/*
+	m = QString("Nothing");
+	ty = QString("None");
+	t = QTime::currentTime();
+	d = QDate::currentDate();
+	e = Event(m, ty, t, d);
+	c.insertEvent(e);
+
+	/*
 	m = QString("NULL");
 	ty = QString("NULL");
 	t = QTime::currentTime();
 	d = QDate::currentDate();
 	e = Event(m, ty, t, d);
 	c.insertEvent(e);
+	*/
 
-	for(int i = 0; i < 3; i ++){
+	for(int i = 1; i < 4; i ++){
 		m = QString("Workout");
 		ty = QString("Notification");
 		t = QTime::currentTime();
 		d = QDate::currentDate();
 		e = Event(m, ty, t, d);
 		e.setId(i);
-		cout << c.deleteEvent(e); //<< endl;
-	}*/
+		cout << c.deleteEvent(e) << endl;
+	}
 	
 
 	return app.exec();

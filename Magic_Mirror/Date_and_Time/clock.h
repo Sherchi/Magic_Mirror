@@ -8,6 +8,7 @@
 #pragma once
 
 #include "AnalogClock.h"
+#include "DigitalClock.h"
 #include<QWidget>
 #include<QDateTime>
 #include<QTimeZone>
@@ -29,7 +30,7 @@ namespace clk
 			QString getStrTime();
 			bool switchTimeZone(std::string id);
 			void update();
-			//QWidget digitalClock();
+			QWidget* digitalClock();
 			QWidget* analogClock();
 	};
 }

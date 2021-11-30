@@ -62,6 +62,11 @@ void Clock::update(){
 	dateTime = dateTime.toTimeZone(timeZone);
 }
 
+QWidget* Clock::digitalClock(){
+	DigitalClock *digital = new DigitalClock();
+	return digital;
+}
+
 QWidget* Clock::analogClock(){
 	AnalogClock *analog = new AnalogClock();
 	return analog;

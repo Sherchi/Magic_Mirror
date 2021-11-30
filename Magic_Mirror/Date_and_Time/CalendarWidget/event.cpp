@@ -106,11 +106,14 @@ void Event::setTime(QTime &t)
 	time = new QTime(t.hour(), t.minute(), t.second(), t.msec());
 }
 
+<<<<<<< HEAD
 void Event::setDate(QDate &d){
     delete date;
     date = new QDate(d.year(), d.month(), d.day());
 }
 
+=======
+>>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
 void Event::setNotified(bool b)
 {
 	notified = b;

@@ -7,8 +7,11 @@
 //
 #pragma once
 
+<<<<<<< HEAD
 #include "../AddEventWidget/AddEvent.h"
 
+=======
+>>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
 #include <QCalendarWidget>
 #include <QGroupBox>
 #include <QCheckBox>
@@ -32,14 +35,20 @@ namespace calendar
 
 		private slots:
 		void dateChanged();
+<<<<<<< HEAD
         void boxClicked();
         void handleEventCreated();
+=======
+>>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
 		
 		signals:
 		void eventUpdated();
 
 		private:
+<<<<<<< HEAD
         AddEvent *addEvent;
+=======
+>>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
 		static int currentId;
 		QCalendarWidget *calendar;
 		QGroupBox *calendarGroupBox, *informationGroupBox;

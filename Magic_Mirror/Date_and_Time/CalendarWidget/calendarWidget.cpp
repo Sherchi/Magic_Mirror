@@ -23,7 +23,10 @@ calendarWidget::calendarWidget(QWidget *parent) : QWidget(parent)
 	createCalendarBox();
 	createInformationBox();
 
+<<<<<<< HEAD
     addEvent = new AddEvent();
+=======
+>>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
 	QGridLayout *layout = new QGridLayout;
 	layout->addWidget(calendarGroupBox, 0, 0);
 	layout->addWidget(informationGroupBox, 0, 1);
@@ -71,6 +74,7 @@ void calendarWidget::createInformationBox()
 	currentDateInformation = new QTextEdit("Nothing for today");
 	currentDateInformation->setReadOnly(true);
 
+<<<<<<< HEAD
     auto *insertEvent = new QPushButton("InsertEvent");
 
 	informationLayout = new QGridLayout;
@@ -92,6 +96,13 @@ void calendarWidget::boxClicked() {
 void calendarWidget::handleEventCreated() { //calls the new event method when an event created signal is released
 //    insertEvent(*addEvent->getNewEvent());
     std::cout << "Event Created Signal heard and processed" << std::endl;
+=======
+	informationLayout = new QGridLayout;
+	informationLayout->addWidget(currentDateInformation, 0, 0, Qt::AlignCenter);
+	informationGroupBox->setLayout(informationLayout);
+	
+	connect(this, &calendarWidget::eventUpdated, this, &calendarWidget::dateChanged);
+>>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
 }
 
 bool calendarWidget::insertEvent(Event &e)

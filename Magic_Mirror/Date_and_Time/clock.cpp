@@ -20,7 +20,7 @@ Clock::Clock(){
 	timeZone = QTimeZone::systemTimeZone();
 }
 
-// Copy constructor
+// Constructor that specifies timezone
 Clock::Clock(string id){
 	timeZone = QTimeZone(QByteArray::fromStdString(id));
 	dateTime = QDateTime::currentDateTime();
@@ -62,4 +62,7 @@ void Clock::update(){
 	dateTime = dateTime.toTimeZone(timeZone);
 }
 
-
+QWidget* Clock::analogClock(){
+	AnalogClock *analog = new AnalogClock();
+	return analog;
+}

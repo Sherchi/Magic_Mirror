@@ -7,6 +7,7 @@
 //
 #pragma once
 
+#include "AnalogClock.h"
 #include<QWidget>
 #include<QDateTime>
 #include<QTimeZone>
@@ -29,7 +30,7 @@ namespace clk
 			bool switchTimeZone(std::string id);
 			void update();
 			//QWidget digitalClock();
-			//QWidget analogClock();
+			QWidget* analogClock();
 	};
 }
 

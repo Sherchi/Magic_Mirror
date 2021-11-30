@@ -1,0 +1,91 @@
+\hypertarget{structmailio_1_1mail__address}{}\doxysection{mailio\+::mail\+\_\+address Struct Reference}
+\label{structmailio_1_1mail__address}\index{mailio::mail\_address@{mailio::mail\_address}}
+
+
+{\ttfamily \#include $<$mailboxes.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address_ae2e17c6933d7933e8276d37a04438517}{mail\+\_\+address}} ()=default
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address_afe2ca641356be882a0526827f99f1db0}{mail\+\_\+address}} (const std\+::string \&mail\+\_\+name, const std\+::string \&\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}})
+\item 
+bool \mbox{\hyperlink{structmailio_1_1mail__address_a8d775a67a9d357586a2e921ab2f5c043}{empty}} () const
+\item 
+void \mbox{\hyperlink{structmailio_1_1mail__address_a0dea416f0155cba2792fc77640ffd1ab}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structmailio_1_1mail__address_ac99c5cdc70938bf90a87bf121d9b5035}{name}}
+\item 
+std\+::string \mbox{\hyperlink{structmailio_1_1mail__address_a896c02db0c442a53148ee7a6d2a4d717}{address}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mail as name and address. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmailio_1_1mail__address_ae2e17c6933d7933e8276d37a04438517}\label{structmailio_1_1mail__address_ae2e17c6933d7933e8276d37a04438517}} 
+\index{mailio::mail\_address@{mailio::mail\_address}!mail\_address@{mail\_address}}
+\index{mail\_address@{mail\_address}!mailio::mail\_address@{mailio::mail\_address}}
+\doxysubsubsection{\texorpdfstring{mail\_address()}{mail\_address()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mailio\+::mail\+\_\+address\+::mail\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor. \mbox{\Hypertarget{structmailio_1_1mail__address_afe2ca641356be882a0526827f99f1db0}\label{structmailio_1_1mail__address_afe2ca641356be882a0526827f99f1db0}} 
+\index{mailio::mail\_address@{mailio::mail\_address}!mail\_address@{mail\_address}}
+\index{mail\_address@{mail\_address}!mailio::mail\_address@{mailio::mail\_address}}
+\doxysubsubsection{\texorpdfstring{mail\_address()}{mail\_address()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mailio\+::mail\+\_\+address\+::mail\+\_\+address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mail\+\_\+name,  }\item[{const std\+::string \&}]{mail\+\_\+address }\end{DoxyParamCaption})}
+
+Setting a mail name and address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail\+\_\+name} & Name to set. \\
+\hline
+{\em \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}}} & Address to set. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmailio_1_1mail__address_a0dea416f0155cba2792fc77640ffd1ab}\label{structmailio_1_1mail__address_a0dea416f0155cba2792fc77640ffd1ab}} 
+\index{mailio::mail\_address@{mailio::mail\_address}!clear@{clear}}
+\index{clear@{clear}!mailio::mail\_address@{mailio::mail\_address}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void mailio\+::mail\+\_\+address\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clearing name and address. \mbox{\Hypertarget{structmailio_1_1mail__address_a8d775a67a9d357586a2e921ab2f5c043}\label{structmailio_1_1mail__address_a8d775a67a9d357586a2e921ab2f5c043}} 
+\index{mailio::mail\_address@{mailio::mail\_address}!empty@{empty}}
+\index{empty@{empty}!mailio::mail\_address@{mailio::mail\_address}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool mailio\+::mail\+\_\+address\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checking if a mail is empty, i.\+e. name and address are empty.
+
+\begin{DoxyReturn}{Returns}
+True if empty, false if not. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmailio_1_1mail__address_a896c02db0c442a53148ee7a6d2a4d717}\label{structmailio_1_1mail__address_a896c02db0c442a53148ee7a6d2a4d717}} 
+\index{mailio::mail\_address@{mailio::mail\_address}!address@{address}}
+\index{address@{address}!mailio::mail\_address@{mailio::mail\_address}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily std\+::string mailio\+::mail\+\_\+address\+::address}
+
+Address part of the mail. \mbox{\Hypertarget{structmailio_1_1mail__address_ac99c5cdc70938bf90a87bf121d9b5035}\label{structmailio_1_1mail__address_ac99c5cdc70938bf90a87bf121d9b5035}} 
+\index{mailio::mail\_address@{mailio::mail\_address}!name@{name}}
+\index{name@{name}!mailio::mail\_address@{mailio::mail\_address}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string mailio\+::mail\+\_\+address\+::name}
+
+Name part of the mail. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/mailboxes.\+hpp\end{DoxyCompactItemize}

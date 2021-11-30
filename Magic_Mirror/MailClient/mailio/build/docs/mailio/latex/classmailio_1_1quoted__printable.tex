@@ -1,0 +1,136 @@
+\hypertarget{classmailio_1_1quoted__printable}{}\doxysection{mailio\+::quoted\+\_\+printable Class Reference}
+\label{classmailio_1_1quoted__printable}\index{mailio::quoted\_printable@{mailio::quoted\_printable}}
+
+
+{\ttfamily \#include $<$quoted\+\_\+printable.\+hpp$>$}
+
+Inheritance diagram for mailio\+::quoted\+\_\+printable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1quoted__printable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1quoted__printable_a013a170b334bdf37f86c62cab2fdf02b}{quoted\+\_\+printable}} (\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} encoder\+\_\+line\+\_\+policy=codec\+::line\+\_\+len\+\_\+policy\+\_\+t\+::\+N\+O\+NE, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} decoder\+\_\+line\+\_\+policy=codec\+::line\+\_\+len\+\_\+policy\+\_\+t\+::\+N\+O\+NE)
+\item 
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_a09655ce2fa97124182b883bfb0039408}\label{classmailio_1_1quoted__printable_a09655ce2fa97124182b883bfb0039408}} 
+{\bfseries quoted\+\_\+printable} (const \mbox{\hyperlink{classmailio_1_1quoted__printable}{quoted\+\_\+printable}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_aa597e3cd6252f257ab0cc294eb24fb52}\label{classmailio_1_1quoted__printable_aa597e3cd6252f257ab0cc294eb24fb52}} 
+{\bfseries quoted\+\_\+printable} (\mbox{\hyperlink{classmailio_1_1quoted__printable}{quoted\+\_\+printable}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classmailio_1_1quoted__printable_aab4393efa96b1545e5abd1ddaf005a71}{$\sim$quoted\+\_\+printable}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_a7a3cb4233c7decd2a8933da4193b2bfe}\label{classmailio_1_1quoted__printable_a7a3cb4233c7decd2a8933da4193b2bfe}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1quoted__printable}{quoted\+\_\+printable}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_a78816e8dbba45722fede48aa2cf50d6a}\label{classmailio_1_1quoted__printable_a78816e8dbba45722fede48aa2cf50d6a}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1quoted__printable}{quoted\+\_\+printable}} \&\&)=delete
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1quoted__printable_a1d87cc4c10c9526c8049ee0439772ddf}{encode}} (const std\+::string \&text, std\+::string\+::size\+\_\+type reserved=0) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1quoted__printable_a04775b7dac9b25fe392ccf6395477d3d}{decode}} (const std\+::vector$<$ std\+::string $>$ \&text) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1quoted__printable_aa06cc5d18a20ca076528919d64af4c14}{q\+\_\+codec\+\_\+mode}} (bool mode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Quoted Printable codec. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_a013a170b334bdf37f86c62cab2fdf02b}\label{classmailio_1_1quoted__printable_a013a170b334bdf37f86c62cab2fdf02b}} 
+\index{mailio::quoted\_printable@{mailio::quoted\_printable}!quoted\_printable@{quoted\_printable}}
+\index{quoted\_printable@{quoted\_printable}!mailio::quoted\_printable@{mailio::quoted\_printable}}
+\doxysubsubsection{\texorpdfstring{quoted\_printable()}{quoted\_printable()}}
+{\footnotesize\ttfamily mailio\+::quoted\+\_\+printable\+::quoted\+\_\+printable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{encoder\+\_\+line\+\_\+policy = {\ttfamily codec\+:\+:line\+\_\+len\+\_\+policy\+\_\+t\+:\+:NONE},  }\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{decoder\+\_\+line\+\_\+policy = {\ttfamily codec\+:\+:line\+\_\+len\+\_\+policy\+\_\+t\+:\+:NONE} }\end{DoxyParamCaption})}
+
+Setting the encoder and decoder line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+line\+\_\+policy} & Encoder line length policy to set. \\
+\hline
+{\em decoder\+\_\+line\+\_\+policy} & Decoder line length policy to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_aab4393efa96b1545e5abd1ddaf005a71}\label{classmailio_1_1quoted__printable_aab4393efa96b1545e5abd1ddaf005a71}} 
+\index{mailio::quoted\_printable@{mailio::quoted\_printable}!````~quoted\_printable@{$\sim$quoted\_printable}}
+\index{````~quoted\_printable@{$\sim$quoted\_printable}!mailio::quoted\_printable@{mailio::quoted\_printable}}
+\doxysubsubsection{\texorpdfstring{$\sim$quoted\_printable()}{~quoted\_printable()}}
+{\footnotesize\ttfamily mailio\+::quoted\+\_\+printable\+::$\sim$quoted\+\_\+printable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_a04775b7dac9b25fe392ccf6395477d3d}\label{classmailio_1_1quoted__printable_a04775b7dac9b25fe392ccf6395477d3d}} 
+\index{mailio::quoted\_printable@{mailio::quoted\_printable}!decode@{decode}}
+\index{decode@{decode}!mailio::quoted\_printable@{mailio::quoted\_printable}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily std\+::string mailio\+::quoted\+\_\+printable\+::decode (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{text }\end{DoxyParamCaption}) const}
+
+Decoding a vector of quoted printable strings to string by applying the line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Vector of quoted printable encoded strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decoded string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad line policy. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad character. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad hexadecimal digit. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_a1d87cc4c10c9526c8049ee0439772ddf}\label{classmailio_1_1quoted__printable_a1d87cc4c10c9526c8049ee0439772ddf}} 
+\index{mailio::quoted\_printable@{mailio::quoted\_printable}!encode@{encode}}
+\index{encode@{encode}!mailio::quoted\_printable@{mailio::quoted\_printable}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::quoted\+\_\+printable\+::encode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{std\+::string\+::size\+\_\+type}]{reserved = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Encoding a string into vector of quoted printable encoded strings by applying the line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String to encode. \\
+\hline
+{\em reserved} & Number of characters to subtract from the line policy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of quoted printable strings. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad character. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad C\+R\+LF sequence. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1quoted__printable_aa06cc5d18a20ca076528919d64af4c14}\label{classmailio_1_1quoted__printable_aa06cc5d18a20ca076528919d64af4c14}} 
+\index{mailio::quoted\_printable@{mailio::quoted\_printable}!q\_codec\_mode@{q\_codec\_mode}}
+\index{q\_codec\_mode@{q\_codec\_mode}!mailio::quoted\_printable@{mailio::quoted\_printable}}
+\doxysubsubsection{\texorpdfstring{q\_codec\_mode()}{q\_codec\_mode()}}
+{\footnotesize\ttfamily void mailio\+::quoted\+\_\+printable\+::q\+\_\+codec\+\_\+mode (\begin{DoxyParamCaption}\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+Setting Q codec mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & True to set, false to unset. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/quoted\+\_\+printable.\+hpp\end{DoxyCompactItemize}

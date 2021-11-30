@@ -1,5 +1,10 @@
 {
    "admin" : false,
+   "calendar_file_path" : "",
+   "email" : "John",
+   "email_imap_server" : "imap.gmail.com",
+   "email_password" : "Smith",
+   "has_inbox" : true,
    "password" : "Smith",
    "username" : "John"
 }

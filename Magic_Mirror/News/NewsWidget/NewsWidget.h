@@ -9,6 +9,7 @@
 #include "../APIRequest.h"
 #include "../articleData.h"
 
+#include <unistd.h>
 #include <iostream>
 #include <QWidget>
 #include <QJsonArray>

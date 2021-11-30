@@ -1,0 +1,159 @@
+\hypertarget{classmailio_1_1q__codec}{}\doxysection{mailio\+::q\+\_\+codec Class Reference}
+\label{classmailio_1_1q__codec}\index{mailio::q\_codec@{mailio::q\_codec}}
+
+
+{\ttfamily \#include $<$q\+\_\+codec.\+hpp$>$}
+
+Inheritance diagram for mailio\+::q\+\_\+codec\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1q__codec}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{codec\+\_\+method\+\_\+t}} \{ {\bfseries B\+A\+S\+E64}, 
+{\bfseries Q\+U\+O\+T\+E\+D\+\_\+\+P\+R\+I\+N\+T\+A\+B\+LE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1q__codec_a988281f7582f76897f3a4c9e0d8ac864}{q\+\_\+codec}} (\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} encoder\+\_\+line\+\_\+policy, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} decoder\+\_\+line\+\_\+policy, \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{codec\+\_\+method\+\_\+t}} codec\+\_\+method)
+\item 
+\mbox{\Hypertarget{classmailio_1_1q__codec_a89f9658c7f2c3df30a9f252cd18bae2f}\label{classmailio_1_1q__codec_a89f9658c7f2c3df30a9f252cd18bae2f}} 
+{\bfseries q\+\_\+codec} (const \mbox{\hyperlink{classmailio_1_1q__codec}{q\+\_\+codec}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1q__codec_a1f82fcd5683c5730c95b739351ded6bb}\label{classmailio_1_1q__codec_a1f82fcd5683c5730c95b739351ded6bb}} 
+{\bfseries q\+\_\+codec} (\mbox{\hyperlink{classmailio_1_1q__codec}{q\+\_\+codec}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classmailio_1_1q__codec_a04d90a9b6fce38277696edc389c3af96}{$\sim$q\+\_\+codec}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1q__codec_a96ce09bdc8cdefc3a2bbe903f5e186a3}\label{classmailio_1_1q__codec_a96ce09bdc8cdefc3a2bbe903f5e186a3}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1q__codec}{q\+\_\+codec}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1q__codec_a24e171a5b39237fe18c8d8c55b47a1a8}\label{classmailio_1_1q__codec_a24e171a5b39237fe18c8d8c55b47a1a8}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1q__codec}{q\+\_\+codec}} \&\&)=delete
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1q__codec_ae0d39eb1ebe04103da32656a1d534692}{encode}} (const std\+::string \&text) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1q__codec_ab17e4b8d35377aa1493d98121dc5894b}{decode}} (const std\+::string \&text) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1q__codec_a7984e8316848bad86144d1ec5be6af64}{check\+\_\+decode}} (const std\+::string \&text) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Q codec.
+
+A\+S\+C\+II and U\+T\+F-\/8 charsets are recognized. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}\label{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}} 
+\index{mailio::q\_codec@{mailio::q\_codec}!codec\_method\_t@{codec\_method\_t}}
+\index{codec\_method\_t@{codec\_method\_t}!mailio::q\_codec@{mailio::q\_codec}}
+\doxysubsubsection{\texorpdfstring{codec\_method\_t}{codec\_method\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{mailio\+::q\+\_\+codec\+::codec\+\_\+method\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Method used for encoding/decoding. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1q__codec_a988281f7582f76897f3a4c9e0d8ac864}\label{classmailio_1_1q__codec_a988281f7582f76897f3a4c9e0d8ac864}} 
+\index{mailio::q\_codec@{mailio::q\_codec}!q\_codec@{q\_codec}}
+\index{q\_codec@{q\_codec}!mailio::q\_codec@{mailio::q\_codec}}
+\doxysubsubsection{\texorpdfstring{q\_codec()}{q\_codec()}}
+{\footnotesize\ttfamily mailio\+::q\+\_\+codec\+::q\+\_\+codec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{encoder\+\_\+line\+\_\+policy,  }\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{decoder\+\_\+line\+\_\+policy,  }\item[{\mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{codec\+\_\+method\+\_\+t}}}]{codec\+\_\+method }\end{DoxyParamCaption})}
+
+Setting the encoder and decoder line policy to recommended one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+line\+\_\+policy} & Line policy to apply. \\
+\hline
+{\em decoder\+\_\+line\+\_\+policy} & Line policy to apply. \\
+\hline
+{\em codec\+\_\+method} & Method for encoding/decoding. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1q__codec_a04d90a9b6fce38277696edc389c3af96}\label{classmailio_1_1q__codec_a04d90a9b6fce38277696edc389c3af96}} 
+\index{mailio::q\_codec@{mailio::q\_codec}!````~q\_codec@{$\sim$q\_codec}}
+\index{````~q\_codec@{$\sim$q\_codec}!mailio::q\_codec@{mailio::q\_codec}}
+\doxysubsubsection{\texorpdfstring{$\sim$q\_codec()}{~q\_codec()}}
+{\footnotesize\ttfamily mailio\+::q\+\_\+codec\+::$\sim$q\+\_\+codec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1q__codec_a7984e8316848bad86144d1ec5be6af64}\label{classmailio_1_1q__codec_a7984e8316848bad86144d1ec5be6af64}} 
+\index{mailio::q\_codec@{mailio::q\_codec}!check\_decode@{check\_decode}}
+\index{check\_decode@{check\_decode}!mailio::q\_codec@{mailio::q\_codec}}
+\doxysubsubsection{\texorpdfstring{check\_decode()}{check\_decode()}}
+{\footnotesize\ttfamily std\+::string mailio\+::q\+\_\+codec\+::check\+\_\+decode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) const}
+
+Checking if a string is Q encoded and decodes it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String to decode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decoded string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad Q codec format. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1q__codec_ab17e4b8d35377aa1493d98121dc5894b}\label{classmailio_1_1q__codec_ab17e4b8d35377aa1493d98121dc5894b}} 
+\index{mailio::q\_codec@{mailio::q\_codec}!decode@{decode}}
+\index{decode@{decode}!mailio::q\_codec@{mailio::q\_codec}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily std\+::string mailio\+::q\+\_\+codec\+::decode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) const}
+
+Decoding a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String to decode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decoded string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Missing Q codec separator for charset. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Missing Q codec separator for codec type. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Missing last Q codec separator. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad encoding method. \\
+\hline
+{\em $\ast$} & {\ttfamily decode\+\_\+qp(const string\&)}, {\ttfamily base64\+::decode(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1q__codec_ae0d39eb1ebe04103da32656a1d534692}\label{classmailio_1_1q__codec_ae0d39eb1ebe04103da32656a1d534692}} 
+\index{mailio::q\_codec@{mailio::q\_codec}!encode@{encode}}
+\index{encode@{encode}!mailio::q\_codec@{mailio::q\_codec}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::q\+\_\+codec\+::encode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) const}
+
+Encoding a text by applying the given method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String to encode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encoded string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/q\+\_\+codec.\+hpp\end{DoxyCompactItemize}

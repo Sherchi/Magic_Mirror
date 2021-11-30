@@ -1,0 +1,105 @@
+\hypertarget{classmailio_1_1binary}{}\doxysection{mailio\+::binary Class Reference}
+\label{classmailio_1_1binary}\index{mailio::binary@{mailio::binary}}
+
+
+{\ttfamily \#include $<$binary.\+hpp$>$}
+
+Inheritance diagram for mailio\+::binary\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1binary}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1binary_af2cc58af6e817eb97d20a3a985a98ded}{binary}} (\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} encoder\+\_\+line\+\_\+policy=codec\+::line\+\_\+len\+\_\+policy\+\_\+t\+::\+N\+O\+NE, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} decoder\+\_\+line\+\_\+policy=codec\+::line\+\_\+len\+\_\+policy\+\_\+t\+::\+N\+O\+NE)
+\item 
+\mbox{\Hypertarget{classmailio_1_1binary_a5808a2aa3f6b338ea13441c4adc8be61}\label{classmailio_1_1binary_a5808a2aa3f6b338ea13441c4adc8be61}} 
+{\bfseries binary} (const \mbox{\hyperlink{classmailio_1_1binary}{binary}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1binary_a70e15d25bdebdedc9a75ae63397a01fa}\label{classmailio_1_1binary_a70e15d25bdebdedc9a75ae63397a01fa}} 
+{\bfseries binary} (\mbox{\hyperlink{classmailio_1_1binary}{binary}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classmailio_1_1binary_a5ae7c48d5c720b3d031ee832c824a2bb}{$\sim$binary}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1binary_afd5593adf5b9eb79251c2cb4a5d82213}\label{classmailio_1_1binary_afd5593adf5b9eb79251c2cb4a5d82213}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1binary}{binary}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1binary_a036ef238b7aba98ddbecd2453ac41698}\label{classmailio_1_1binary_a036ef238b7aba98ddbecd2453ac41698}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1binary}{binary}} \&\&)=delete
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1binary_ace75aace246b12ce2f2a3d2b77b02f57}{encode}} (const std\+::string \&text) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1binary_a5ce92613b14f14d17fccacf2a5d55d8a}{decode}} (const std\+::vector$<$ std\+::string $>$ \&text) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Binary codec. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1binary_af2cc58af6e817eb97d20a3a985a98ded}\label{classmailio_1_1binary_af2cc58af6e817eb97d20a3a985a98ded}} 
+\index{mailio::binary@{mailio::binary}!binary@{binary}}
+\index{binary@{binary}!mailio::binary@{mailio::binary}}
+\doxysubsubsection{\texorpdfstring{binary()}{binary()}}
+{\footnotesize\ttfamily mailio\+::binary\+::binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{encoder\+\_\+line\+\_\+policy = {\ttfamily codec\+:\+:line\+\_\+len\+\_\+policy\+\_\+t\+:\+:NONE},  }\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{decoder\+\_\+line\+\_\+policy = {\ttfamily codec\+:\+:line\+\_\+len\+\_\+policy\+\_\+t\+:\+:NONE} }\end{DoxyParamCaption})}
+
+Setting the encoder and decoder line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+line\+\_\+policy} & Encoder line length policy to set. \\
+\hline
+{\em decoder\+\_\+line\+\_\+policy} & Decoder line length policy to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1binary_a5ae7c48d5c720b3d031ee832c824a2bb}\label{classmailio_1_1binary_a5ae7c48d5c720b3d031ee832c824a2bb}} 
+\index{mailio::binary@{mailio::binary}!````~binary@{$\sim$binary}}
+\index{````~binary@{$\sim$binary}!mailio::binary@{mailio::binary}}
+\doxysubsubsection{\texorpdfstring{$\sim$binary()}{~binary()}}
+{\footnotesize\ttfamily mailio\+::binary\+::$\sim$binary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1binary_a5ce92613b14f14d17fccacf2a5d55d8a}\label{classmailio_1_1binary_a5ce92613b14f14d17fccacf2a5d55d8a}} 
+\index{mailio::binary@{mailio::binary}!decode@{decode}}
+\index{decode@{decode}!mailio::binary@{mailio::binary}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily std\+::string mailio\+::binary\+::decode (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{text }\end{DoxyParamCaption}) const}
+
+Decoding a vector of binary encoded strings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Vector of binary encoded strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decoded string. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Line policy to be verified.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1binary_ace75aace246b12ce2f2a3d2b77b02f57}\label{classmailio_1_1binary_ace75aace246b12ce2f2a3d2b77b02f57}} 
+\index{mailio::binary@{mailio::binary}!encode@{encode}}
+\index{encode@{encode}!mailio::binary@{mailio::binary}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::binary\+::encode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) const}
+
+Encoding a string into vector of binary encoded strings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String to encode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector with binary encoded strings. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/binary.\+hpp\end{DoxyCompactItemize}

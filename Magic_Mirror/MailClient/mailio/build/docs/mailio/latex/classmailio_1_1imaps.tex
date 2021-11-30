@@ -1,0 +1,155 @@
+\hypertarget{classmailio_1_1imaps}{}\doxysection{mailio\+::imaps Class Reference}
+\label{classmailio_1_1imaps}\index{mailio::imaps@{mailio::imaps}}
+
+
+{\ttfamily \#include $<$imap.\+hpp$>$}
+
+Inheritance diagram for mailio\+::imaps\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1imaps}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1imaps_abb45ac0565872e093ba0a66946a85c94}{auth\+\_\+method\+\_\+t}} \{ {\bfseries L\+O\+G\+IN}, 
+{\bfseries S\+T\+A\+R\+T\+\_\+\+T\+LS}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1imaps_a4f83f8e4a83b2adcd8b8549e640facee}{imaps}} (const std\+::string \&hostname, unsigned port, std\+::chrono\+::milliseconds timeout=std\+::chrono\+::milliseconds(0))
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1imaps_afd5798b54b45952fd7a9025f74d61521}{$\sim$imaps}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1imaps_ae72344766126e090d0d69a0ceb5fd201}\label{classmailio_1_1imaps_ae72344766126e090d0d69a0ceb5fd201}} 
+{\bfseries imaps} (const \mbox{\hyperlink{classmailio_1_1imap}{imap}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1imaps_a30c4e342bbe6e496f7073fe5ec786dee}\label{classmailio_1_1imaps_a30c4e342bbe6e496f7073fe5ec786dee}} 
+{\bfseries imaps} (\mbox{\hyperlink{classmailio_1_1imaps}{imaps}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1imaps_adef55ea8e763c1459f7dc276960a48ef}\label{classmailio_1_1imaps_adef55ea8e763c1459f7dc276960a48ef}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1imaps}{imaps}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1imaps_a5bc08b7f7d869c6f320a7330eca46cbe}\label{classmailio_1_1imaps_a5bc08b7f7d869c6f320a7330eca46cbe}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1imaps}{imaps}} \&\&)=delete
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1imaps_a9d400468be70aa06794825c204c33968}{authenticate}} (const std\+::string \&username, const std\+::string \&password, \mbox{\hyperlink{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}{auth\+\_\+method\+\_\+t}} method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmailio_1_1imaps_a469bb1113f0dc6e5effdde1906960fcc}{start\+\_\+tls}} ()
+\item 
+void \mbox{\hyperlink{classmailio_1_1imaps_a6d705e6660db64de63347e2a13e755d7}{switch\+\_\+to\+\_\+ssl}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Secure version of {\ttfamily imap} class. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1imaps_abb45ac0565872e093ba0a66946a85c94}\label{classmailio_1_1imaps_abb45ac0565872e093ba0a66946a85c94}} 
+\index{mailio::imaps@{mailio::imaps}!auth\_method\_t@{auth\_method\_t}}
+\index{auth\_method\_t@{auth\_method\_t}!mailio::imaps@{mailio::imaps}}
+\doxysubsubsection{\texorpdfstring{auth\_method\_t}{auth\_method\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1imaps_abb45ac0565872e093ba0a66946a85c94}{mailio\+::imaps\+::auth\+\_\+method\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Available authentication methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1imaps_a4f83f8e4a83b2adcd8b8549e640facee}\label{classmailio_1_1imaps_a4f83f8e4a83b2adcd8b8549e640facee}} 
+\index{mailio::imaps@{mailio::imaps}!imaps@{imaps}}
+\index{imaps@{imaps}!mailio::imaps@{mailio::imaps}}
+\doxysubsubsection{\texorpdfstring{imaps()}{imaps()}}
+{\footnotesize\ttfamily mailio\+::imaps\+::imaps (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{unsigned}]{port,  }\item[{std\+::chrono\+::milliseconds}]{timeout = {\ttfamily std\+:\+:chrono\+:\+:milliseconds(0)} }\end{DoxyParamCaption})}
+
+Making a connection to the server.
+
+Calls parent constructor to do all the work.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & Hostname of the server. \\
+\hline
+{\em port} & Port of the server. \\
+\hline
+{\em timeout} & Network timeout after which I/O operations fail. If zero, then no timeout is set i.\+e. I/O operations are synchronous. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily imap\+::imap(const std\+::string\&, unsigned)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imaps_afd5798b54b45952fd7a9025f74d61521}\label{classmailio_1_1imaps_afd5798b54b45952fd7a9025f74d61521}} 
+\index{mailio::imaps@{mailio::imaps}!````~imaps@{$\sim$imaps}}
+\index{````~imaps@{$\sim$imaps}!mailio::imaps@{mailio::imaps}}
+\doxysubsubsection{\texorpdfstring{$\sim$imaps()}{~imaps()}}
+{\footnotesize\ttfamily virtual mailio\+::imaps\+::$\sim$imaps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Sending the logout command and closing the connection.
+
+Calls parent destructor to do all the work. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1imaps_a9d400468be70aa06794825c204c33968}\label{classmailio_1_1imaps_a9d400468be70aa06794825c204c33968}} 
+\index{mailio::imaps@{mailio::imaps}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!mailio::imaps@{mailio::imaps}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily std\+::string mailio\+::imaps\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}{auth\+\_\+method\+\_\+t}}}]{method }\end{DoxyParamCaption})}
+
+Authenticating with the given credentials.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+{\em method} & Authentication method to use. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a500ee348338e6bcd6e03aed5a684e22e}{connect()}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1imaps_a6d705e6660db64de63347e2a13e755d7}{switch\+\_\+to\+\_\+ssl()}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1imaps_a469bb1113f0dc6e5effdde1906960fcc}{start\+\_\+tls()}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a49db87437dd17e1939ba7789e190e722}{auth\+\_\+login(const std\+::string\&, const std\+::string\&)}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imaps_a469bb1113f0dc6e5effdde1906960fcc}\label{classmailio_1_1imaps_a469bb1113f0dc6e5effdde1906960fcc}} 
+\index{mailio::imaps@{mailio::imaps}!start\_tls@{start\_tls}}
+\index{start\_tls@{start\_tls}!mailio::imaps@{mailio::imaps}}
+\doxysubsubsection{\texorpdfstring{start\_tls()}{start\_tls()}}
+{\footnotesize\ttfamily void mailio\+::imaps\+::start\+\_\+tls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Switching to T\+LS layer.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Bad server response. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Start T\+LS refused by server. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const std\+::string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1imaps_a6d705e6660db64de63347e2a13e755d7}{switch\+\_\+to\+\_\+ssl()}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_ab5a91af9e49140a848c0eae66c030d43}{dialog\+::send(const std\+::string\&)}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imaps_a6d705e6660db64de63347e2a13e755d7}\label{classmailio_1_1imaps_a6d705e6660db64de63347e2a13e755d7}} 
+\index{mailio::imaps@{mailio::imaps}!switch\_to\_ssl@{switch\_to\_ssl}}
+\index{switch\_to\_ssl@{switch\_to\_ssl}!mailio::imaps@{mailio::imaps}}
+\doxysubsubsection{\texorpdfstring{switch\_to\_ssl()}{switch\_to\_ssl()}}
+{\footnotesize\ttfamily void mailio\+::imaps\+::switch\+\_\+to\+\_\+ssl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Replacing T\+CP socket with S\+SL socket.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily dialog\+\_\+ssl\+::dialog\+\_\+ssl(dialog\+\_\+ssl\&\&)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/imap.\+hpp\end{DoxyCompactItemize}

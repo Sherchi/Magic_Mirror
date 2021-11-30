@@ -20,17 +20,21 @@
  * @authors Nolan Morris, Nathan Dinatale.
  * */
 WeatherWidget::WeatherWidget() {
+    mainVbox = new QVBoxLayout;
+    mainVbox->setSpacing(0);
+    mainVbox->setMargin(0);
     hbox = new QHBoxLayout;
-    this->setLayout(hbox);
+    this->setLayout(mainVbox);
 
     weather = new getWeather; //creating and accessing weather module
-    weather->fetchWeather("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7ffedcbb88ebcf7876bc827343f9f05f");
+    weather->fetchWeather("7ffedcbb88ebcf7876bc827343f9f05f", "London, ca");
+    weather->fetchForecast("7ffedcbb88ebcf7876bc827343f9f05f", "London, ca");
 
     QString imageName = parseWeather(weather->getWeatherDescription());
     QString temperature = QString::number(weather->getTemperature());
 
     image = new QPixmap;
-    image->load("/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/Bootstrapper/Images/" + imageName + ".png"); //loads the image from the URL
+    image->load(QString::fromStdString(std::filesystem::current_path()) + "/Bootstrapper/Images/" + imageName + ".png"); //loads the image from the URL
 
     imageLabel = new QLabel;
     imageLabel->setPixmap(image->scaled(250, 250, Qt::KeepAspectRatio)); //scales the image so that it doesn't take up the whole window
@@ -48,6 +52,42 @@ WeatherWidget::WeatherWidget() {
     hbox->addWidget(temp);
     hbox->addStretch(); //changes the spacing between elements in this layout
     hbox->setSpacing(10);
+
+    mainVbox->addLayout(hbox);
+
+    auto *futureForecastHbox = new QHBoxLayout;
+
+    futureForecastHbox->setSpacing(5);
+    futureForecastHbox->setAlignment(Qt::AlignLeft);
+
+    QVector<QString> descriptions = weather->getForecastDescriptions();
+    QVector<double> minTemps = weather->getForecastTempMins();
+    QVector<double> maxTemps = weather->getForecastTempMaxes();
+
+    for(int i = 0; i < descriptions.size(); i++){
+        auto *vbox = new QVBoxLayout;
+        auto *minTemp = new QLabel();
+        auto *maxTemp = new QLabel();
+        auto *weatherPixmap = new QPixmap;
+        auto *pixmapLabel = new QLabel;
+
+        QString descriptionImage = parseWeather(descriptions[i]);
+
+        weatherPixmap->load(QString::fromStdString(std::filesystem::current_path()) + "/Bootstrapper/Images/" + descriptionImage + ".png");
+        pixmapLabel->setPixmap(weatherPixmap->scaled(75, 75, Qt::KeepAspectRatio));
+
+        minTemp->setText(QString::number(minTemps[i]) + " C");
+        maxTemp->setText(QString::number(maxTemps[i]) + " C");
+
+        vbox->addWidget(pixmapLabel, Qt::AlignLeft);
+        vbox->addWidget(maxTemp, Qt::AlignLeft);
+        vbox->addWidget(minTemp, Qt::AlignLeft);
+        vbox->setAlignment(Qt::AlignLeft);
+
+        futureForecastHbox->addLayout(vbox);
+    }
+
+    mainVbox->addLayout(futureForecastHbox);
 }
 
 /*
@@ -63,7 +103,7 @@ void WeatherWidget::changeUnits() {
     temp->setText(weather->convert(temp->text()));
 }
 
-//TODO: Move this function to the weather class and have it return this. This doesn't need to be here
+
 /*
  * @brief parses the description of the weather from the API to one of the images in the file system that can be
  * displayed on screen.

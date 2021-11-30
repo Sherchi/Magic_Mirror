@@ -1,0 +1,131 @@
+\hypertarget{structmailio_1_1mailboxes}{}\doxysection{mailio\+::mailboxes Struct Reference}
+\label{structmailio_1_1mailboxes}\index{mailio::mailboxes@{mailio::mailboxes}}
+
+
+{\ttfamily \#include $<$mailboxes.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes_a0451606d266523c6e75ec4583588fa0f}{mailboxes}} ()=default
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes_aec49fc3a4faa2dd4f12d19a9c29b5b33}{mailboxes}} (const \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&)=default
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes_a1dbe91a23fa787e4db8abbaef13178b7}{mailboxes}} (\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&\&)=default
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes_ab03a17baa03306f84a99eed8bf2cd4d5}{mailboxes}} (std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$ address\+\_\+list, std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} $>$ group\+\_\+list)
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes_a7113a70b9a9a5b1ad62cb6117d7b4970}{$\sim$mailboxes}} ()=default
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \& \mbox{\hyperlink{structmailio_1_1mailboxes_a9e2e2bc820a19e17debd85d40adbd1da}{operator=}} (const \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&)=default
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \& \mbox{\hyperlink{structmailio_1_1mailboxes_a727ecedcc71ee44ac7cf4a4b67bb44b0}{operator=}} (\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&\&)=default
+\item 
+bool \mbox{\hyperlink{structmailio_1_1mailboxes_afbcb0cbf25f079fd803d24bd6d3fb247}{empty}} () const
+\item 
+void \mbox{\hyperlink{structmailio_1_1mailboxes_aa4c8c9f1c684f1cb2a4acaa37df90850}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$ \mbox{\hyperlink{structmailio_1_1mailboxes_a156c8b896cb56a41f7b3b5b4fa1275fb}{addresses}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} $>$ \mbox{\hyperlink{structmailio_1_1mailboxes_af7dfe5ee4e4eabe02c7b06c4c6987b13}{groups}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+List of mail addresses and groups. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmailio_1_1mailboxes_a0451606d266523c6e75ec4583588fa0f}\label{structmailio_1_1mailboxes_a0451606d266523c6e75ec4583588fa0f}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!mailboxes@{mailboxes}}
+\index{mailboxes@{mailboxes}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{mailboxes()}{mailboxes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily mailio\+::mailboxes\+::mailboxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor. \mbox{\Hypertarget{structmailio_1_1mailboxes_aec49fc3a4faa2dd4f12d19a9c29b5b33}\label{structmailio_1_1mailboxes_aec49fc3a4faa2dd4f12d19a9c29b5b33}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!mailboxes@{mailboxes}}
+\index{mailboxes@{mailboxes}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{mailboxes()}{mailboxes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily mailio\+::mailboxes\+::mailboxes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default copy constructor. \mbox{\Hypertarget{structmailio_1_1mailboxes_a1dbe91a23fa787e4db8abbaef13178b7}\label{structmailio_1_1mailboxes_a1dbe91a23fa787e4db8abbaef13178b7}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!mailboxes@{mailboxes}}
+\index{mailboxes@{mailboxes}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{mailboxes()}{mailboxes()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily mailio\+::mailboxes\+::mailboxes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default move constructor. \mbox{\Hypertarget{structmailio_1_1mailboxes_ab03a17baa03306f84a99eed8bf2cd4d5}\label{structmailio_1_1mailboxes_ab03a17baa03306f84a99eed8bf2cd4d5}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!mailboxes@{mailboxes}}
+\index{mailboxes@{mailboxes}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{mailboxes()}{mailboxes()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily mailio\+::mailboxes\+::mailboxes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$}]{address\+\_\+list,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} $>$}]{group\+\_\+list }\end{DoxyParamCaption})}
+
+Creating a mailbox with the given addresses and groups.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+\_\+list} & Mail addresses to set. \\
+\hline
+{\em group\+\_\+list} & Mail groups to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structmailio_1_1mailboxes_a7113a70b9a9a5b1ad62cb6117d7b4970}\label{structmailio_1_1mailboxes_a7113a70b9a9a5b1ad62cb6117d7b4970}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!````~mailboxes@{$\sim$mailboxes}}
+\index{````~mailboxes@{$\sim$mailboxes}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{$\sim$mailboxes()}{~mailboxes()}}
+{\footnotesize\ttfamily mailio\+::mailboxes\+::$\sim$mailboxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmailio_1_1mailboxes_aa4c8c9f1c684f1cb2a4acaa37df90850}\label{structmailio_1_1mailboxes_aa4c8c9f1c684f1cb2a4acaa37df90850}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!clear@{clear}}
+\index{clear@{clear}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void mailio\+::mailboxes\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clearing the list of addresses. \mbox{\Hypertarget{structmailio_1_1mailboxes_afbcb0cbf25f079fd803d24bd6d3fb247}\label{structmailio_1_1mailboxes_afbcb0cbf25f079fd803d24bd6d3fb247}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!empty@{empty}}
+\index{empty@{empty}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool mailio\+::mailboxes\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checking if the mailbox is empty.
+
+\begin{DoxyReturn}{Returns}
+True if empty, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structmailio_1_1mailboxes_a9e2e2bc820a19e17debd85d40adbd1da}\label{structmailio_1_1mailboxes_a9e2e2bc820a19e17debd85d40adbd1da}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!operator=@{operator=}}
+\index{operator=@{operator=}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}}\& mailio\+::mailboxes\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default copy assignment operator. \mbox{\Hypertarget{structmailio_1_1mailboxes_a727ecedcc71ee44ac7cf4a4b67bb44b0}\label{structmailio_1_1mailboxes_a727ecedcc71ee44ac7cf4a4b67bb44b0}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!operator=@{operator=}}
+\index{operator=@{operator=}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}}\& mailio\+::mailboxes\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default move assignment operator. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmailio_1_1mailboxes_a156c8b896cb56a41f7b3b5b4fa1275fb}\label{structmailio_1_1mailboxes_a156c8b896cb56a41f7b3b5b4fa1275fb}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!addresses@{addresses}}
+\index{addresses@{addresses}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{addresses}{addresses}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}}$>$ mailio\+::mailboxes\+::addresses}
+
+Mail addresses. \mbox{\Hypertarget{structmailio_1_1mailboxes_af7dfe5ee4e4eabe02c7b06c4c6987b13}\label{structmailio_1_1mailboxes_af7dfe5ee4e4eabe02c7b06c4c6987b13}} 
+\index{mailio::mailboxes@{mailio::mailboxes}!groups@{groups}}
+\index{groups@{groups}!mailio::mailboxes@{mailio::mailboxes}}
+\doxysubsubsection{\texorpdfstring{groups}{groups}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}}$>$ mailio\+::mailboxes\+::groups}
+
+Mail groups. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/mailboxes.\+hpp\end{DoxyCompactItemize}

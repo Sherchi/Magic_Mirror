@@ -1,46 +1,75 @@
-//
-// Created by peter on 2021-11-07.
-//
-//
-// DEPENCENCY:
-// sudo apt-get install libjsoncpp-dev
+/*
+ * @brief This class defines the singleton of the UserSystem, this system manages the active user, user logins, user creation, etc.
+ *
+ * @authors Peter Meijer
+ * */
 
-
+#include "../MailClient/MailClient.h"
 #include "UserSystem.h"
-#include <string>
-#include <iostream>
-#include <boost/filesystem.hpp>
-#include <boost/range/iterator_range.hpp>
-#include <jsoncpp/json/json.h>
-#include <jsoncpp/json/value.h>
-#include <fstream>
-#include <typeinfo>
-#include <sstream>
-#include <unistd.h>
-#include <stdio.h>
-#include <limits.h>
 
+//static variable of usersystem object
+UserSystem* UserSystem::_instance = NULL;
 
+/*
+ * @brief Singleton instance access method for static usersystem instance
+ *
+ * @param No Params
+ *
+ * @return UserSystem instance singleton
+ *
+ * @authors Peter Meijer.
+ * */
+UserSystem& UserSystem::instance()
+{
+    //creates instance if none exists
+    if(_instance == NULL)
+    {
+        _instance = new UserSystem();
+    }
+    return *_instance;
+}
+
+/*
+ * @brief Constructor for the class. Initializes the UserSystem
+ *
+ * @param No params.
+ *
+ * @return No returns.
+ *
+ * @authors Peter Meijer.
+ * */
 UserSystem::UserSystem()
 {
     users_loaded = false;
-    active_user;
+    active_user = new User();
     loadUsers();
 }
 
+/*
+ * @brief Destructor for the class.
+ *
+ * @param No params.
+ *
+ * @return No returns.
+ *
+ * @authors Peter Meijer.
+ * */
 UserSystem::~UserSystem() {
 
 }
 
-//FUNCTION: loadUsers
-//DESCRIPTION: load user objects from json files into the system
-//PARAMETERS:
-//none
-//RETURN:
-//none, function is void
+/*
+ * @brief Method to load the users out of the json files in useraccounts folder
+ *
+ * @param No paramgs
+ *
+ * @return No returns.
+ *
+ * @authors Peter Meijer.
+ * */
 void UserSystem::loadUsers() {
-//    std::string path = "../useraccounts";
-    std::string path = "/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/useraccounts"; //temp for testing in CLion
+    std::string currentPath = std::filesystem::current_path();
+    std::string path = currentPath + "/useraccounts";
     //vector to store list of users in the useraccount directory
     std::vector<std::string> files_in_folder;
 
@@ -64,7 +93,7 @@ void UserSystem::loadUsers() {
         ifs >> user_json;
 
         User *user = new User(file_path,user_json);
-        users.push_back(*user);
+        users.push_back(user);
 
         ifs.close();
 
@@ -74,39 +103,51 @@ void UserSystem::loadUsers() {
 
 }
 
-//FUNCTION: getUsers
-//DESCRIPTION: get list of usernames for all the user accounts
-//PARAMETERS:
-//none
-//RETURN:
-//vector of std::string with usernames of all accounts
+/*
+ * @brief Method to get list of all usernames of all users in system
+ *
+ * @param No params.
+ *
+ * @return vector list of string usernames of all users in the system
+ *
+ * @authors Peter Meijer.
+ * */
 std::vector<std::string> UserSystem::getUsers() {
     std::vector<std::string> user_list;
-    for(User u: users)
+    for(User* u: users)
     {
-        user_list.push_back(u.getUsername());
+        user_list.push_back(u->getUsername());
     }
     return user_list;
 }
 
-//FUNCTION: logout
-//DESCRIPTION: logout of current logged-in user
-//PARAMETERS:
-//std::string username: username of user attempting to login
-//std::string password: password of user attempting to login
-//RETURN:
-//returns 0 if successful
-//returns -1 if username is wrong (does not exist)
-//returns -2 if password is wrong
-//return -3 if another user is already logged in
+
+/*
+ * @brief Method to login user
+ *
+ * @param string username of user to login
+ *
+ * @param string password of user to login
+ *
+ * @return int 0 on success
+ *
+ * @return int -1 if username invalid
+ *
+ * @return -2 if password is wrong
+ *
+ * @return -3 if another user is already logged in
+ *
+ * @authors Peter Meijer.
+ * */
 int UserSystem::login(std::string username, std::string password)
 {
-    if(!active_user.isActivated()) {
-        for (User u: users) {
-            if (username == u.getUsername()) {
-                bool authenticated = u.authenticate(password);
+    if(!active_user->isActivated()) {
+        for (User* u: users) {
+            if (username == u->getUsername()) {
+                bool authenticated = u->authenticate(password);
                 if (authenticated == true) {
                     active_user = u;
+                    MailClient::instance().updateUser();
                     return 0;
                 } else {
                     return -2;
@@ -125,13 +166,26 @@ int UserSystem::login(std::string username, std::string password)
 //RETURN:
 //return 0 if user logged in is successfully logged out
 //return -1 if user cannot be logged out because no user is logged in
+
+/*
+ * @brief Method to logout current logged in  user
+ *
+ * @param No params.
+ *
+ * @return int 0 on success
+ *
+ * @return int -1 if no user is logged in
+
+ * @authors Peter Meijer.
+ * */
 bool UserSystem::logout()
 {
-    if(active_user.isActivated()) {
+    if(active_user->isActivated()) {
         //create blank user as active user aka no user is active
         User *u = new User();
-        active_user = *u;
+        active_user = u;
         //return successful logout
+        MailClient::instance().updateUser();
         return 0;
     }
     else
@@ -140,19 +194,27 @@ bool UserSystem::logout()
     }
 }
 
-//FUNCTION: changePassword
-//DESCRIPTION: changes password of current logged-in user to the new_password
-//PARAMETERS:
-//std::string old_password: old password for user
-//std::string new_password: new password for user
-//RETURN:
-//returns 0 if password of active user successfully changed
-//returns -1 if password of active user not changed (e.g. old password is wrong)
-//return -2 if there is no current active user to change password for
+
+
+/*
+ * @brief Method to change password of current user
+ *
+ * @param string old user password
+ *
+ * @param string new user password
+ *
+ * @return int 0 on success
+ *
+ * @return int -1 if old password is wrong
+ *
+ * @return int -2 if no active user logged in to change password for
+
+ * @authors Peter Meijer.
+ * */
 int UserSystem::changePassword(std::string old_password, std::string new_password) {
-    if(active_user.isActivated())
+    if(active_user->isActivated())
     {
-        bool change = active_user.changePassword(old_password,new_password);
+        bool change = active_user->changePassword(old_password,new_password);
         if(change)
         {
             return 0;
@@ -175,45 +237,69 @@ int UserSystem::changePassword(std::string old_password, std::string new_passwor
 //RETURN:
 //returns false if no user is active to change username for
 //returns true if username changed
+
+/*
+ * @brief Method to change username of current user
+ *
+ * @param string new username
+ *
+ * @return bool true on success
+ *
+ * @return bool false if no active user to change username for
+
+ * @authors Peter Meijer.
+ * */
 bool UserSystem::changeUsername(std::string new_username)
 {
-    if(!active_user.isActivated())
+    if(!active_user->isActivated())
     {
         return false;
     }
     else
     {
-        active_user.changeUsername(new_username);
+        active_user->changeUsername(new_username);
         return true;
     }
 }
 
-//FUNCTION: createUser
-//DESCRIPTION: create a new user with username and password and admin status
-//PARAMETERS:
-//std::string username:  username for new account
-//std::string password: password for new account
-//bool admin: admin status for new account, true or false
-//RETURN:
-//returns 0 if successful
-//returns -1 if current active user not admin
-//returns -2 if username is taken
-// returns -3 if no active user
+
+
+/*
+ * @brief Method to create a new user
+ *
+ * @param string username
+ *
+ * @param string password
+ *
+ * @param bool admin to designate if user is admin
+ *
+ * @return int 0 on success
+ *
+ * @return int -1 if current user is not admin and cannot create accounts
+ *
+ * @return int -2 if username is taken
+ *
+ * @return int -3 if no active user
+ *
+ * @authors Peter Meijer.
+ * */
 int UserSystem::createUser(std::string username, std::string password, bool admin)
 {
-    if(!active_user.isActivated())
+    //check if a user is active
+    if(!active_user->isActivated())
     {
         return -3;
     }
     else
     {
-
-        if(active_user.isAdmin())
+        //if they are admin,account can be created
+        if(active_user->isAdmin())
         {
+            //check if username is already taken
             bool username_taken = false;
-            for(User u: users)
+            for(User *u: users)
             {
-                if(u.getUsername() == username)
+                if(u->getUsername() == username)
                 {
                     username_taken = true;
                 }
@@ -225,7 +311,8 @@ int UserSystem::createUser(std::string username, std::string password, bool admi
             }
             else
             {
-                std::string file_path ="/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/useraccounts/"+username+".json";
+                //create user object and save it
+                std::string file_path ="../useraccounts/"+username+".json";
                 Json::Value object;
                 object["username"] = username;
                 object["password"] = password;
@@ -233,7 +320,7 @@ int UserSystem::createUser(std::string username, std::string password, bool admi
 
                 User *user = new User(file_path,object);
                 user->save();
-                users.push_back(*user);
+                users.push_back(user);
                 return 0;
             }
         }
@@ -244,28 +331,37 @@ int UserSystem::createUser(std::string username, std::string password, bool admi
     }
 }
 
-//FUNCTION: makeAdmin
-//DESCRIPTION: set the admin status of user with username to true
-//PARAMETERS:
-//std::string username:  username for account to make admin
-//RETURN:
-//return 1 if user is already admin
-//return 0 if successfully set the user with username to an admin
-//return -1 if username does not correspond to a user
-//return -2 if current user is not an admin
-//return -3 if no user is currently active
+/*
+ * @brief Method to make a user an admin
+ *
+ * @param string username
+ *
+ * @return int 1  if user is already admin
+ *
+ * @return int 0 on success
+ *
+ * @return int -1 if username does not correspond to user
+ *
+ * @return int -2 if current user is not an admin
+ *
+ * @return -3 if no user is currently active
+ *
+ * @authors Peter Meijer.
+ * */
 int UserSystem::makeAdmin(std::string username)
 {
-    if(active_user.isActivated())
+    //check if active user exists
+    if(active_user->isActivated())
     {
-        if(active_user.isAdmin()) {
-            for (User u: users) {
-                if (u.getUsername() == username) {
-                    if(u.isAdmin())
+        //if they are admin attempt to set username user to admin
+        if(active_user->isAdmin()) {
+            for (User *u: users) {
+                if (u->getUsername() == username) {
+                    if(u->isAdmin())
                     {
                         return 1;
                     }
-                    u.setAdmin(true);
+                    u->setAdmin(true);
                     return 0;
                 }
             }
@@ -276,28 +372,36 @@ int UserSystem::makeAdmin(std::string username)
     return -3;
 }
 
-//FUNCTION: removeAdmin
-//DESCRIPTION: set the admin status of user with username to false
-//PARAMETERS:
-//std::string username:  username for account to remove admin
-//RETURN:
-//return 1 if user is already not an admin
-//return 0 if successfully set the user with username to an admin
-//return -1 if username does not correspond to a user
-//return -2 if current user is not an admin
-//return -3 if no user is currently active
+
+/*
+ * @brief Method to remove an admin
+ *
+ * @param string username
+ *
+ * @return int 1  if user is already not admin
+ *
+ * @return int 0 on success
+ *
+ * @return int -1 if username does not correspond to user
+ *
+ * @return int -2 if current user is not an admin
+ *
+ * @return -3 if no user is currently active
+ *
+ * @authors Peter Meijer.
+ * */
 int UserSystem::removeAdmin(std::string username)
 {
-    if(active_user.isActivated())
+    if(active_user->isActivated())
     {
-        if(active_user.isAdmin()) {
-            for (User u: users) {
-                if (u.getUsername() == username) {
-                    if(!u.isAdmin())
+        if(active_user->isAdmin()) {
+            for (User *u: users) {
+                if (u->getUsername() == username) {
+                    if(!u->isAdmin())
                     {
                         return 1;
                     }
-                    u.setAdmin(false);
+                    u->setAdmin(false);
                     return 0;
                 }
             }
@@ -308,13 +412,16 @@ int UserSystem::removeAdmin(std::string username)
     return -3;
 }
 
-//FUNCTION: getActiveUser
-//DESCRIPTION: get the user object of the current active user
-//PARAMETERS:
-//none
-//RETURN:
-//return User object of active user (logged-in)
-User UserSystem::getActiveUser()
+/*
+ * @brief Method to make a user an admin
+ *
+ * @param No params.
+ *
+ * @return User* pointer to active (logged in) user
+ *
+ * @authors Peter Meijer.
+ * */
+User* UserSystem::getActiveUser()
 {
     return active_user;
 }

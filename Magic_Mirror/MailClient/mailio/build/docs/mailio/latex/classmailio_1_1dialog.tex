@@ -1,0 +1,365 @@
+\hypertarget{classmailio_1_1dialog}{}\doxysection{mailio\+::dialog Class Reference}
+\label{classmailio_1_1dialog}\index{mailio::dialog@{mailio::dialog}}
+
+
+{\ttfamily \#include $<$dialog.\+hpp$>$}
+
+Inheritance diagram for mailio\+::dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1dialog_af3b07a5985f57968359ba875dfddc489}{dialog}} (const std\+::string \&hostname, unsigned port, std\+::chrono\+::milliseconds timeout)
+\item 
+\mbox{\hyperlink{classmailio_1_1dialog_a64631ba1d88f26e82b5f3e8a1a2074d8}{dialog}} (const \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} \&other)
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1dialog_a310902f38dfd39ef39d382bc7da51fa4}{$\sim$dialog}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1dialog_a2a688ec0de9d4035fa1acf95138280f1}\label{classmailio_1_1dialog_a2a688ec0de9d4035fa1acf95138280f1}} 
+{\bfseries dialog} (\mbox{\hyperlink{classmailio_1_1dialog}{dialog}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1dialog_ad611663b96d4cc61de084156ae64a834}\label{classmailio_1_1dialog_ad611663b96d4cc61de084156ae64a834}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1dialog_a4f23adca8ef596dd455fc549261fa76d}\label{classmailio_1_1dialog_a4f23adca8ef596dd455fc549261fa76d}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1dialog}{dialog}} \&\&)=delete
+\item 
+virtual void \mbox{\hyperlink{classmailio_1_1dialog_ab5a91af9e49140a848c0eae66c030d43}{send}} (const std\+::string \&line)
+\item 
+virtual std\+::string \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{receive}} (bool raw=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Socket $>$ }\\void \mbox{\hyperlink{classmailio_1_1dialog_a6d52ecec699d167ebc00a8e1978280d3}{send\+\_\+sync}} (Socket \&socket, const std\+::string \&line)
+\item 
+{\footnotesize template$<$typename Socket $>$ }\\std\+::string \mbox{\hyperlink{classmailio_1_1dialog_a501b1d4adb9daa1bb255e2a1117526b4}{receive\+\_\+sync}} (Socket \&socket, bool raw)
+\item 
+void \mbox{\hyperlink{classmailio_1_1dialog_a5821c442d13d1c113f810bcbbe4f01e2}{connect\+\_\+async}} ()
+\item 
+{\footnotesize template$<$typename Socket $>$ }\\void \mbox{\hyperlink{classmailio_1_1dialog_aeb93efa9b70e865c885640a29578664a}{send\+\_\+async}} (Socket \&socket, std\+::string line)
+\item 
+{\footnotesize template$<$typename Socket $>$ }\\std\+::string \mbox{\hyperlink{classmailio_1_1dialog_adcf4411e3a455404d03eb5785a485f6b}{receive\+\_\+async}} (Socket \&socket, bool raw)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classmailio_1_1dialog_a96cc5df6a10fd44725ad94d06d0b2513}{check\+\_\+timeout}} (const boost\+::system\+::error\+\_\+code \&error, std\+::shared\+\_\+ptr$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$ socket, std\+::shared\+\_\+ptr$<$ boost\+::asio\+::deadline\+\_\+timer $>$ timer, bool \&expired)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classmailio_1_1dialog_ab63086dd116d0584e43c47d5a0e4e252}{\+\_\+hostname}}
+\item 
+const unsigned int \mbox{\hyperlink{classmailio_1_1dialog_aadb6ded1868f84b31afce5b7935ad13b}{\+\_\+port}}
+\item 
+std\+::shared\+\_\+ptr$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$ \mbox{\hyperlink{classmailio_1_1dialog_a99b0ae8aa94aaa5b2ea486279b271da8}{\+\_\+socket}}
+\item 
+std\+::shared\+\_\+ptr$<$ boost\+::asio\+::deadline\+\_\+timer $>$ \mbox{\hyperlink{classmailio_1_1dialog_aee161381457eabf47bcc8b78ef648a0e}{\+\_\+timer}}
+\item 
+std\+::chrono\+::milliseconds \mbox{\hyperlink{classmailio_1_1dialog_a3ca75a03c0e66e33e44ef4bba4d0a4aa}{\+\_\+timeout}}
+\item 
+bool \mbox{\hyperlink{classmailio_1_1dialog_acedc710828431641f8710f8007899ebe}{\+\_\+timer\+\_\+expired}}
+\item 
+std\+::shared\+\_\+ptr$<$ boost\+::asio\+::streambuf $>$ \mbox{\hyperlink{classmailio_1_1dialog_af259cf1373f57ad22d90673cf5a48511}{\+\_\+strmbuf}}
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::istream $>$ \mbox{\hyperlink{classmailio_1_1dialog_a0617363d31eb8c4155cb48f26f0c2835}{\+\_\+istrm}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static boost\+::asio\+::io\+\_\+context \mbox{\hyperlink{classmailio_1_1dialog_ada98de74ba8724bf762c6a0160b19ded}{\+\_\+ios}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dealing with network in a line oriented fashion. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1dialog_af3b07a5985f57968359ba875dfddc489}\label{classmailio_1_1dialog_af3b07a5985f57968359ba875dfddc489}} 
+\index{mailio::dialog@{mailio::dialog}!dialog@{dialog}}
+\index{dialog@{dialog}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{dialog()}{dialog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mailio\+::dialog\+::dialog (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{unsigned}]{port,  }\item[{std\+::chrono\+::milliseconds}]{timeout }\end{DoxyParamCaption})}
+
+Making a connection to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & Server hostname. \\
+\hline
+{\em port} & Server port. \\
+\hline
+{\em timeout} & Network timeout after which I/O operations fail. If zero, then no timeout is set i.\+e. I/O operations are synchronous. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Server connecting failed. \\
+\hline
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_a5821c442d13d1c113f810bcbbe4f01e2}{connect\+\_\+async()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1dialog_a64631ba1d88f26e82b5f3e8a1a2074d8}\label{classmailio_1_1dialog_a64631ba1d88f26e82b5f3e8a1a2074d8}} 
+\index{mailio::dialog@{mailio::dialog}!dialog@{dialog}}
+\index{dialog@{dialog}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{dialog()}{dialog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mailio\+::dialog\+::dialog (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} \&}]{other }\end{DoxyParamCaption})}
+
+Copy constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to copy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1dialog_a310902f38dfd39ef39d382bc7da51fa4}\label{classmailio_1_1dialog_a310902f38dfd39ef39d382bc7da51fa4}} 
+\index{mailio::dialog@{mailio::dialog}!````~dialog@{$\sim$dialog}}
+\index{````~dialog@{$\sim$dialog}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{$\sim$dialog()}{~dialog()}}
+{\footnotesize\ttfamily virtual mailio\+::dialog\+::$\sim$dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Closing the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1dialog_a96cc5df6a10fd44725ad94d06d0b2513}\label{classmailio_1_1dialog_a96cc5df6a10fd44725ad94d06d0b2513}} 
+\index{mailio::dialog@{mailio::dialog}!check\_timeout@{check\_timeout}}
+\index{check\_timeout@{check\_timeout}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{check\_timeout()}{check\_timeout()}}
+{\footnotesize\ttfamily static void mailio\+::dialog\+::check\+\_\+timeout (\begin{DoxyParamCaption}\item[{const boost\+::system\+::error\+\_\+code \&}]{error,  }\item[{std\+::shared\+\_\+ptr$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$}]{socket,  }\item[{std\+::shared\+\_\+ptr$<$ boost\+::asio\+::deadline\+\_\+timer $>$}]{timer,  }\item[{bool \&}]{expired }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checking if the timeout is reached. The method is static to ensure that it still exists at the moment of the socket destruction. As method, it could happen that in the destructor it\textquotesingle{}s being used by the IO service, thus producing the crash.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Error code. \\
+\hline
+{\em socket} & Socket to check the timeout. \\
+\hline
+{\em timer} & Timer associated with the socket. \\
+\hline
+{\em expired} & Flag if the timer has expired. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1dialog_a5821c442d13d1c113f810bcbbe4f01e2}\label{classmailio_1_1dialog_a5821c442d13d1c113f810bcbbe4f01e2}} 
+\index{mailio::dialog@{mailio::dialog}!connect\_async@{connect\_async}}
+\index{connect\_async@{connect\_async}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{connect\_async()}{connect\_async()}}
+{\footnotesize\ttfamily void mailio\+::dialog\+::connect\+\_\+async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Connecting to the host within the given timeout period.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Server connecting failed. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Server connecting timed out. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}\label{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}} 
+\index{mailio::dialog@{mailio::dialog}!receive@{receive}}
+\index{receive@{receive}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily virtual std\+::string mailio\+::dialog\+::receive (\begin{DoxyParamCaption}\item[{bool}]{raw = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Receiving a line from network.
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw} & Flag if the receiving is raw (no C\+R\+LF is truncated) or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Line read from network. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily receive\+\_\+sync$<$Socket$>$(Socket\&, bool)}, {\ttfamily receive\+\_\+async$<$Socket$>$(Socket\&, bool)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classmailio_1_1dialog__ssl_a06e1f19e5f2fcb7798c7879b5f7e1798}{mailio\+::dialog\+\_\+ssl}}.
+
+\mbox{\Hypertarget{classmailio_1_1dialog_adcf4411e3a455404d03eb5785a485f6b}\label{classmailio_1_1dialog_adcf4411e3a455404d03eb5785a485f6b}} 
+\index{mailio::dialog@{mailio::dialog}!receive\_async@{receive\_async}}
+\index{receive\_async@{receive\_async}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{receive\_async()}{receive\_async()}}
+{\footnotesize\ttfamily template$<$typename Socket $>$ \\
+std\+::string mailio\+::dialog\+::receive\+\_\+async (\begin{DoxyParamCaption}\item[{Socket \&}]{socket,  }\item[{bool}]{raw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Receiving a line over network within the given timeout period.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Socket to use for I/O. \\
+\hline
+{\em raw} & Flag if the receiving is raw (no C\+R\+LF is truncated) or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+line Line received. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Network receiving failed. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Network receiving timed out. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1dialog_a501b1d4adb9daa1bb255e2a1117526b4}\label{classmailio_1_1dialog_a501b1d4adb9daa1bb255e2a1117526b4}} 
+\index{mailio::dialog@{mailio::dialog}!receive\_sync@{receive\_sync}}
+\index{receive\_sync@{receive\_sync}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{receive\_sync()}{receive\_sync()}}
+{\footnotesize\ttfamily template$<$typename Socket $>$ \\
+std\+::string mailio\+::dialog\+::receive\+\_\+sync (\begin{DoxyParamCaption}\item[{Socket \&}]{socket,  }\item[{bool}]{raw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Receiving a line from network in synchronous manner.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Socket to use for I/O. \\
+\hline
+{\em raw} & Flag if the receiving is raw (no C\+R\+LF is truncated) or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+line Line received. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Network sending error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1dialog_ab5a91af9e49140a848c0eae66c030d43}\label{classmailio_1_1dialog_ab5a91af9e49140a848c0eae66c030d43}} 
+\index{mailio::dialog@{mailio::dialog}!send@{send}}
+\index{send@{send}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily virtual void mailio\+::dialog\+::send (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sending a line to network synchronously or asynchronously, depending of the timeout value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Line to send. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily send\+\_\+sync$<$Socket$>$(Socket\&, const std\+::string\&)}, {\ttfamily send\+\_\+async$<$Socket$>$(Socket\&, const std\+::string\&)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classmailio_1_1dialog__ssl_a89fcd7cbc7952690b3181cecdb9247d8}{mailio\+::dialog\+\_\+ssl}}.
+
+\mbox{\Hypertarget{classmailio_1_1dialog_aeb93efa9b70e865c885640a29578664a}\label{classmailio_1_1dialog_aeb93efa9b70e865c885640a29578664a}} 
+\index{mailio::dialog@{mailio::dialog}!send\_async@{send\_async}}
+\index{send\_async@{send\_async}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{send\_async()}{send\_async()}}
+{\footnotesize\ttfamily template$<$typename Socket $>$ \\
+void mailio\+::dialog\+::send\+\_\+async (\begin{DoxyParamCaption}\item[{Socket \&}]{socket,  }\item[{std\+::string}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sending a line over network within the given timeout period.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Socket to use for I/O. \\
+\hline
+{\em line} & Line to send. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Network sending failed. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Network sending timed out. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1dialog_a6d52ecec699d167ebc00a8e1978280d3}\label{classmailio_1_1dialog_a6d52ecec699d167ebc00a8e1978280d3}} 
+\index{mailio::dialog@{mailio::dialog}!send\_sync@{send\_sync}}
+\index{send\_sync@{send\_sync}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{send\_sync()}{send\_sync()}}
+{\footnotesize\ttfamily template$<$typename Socket $>$ \\
+void mailio\+::dialog\+::send\+\_\+sync (\begin{DoxyParamCaption}\item[{Socket \&}]{socket,  }\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sending a line to network in synchronous manner.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Socket to use for I/O. \\
+\hline
+{\em line} & Line to send. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1dialog__error}{dialog\+\_\+error}}} & Network sending error. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1dialog_ab63086dd116d0584e43c47d5a0e4e252}\label{classmailio_1_1dialog_ab63086dd116d0584e43c47d5a0e4e252}} 
+\index{mailio::dialog@{mailio::dialog}!\_hostname@{\_hostname}}
+\index{\_hostname@{\_hostname}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_hostname}{\_hostname}}
+{\footnotesize\ttfamily const std\+::string mailio\+::dialog\+::\+\_\+hostname\hspace{0.3cm}{\ttfamily [protected]}}
+
+Server hostname. \mbox{\Hypertarget{classmailio_1_1dialog_ada98de74ba8724bf762c6a0160b19ded}\label{classmailio_1_1dialog_ada98de74ba8724bf762c6a0160b19ded}} 
+\index{mailio::dialog@{mailio::dialog}!\_ios@{\_ios}}
+\index{\_ios@{\_ios}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_ios}{\_ios}}
+{\footnotesize\ttfamily boost\+::asio\+::io\+\_\+context mailio\+::dialog\+::\+\_\+ios\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Asio input/output service. \mbox{\Hypertarget{classmailio_1_1dialog_a0617363d31eb8c4155cb48f26f0c2835}\label{classmailio_1_1dialog_a0617363d31eb8c4155cb48f26f0c2835}} 
+\index{mailio::dialog@{mailio::dialog}!\_istrm@{\_istrm}}
+\index{\_istrm@{\_istrm}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_istrm}{\_istrm}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::istream$>$ mailio\+::dialog\+::\+\_\+istrm\hspace{0.3cm}{\ttfamily [protected]}}
+
+Input stream associated to the buffer. \mbox{\Hypertarget{classmailio_1_1dialog_aadb6ded1868f84b31afce5b7935ad13b}\label{classmailio_1_1dialog_aadb6ded1868f84b31afce5b7935ad13b}} 
+\index{mailio::dialog@{mailio::dialog}!\_port@{\_port}}
+\index{\_port@{\_port}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_port}{\_port}}
+{\footnotesize\ttfamily const unsigned int mailio\+::dialog\+::\+\_\+port\hspace{0.3cm}{\ttfamily [protected]}}
+
+Server port. \mbox{\Hypertarget{classmailio_1_1dialog_a99b0ae8aa94aaa5b2ea486279b271da8}\label{classmailio_1_1dialog_a99b0ae8aa94aaa5b2ea486279b271da8}} 
+\index{mailio::dialog@{mailio::dialog}!\_socket@{\_socket}}
+\index{\_socket@{\_socket}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_socket}{\_socket}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$boost\+::asio\+::ip\+::tcp\+::socket$>$ mailio\+::dialog\+::\+\_\+socket\hspace{0.3cm}{\ttfamily [protected]}}
+
+Socket connection. \mbox{\Hypertarget{classmailio_1_1dialog_af259cf1373f57ad22d90673cf5a48511}\label{classmailio_1_1dialog_af259cf1373f57ad22d90673cf5a48511}} 
+\index{mailio::dialog@{mailio::dialog}!\_strmbuf@{\_strmbuf}}
+\index{\_strmbuf@{\_strmbuf}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_strmbuf}{\_strmbuf}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$boost\+::asio\+::streambuf$>$ mailio\+::dialog\+::\+\_\+strmbuf\hspace{0.3cm}{\ttfamily [protected]}}
+
+Stream buffer associated to the socket. \mbox{\Hypertarget{classmailio_1_1dialog_a3ca75a03c0e66e33e44ef4bba4d0a4aa}\label{classmailio_1_1dialog_a3ca75a03c0e66e33e44ef4bba4d0a4aa}} 
+\index{mailio::dialog@{mailio::dialog}!\_timeout@{\_timeout}}
+\index{\_timeout@{\_timeout}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_timeout}{\_timeout}}
+{\footnotesize\ttfamily std\+::chrono\+::milliseconds mailio\+::dialog\+::\+\_\+timeout\hspace{0.3cm}{\ttfamily [protected]}}
+
+Timeout on I/O operations in milliseconds. \mbox{\Hypertarget{classmailio_1_1dialog_aee161381457eabf47bcc8b78ef648a0e}\label{classmailio_1_1dialog_aee161381457eabf47bcc8b78ef648a0e}} 
+\index{mailio::dialog@{mailio::dialog}!\_timer@{\_timer}}
+\index{\_timer@{\_timer}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_timer}{\_timer}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$boost\+::asio\+::deadline\+\_\+timer$>$ mailio\+::dialog\+::\+\_\+timer\hspace{0.3cm}{\ttfamily [protected]}}
+
+Timer to check the timeout. \mbox{\Hypertarget{classmailio_1_1dialog_acedc710828431641f8710f8007899ebe}\label{classmailio_1_1dialog_acedc710828431641f8710f8007899ebe}} 
+\index{mailio::dialog@{mailio::dialog}!\_timer\_expired@{\_timer\_expired}}
+\index{\_timer\_expired@{\_timer\_expired}!mailio::dialog@{mailio::dialog}}
+\doxysubsubsection{\texorpdfstring{\_timer\_expired}{\_timer\_expired}}
+{\footnotesize\ttfamily bool mailio\+::dialog\+::\+\_\+timer\+\_\+expired\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag to show whether the timeout has expired. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/dialog.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,1403 @@
+\hypertarget{classmailio_1_1message}{}\doxysection{mailio\+::message Class Reference}
+\label{classmailio_1_1message}\index{mailio::message@{mailio::message}}
+
+
+{\ttfamily \#include $<$message.\+hpp$>$}
+
+Inheritance diagram for mailio\+::message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1message}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1message_a75801bda9e3e529e3557651cf3d172d7}{message}} ()
+\item 
+\mbox{\hyperlink{classmailio_1_1message_a9915d8aa078adc8749b2c2aef81014e8}{message}} (const \mbox{\hyperlink{classmailio_1_1message}{message}} \&)=default
+\item 
+\mbox{\hyperlink{classmailio_1_1message_ac582e86e1ff840e835123473e8b13004}{message}} (\mbox{\hyperlink{classmailio_1_1message}{message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classmailio_1_1message_ab38a406a3fb29d16e36a9f3bd15ddfac}{$\sim$message}} ()=default
+\item 
+\mbox{\hyperlink{classmailio_1_1message}{message}} \& \mbox{\hyperlink{classmailio_1_1message_a5bcdff09c959a2f82dc69ca031eeac2a}{operator=}} (const \mbox{\hyperlink{classmailio_1_1message}{message}} \&)=default
+\item 
+\mbox{\hyperlink{classmailio_1_1message}{message}} \& \mbox{\hyperlink{classmailio_1_1message_a3a893534cf3b954d00bab8b90746c220}{operator=}} (\mbox{\hyperlink{classmailio_1_1message}{message}} \&\&)=default
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_ab208a3f5b1695b2e7f0f2a6f918c5829}{format}} (std\+::string \&message\+\_\+str, bool dot\+\_\+escape=false) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a0ba5f24864f3f17a48069d9d03189eb8}{parse}} (const std\+::string \&message\+\_\+str, bool dot\+\_\+escape=false)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1message_a88c12b94ac20aa1eedfe28d9521ae720}{empty}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a196ead04e5783386cb81b914c0070762}{from}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_ae948c49f58f89bb6005223ef755b8959}{from}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a755b12baefade69ead9aee9d423ad0cc}{add\+\_\+from}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a157f44f3fa8415695fced6b248eff4a9}{from\+\_\+to\+\_\+string}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a48d81c951a16fdce21f76616e11fed26}{sender}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \mbox{\hyperlink{classmailio_1_1message_ac278dcbf84920671de5b63d65a8a60b6}{sender}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a5b2948d2e3b4cddae1a2b2d10358fbb7}{sender\+\_\+to\+\_\+string}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a8423eb112de8678f9f46aa98f991831e}{reply\+\_\+address}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \mbox{\hyperlink{classmailio_1_1message_a90a7ce94864856c0d660797f71abac84}{reply\+\_\+address}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a6c020ef704a51e6635338e485febc3f0}{reply\+\_\+address\+\_\+to\+\_\+string}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_aa27d375dd664d895d375f431a63c3540}{add\+\_\+recipient}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a88b12ca56d87dbf0f28f0080f2c72adf}{add\+\_\+recipient}} (const \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} \&group)
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_a3a4e2cc26467687a29958d1d4f95b067}{recipients}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_afea7dc70bfb5b385511562a651e08dc5}{recipients\+\_\+to\+\_\+string}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_ae1cb0ea4a49734a0c4cff68585e01268}{add\+\_\+cc\+\_\+recipient}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_aa91c0a9c78516ea5f4b0087d7c2e3e58}{add\+\_\+cc\+\_\+recipient}} (const \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} \&group)
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_aead39d30e25e06c58475b246fa836abc}{cc\+\_\+recipients}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_aaab1dd8ced98d437b2654729447ed14a}{cc\+\_\+recipients\+\_\+to\+\_\+string}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a0e5188eaecc2941d7a9b592d3435fb82}{add\+\_\+bcc\+\_\+recipient}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_ad43a70525576f245a43ab60625e7de1c}{add\+\_\+bcc\+\_\+recipient}} (const \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} \&group)
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_a0b4698f1a71baee268fd9d050d235acd}{bcc\+\_\+recipients}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a824d3861d7f34d335a523ec4daf9b196}{bcc\+\_\+recipients\+\_\+to\+\_\+string}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_afb0bf16679dc43922cd7cbfc0091d097}{disposition\+\_\+notification}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \mbox{\hyperlink{classmailio_1_1message_a6df0c10f022f19b3f8fe92a3d315a2b8}{disposition\+\_\+notification}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a543411ee8d806cf1f2982fc87b7f670a}{disposition\+\_\+notification\+\_\+to\+\_\+string}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a1628975d13c78a62bfccee7ad1dce39d}{message\+\_\+id}} (std\+::string id)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a87e83adeb7445389674efded7a7bfc54}{message\+\_\+id}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a6e32ce2701e6fba51c90541cf1394b69}{add\+\_\+in\+\_\+reply\+\_\+to}} (const std\+::string \&in\+\_\+reply)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1message_a450ee279482dcb08578ee77e3d2f16ef}{in\+\_\+reply\+\_\+to}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_acc943b0919d8d0f573a144a308ba047b}{add\+\_\+references}} (const std\+::string \&reference\+\_\+id)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1message_a93b3c44ed2409f3186b7d495e0618ccc}{references}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_aeb34177e1fa2c765744aec5d7a120e2f}{subject}} (const std\+::string \&mail\+\_\+subject)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_abec19007b058972cfd1e97e0a2ed203e}{subject}} () const
+\item 
+boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time \mbox{\hyperlink{classmailio_1_1message_a785add313f3852900a3e7d90a9fc0daa}{date\+\_\+time}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a16e27babcd45b58b05714f8c94c1a0ba}{date\+\_\+time}} (const boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time \&mail\+\_\+dt)
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a7c938e0da9220b719388af38eb0b19e8}{attach}} (const std\+::istream \&att\+\_\+strm, const std\+::string \&att\+\_\+name, \mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} type, const std\+::string \&subtype)
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a204c0ef228de4faf6c8e5d0773535a77}{attach}} (const std\+::list$<$ std\+::tuple$<$ std\+::istream \&, std\+::string, \mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} $>$$>$ \&attachments)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmailio_1_1message_a6e2ac669e9812a30b0f103dd8140b5da}{attachments\+\_\+size}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_ae31480e43e564ef2cc46cca9ac961294}{attachment}} (std\+::size\+\_\+t index, std\+::ostream \&att\+\_\+strm, std\+::string \&att\+\_\+name) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_ae97adbcf190a4d42533377bce57d3837}{add\+\_\+header}} (const std\+::string \&\mbox{\hyperlink{classmailio_1_1mime_ae63b9c6bdcd687c62eadbb3f390b78ab}{name}}, const std\+::string \&value)
+\item 
+void \mbox{\hyperlink{classmailio_1_1message_a4c993740dad317d67b2f88e76b85953e}{remove\+\_\+header}} (const std\+::string \&\mbox{\hyperlink{classmailio_1_1mime_ae63b9c6bdcd687c62eadbb3f390b78ab}{name}})
+\item 
+std\+::multimap$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classmailio_1_1message_ac3a7d5d532a1e28a56d8791c38e521f0}{headers}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1message_a9d16690b3db9e33211ddfea8870936a5}{A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+E\+G\+I\+N\+\_\+\+C\+H\+AR}} = \textquotesingle{}$<$\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_ae35cdb7081940863ab5af183913261ee}{A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+E\+G\+I\+N\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1message_a460a138e15216c49981bba459c003b9a}{A\+D\+D\+R\+E\+S\+S\+\_\+\+E\+N\+D\+\_\+\+C\+H\+AR}} = \textquotesingle{}$>$\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_aa1b8fa146adc66c3970b59c3e4948f50}{A\+D\+D\+R\+E\+S\+S\+\_\+\+E\+N\+D\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1message_a9ae5d38be3aa4b1cff036d2b9bc639bd}{A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}} = \textquotesingle{},\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1message_ac29e6adf6ea6b04b5e50caa0c38918b6}{M\+A\+I\+L\+G\+R\+O\+U\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}} = \textquotesingle{}\+:\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1message_ab3885af760ca8c00d64cd09f75a26513}{M\+A\+I\+L\+G\+R\+O\+U\+P\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}} = \textquotesingle{};\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classmailio_1_1message_a4c2c9865ecdcdd2eea00184204e7bb58}{format\+\_\+header}} () const
+\item 
+virtual void \mbox{\hyperlink{classmailio_1_1message_a27d7f54cfe7bd7c238ce62209c2c66b1}{parse\+\_\+header\+\_\+line}} (const std\+::string \&header\+\_\+line)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_aab58dc524dd60d978e37bc86d9b9d997}{format\+\_\+address\+\_\+list}} (const \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&mailbox\+\_\+list) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a601a83075fdcd0b4dd9bc9f966839b64}{format\+\_\+address}} (const std\+::string \&\mbox{\hyperlink{classmailio_1_1mime_ae63b9c6bdcd687c62eadbb3f390b78ab}{name}}, const std\+::string \&address) const
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_aa94eb5c75bffce4399681e3f8ddbb197}{parse\+\_\+address\+\_\+list}} (const std\+::string \&address\+\_\+list) const
+\item 
+boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time \mbox{\hyperlink{classmailio_1_1message_a54b7e37c5dfafb156abf1fe54f2d8837}{parse\+\_\+date}} (const std\+::string \&date\+\_\+str) const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1message_aaa83b016c665362d4a04e2a1b3996f0c}{parse\+\_\+many\+\_\+ids}} (const std\+::string \&ids) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a313eb88ce9c245da8b9ad74afd63748e}{format\+\_\+subject}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_af499ebcbe87a042f50b1093463e91439}{parse\+\_\+subject}} (const std\+::string \&\mbox{\hyperlink{classmailio_1_1message_aeb34177e1fa2c765744aec5d7a120e2f}{subject}}) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a784fe4171910d79a1480ea1f895d2090}{parse\+\_\+address\+\_\+name}} (const std\+::string \&address\+\_\+name) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classmailio_1_1message_a91dc7e80b101e1bc56556e3fdca6c851}{format\+\_\+many\+\_\+ids}} (const std\+::vector$<$ std\+::string $>$ \&ids)
+\item 
+static std\+::string \mbox{\hyperlink{classmailio_1_1message_a45dacb9b86e859b3d979e11917176ae1}{format\+\_\+many\+\_\+ids}} (const std\+::string \&id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_a16202f7be1464bc5e97d7cf2d21e4b92}{\+\_\+from}}
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \mbox{\hyperlink{classmailio_1_1message_a09eaf283e87461b740a4e6cc9d930cf3}{\+\_\+sender}}
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \mbox{\hyperlink{classmailio_1_1message_a44c13fb1010a8552bfaaff75af0cfc02}{\+\_\+reply\+\_\+address}}
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_a671eba940b17cc5e740033c5c33e4104}{\+\_\+recipients}}
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_a6be5b16736adc447468463eddc3c4d64}{\+\_\+cc\+\_\+recipients}}
+\item 
+\mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \mbox{\hyperlink{classmailio_1_1message_ab1ae15d24e5965b96f94368a0a8d0fdf}{\+\_\+bcc\+\_\+recipients}}
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \mbox{\hyperlink{classmailio_1_1message_aaa10c9108796bb1affd42a015fb491f1}{\+\_\+disposition\+\_\+notification}}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_ad7a47222d85cc388f2a9733ac8cb31e3}{\+\_\+message\+\_\+id}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1message_a26dd7c59151e570c3c9648d278a8727d}{\+\_\+in\+\_\+reply\+\_\+to}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1message_a3234d4e41fbeb4d630fe11cdef4ad35f}{\+\_\+references}}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1message_a436859dd2a1d997e594835df7581a03b}{\+\_\+subject}}
+\item 
+boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time \mbox{\hyperlink{classmailio_1_1message_a4eb16f4ab0ee02bb50838917826e9764}{\+\_\+date\+\_\+time}}
+\item 
+std\+::multimap$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classmailio_1_1message_a8c061ad586c601ae5391de0720da08b7}{\+\_\+headers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_aa8efc55f939879557fb2018427a662f4}{A\+T\+E\+XT}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_aafd8661845e6c40165767595b6ea3fad}{D\+T\+E\+XT}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a01fb50f1a2178c8a2c44e016617a8eb6}{F\+R\+O\+M\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a6897771df0e72466f8daab6120d5b7e0}{S\+E\+N\+D\+E\+R\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a1abbe3913548bfb30a22bce695ea9d4a}{R\+E\+P\+L\+Y\+\_\+\+T\+O\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a8e1a49d4b1c3c0c67d9a7349ceedaa8c}{T\+O\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a0aac3397d96fde43f7f12ab238a83700}{C\+C\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a980820ef3f9a2492aae588feafc2a433}{B\+C\+C\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_aa770684e4773384f7aa9a74108bf9346}{M\+E\+S\+S\+A\+G\+E\+\_\+\+I\+D\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a24f2e94dd5fff906abeabb60a3eddf9c}{I\+N\+\_\+\+R\+E\+P\+L\+Y\+\_\+\+T\+O\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a3816d750674f50a5d6415be510c0f2d4}{R\+E\+F\+E\+R\+E\+N\+C\+E\+S\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a95684de6e81b0959e31bcef84790da8e}{S\+U\+B\+J\+E\+C\+T\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_ab632f760a858df1f8e708835c1f207d9}{D\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_ac0f78412fc9e847662d39e5b7dbeaf83}{D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1message_a55cbf8356e0fcbde0490a047bd84b02e}{M\+I\+M\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Mail message and applied parsing/formatting algorithms. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1message_a75801bda9e3e529e3557651cf3d172d7}\label{classmailio_1_1message_a75801bda9e3e529e3557651cf3d172d7}} 
+\index{mailio::message@{mailio::message}!message@{message}}
+\index{message@{message}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily mailio\+::message\+::message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calling parent destructor, initializing date and time to local time in utc time zone, other members set to default. \mbox{\Hypertarget{classmailio_1_1message_a9915d8aa078adc8749b2c2aef81014e8}\label{classmailio_1_1message_a9915d8aa078adc8749b2c2aef81014e8}} 
+\index{mailio::message@{mailio::message}!message@{message}}
+\index{message@{message}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily mailio\+::message\+::message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default copy constructor. \mbox{\Hypertarget{classmailio_1_1message_ac582e86e1ff840e835123473e8b13004}\label{classmailio_1_1message_ac582e86e1ff840e835123473e8b13004}} 
+\index{mailio::message@{mailio::message}!message@{message}}
+\index{message@{message}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily mailio\+::message\+::message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1message}{message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default move constructor.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000029}{Todo}}]Default implementation is probably a bug, but not manifested yet.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1message_ab38a406a3fb29d16e36a9f3bd15ddfac}\label{classmailio_1_1message_ab38a406a3fb29d16e36a9f3bd15ddfac}} 
+\index{mailio::message@{mailio::message}!````~message@{$\sim$message}}
+\index{````~message@{$\sim$message}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{$\sim$message()}{~message()}}
+{\footnotesize\ttfamily mailio\+::message\+::$\sim$message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1message_a0e5188eaecc2941d7a9b592d3435fb82}\label{classmailio_1_1message_a0e5188eaecc2941d7a9b592d3435fb82}} 
+\index{mailio::message@{mailio::message}!add\_bcc\_recipient@{add\_bcc\_recipient}}
+\index{add\_bcc\_recipient@{add\_bcc\_recipient}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_bcc\_recipient()}{add\_bcc\_recipient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+bcc\+\_\+recipient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Adding a B\+CC recipent name and address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Mail address to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_ad43a70525576f245a43ab60625e7de1c}\label{classmailio_1_1message_ad43a70525576f245a43ab60625e7de1c}} 
+\index{mailio::message@{mailio::message}!add\_bcc\_recipient@{add\_bcc\_recipient}}
+\index{add\_bcc\_recipient@{add\_bcc\_recipient}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_bcc\_recipient()}{add\_bcc\_recipient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+bcc\+\_\+recipient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} \&}]{group }\end{DoxyParamCaption})}
+
+Adding a B\+CC recipient group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Group to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_ae1cb0ea4a49734a0c4cff68585e01268}\label{classmailio_1_1message_ae1cb0ea4a49734a0c4cff68585e01268}} 
+\index{mailio::message@{mailio::message}!add\_cc\_recipient@{add\_cc\_recipient}}
+\index{add\_cc\_recipient@{add\_cc\_recipient}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_cc\_recipient()}{add\_cc\_recipient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+cc\+\_\+recipient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Adding a CC recipent name and address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Mail address to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_aa91c0a9c78516ea5f4b0087d7c2e3e58}\label{classmailio_1_1message_aa91c0a9c78516ea5f4b0087d7c2e3e58}} 
+\index{mailio::message@{mailio::message}!add\_cc\_recipient@{add\_cc\_recipient}}
+\index{add\_cc\_recipient@{add\_cc\_recipient}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_cc\_recipient()}{add\_cc\_recipient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+cc\+\_\+recipient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} \&}]{group }\end{DoxyParamCaption})}
+
+Adding a CC recipient group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Group to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a755b12baefade69ead9aee9d423ad0cc}\label{classmailio_1_1message_a755b12baefade69ead9aee9d423ad0cc}} 
+\index{mailio::message@{mailio::message}!add\_from@{add\_from}}
+\index{add\_from@{add\_from}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_from()}{add\_from()}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+from (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Adding an addrress to the author field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Mail address to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_ae97adbcf190a4d42533377bce57d3837}\label{classmailio_1_1message_ae97adbcf190a4d42533377bce57d3837}} 
+\index{mailio::message@{mailio::message}!add\_header@{add\_header}}
+\index{add\_header@{add\_header}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_header()}{add\_header()}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+Adding another header.
+
+Adding a header defined by other methods leads to the undefined behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Header name. \\
+\hline
+{\em value} & Header value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000031}{Todo}}]Disallowing standard headers defined elsewhere?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1message_a6e32ce2701e6fba51c90541cf1394b69}\label{classmailio_1_1message_a6e32ce2701e6fba51c90541cf1394b69}} 
+\index{mailio::message@{mailio::message}!add\_in\_reply\_to@{add\_in\_reply\_to}}
+\index{add\_in\_reply\_to@{add\_in\_reply\_to}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_in\_reply\_to()}{add\_in\_reply\_to()}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+in\+\_\+reply\+\_\+to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{in\+\_\+reply }\end{DoxyParamCaption})}
+
+Adding the in-\/reply-\/to ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in-\/reply} & ID of the in-\/reply-\/to header. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_aa27d375dd664d895d375f431a63c3540}\label{classmailio_1_1message_aa27d375dd664d895d375f431a63c3540}} 
+\index{mailio::message@{mailio::message}!add\_recipient@{add\_recipient}}
+\index{add\_recipient@{add\_recipient}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_recipient()}{add\_recipient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+recipient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Adding a recipent name and address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Address to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a88b12ca56d87dbf0f28f0080f2c72adf}\label{classmailio_1_1message_a88b12ca56d87dbf0f28f0080f2c72adf}} 
+\index{mailio::message@{mailio::message}!add\_recipient@{add\_recipient}}
+\index{add\_recipient@{add\_recipient}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_recipient()}{add\_recipient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+recipient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__group}{mail\+\_\+group}} \&}]{group }\end{DoxyParamCaption})}
+
+Adding a recipient group.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Group to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_acc943b0919d8d0f573a144a308ba047b}\label{classmailio_1_1message_acc943b0919d8d0f573a144a308ba047b}} 
+\index{mailio::message@{mailio::message}!add\_references@{add\_references}}
+\index{add\_references@{add\_references}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{add\_references()}{add\_references()}}
+{\footnotesize\ttfamily void mailio\+::message\+::add\+\_\+references (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{reference\+\_\+id }\end{DoxyParamCaption})}
+
+Adding the reference ID to the list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference\+\_\+id} & Reference ID. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a7c938e0da9220b719388af38eb0b19e8}\label{classmailio_1_1message_a7c938e0da9220b719388af38eb0b19e8}} 
+\index{mailio::message@{mailio::message}!attach@{attach}}
+\index{attach@{attach}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::attach (\begin{DoxyParamCaption}\item[{const std\+::istream \&}]{att\+\_\+strm,  }\item[{const std\+::string \&}]{att\+\_\+name,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}}}]{type,  }\item[{const std\+::string \&}]{subtype }\end{DoxyParamCaption})}
+
+Attaching a file with the given media type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em att\+\_\+strm} & Stream to read the attachment. \\
+\hline
+{\em att\+\_\+name} & Attachment name to set. \\
+\hline
+{\em type} & Attachment media type to set. \\
+\hline
+{\em subtype} & Attachment media subtype to set. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a37e0c25917cc768edfeacc5e5fa5b902}{mime\+::content\+\_\+type(const content\+\_\+type\+\_\+t\&)}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a9c245748916339b8a2656453b93b2833}{mime\+::content\+\_\+transfer\+\_\+encoding(content\+\_\+transfer\+\_\+encoding\+\_\+t)}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a1848bac81b3b3c37d5e2b5b8d630297f}{mime\+::content\+\_\+disposition(content\+\_\+disposition\+\_\+t)}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a204c0ef228de4faf6c8e5d0773535a77}\label{classmailio_1_1message_a204c0ef228de4faf6c8e5d0773535a77}} 
+\index{mailio::message@{mailio::message}!attach@{attach}}
+\index{attach@{attach}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::attach (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::tuple$<$ std\+::istream \&, std\+::string, \mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} $>$$>$ \&}]{attachments }\end{DoxyParamCaption})}
+
+Attaching a list of streams.
+
+If the content is set, attaching a file moves the content to the first M\+I\+ME part. Thus, the content and the attached files are M\+I\+ME parts, as described in R\+FC 2046 section 5.\+1. The consequence is that the content remains empty afterwards.
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachments} & Files to attach. Each tuple consists of a stream, attachment name and content type. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a37e0c25917cc768edfeacc5e5fa5b902}{mime\+::content\+\_\+type(const content\+\_\+type\+\_\+t\&)}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a9c245748916339b8a2656453b93b2833}{mime\+::content\+\_\+transfer\+\_\+encoding(content\+\_\+transfer\+\_\+encoding\+\_\+t)}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a1848bac81b3b3c37d5e2b5b8d630297f}{mime\+::content\+\_\+disposition(content\+\_\+disposition\+\_\+t)}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_ae31480e43e564ef2cc46cca9ac961294}\label{classmailio_1_1message_ae31480e43e564ef2cc46cca9ac961294}} 
+\index{mailio::message@{mailio::message}!attachment@{attachment}}
+\index{attachment@{attachment}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{attachment()}{attachment()}}
+{\footnotesize\ttfamily void mailio\+::message\+::attachment (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index,  }\item[{std\+::ostream \&}]{att\+\_\+strm,  }\item[{std\+::string \&}]{att\+\_\+name }\end{DoxyParamCaption}) const}
+
+Getting the attachment at the given index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the attachment. \\
+\hline
+{\em att\+\_\+strm} & Stream to write the attachment. \\
+\hline
+{\em att\+\_\+name} & Name of the attachment. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Bad attachment index. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a6e2ac669e9812a30b0f103dd8140b5da}\label{classmailio_1_1message_a6e2ac669e9812a30b0f103dd8140b5da}} 
+\index{mailio::message@{mailio::message}!attachments\_size@{attachments\_size}}
+\index{attachments\_size@{attachments\_size}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{attachments\_size()}{attachments\_size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mailio\+::message\+::attachments\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the number of attachments.
+
+\begin{DoxyReturn}{Returns}
+Number of attachments. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a0b4698f1a71baee268fd9d050d235acd}\label{classmailio_1_1message_a0b4698f1a71baee268fd9d050d235acd}} 
+\index{mailio::message@{mailio::message}!bcc\_recipients@{bcc\_recipients}}
+\index{bcc\_recipients@{bcc\_recipients}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{bcc\_recipients()}{bcc\_recipients()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::bcc\+\_\+recipients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the B\+CC recipients names and addresses.
+
+\begin{DoxyReturn}{Returns}
+List of B\+CC recipients. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a824d3861d7f34d335a523ec4daf9b196}\label{classmailio_1_1message_a824d3861d7f34d335a523ec4daf9b196}} 
+\index{mailio::message@{mailio::message}!bcc\_recipients\_to\_string@{bcc\_recipients\_to\_string}}
+\index{bcc\_recipients\_to\_string@{bcc\_recipients\_to\_string}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{bcc\_recipients\_to\_string()}{bcc\_recipients\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::bcc\+\_\+recipients\+\_\+to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the B\+CC recipients names and addresses as string.
+
+\begin{DoxyReturn}{Returns}
+B\+CC recipients names and addresses as string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily format\+\_\+mailbox}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_aead39d30e25e06c58475b246fa836abc}\label{classmailio_1_1message_aead39d30e25e06c58475b246fa836abc}} 
+\index{mailio::message@{mailio::message}!cc\_recipients@{cc\_recipients}}
+\index{cc\_recipients@{cc\_recipients}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{cc\_recipients()}{cc\_recipients()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::cc\+\_\+recipients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the CC recipients names and addresses.
+
+\begin{DoxyReturn}{Returns}
+List of CC recipients. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_aaab1dd8ced98d437b2654729447ed14a}\label{classmailio_1_1message_aaab1dd8ced98d437b2654729447ed14a}} 
+\index{mailio::message@{mailio::message}!cc\_recipients\_to\_string@{cc\_recipients\_to\_string}}
+\index{cc\_recipients\_to\_string@{cc\_recipients\_to\_string}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{cc\_recipients\_to\_string()}{cc\_recipients\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::cc\+\_\+recipients\+\_\+to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the CC recipients names and addresses as string.
+
+\begin{DoxyReturn}{Returns}
+CC recipients names and addresses as string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily format\+\_\+mailbox}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a785add313f3852900a3e7d90a9fc0daa}\label{classmailio_1_1message_a785add313f3852900a3e7d90a9fc0daa}} 
+\index{mailio::message@{mailio::message}!date\_time@{date\_time}}
+\index{date\_time@{date\_time}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{date\_time()}{date\_time()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time mailio\+::message\+::date\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the date, time and zone.
+
+\begin{DoxyReturn}{Returns}
+Date, time and zone. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a16e27babcd45b58b05714f8c94c1a0ba}\label{classmailio_1_1message_a16e27babcd45b58b05714f8c94c1a0ba}} 
+\index{mailio::message@{mailio::message}!date\_time@{date\_time}}
+\index{date\_time@{date\_time}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{date\_time()}{date\_time()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::date\+\_\+time (\begin{DoxyParamCaption}\item[{const boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time \&}]{mail\+\_\+dt }\end{DoxyParamCaption})}
+
+Setting the date, time and zone.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+\_\+date\+\_\+time} & Date, time and zone to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a6df0c10f022f19b3f8fe92a3d315a2b8}\label{classmailio_1_1message_a6df0c10f022f19b3f8fe92a3d315a2b8}} 
+\index{mailio::message@{mailio::message}!disposition\_notification@{disposition\_notification}}
+\index{disposition\_notification@{disposition\_notification}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{disposition\_notification()}{disposition\_notification()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} mailio\+::message\+::disposition\+\_\+notification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the disposition notification mail address.
+
+\begin{DoxyReturn}{Returns}
+Dispostion notification mail address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_afb0bf16679dc43922cd7cbfc0091d097}\label{classmailio_1_1message_afb0bf16679dc43922cd7cbfc0091d097}} 
+\index{mailio::message@{mailio::message}!disposition\_notification@{disposition\_notification}}
+\index{disposition\_notification@{disposition\_notification}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{disposition\_notification()}{disposition\_notification()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::disposition\+\_\+notification (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Setting the disposition notification mail address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Mail address to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a543411ee8d806cf1f2982fc87b7f670a}\label{classmailio_1_1message_a543411ee8d806cf1f2982fc87b7f670a}} 
+\index{mailio::message@{mailio::message}!disposition\_notification\_to\_string@{disposition\_notification\_to\_string}}
+\index{disposition\_notification\_to\_string@{disposition\_notification\_to\_string}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{disposition\_notification\_to\_string()}{disposition\_notification\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::disposition\+\_\+notification\+\_\+to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the disposition notification mail address as string.
+
+\begin{DoxyReturn}{Returns}
+Disposition notification mail address as string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily format\+\_\+address(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a88c12b94ac20aa1eedfe28d9521ae720}\label{classmailio_1_1message_a88c12b94ac20aa1eedfe28d9521ae720}} 
+\index{mailio::message@{mailio::message}!empty@{empty}}
+\index{empty@{empty}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool mailio\+::message\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checking if the mail is empty.
+
+\begin{DoxyReturn}{Returns}
+True if empty, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_ab208a3f5b1695b2e7f0f2a6f918c5829}\label{classmailio_1_1message_ab208a3f5b1695b2e7f0f2a6f918c5829}} 
+\index{mailio::message@{mailio::message}!format@{format}}
+\index{format@{format}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily void mailio\+::message\+::format (\begin{DoxyParamCaption}\item[{std\+::string \&}]{message\+\_\+str,  }\item[{bool}]{dot\+\_\+escape = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Formatting the message to a string.
+
+If a line contains leading dot, then it can be escaped as required by mail protocols.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+str} & Resulting message as string. \\
+\hline
+{\em dot\+\_\+escape} & Flag if the leading dot should be escaped. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1message_a4c2c9865ecdcdd2eea00184204e7bb58}{format\+\_\+header()}}}, {\ttfamily format\+\_\+content(bool)}, {\ttfamily mime\+::format(string\&, bool)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a601a83075fdcd0b4dd9bc9f966839b64}\label{classmailio_1_1message_a601a83075fdcd0b4dd9bc9f966839b64}} 
+\index{mailio::message@{mailio::message}!format\_address@{format\_address}}
+\index{format\_address@{format\_address}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{format\_address()}{format\_address()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::format\+\_\+address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting a name and an address.
+
+If U\+T\+F-\/8 is detected in the name, the given header codec is used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Mail name. \\
+\hline
+{\em address} & Mail address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mail name and address formatted. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Formatting failure of name, line policy overflow. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Formatting failure of name. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Formatting failure of address. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_aab58dc524dd60d978e37bc86d9b9d997}\label{classmailio_1_1message_aab58dc524dd60d978e37bc86d9b9d997}} 
+\index{mailio::message@{mailio::message}!format\_address\_list@{format\_address\_list}}
+\index{format\_address\_list@{format\_address\_list}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{format\_address\_list()}{format\_address\_list()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::format\+\_\+address\+\_\+list (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} \&}]{mailbox\+\_\+list }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting a list of addresses to string.
+
+Multiple addresses are put into separate lines.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mailbox\+\_\+list} & Mailbox to format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mailbox as string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Formatting failure of address list, bad group name. \\
+\hline
+{\em $\ast$} & {\ttfamily format\+\_\+address(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a4c2c9865ecdcdd2eea00184204e7bb58}\label{classmailio_1_1message_a4c2c9865ecdcdd2eea00184204e7bb58}} 
+\index{mailio::message@{mailio::message}!format\_header@{format\_header}}
+\index{format\_header@{format\_header}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{format\_header()}{format\_header()}}
+{\footnotesize\ttfamily virtual std\+::string mailio\+::message\+::format\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Formatting the header to a string.
+
+\begin{DoxyReturn}{Returns}
+Header as string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & No boundary for multipart message. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & No author. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & No sender for multiple authors. \\
+\hline
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a0d37ed58e19f4e55710c84895df888ce}{mime\+::format\+\_\+header()}}}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{classmailio_1_1mime_a0d37ed58e19f4e55710c84895df888ce}{mailio\+::mime}}.
+
+\mbox{\Hypertarget{classmailio_1_1message_a45dacb9b86e859b3d979e11917176ae1}\label{classmailio_1_1message_a45dacb9b86e859b3d979e11917176ae1}} 
+\index{mailio::message@{mailio::message}!format\_many\_ids@{format\_many\_ids}}
+\index{format\_many\_ids@{format\_many\_ids}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{format\_many\_ids()}{format\_many\_ids()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::string mailio\+::message\+::format\+\_\+many\+\_\+ids (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Formatting the ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID to format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ID within the angle brackets. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a91dc7e80b101e1bc56556e3fdca6c851}\label{classmailio_1_1message_a91dc7e80b101e1bc56556e3fdca6c851}} 
+\index{mailio::message@{mailio::message}!format\_many\_ids@{format\_many\_ids}}
+\index{format\_many\_ids@{format\_many\_ids}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{format\_many\_ids()}{format\_many\_ids()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static std\+::string mailio\+::message\+::format\+\_\+many\+\_\+ids (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{ids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Formatting the vector of I\+Ds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids} & Vector of I\+Ds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String of I\+Ds in the angle brackets. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a313eb88ce9c245da8b9ad74afd63748e}\label{classmailio_1_1message_a313eb88ce9c245da8b9ad74afd63748e}} 
+\index{mailio::message@{mailio::message}!format\_subject@{format\_subject}}
+\index{format\_subject@{format\_subject}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{format\_subject()}{format\_subject()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::format\+\_\+subject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting the subject which can be A\+S\+C\+II or U\+T\+F-\/8.
+
+\begin{DoxyReturn}{Returns}
+Formatted subject. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_ae948c49f58f89bb6005223ef755b8959}\label{classmailio_1_1message_ae948c49f58f89bb6005223ef755b8959}} 
+\index{mailio::message@{mailio::message}!from@{from}}
+\index{from@{from}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{from()}{from()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::from (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the author address.
+
+\begin{DoxyReturn}{Returns}
+Author mail address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a196ead04e5783386cb81b914c0070762}\label{classmailio_1_1message_a196ead04e5783386cb81b914c0070762}} 
+\index{mailio::message@{mailio::message}!from@{from}}
+\index{from@{from}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{from()}{from()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::from (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Setting the author to a given address.
+
+The given address is set as the only one, others are deleted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Mail address to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a157f44f3fa8415695fced6b248eff4a9}\label{classmailio_1_1message_a157f44f3fa8415695fced6b248eff4a9}} 
+\index{mailio::message@{mailio::message}!from\_to\_string@{from\_to\_string}}
+\index{from\_to\_string@{from\_to\_string}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{from\_to\_string()}{from\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::from\+\_\+to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Formatting the author as string.
+
+\begin{DoxyReturn}{Returns}
+Author name and address as formatted string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily format\+\_\+address(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_ac3a7d5d532a1e28a56d8791c38e521f0}\label{classmailio_1_1message_ac3a7d5d532a1e28a56d8791c38e521f0}} 
+\index{mailio::message@{mailio::message}!headers@{headers}}
+\index{headers@{headers}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{headers()}{headers()}}
+{\footnotesize\ttfamily std\+::multimap$<$std\+::string, std\+::string$>$ mailio\+::message\+::headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returning the other headers.
+
+\begin{DoxyReturn}{Returns}
+Message headers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a450ee279482dcb08578ee77e3d2f16ef}\label{classmailio_1_1message_a450ee279482dcb08578ee77e3d2f16ef}} 
+\index{mailio::message@{mailio::message}!in\_reply\_to@{in\_reply\_to}}
+\index{in\_reply\_to@{in\_reply\_to}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{in\_reply\_to()}{in\_reply\_to()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::message\+::in\+\_\+reply\+\_\+to (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the in-\/reply-\/to ID.
+
+\begin{DoxyReturn}{Returns}
+List of in-\/reply-\/to I\+Ds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a87e83adeb7445389674efded7a7bfc54}\label{classmailio_1_1message_a87e83adeb7445389674efded7a7bfc54}} 
+\index{mailio::message@{mailio::message}!message\_id@{message\_id}}
+\index{message\_id@{message\_id}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{message\_id()}{message\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::message\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the message ID.
+
+\begin{DoxyReturn}{Returns}
+Message ID. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a1628975d13c78a62bfccee7ad1dce39d}\label{classmailio_1_1message_a1628975d13c78a62bfccee7ad1dce39d}} 
+\index{mailio::message@{mailio::message}!message\_id@{message\_id}}
+\index{message\_id@{message\_id}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{message\_id()}{message\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::message\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+Setting the message ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The message ID in the format {\ttfamily string1@string2}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Invalid message ID. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a5bcdff09c959a2f82dc69ca031eeac2a}\label{classmailio_1_1message_a5bcdff09c959a2f82dc69ca031eeac2a}} 
+\index{mailio::message@{mailio::message}!operator=@{operator=}}
+\index{operator=@{operator=}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1message}{message}}\& mailio\+::message\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default assignment operator. \mbox{\Hypertarget{classmailio_1_1message_a3a893534cf3b954d00bab8b90746c220}\label{classmailio_1_1message_a3a893534cf3b954d00bab8b90746c220}} 
+\index{mailio::message@{mailio::message}!operator=@{operator=}}
+\index{operator=@{operator=}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1message}{message}}\& mailio\+::message\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1message}{message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default move assignment operator.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000030}{Todo}}]Default implementation is probably a bug, but not manifested yet.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1message_a0ba5f24864f3f17a48069d9d03189eb8}\label{classmailio_1_1message_a0ba5f24864f3f17a48069d9d03189eb8}} 
+\index{mailio::message@{mailio::message}!parse@{parse}}
+\index{parse@{parse}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void mailio\+::message\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message\+\_\+str,  }\item[{bool}]{dot\+\_\+escape = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Parsing a message from a string.
+
+Essentially, the method calls the same one from {\ttfamily mime} and checks for errors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+str} & String to parse. \\
+\hline
+{\em dot\+\_\+escape} & Flag if the leading dot should be escaped. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & No author address. \\
+\hline
+{\em $\ast$} & {\ttfamily mime\+::parse(const string\&, bool)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_aa94eb5c75bffce4399681e3f8ddbb197}\label{classmailio_1_1message_aa94eb5c75bffce4399681e3f8ddbb197}} 
+\index{mailio::message@{mailio::message}!parse\_address\_list@{parse\_address\_list}}
+\index{parse\_address\_list@{parse\_address\_list}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{parse\_address\_list()}{parse\_address\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::parse\+\_\+address\+\_\+list (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address\+\_\+list }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a string into vector of names and addresses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+\_\+list} & String to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of names and addresses. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of address or group at. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of group at. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of name or address at. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of address at. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of name at. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of comment at. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a784fe4171910d79a1480ea1f895d2090}\label{classmailio_1_1message_a784fe4171910d79a1480ea1f895d2090}} 
+\index{mailio::message@{mailio::message}!parse\_address\_name@{parse\_address\_name}}
+\index{parse\_address\_name@{parse\_address\_name}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{parse\_address\_name()}{parse\_address\_name()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::parse\+\_\+address\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a name part of a mail A\+S\+C\+II or U\+T\+F-\/8 encoded.
+
+The result is string A\+S\+C\+II or U\+T\+F-\/8 encoded. If another encoding is used, then it should be decoded by the method caller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+\_\+name} & Name part of mail. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parsed name part of the address. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000032}{Todo}}]Not tested with charsets different than A\+S\+C\+II and U\+T\+F-\/8.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1message_a54b7e37c5dfafb156abf1fe54f2d8837}\label{classmailio_1_1message_a54b7e37c5dfafb156abf1fe54f2d8837}} 
+\index{mailio::message@{mailio::message}!parse\_date@{parse\_date}}
+\index{parse\_date@{parse\_date}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{parse\_date()}{parse\_date()}}
+{\footnotesize\ttfamily boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time mailio\+::message\+::parse\+\_\+date (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{date\+\_\+str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a string into date and time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+\_\+str} & Date string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Date and time translated to local time zone. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of date. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a27d7f54cfe7bd7c238ce62209c2c66b1}\label{classmailio_1_1message_a27d7f54cfe7bd7c238ce62209c2c66b1}} 
+\index{mailio::message@{mailio::message}!parse\_header\_line@{parse\_header\_line}}
+\index{parse\_header\_line@{parse\_header\_line}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{parse\_header\_line()}{parse\_header\_line()}}
+{\footnotesize\ttfamily virtual void mailio\+::message\+::parse\+\_\+header\+\_\+line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{header\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Parsing a header line for a specific header.
+
+
+\begin{DoxyParams}{Parameters}
+{\em header\+\_\+line} & Header line to be parsed. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Line policy overflow in a header. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Empty author header. \\
+\hline
+{\em $\ast$} & {\ttfamily mime\+::parse\+\_\+header\+\_\+line(const string\&)}, {\ttfamily mime\+::parse\+\_\+header\+\_\+name\+\_\+value(const string\&, string\&, string\&)}, {\ttfamily parse\+\_\+address\+\_\+list(const string\&)}, {\ttfamily parse\+\_\+subject(const string\&)}, {\ttfamily parse\+\_\+date(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{classmailio_1_1mime_a8e97e1c1dd7f87b3be893ccec3e418f7}{mailio\+::mime}}.
+
+\mbox{\Hypertarget{classmailio_1_1message_aaa83b016c665362d4a04e2a1b3996f0c}\label{classmailio_1_1message_aaa83b016c665362d4a04e2a1b3996f0c}} 
+\index{mailio::message@{mailio::message}!parse\_many\_ids@{parse\_many\_ids}}
+\index{parse\_many\_ids@{parse\_many\_ids}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{parse\_many\_ids()}{parse\_many\_ids()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::message\+::parse\+\_\+many\+\_\+ids (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ids }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a string of I\+Ds into a vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids} & String of I\+Ds within the angle brackets. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of I\+Ds. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of the message ID. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_af499ebcbe87a042f50b1093463e91439}\label{classmailio_1_1message_af499ebcbe87a042f50b1093463e91439}} 
+\index{mailio::message@{mailio::message}!parse\_subject@{parse\_subject}}
+\index{parse\_subject@{parse\_subject}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{parse\_subject()}{parse\_subject()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::parse\+\_\+subject (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{subject }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a subject which can be A\+S\+C\+II or U\+T\+F-\/8.
+
+The result is string either A\+S\+C\+II or U\+T\+F-\/8 encoded. If another encoding is used like I\+S\+O-\/8859-\/X, then the result is undefined.
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & Subject to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parsed subject. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1message__error}{message\+\_\+error}}} & Parsing failure of Q encoding. \\
+\hline
+{\em $\ast$} & {\ttfamily q\+\_\+codec\+::decode(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a3a4e2cc26467687a29958d1d4f95b067}\label{classmailio_1_1message_a3a4e2cc26467687a29958d1d4f95b067}} 
+\index{mailio::message@{mailio::message}!recipients@{recipients}}
+\index{recipients@{recipients}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{recipients()}{recipients()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::recipients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the recipients.
+
+\begin{DoxyReturn}{Returns}
+List of recipients. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_afea7dc70bfb5b385511562a651e08dc5}\label{classmailio_1_1message_afea7dc70bfb5b385511562a651e08dc5}} 
+\index{mailio::message@{mailio::message}!recipients\_to\_string@{recipients\_to\_string}}
+\index{recipients\_to\_string@{recipients\_to\_string}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{recipients\_to\_string()}{recipients\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::recipients\+\_\+to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the recipients names and addresses as string.
+
+\begin{DoxyReturn}{Returns}
+Recipients names and addresses as string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily format\+\_\+mailbox}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_a93b3c44ed2409f3186b7d495e0618ccc}\label{classmailio_1_1message_a93b3c44ed2409f3186b7d495e0618ccc}} 
+\index{mailio::message@{mailio::message}!references@{references}}
+\index{references@{references}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{references()}{references()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::message\+::references (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the references list of I\+Ds.
+
+\begin{DoxyReturn}{Returns}
+List of references I\+Ds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a4c993740dad317d67b2f88e76b85953e}\label{classmailio_1_1message_a4c993740dad317d67b2f88e76b85953e}} 
+\index{mailio::message@{mailio::message}!remove\_header@{remove\_header}}
+\index{remove\_header@{remove\_header}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{remove\_header()}{remove\_header()}}
+{\footnotesize\ttfamily void mailio\+::message\+::remove\+\_\+header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+Removing another header.
+
+Removing a header defined by other methods leads to the undefined behaviour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Header to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a90a7ce94864856c0d660797f71abac84}\label{classmailio_1_1message_a90a7ce94864856c0d660797f71abac84}} 
+\index{mailio::message@{mailio::message}!reply\_address@{reply\_address}}
+\index{reply\_address@{reply\_address}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{reply\_address()}{reply\_address()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} mailio\+::message\+::reply\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the reply address.
+
+\begin{DoxyReturn}{Returns}
+Reply mail address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a8423eb112de8678f9f46aa98f991831e}\label{classmailio_1_1message_a8423eb112de8678f9f46aa98f991831e}} 
+\index{mailio::message@{mailio::message}!reply\_address@{reply\_address}}
+\index{reply\_address@{reply\_address}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{reply\_address()}{reply\_address()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::reply\+\_\+address (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Setting the reply address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Reply mail address. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a6c020ef704a51e6635338e485febc3f0}\label{classmailio_1_1message_a6c020ef704a51e6635338e485febc3f0}} 
+\index{mailio::message@{mailio::message}!reply\_address\_to\_string@{reply\_address\_to\_string}}
+\index{reply\_address\_to\_string@{reply\_address\_to\_string}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{reply\_address\_to\_string()}{reply\_address\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::reply\+\_\+address\+\_\+to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Formatting the reply name and address as string.
+
+\begin{DoxyReturn}{Returns}
+Reply name and address as string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily format\+\_\+address(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_ac278dcbf84920671de5b63d65a8a60b6}\label{classmailio_1_1message_ac278dcbf84920671de5b63d65a8a60b6}} 
+\index{mailio::message@{mailio::message}!sender@{sender}}
+\index{sender@{sender}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{sender()}{sender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} mailio\+::message\+::sender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the sender address.
+
+\begin{DoxyReturn}{Returns}
+Sender mail address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_a48d81c951a16fdce21f76616e11fed26}\label{classmailio_1_1message_a48d81c951a16fdce21f76616e11fed26}} 
+\index{mailio::message@{mailio::message}!sender@{sender}}
+\index{sender@{sender}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{sender()}{sender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::sender (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Setting the sender to the given address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Mail address to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1message_a5b2948d2e3b4cddae1a2b2d10358fbb7}\label{classmailio_1_1message_a5b2948d2e3b4cddae1a2b2d10358fbb7}} 
+\index{mailio::message@{mailio::message}!sender\_to\_string@{sender\_to\_string}}
+\index{sender\_to\_string@{sender\_to\_string}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{sender\_to\_string()}{sender\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::sender\+\_\+to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Formatting the sender as string.
+
+\begin{DoxyReturn}{Returns}
+Sender name and address as formatted string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily format\+\_\+address(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1message_abec19007b058972cfd1e97e0a2ed203e}\label{classmailio_1_1message_abec19007b058972cfd1e97e0a2ed203e}} 
+\index{mailio::message@{mailio::message}!subject@{subject}}
+\index{subject@{subject}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{subject()}{subject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::subject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the subject.
+
+\begin{DoxyReturn}{Returns}
+Subject value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1message_aeb34177e1fa2c765744aec5d7a120e2f}\label{classmailio_1_1message_aeb34177e1fa2c765744aec5d7a120e2f}} 
+\index{mailio::message@{mailio::message}!subject@{subject}}
+\index{subject@{subject}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{subject()}{subject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::message\+::subject (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mail\+\_\+subject }\end{DoxyParamCaption})}
+
+Setting the subject.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail\+\_\+subject} & Subject to set. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1message_ab1ae15d24e5965b96f94368a0a8d0fdf}\label{classmailio_1_1message_ab1ae15d24e5965b96f94368a0a8d0fdf}} 
+\index{mailio::message@{mailio::message}!\_bcc\_recipients@{\_bcc\_recipients}}
+\index{\_bcc\_recipients@{\_bcc\_recipients}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_bcc\_recipients}{\_bcc\_recipients}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::\+\_\+bcc\+\_\+recipients\hspace{0.3cm}{\ttfamily [protected]}}
+
+List of B\+CC recipients. \mbox{\Hypertarget{classmailio_1_1message_a6be5b16736adc447468463eddc3c4d64}\label{classmailio_1_1message_a6be5b16736adc447468463eddc3c4d64}} 
+\index{mailio::message@{mailio::message}!\_cc\_recipients@{\_cc\_recipients}}
+\index{\_cc\_recipients@{\_cc\_recipients}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_cc\_recipients}{\_cc\_recipients}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::\+\_\+cc\+\_\+recipients\hspace{0.3cm}{\ttfamily [protected]}}
+
+List of CC recipients. \mbox{\Hypertarget{classmailio_1_1message_a4eb16f4ab0ee02bb50838917826e9764}\label{classmailio_1_1message_a4eb16f4ab0ee02bb50838917826e9764}} 
+\index{mailio::message@{mailio::message}!\_date\_time@{\_date\_time}}
+\index{\_date\_time@{\_date\_time}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_date\_time}{\_date\_time}}
+{\footnotesize\ttfamily boost\+::local\+\_\+time\+::local\+\_\+date\+\_\+time mailio\+::message\+::\+\_\+date\+\_\+time\hspace{0.3cm}{\ttfamily [protected]}}
+
+Message date and time with time zone. \mbox{\Hypertarget{classmailio_1_1message_aaa10c9108796bb1affd42a015fb491f1}\label{classmailio_1_1message_aaa10c9108796bb1affd42a015fb491f1}} 
+\index{mailio::message@{mailio::message}!\_disposition\_notification@{\_disposition\_notification}}
+\index{\_disposition\_notification@{\_disposition\_notification}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_disposition\_notification}{\_disposition\_notification}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} mailio\+::message\+::\+\_\+disposition\+\_\+notification\hspace{0.3cm}{\ttfamily [protected]}}
+
+Disposition notification address. \mbox{\Hypertarget{classmailio_1_1message_a16202f7be1464bc5e97d7cf2d21e4b92}\label{classmailio_1_1message_a16202f7be1464bc5e97d7cf2d21e4b92}} 
+\index{mailio::message@{mailio::message}!\_from@{\_from}}
+\index{\_from@{\_from}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_from}{\_from}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::\+\_\+from\hspace{0.3cm}{\ttfamily [protected]}}
+
+From name and address. \mbox{\Hypertarget{classmailio_1_1message_a8c061ad586c601ae5391de0720da08b7}\label{classmailio_1_1message_a8c061ad586c601ae5391de0720da08b7}} 
+\index{mailio::message@{mailio::message}!\_headers@{\_headers}}
+\index{\_headers@{\_headers}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_headers}{\_headers}}
+{\footnotesize\ttfamily std\+::multimap$<$std\+::string, std\+::string$>$ mailio\+::message\+::\+\_\+headers\hspace{0.3cm}{\ttfamily [protected]}}
+
+Other headers not included into the known ones. \mbox{\Hypertarget{classmailio_1_1message_a26dd7c59151e570c3c9648d278a8727d}\label{classmailio_1_1message_a26dd7c59151e570c3c9648d278a8727d}} 
+\index{mailio::message@{mailio::message}!\_in\_reply\_to@{\_in\_reply\_to}}
+\index{\_in\_reply\_to@{\_in\_reply\_to}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_in\_reply\_to}{\_in\_reply\_to}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::message\+::\+\_\+in\+\_\+reply\+\_\+to\hspace{0.3cm}{\ttfamily [protected]}}
+
+In reply to list of I\+Ds. \mbox{\Hypertarget{classmailio_1_1message_ad7a47222d85cc388f2a9733ac8cb31e3}\label{classmailio_1_1message_ad7a47222d85cc388f2a9733ac8cb31e3}} 
+\index{mailio::message@{mailio::message}!\_message\_id@{\_message\_id}}
+\index{\_message\_id@{\_message\_id}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_message\_id}{\_message\_id}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::\+\_\+message\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+Message ID. \mbox{\Hypertarget{classmailio_1_1message_a671eba940b17cc5e740033c5c33e4104}\label{classmailio_1_1message_a671eba940b17cc5e740033c5c33e4104}} 
+\index{mailio::message@{mailio::message}!\_recipients@{\_recipients}}
+\index{\_recipients@{\_recipients}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_recipients}{\_recipients}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mailboxes}{mailboxes}} mailio\+::message\+::\+\_\+recipients\hspace{0.3cm}{\ttfamily [protected]}}
+
+List of recipients. \mbox{\Hypertarget{classmailio_1_1message_a3234d4e41fbeb4d630fe11cdef4ad35f}\label{classmailio_1_1message_a3234d4e41fbeb4d630fe11cdef4ad35f}} 
+\index{mailio::message@{mailio::message}!\_references@{\_references}}
+\index{\_references@{\_references}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_references}{\_references}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::message\+::\+\_\+references\hspace{0.3cm}{\ttfamily [protected]}}
+
+References list of I\+Ds. \mbox{\Hypertarget{classmailio_1_1message_a44c13fb1010a8552bfaaff75af0cfc02}\label{classmailio_1_1message_a44c13fb1010a8552bfaaff75af0cfc02}} 
+\index{mailio::message@{mailio::message}!\_reply\_address@{\_reply\_address}}
+\index{\_reply\_address@{\_reply\_address}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_reply\_address}{\_reply\_address}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} mailio\+::message\+::\+\_\+reply\+\_\+address\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reply address. \mbox{\Hypertarget{classmailio_1_1message_a09eaf283e87461b740a4e6cc9d930cf3}\label{classmailio_1_1message_a09eaf283e87461b740a4e6cc9d930cf3}} 
+\index{mailio::message@{mailio::message}!\_sender@{\_sender}}
+\index{\_sender@{\_sender}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_sender}{\_sender}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} mailio\+::message\+::\+\_\+sender\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sender name and address. \mbox{\Hypertarget{classmailio_1_1message_a436859dd2a1d997e594835df7581a03b}\label{classmailio_1_1message_a436859dd2a1d997e594835df7581a03b}} 
+\index{mailio::message@{mailio::message}!\_subject@{\_subject}}
+\index{\_subject@{\_subject}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{\_subject}{\_subject}}
+{\footnotesize\ttfamily std\+::string mailio\+::message\+::\+\_\+subject\hspace{0.3cm}{\ttfamily [protected]}}
+
+Message subject. \mbox{\Hypertarget{classmailio_1_1message_a9d16690b3db9e33211ddfea8870936a5}\label{classmailio_1_1message_a9d16690b3db9e33211ddfea8870936a5}} 
+\index{mailio::message@{mailio::message}!ADDRESS\_BEGIN\_CHAR@{ADDRESS\_BEGIN\_CHAR}}
+\index{ADDRESS\_BEGIN\_CHAR@{ADDRESS\_BEGIN\_CHAR}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_BEGIN\_CHAR}{ADDRESS\_BEGIN\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::message\+::\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+E\+G\+I\+N\+\_\+\+C\+H\+AR = \textquotesingle{}$<$\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Enclosing character for the mail address begin. \mbox{\Hypertarget{classmailio_1_1message_ae35cdb7081940863ab5af183913261ee}\label{classmailio_1_1message_ae35cdb7081940863ab5af183913261ee}} 
+\index{mailio::message@{mailio::message}!ADDRESS\_BEGIN\_STR@{ADDRESS\_BEGIN\_STR}}
+\index{ADDRESS\_BEGIN\_STR@{ADDRESS\_BEGIN\_STR}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_BEGIN\_STR}{ADDRESS\_BEGIN\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+E\+G\+I\+N\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+String representation of the mail address start enclosing character. \mbox{\Hypertarget{classmailio_1_1message_a460a138e15216c49981bba459c003b9a}\label{classmailio_1_1message_a460a138e15216c49981bba459c003b9a}} 
+\index{mailio::message@{mailio::message}!ADDRESS\_END\_CHAR@{ADDRESS\_END\_CHAR}}
+\index{ADDRESS\_END\_CHAR@{ADDRESS\_END\_CHAR}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_END\_CHAR}{ADDRESS\_END\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::message\+::\+A\+D\+D\+R\+E\+S\+S\+\_\+\+E\+N\+D\+\_\+\+C\+H\+AR = \textquotesingle{}$>$\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Enclosing character for the mail address end. \mbox{\Hypertarget{classmailio_1_1message_aa1b8fa146adc66c3970b59c3e4948f50}\label{classmailio_1_1message_aa1b8fa146adc66c3970b59c3e4948f50}} 
+\index{mailio::message@{mailio::message}!ADDRESS\_END\_STR@{ADDRESS\_END\_STR}}
+\index{ADDRESS\_END\_STR@{ADDRESS\_END\_STR}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_END\_STR}{ADDRESS\_END\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+A\+D\+D\+R\+E\+S\+S\+\_\+\+E\+N\+D\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+String representation of the mail address end enclosing character. \mbox{\Hypertarget{classmailio_1_1message_a9ae5d38be3aa4b1cff036d2b9bc639bd}\label{classmailio_1_1message_a9ae5d38be3aa4b1cff036d2b9bc639bd}} 
+\index{mailio::message@{mailio::message}!ADDRESS\_SEPARATOR@{ADDRESS\_SEPARATOR}}
+\index{ADDRESS\_SEPARATOR@{ADDRESS\_SEPARATOR}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_SEPARATOR}{ADDRESS\_SEPARATOR}}
+{\footnotesize\ttfamily const char mailio\+::message\+::\+A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR = \textquotesingle{},\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Character to separate mail addresses in a list. \mbox{\Hypertarget{classmailio_1_1message_aa8efc55f939879557fb2018427a662f4}\label{classmailio_1_1message_aa8efc55f939879557fb2018427a662f4}} 
+\index{mailio::message@{mailio::message}!ATEXT@{ATEXT}}
+\index{ATEXT@{ATEXT}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{ATEXT}{ATEXT}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+A\+T\+E\+XT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Printable A\+S\+C\+II characters without the alphanumerics, double quote, comma, colon, semicolon, angle and square brackets and monkey. \mbox{\Hypertarget{classmailio_1_1message_a980820ef3f9a2492aae588feafc2a433}\label{classmailio_1_1message_a980820ef3f9a2492aae588feafc2a433}} 
+\index{mailio::message@{mailio::message}!BCC\_HEADER@{BCC\_HEADER}}
+\index{BCC\_HEADER@{BCC\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{BCC\_HEADER}{BCC\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+B\+C\+C\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily Bcc} header name. \mbox{\Hypertarget{classmailio_1_1message_a0aac3397d96fde43f7f12ab238a83700}\label{classmailio_1_1message_a0aac3397d96fde43f7f12ab238a83700}} 
+\index{mailio::message@{mailio::message}!CC\_HEADER@{CC\_HEADER}}
+\index{CC\_HEADER@{CC\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{CC\_HEADER}{CC\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+C\+C\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily Cc} header name. \mbox{\Hypertarget{classmailio_1_1message_ab632f760a858df1f8e708835c1f207d9}\label{classmailio_1_1message_ab632f760a858df1f8e708835c1f207d9}} 
+\index{mailio::message@{mailio::message}!DATE\_HEADER@{DATE\_HEADER}}
+\index{DATE\_HEADER@{DATE\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{DATE\_HEADER}{DATE\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+D\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Date header name. \mbox{\Hypertarget{classmailio_1_1message_ac0f78412fc9e847662d39e5b7dbeaf83}\label{classmailio_1_1message_ac0f78412fc9e847662d39e5b7dbeaf83}} 
+\index{mailio::message@{mailio::message}!DISPOSITION\_NOTIFICATION\_HEADER@{DISPOSITION\_NOTIFICATION\_HEADER}}
+\index{DISPOSITION\_NOTIFICATION\_HEADER@{DISPOSITION\_NOTIFICATION\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{DISPOSITION\_NOTIFICATION\_HEADER}{DISPOSITION\_NOTIFICATION\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Disposition notification header name. \mbox{\Hypertarget{classmailio_1_1message_aafd8661845e6c40165767595b6ea3fad}\label{classmailio_1_1message_aafd8661845e6c40165767595b6ea3fad}} 
+\index{mailio::message@{mailio::message}!DTEXT@{DTEXT}}
+\index{DTEXT@{DTEXT}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{DTEXT}{DTEXT}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+D\+T\+E\+XT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Printable A\+S\+C\+II characters without the alphanumerics, brackets and backslash. \mbox{\Hypertarget{classmailio_1_1message_a01fb50f1a2178c8a2c44e016617a8eb6}\label{classmailio_1_1message_a01fb50f1a2178c8a2c44e016617a8eb6}} 
+\index{mailio::message@{mailio::message}!FROM\_HEADER@{FROM\_HEADER}}
+\index{FROM\_HEADER@{FROM\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{FROM\_HEADER}{FROM\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+F\+R\+O\+M\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily From} header name. \mbox{\Hypertarget{classmailio_1_1message_a24f2e94dd5fff906abeabb60a3eddf9c}\label{classmailio_1_1message_a24f2e94dd5fff906abeabb60a3eddf9c}} 
+\index{mailio::message@{mailio::message}!IN\_REPLY\_TO\_HEADER@{IN\_REPLY\_TO\_HEADER}}
+\index{IN\_REPLY\_TO\_HEADER@{IN\_REPLY\_TO\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{IN\_REPLY\_TO\_HEADER}{IN\_REPLY\_TO\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+I\+N\+\_\+\+R\+E\+P\+L\+Y\+\_\+\+T\+O\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily In-\/\+Reply-\/\+To} header name. \mbox{\Hypertarget{classmailio_1_1message_ac29e6adf6ea6b04b5e50caa0c38918b6}\label{classmailio_1_1message_ac29e6adf6ea6b04b5e50caa0c38918b6}} 
+\index{mailio::message@{mailio::message}!MAILGROUP\_NAME\_SEPARATOR@{MAILGROUP\_NAME\_SEPARATOR}}
+\index{MAILGROUP\_NAME\_SEPARATOR@{MAILGROUP\_NAME\_SEPARATOR}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{MAILGROUP\_NAME\_SEPARATOR}{MAILGROUP\_NAME\_SEPARATOR}}
+{\footnotesize\ttfamily const char mailio\+::message\+::\+M\+A\+I\+L\+G\+R\+O\+U\+P\+\_\+\+N\+A\+M\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR = \textquotesingle{}\+:\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Mail group name separator from the list of addresses. \mbox{\Hypertarget{classmailio_1_1message_ab3885af760ca8c00d64cd09f75a26513}\label{classmailio_1_1message_ab3885af760ca8c00d64cd09f75a26513}} 
+\index{mailio::message@{mailio::message}!MAILGROUP\_SEPARATOR@{MAILGROUP\_SEPARATOR}}
+\index{MAILGROUP\_SEPARATOR@{MAILGROUP\_SEPARATOR}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{MAILGROUP\_SEPARATOR}{MAILGROUP\_SEPARATOR}}
+{\footnotesize\ttfamily const char mailio\+::message\+::\+M\+A\+I\+L\+G\+R\+O\+U\+P\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR = \textquotesingle{};\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Separator of several mail groups. \mbox{\Hypertarget{classmailio_1_1message_aa770684e4773384f7aa9a74108bf9346}\label{classmailio_1_1message_aa770684e4773384f7aa9a74108bf9346}} 
+\index{mailio::message@{mailio::message}!MESSAGE\_ID\_HEADER@{MESSAGE\_ID\_HEADER}}
+\index{MESSAGE\_ID\_HEADER@{MESSAGE\_ID\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{MESSAGE\_ID\_HEADER}{MESSAGE\_ID\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+M\+E\+S\+S\+A\+G\+E\+\_\+\+I\+D\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily Message-\/\+ID} header name. \mbox{\Hypertarget{classmailio_1_1message_a55cbf8356e0fcbde0490a047bd84b02e}\label{classmailio_1_1message_a55cbf8356e0fcbde0490a047bd84b02e}} 
+\index{mailio::message@{mailio::message}!MIME\_VERSION\_HEADER@{MIME\_VERSION\_HEADER}}
+\index{MIME\_VERSION\_HEADER@{MIME\_VERSION\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{MIME\_VERSION\_HEADER}{MIME\_VERSION\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+M\+I\+M\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Mime version header name. \mbox{\Hypertarget{classmailio_1_1message_a3816d750674f50a5d6415be510c0f2d4}\label{classmailio_1_1message_a3816d750674f50a5d6415be510c0f2d4}} 
+\index{mailio::message@{mailio::message}!REFERENCES\_HEADER@{REFERENCES\_HEADER}}
+\index{REFERENCES\_HEADER@{REFERENCES\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{REFERENCES\_HEADER}{REFERENCES\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+R\+E\+F\+E\+R\+E\+N\+C\+E\+S\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily References} header name. \mbox{\Hypertarget{classmailio_1_1message_a1abbe3913548bfb30a22bce695ea9d4a}\label{classmailio_1_1message_a1abbe3913548bfb30a22bce695ea9d4a}} 
+\index{mailio::message@{mailio::message}!REPLY\_TO\_HEADER@{REPLY\_TO\_HEADER}}
+\index{REPLY\_TO\_HEADER@{REPLY\_TO\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{REPLY\_TO\_HEADER}{REPLY\_TO\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+R\+E\+P\+L\+Y\+\_\+\+T\+O\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily Reply-\/\+To} header name. \mbox{\Hypertarget{classmailio_1_1message_a6897771df0e72466f8daab6120d5b7e0}\label{classmailio_1_1message_a6897771df0e72466f8daab6120d5b7e0}} 
+\index{mailio::message@{mailio::message}!SENDER\_HEADER@{SENDER\_HEADER}}
+\index{SENDER\_HEADER@{SENDER\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{SENDER\_HEADER}{SENDER\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+S\+E\+N\+D\+E\+R\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily Sender} header name. \mbox{\Hypertarget{classmailio_1_1message_a95684de6e81b0959e31bcef84790da8e}\label{classmailio_1_1message_a95684de6e81b0959e31bcef84790da8e}} 
+\index{mailio::message@{mailio::message}!SUBJECT\_HEADER@{SUBJECT\_HEADER}}
+\index{SUBJECT\_HEADER@{SUBJECT\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{SUBJECT\_HEADER}{SUBJECT\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+S\+U\+B\+J\+E\+C\+T\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Subject header name. \mbox{\Hypertarget{classmailio_1_1message_a8e1a49d4b1c3c0c67d9a7349ceedaa8c}\label{classmailio_1_1message_a8e1a49d4b1c3c0c67d9a7349ceedaa8c}} 
+\index{mailio::message@{mailio::message}!TO\_HEADER@{TO\_HEADER}}
+\index{TO\_HEADER@{TO\_HEADER}!mailio::message@{mailio::message}}
+\doxysubsubsection{\texorpdfstring{TO\_HEADER}{TO\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::message\+::\+T\+O\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\ttfamily To} header name. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/message.\+hpp\end{DoxyCompactItemize}

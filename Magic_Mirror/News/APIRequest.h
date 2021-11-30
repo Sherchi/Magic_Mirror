@@ -29,12 +29,13 @@ private slots:
 
 
 //Network Manager, The data from request, and some
-// Json stuff to temperarily hold some values
+// Json stuff to temperarily hold some values while being processed
 private:
     QNetworkAccessManager manager;
     QByteArray data;
     QJsonObject articleList;
     QJsonArray articleArr;
+    int gotInfo;
 
     // ok This should be a private slot, but it wasn't working
     //and doesn't do much so I left it here. Might need later
@@ -46,6 +47,7 @@ public slots:
 public:
     QJsonArray getJsonArr();
     void get(QString location);
+    int isDone();
 
 
 };

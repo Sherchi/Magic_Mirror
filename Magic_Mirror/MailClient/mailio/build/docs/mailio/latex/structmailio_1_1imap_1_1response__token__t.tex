@@ -1,0 +1,91 @@
+\hypertarget{structmailio_1_1imap_1_1response__token__t}{}\doxysection{mailio\+::imap\+::response\+\_\+token\+\_\+t Struct Reference}
+\label{structmailio_1_1imap_1_1response__token__t}\index{mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}}
+
+
+{\ttfamily \#include $<$imap.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_adbcaff3f182d988ccf30040d3ec428a0}{token\+\_\+type\+\_\+t}} \{ {\bfseries E\+M\+P\+TY}, 
+{\bfseries A\+T\+OM}, 
+{\bfseries L\+I\+T\+E\+R\+AL}, 
+{\bfseries L\+I\+ST}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_a3cf4343c4b68ab7f3a3800b2b9a59109}{response\+\_\+token\+\_\+t}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmailio_1_1imap_1_1response__token__t_ae5112ff0ebba009ec821ae1c729aab6c}\label{structmailio_1_1imap_1_1response__token__t_ae5112ff0ebba009ec821ae1c729aab6c}} 
+enum \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_adbcaff3f182d988ccf30040d3ec428a0}{mailio\+::imap\+::response\+\_\+token\+\_\+t\+::token\+\_\+type\+\_\+t}} {\bfseries token\+\_\+type}
+\item 
+std\+::string \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_a9e71bf62b4de29e04b27d3026e92b01f}{atom}}
+\item 
+std\+::string \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_abad3011cbfd1266fea02052a136b876a}{literal}}
+\item 
+std\+::string \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_a25e88d761e7bc7617c28ba34988999df}{literal\+\_\+size}}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}} $>$ $>$ \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_a12f2deeab4a88d795502ad457809118a}{parenthesized\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Token of the response defined by the grammar.
+
+Its type is determined by the content, and can be either atom, string literal or parenthesized list. Thus, it can be considered as union of those three types. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1response__token__t_adbcaff3f182d988ccf30040d3ec428a0}\label{structmailio_1_1imap_1_1response__token__t_adbcaff3f182d988ccf30040d3ec428a0}} 
+\index{mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}!token\_type\_t@{token\_type\_t}}
+\index{token\_type\_t@{token\_type\_t}!mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}}
+\doxysubsubsection{\texorpdfstring{token\_type\_t}{token\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t_adbcaff3f182d988ccf30040d3ec428a0}{mailio\+::imap\+::response\+\_\+token\+\_\+t\+::token\+\_\+type\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Token type which can be empty in the case that is not determined yet, atom, string literal or parenthesized list. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1response__token__t_a3cf4343c4b68ab7f3a3800b2b9a59109}\label{structmailio_1_1imap_1_1response__token__t_a3cf4343c4b68ab7f3a3800b2b9a59109}} 
+\index{mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}!response\_token\_t@{response\_token\_t}}
+\index{response\_token\_t@{response\_token\_t}!mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}}
+\doxysubsubsection{\texorpdfstring{response\_token\_t()}{response\_token\_t()}}
+{\footnotesize\ttfamily mailio\+::imap\+::response\+\_\+token\+\_\+t\+::response\+\_\+token\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1response__token__t_a9e71bf62b4de29e04b27d3026e92b01f}\label{structmailio_1_1imap_1_1response__token__t_a9e71bf62b4de29e04b27d3026e92b01f}} 
+\index{mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}!atom@{atom}}
+\index{atom@{atom}!mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}}
+\doxysubsubsection{\texorpdfstring{atom}{atom}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::response\+\_\+token\+\_\+t\+::atom}
+
+Token content in case it is atom. \mbox{\Hypertarget{structmailio_1_1imap_1_1response__token__t_abad3011cbfd1266fea02052a136b876a}\label{structmailio_1_1imap_1_1response__token__t_abad3011cbfd1266fea02052a136b876a}} 
+\index{mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}!literal@{literal}}
+\index{literal@{literal}!mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}}
+\doxysubsubsection{\texorpdfstring{literal}{literal}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::response\+\_\+token\+\_\+t\+::literal}
+
+Token content in case it is string literal. \mbox{\Hypertarget{structmailio_1_1imap_1_1response__token__t_a25e88d761e7bc7617c28ba34988999df}\label{structmailio_1_1imap_1_1response__token__t_a25e88d761e7bc7617c28ba34988999df}} 
+\index{mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}!literal\_size@{literal\_size}}
+\index{literal\_size@{literal\_size}!mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}}
+\doxysubsubsection{\texorpdfstring{literal\_size}{literal\_size}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::response\+\_\+token\+\_\+t\+::literal\+\_\+size}
+
+String literal is first determined by its size, so it\textquotesingle{}s stored here before reading the literal itself. \mbox{\Hypertarget{structmailio_1_1imap_1_1response__token__t_a12f2deeab4a88d795502ad457809118a}\label{structmailio_1_1imap_1_1response__token__t_a12f2deeab4a88d795502ad457809118a}} 
+\index{mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}!parenthesized\_list@{parenthesized\_list}}
+\index{parenthesized\_list@{parenthesized\_list}!mailio::imap::response\_token\_t@{mailio::imap::response\_token\_t}}
+\doxysubsubsection{\texorpdfstring{parenthesized\_list}{parenthesized\_list}}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}}$>$ $>$ mailio\+::imap\+::response\+\_\+token\+\_\+t\+::parenthesized\+\_\+list}
+
+Token content in case it is parenthesized list.
+
+It can store either of the three types, so the definition is recursive. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/imap.\+hpp\end{DoxyCompactItemize}

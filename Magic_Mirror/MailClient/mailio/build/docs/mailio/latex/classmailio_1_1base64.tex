@@ -1,0 +1,153 @@
+\hypertarget{classmailio_1_1base64}{}\doxysection{mailio\+::base64 Class Reference}
+\label{classmailio_1_1base64}\index{mailio::base64@{mailio::base64}}
+
+
+{\ttfamily \#include $<$base64.\+hpp$>$}
+
+Inheritance diagram for mailio\+::base64\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1base64}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1base64_a2220031eae2a0244b7887c8c504cdfaf}{base64}} (\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} encoder\+\_\+line\+\_\+policy=codec\+::line\+\_\+len\+\_\+policy\+\_\+t\+::\+N\+O\+NE, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} decoder\+\_\+line\+\_\+policy=codec\+::line\+\_\+len\+\_\+policy\+\_\+t\+::\+N\+O\+NE)
+\item 
+\mbox{\Hypertarget{classmailio_1_1base64_a6cf958232ebf2a88487a984a9fb09518}\label{classmailio_1_1base64_a6cf958232ebf2a88487a984a9fb09518}} 
+{\bfseries base64} (const \mbox{\hyperlink{classmailio_1_1base64}{base64}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1base64_a86d9c2eee8b136f6ac7ef9c0926597cc}\label{classmailio_1_1base64_a86d9c2eee8b136f6ac7ef9c0926597cc}} 
+{\bfseries base64} (\mbox{\hyperlink{classmailio_1_1base64}{base64}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classmailio_1_1base64_aa8c017386bd0d75e9802fe9d1b7c6f2e}{$\sim$base64}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1base64_a9d9a920f9da8efd8a8c5ece78032fd11}\label{classmailio_1_1base64_a9d9a920f9da8efd8a8c5ece78032fd11}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1base64}{base64}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1base64_a800b2cf8000afa291e1cce32e1eabb15}\label{classmailio_1_1base64_a800b2cf8000afa291e1cce32e1eabb15}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1base64}{base64}} \&\&)=delete
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1base64_a99bfcd58481f8be36defdfe6a577b348}{encode}} (const std\+::string \&text, std\+::string\+::size\+\_\+type reserved=0) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1base64_abc9aaae74d8cd835b3154d126ab3c1d6}{decode}} (const std\+::vector$<$ std\+::string $>$ \&text) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1base64_a832f2b935be4fd3f772b630b4e2f139e}{decode}} (const std\+::string \&text) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1base64_a1a640debbc6b1a35ba5ad82ae591709b}{C\+H\+A\+R\+S\+ET}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base64 codec.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Add static method {\ttfamily string encode(string)} to be used by {\ttfamily smtp}? \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1base64_a2220031eae2a0244b7887c8c504cdfaf}\label{classmailio_1_1base64_a2220031eae2a0244b7887c8c504cdfaf}} 
+\index{mailio::base64@{mailio::base64}!base64@{base64}}
+\index{base64@{base64}!mailio::base64@{mailio::base64}}
+\doxysubsubsection{\texorpdfstring{base64()}{base64()}}
+{\footnotesize\ttfamily mailio\+::base64\+::base64 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{encoder\+\_\+line\+\_\+policy = {\ttfamily codec\+:\+:line\+\_\+len\+\_\+policy\+\_\+t\+:\+:NONE},  }\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{decoder\+\_\+line\+\_\+policy = {\ttfamily codec\+:\+:line\+\_\+len\+\_\+policy\+\_\+t\+:\+:NONE} }\end{DoxyParamCaption})}
+
+Setting the encoder and decoder line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+line\+\_\+policy} & Encoder line length policy to set. \\
+\hline
+{\em decoder\+\_\+line\+\_\+policy} & Decoder line length policy to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1base64_aa8c017386bd0d75e9802fe9d1b7c6f2e}\label{classmailio_1_1base64_aa8c017386bd0d75e9802fe9d1b7c6f2e}} 
+\index{mailio::base64@{mailio::base64}!````~base64@{$\sim$base64}}
+\index{````~base64@{$\sim$base64}!mailio::base64@{mailio::base64}}
+\doxysubsubsection{\texorpdfstring{$\sim$base64()}{~base64()}}
+{\footnotesize\ttfamily mailio\+::base64\+::$\sim$base64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1base64_a832f2b935be4fd3f772b630b4e2f139e}\label{classmailio_1_1base64_a832f2b935be4fd3f772b630b4e2f139e}} 
+\index{mailio::base64@{mailio::base64}!decode@{decode}}
+\index{decode@{decode}!mailio::base64@{mailio::base64}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::base64\+::decode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) const}
+
+Decoding a Base64 string to a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Base64 encoded string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encoded string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily decode(const std\+::vector$<$std\+::string$>$\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1base64_abc9aaae74d8cd835b3154d126ab3c1d6}\label{classmailio_1_1base64_abc9aaae74d8cd835b3154d126ab3c1d6}} 
+\index{mailio::base64@{mailio::base64}!decode@{decode}}
+\index{decode@{decode}!mailio::base64@{mailio::base64}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::base64\+::decode (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{text }\end{DoxyParamCaption}) const}
+
+Decoding a vector of Base64 encoded strings to string by applying the line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Vector of Base64 encoded strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decoded string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1codec__error}{codec\+\_\+error}}} & Bad character. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Line policy not verified.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1base64_a99bfcd58481f8be36defdfe6a577b348}\label{classmailio_1_1base64_a99bfcd58481f8be36defdfe6a577b348}} 
+\index{mailio::base64@{mailio::base64}!encode@{encode}}
+\index{encode@{encode}!mailio::base64@{mailio::base64}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::base64\+::encode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{std\+::string\+::size\+\_\+type}]{reserved = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Encoding a string into vector of Base64 encoded strings by applying the line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & String to encode. \\
+\hline
+{\em reserved} & Number of characters to subtract from the line policy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of Base64 encoded strings. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1base64_a1a640debbc6b1a35ba5ad82ae591709b}\label{classmailio_1_1base64_a1a640debbc6b1a35ba5ad82ae591709b}} 
+\index{mailio::base64@{mailio::base64}!CHARSET@{CHARSET}}
+\index{CHARSET@{CHARSET}!mailio::base64@{mailio::base64}}
+\doxysubsubsection{\texorpdfstring{CHARSET}{CHARSET}}
+{\footnotesize\ttfamily const std\+::string mailio\+::base64\+::\+C\+H\+A\+R\+S\+ET\hspace{0.3cm}{\ttfamily [static]}}
+
+Base64 character set. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/base64.\+hpp\end{DoxyCompactItemize}

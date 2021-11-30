@@ -1,0 +1,168 @@
+\hypertarget{classmailio_1_1dialog__ssl}{}\doxysection{mailio\+::dialog\+\_\+ssl Class Reference}
+\label{classmailio_1_1dialog__ssl}\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+
+
+{\ttfamily \#include $<$dialog.\+hpp$>$}
+
+Inheritance diagram for mailio\+::dialog\+\_\+ssl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1dialog__ssl}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1dialog__ssl_a9952a51816b2ad1a9b5b1f89c22dcd05}{dialog\+\_\+ssl}} (const std\+::string \&hostname, unsigned port, std\+::chrono\+::milliseconds timeout)
+\item 
+\mbox{\hyperlink{classmailio_1_1dialog__ssl_adbdf7bf7e71eb8ea0c53e33a9b3bcbdf}{dialog\+\_\+ssl}} (const \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} \&other)
+\item 
+\mbox{\hyperlink{classmailio_1_1dialog__ssl_a04c45344289f61a651a733b998894fbe}{dialog\+\_\+ssl}} (const \mbox{\hyperlink{classmailio_1_1dialog__ssl}{dialog\+\_\+ssl}} \&)=default
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1dialog__ssl_ae08a8f8b140ab33e96aaf03d7709d43f}{$\sim$dialog\+\_\+ssl}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_a6ff708de5d246cd2ac04262e461b15f4}\label{classmailio_1_1dialog__ssl_a6ff708de5d246cd2ac04262e461b15f4}} 
+{\bfseries dialog\+\_\+ssl} (\mbox{\hyperlink{classmailio_1_1dialog__ssl}{dialog\+\_\+ssl}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_a6567100c5c0662e1a477b1c9ab97dc96}\label{classmailio_1_1dialog__ssl_a6567100c5c0662e1a477b1c9ab97dc96}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1dialog__ssl}{dialog\+\_\+ssl}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_af8156423e21683e399fbd906c279bdbd}\label{classmailio_1_1dialog__ssl_af8156423e21683e399fbd906c279bdbd}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1dialog__ssl}{dialog\+\_\+ssl}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classmailio_1_1dialog__ssl_a89fcd7cbc7952690b3181cecdb9247d8}{send}} (const std\+::string \&line)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1dialog__ssl_a06e1f19e5f2fcb7798c7879b5f7e1798}{receive}} (bool raw=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classmailio_1_1dialog__ssl_a8a4ecafcf7e6a1cbd54b400222af007c}{\+\_\+ssl}}
+\item 
+std\+::shared\+\_\+ptr$<$ boost\+::asio\+::ssl\+::context $>$ \mbox{\hyperlink{classmailio_1_1dialog__ssl_a5aa8a68cb9260ff8571b524fbcf158d1}{\+\_\+context}}
+\item 
+std\+::shared\+\_\+ptr$<$ boost\+::asio\+::ssl\+::stream$<$ boost\+::asio\+::ip\+::tcp\+::socket \& $>$ $>$ \mbox{\hyperlink{classmailio_1_1dialog__ssl_ae8d9c9795b4789862f0c0bd4720aa7b3}{\+\_\+ssl\+\_\+socket}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Secure version of {\ttfamily dialog} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_a9952a51816b2ad1a9b5b1f89c22dcd05}\label{classmailio_1_1dialog__ssl_a9952a51816b2ad1a9b5b1f89c22dcd05}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!dialog\_ssl@{dialog\_ssl}}
+\index{dialog\_ssl@{dialog\_ssl}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{dialog\_ssl()}{dialog\_ssl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily mailio\+::dialog\+\_\+ssl\+::dialog\+\_\+ssl (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{unsigned}]{port,  }\item[{std\+::chrono\+::milliseconds}]{timeout }\end{DoxyParamCaption})}
+
+Making a connection to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & Server hostname. \\
+\hline
+{\em port} & Server port. \\
+\hline
+{\em timeout} & Network timeout after which I/O operations fail. If zero, then no timeout is set i.\+e. I/O operations are synchronous. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily dialog\+::dialog(const std\+::string\&, unsigned)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_adbdf7bf7e71eb8ea0c53e33a9b3bcbdf}\label{classmailio_1_1dialog__ssl_adbdf7bf7e71eb8ea0c53e33a9b3bcbdf}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!dialog\_ssl@{dialog\_ssl}}
+\index{dialog\_ssl@{dialog\_ssl}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{dialog\_ssl()}{dialog\_ssl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily mailio\+::dialog\+\_\+ssl\+::dialog\+\_\+ssl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} \&}]{other }\end{DoxyParamCaption})}
+
+Calling the parent constructor, initializing the S\+SL socket. \mbox{\Hypertarget{classmailio_1_1dialog__ssl_a04c45344289f61a651a733b998894fbe}\label{classmailio_1_1dialog__ssl_a04c45344289f61a651a733b998894fbe}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!dialog\_ssl@{dialog\_ssl}}
+\index{dialog\_ssl@{dialog\_ssl}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{dialog\_ssl()}{dialog\_ssl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily mailio\+::dialog\+\_\+ssl\+::dialog\+\_\+ssl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1dialog__ssl}{dialog\+\_\+ssl}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default copy constructor. \mbox{\Hypertarget{classmailio_1_1dialog__ssl_ae08a8f8b140ab33e96aaf03d7709d43f}\label{classmailio_1_1dialog__ssl_ae08a8f8b140ab33e96aaf03d7709d43f}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!````~dialog\_ssl@{$\sim$dialog\_ssl}}
+\index{````~dialog\_ssl@{$\sim$dialog\_ssl}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{$\sim$dialog\_ssl()}{~dialog\_ssl()}}
+{\footnotesize\ttfamily virtual mailio\+::dialog\+\_\+ssl\+::$\sim$dialog\+\_\+ssl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_a06e1f19e5f2fcb7798c7879b5f7e1798}\label{classmailio_1_1dialog__ssl_a06e1f19e5f2fcb7798c7879b5f7e1798}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!receive@{receive}}
+\index{receive@{receive}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily std\+::string mailio\+::dialog\+\_\+ssl\+::receive (\begin{DoxyParamCaption}\item[{bool}]{raw = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Receiving an encrypted or unecrypted line, depending of S\+SL state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw} & Flag if the receiving is raw (no C\+R\+LF is truncated) or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Line read from network 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}, {\ttfamily receive\+\_\+sync$<$Socket$>$(Socket\&, bool)}, {\ttfamily receive\+\_\+async$<$Socket$>$(Socket\&, bool)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{mailio\+::dialog}}.
+
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_a89fcd7cbc7952690b3181cecdb9247d8}\label{classmailio_1_1dialog__ssl_a89fcd7cbc7952690b3181cecdb9247d8}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!send@{send}}
+\index{send@{send}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void mailio\+::dialog\+\_\+ssl\+::send (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sending an encrypted or unecrypted line, depending of S\+SL flag.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Line to send. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_ab5a91af9e49140a848c0eae66c030d43}{dialog\+::send(const std\+::string\&)}}}, {\ttfamily send\+\_\+sync$<$Socket$>$(Socket\&, const std\+::string\&)}, {\ttfamily send\+\_\+async$<$Socket$>$(Socket\&, const std\+::string\&)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{classmailio_1_1dialog_ab5a91af9e49140a848c0eae66c030d43}{mailio\+::dialog}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1dialog__ssl_a5aa8a68cb9260ff8571b524fbcf158d1}\label{classmailio_1_1dialog__ssl_a5aa8a68cb9260ff8571b524fbcf158d1}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!\_context@{\_context}}
+\index{\_context@{\_context}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{\_context}{\_context}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$boost\+::asio\+::ssl\+::context$>$ mailio\+::dialog\+\_\+ssl\+::\+\_\+context\hspace{0.3cm}{\ttfamily [protected]}}
+
+S\+SL context (when used). \mbox{\Hypertarget{classmailio_1_1dialog__ssl_a8a4ecafcf7e6a1cbd54b400222af007c}\label{classmailio_1_1dialog__ssl_a8a4ecafcf7e6a1cbd54b400222af007c}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!\_ssl@{\_ssl}}
+\index{\_ssl@{\_ssl}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{\_ssl}{\_ssl}}
+{\footnotesize\ttfamily bool mailio\+::dialog\+\_\+ssl\+::\+\_\+ssl\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag if S\+SL is chosen or not. \mbox{\Hypertarget{classmailio_1_1dialog__ssl_ae8d9c9795b4789862f0c0bd4720aa7b3}\label{classmailio_1_1dialog__ssl_ae8d9c9795b4789862f0c0bd4720aa7b3}} 
+\index{mailio::dialog\_ssl@{mailio::dialog\_ssl}!\_ssl\_socket@{\_ssl\_socket}}
+\index{\_ssl\_socket@{\_ssl\_socket}!mailio::dialog\_ssl@{mailio::dialog\_ssl}}
+\doxysubsubsection{\texorpdfstring{\_ssl\_socket}{\_ssl\_socket}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$boost\+::asio\+::ssl\+::stream$<$boost\+::asio\+::ip\+::tcp\+::socket\&$>$ $>$ mailio\+::dialog\+\_\+ssl\+::\+\_\+ssl\+\_\+socket\hspace{0.3cm}{\ttfamily [protected]}}
+
+S\+SL socket (when used). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/dialog.\+hpp\end{DoxyCompactItemize}

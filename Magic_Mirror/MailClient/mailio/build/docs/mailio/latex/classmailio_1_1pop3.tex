@@ -1,0 +1,370 @@
+\hypertarget{classmailio_1_1pop3}{}\doxysection{mailio\+::pop3 Class Reference}
+\label{classmailio_1_1pop3}\index{mailio::pop3@{mailio::pop3}}
+
+
+{\ttfamily \#include $<$pop3.\+hpp$>$}
+
+Inheritance diagram for mailio\+::pop3\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1pop3}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1pop3_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}{auth\+\_\+method\+\_\+t}} \{ {\bfseries L\+O\+G\+IN}
+ \}
+\item 
+typedef std\+::map$<$ unsigned, unsigned long $>$ \mbox{\hyperlink{classmailio_1_1pop3_a4b1ba63d411962b654957e2dff2b3807}{message\+\_\+list\+\_\+t}}
+\item 
+typedef std\+::map$<$ unsigned, std\+::string $>$ \mbox{\hyperlink{classmailio_1_1pop3_a80c1befe3fe735f69ab1ab06cb11c8c3}{uidl\+\_\+list\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1pop3_af039a256a5cc218aabfdebbc8f1b6602}{pop3}} (const std\+::string \&hostname, unsigned port, std\+::chrono\+::milliseconds timeout=std\+::chrono\+::milliseconds(0))
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1pop3_aeb0215c2253fa084246992c667510655}{$\sim$pop3}} ()
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3_a6741878bb7f8509e81be9f9d7b11e9f4}\label{classmailio_1_1pop3_a6741878bb7f8509e81be9f9d7b11e9f4}} 
+{\bfseries pop3} (const \mbox{\hyperlink{classmailio_1_1pop3}{pop3}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3_acd2ba15048ff377e6de3133a4963c5f3}\label{classmailio_1_1pop3_acd2ba15048ff377e6de3133a4963c5f3}} 
+{\bfseries pop3} (\mbox{\hyperlink{classmailio_1_1pop3}{pop3}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3_a1fac3afbabeb39b03b812627316c11e1}\label{classmailio_1_1pop3_a1fac3afbabeb39b03b812627316c11e1}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1pop3}{pop3}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3_a8c7c75349f55ca5aa27c7b95e4291097}\label{classmailio_1_1pop3_a8c7c75349f55ca5aa27c7b95e4291097}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1pop3}{pop3}} \&\&)=delete
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1pop3_affe00d545818cffc5393f661eeca52fc}{authenticate}} (const std\+::string \&username, const std\+::string \&password, \mbox{\hyperlink{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}{auth\+\_\+method\+\_\+t}} method)
+\item 
+\mbox{\hyperlink{classmailio_1_1pop3_a4b1ba63d411962b654957e2dff2b3807}{message\+\_\+list\+\_\+t}} \mbox{\hyperlink{classmailio_1_1pop3_ab52f888f855c256b20014a6ca24b2d0e}{list}} (unsigned message\+\_\+no=0)
+\item 
+\mbox{\hyperlink{classmailio_1_1pop3_a80c1befe3fe735f69ab1ab06cb11c8c3}{uidl\+\_\+list\+\_\+t}} \mbox{\hyperlink{classmailio_1_1pop3_a3eead1ad276a8fafa38b51fad7d68ba7}{uidl}} (unsigned message\+\_\+no=0)
+\item 
+\mbox{\hyperlink{structmailio_1_1pop3_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} \mbox{\hyperlink{classmailio_1_1pop3_a9c573a9bdf2f1afca2a0c34779825c48}{statistics}} ()
+\item 
+void \mbox{\hyperlink{classmailio_1_1pop3_abc36293e65b23272ab6f8c191b5443a3}{fetch}} (unsigned long message\+\_\+no, \mbox{\hyperlink{classmailio_1_1message}{message}} \&msg, bool header\+\_\+only=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1pop3_a4ad2312e58a6c90a8d34bd1337213b09}{remove}} (unsigned long message\+\_\+no)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1pop3_a130205040b03cb133775950b63888801}{connect}} ()
+\item 
+void \mbox{\hyperlink{classmailio_1_1pop3_a3dcc7b088f661246d36df4ffb8c64b06}{auth\+\_\+login}} (const std\+::string \&username, const std\+::string \&password)
+\item 
+std\+::tuple$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classmailio_1_1pop3_a49462d61f7e3ad7e6e0842947081d319}{parse\+\_\+status}} (const std\+::string \&line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} $>$ \mbox{\hyperlink{classmailio_1_1pop3_aa4222ebbd8fe463f8ba69acf9fed6b1b}{\+\_\+dlg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1pop3_a74e4c5d1ae374d1defeed122ba91affd}{T\+O\+K\+E\+N\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR}} \{\textquotesingle{} \textquotesingle{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+P\+O\+P3 client implementation. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3_a4b1ba63d411962b654957e2dff2b3807}\label{classmailio_1_1pop3_a4b1ba63d411962b654957e2dff2b3807}} 
+\index{mailio::pop3@{mailio::pop3}!message\_list\_t@{message\_list\_t}}
+\index{message\_list\_t@{message\_list\_t}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{message\_list\_t}{message\_list\_t}}
+{\footnotesize\ttfamily typedef std\+::map$<$unsigned, unsigned long$>$ \mbox{\hyperlink{classmailio_1_1pop3_a4b1ba63d411962b654957e2dff2b3807}{mailio\+::pop3\+::message\+\_\+list\+\_\+t}}}
+
+Messages indexed by their order number containing sizes in octets. \mbox{\Hypertarget{classmailio_1_1pop3_a80c1befe3fe735f69ab1ab06cb11c8c3}\label{classmailio_1_1pop3_a80c1befe3fe735f69ab1ab06cb11c8c3}} 
+\index{mailio::pop3@{mailio::pop3}!uidl\_list\_t@{uidl\_list\_t}}
+\index{uidl\_list\_t@{uidl\_list\_t}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{uidl\_list\_t}{uidl\_list\_t}}
+{\footnotesize\ttfamily typedef std\+::map$<$unsigned, std\+::string$>$ \mbox{\hyperlink{classmailio_1_1pop3_a80c1befe3fe735f69ab1ab06cb11c8c3}{mailio\+::pop3\+::uidl\+\_\+list\+\_\+t}}}
+
+Message order numbers and their corresponding unique I\+Ds (a U\+I\+DL response from server). 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}\label{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}} 
+\index{mailio::pop3@{mailio::pop3}!auth\_method\_t@{auth\_method\_t}}
+\index{auth\_method\_t@{auth\_method\_t}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{auth\_method\_t}{auth\_method\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}{mailio\+::pop3\+::auth\+\_\+method\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Available authentication methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3_af039a256a5cc218aabfdebbc8f1b6602}\label{classmailio_1_1pop3_af039a256a5cc218aabfdebbc8f1b6602}} 
+\index{mailio::pop3@{mailio::pop3}!pop3@{pop3}}
+\index{pop3@{pop3}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{pop3()}{pop3()}}
+{\footnotesize\ttfamily mailio\+::pop3\+::pop3 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{unsigned}]{port,  }\item[{std\+::chrono\+::milliseconds}]{timeout = {\ttfamily std\+:\+:chrono\+:\+:milliseconds(0)} }\end{DoxyParamCaption})}
+
+Making connection to a server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & Hostname of the server. \\
+\hline
+{\em port} & Port of the server. \\
+\hline
+{\em timeout} & Network timeout after which I/O operations fail. If zero, then no timeout is set i.\+e. I/O operations are synchronous. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily dialog\+::dialog(const string\&, unsigned)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_aeb0215c2253fa084246992c667510655}\label{classmailio_1_1pop3_aeb0215c2253fa084246992c667510655}} 
+\index{mailio::pop3@{mailio::pop3}!````~pop3@{$\sim$pop3}}
+\index{````~pop3@{$\sim$pop3}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{$\sim$pop3()}{~pop3()}}
+{\footnotesize\ttfamily virtual mailio\+::pop3\+::$\sim$pop3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sending the quit command and closing the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3_a3dcc7b088f661246d36df4ffb8c64b06}\label{classmailio_1_1pop3_a3dcc7b088f661246d36df4ffb8c64b06}} 
+\index{mailio::pop3@{mailio::pop3}!auth\_login@{auth\_login}}
+\index{auth\_login@{auth\_login}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{auth\_login()}{auth\_login()}}
+{\footnotesize\ttfamily void mailio\+::pop3\+::auth\+\_\+login (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Authentication of a user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Username rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Password rejection. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_affe00d545818cffc5393f661eeca52fc}\label{classmailio_1_1pop3_affe00d545818cffc5393f661eeca52fc}} 
+\index{mailio::pop3@{mailio::pop3}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily std\+::string mailio\+::pop3\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}{auth\+\_\+method\+\_\+t}}}]{method }\end{DoxyParamCaption})}
+
+Authentication with the given credentials.
+
+The method should be called only once on an existing object -\/ it is not possible to authenticate again within the same connection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+{\em method} & Authentication method to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The server greeting message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1pop3_a130205040b03cb133775950b63888801}{connect()}}}, {\ttfamily auth\+\_\+login(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_a130205040b03cb133775950b63888801}\label{classmailio_1_1pop3_a130205040b03cb133775950b63888801}} 
+\index{mailio::pop3@{mailio::pop3}!connect@{connect}}
+\index{connect@{connect}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily std\+::string mailio\+::pop3\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initializing a connection to the server.
+
+\begin{DoxyReturn}{Returns}
+The server greeting message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Connection to server failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_abc36293e65b23272ab6f8c191b5443a3}\label{classmailio_1_1pop3_abc36293e65b23272ab6f8c191b5443a3}} 
+\index{mailio::pop3@{mailio::pop3}!fetch@{fetch}}
+\index{fetch@{fetch}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily void mailio\+::pop3\+::fetch (\begin{DoxyParamCaption}\item[{unsigned long}]{message\+\_\+no,  }\item[{\mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{msg,  }\item[{bool}]{header\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Fetching a message.
+
+The flag for fetching the header only uses a different P\+O\+P3 command (than for retrieving the full messsage) which is not mandatory by P\+O\+P3. In case the command fails, the method will not report an error but rather the {\ttfamily msg} parameter will be empty.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+no} & Message number to fetch. \\
+\hline
+{\em msg} & Fetched message. \\
+\hline
+{\em header\+\_\+only} & Flag if only the message header should be fetched. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Fetching message failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_ab52f888f855c256b20014a6ca24b2d0e}\label{classmailio_1_1pop3_ab52f888f855c256b20014a6ca24b2d0e}} 
+\index{mailio::pop3@{mailio::pop3}!list@{list}}
+\index{list@{list}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1pop3_a4b1ba63d411962b654957e2dff2b3807}{message\+\_\+list\+\_\+t}} mailio\+::pop3\+::list (\begin{DoxyParamCaption}\item[{unsigned}]{message\+\_\+no = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Listing the size in octets of a message or all messages in a mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+no} & Number of the message to list. If zero, then all messages are listed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Message list. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Listing message failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Listing all messages failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Parser failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000039}{Todo}}]This method is perhaps useless and should be removed.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1pop3_a49462d61f7e3ad7e6e0842947081d319}\label{classmailio_1_1pop3_a49462d61f7e3ad7e6e0842947081d319}} 
+\index{mailio::pop3@{mailio::pop3}!parse\_status@{parse\_status}}
+\index{parse\_status@{parse\_status}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{parse\_status()}{parse\_status()}}
+{\footnotesize\ttfamily std\+::tuple$<$std\+::string, std\+::string$>$ mailio\+::pop3\+::parse\+\_\+status (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a response line for the status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Response line to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple with the status and rest of the line. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Response status unknown. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_a4ad2312e58a6c90a8d34bd1337213b09}\label{classmailio_1_1pop3_a4ad2312e58a6c90a8d34bd1337213b09}} 
+\index{mailio::pop3@{mailio::pop3}!remove@{remove}}
+\index{remove@{remove}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void mailio\+::pop3\+::remove (\begin{DoxyParamCaption}\item[{unsigned long}]{message\+\_\+no }\end{DoxyParamCaption})}
+
+Removing a message in the mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+no} & Message number to remove. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Removing message failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_a9c573a9bdf2f1afca2a0c34779825c48}\label{classmailio_1_1pop3_a9c573a9bdf2f1afca2a0c34779825c48}} 
+\index{mailio::pop3@{mailio::pop3}!statistics@{statistics}}
+\index{statistics@{statistics}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{statistics()}{statistics()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1pop3_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} mailio\+::pop3\+::statistics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetching the mailbox statistics.
+
+\begin{DoxyReturn}{Returns}
+Number of messages and mailbox size in octets. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Reading statistics failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Parser failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3_a3eead1ad276a8fafa38b51fad7d68ba7}\label{classmailio_1_1pop3_a3eead1ad276a8fafa38b51fad7d68ba7}} 
+\index{mailio::pop3@{mailio::pop3}!uidl@{uidl}}
+\index{uidl@{uidl}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{uidl()}{uidl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1pop3_a80c1befe3fe735f69ab1ab06cb11c8c3}{uidl\+\_\+list\+\_\+t}} mailio\+::pop3\+::uidl (\begin{DoxyParamCaption}\item[{unsigned}]{message\+\_\+no = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Getting the unique ID of a message or all messages in a mailbox (U\+I\+DL command; might not be supported by server).
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+no} & Number of the message to get ID for. If zero, then all messages are listed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uidl list. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Listing message failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Listing all messages failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Parser failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3_aa4222ebbd8fe463f8ba69acf9fed6b1b}\label{classmailio_1_1pop3_aa4222ebbd8fe463f8ba69acf9fed6b1b}} 
+\index{mailio::pop3@{mailio::pop3}!\_dlg@{\_dlg}}
+\index{\_dlg@{\_dlg}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{\_dlg}{\_dlg}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmailio_1_1dialog}{dialog}}$>$ mailio\+::pop3\+::\+\_\+dlg\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dialog to use for send/receive operations. \mbox{\Hypertarget{classmailio_1_1pop3_a74e4c5d1ae374d1defeed122ba91affd}\label{classmailio_1_1pop3_a74e4c5d1ae374d1defeed122ba91affd}} 
+\index{mailio::pop3@{mailio::pop3}!TOKEN\_SEPARATOR\_CHAR@{TOKEN\_SEPARATOR\_CHAR}}
+\index{TOKEN\_SEPARATOR\_CHAR@{TOKEN\_SEPARATOR\_CHAR}!mailio::pop3@{mailio::pop3}}
+\doxysubsubsection{\texorpdfstring{TOKEN\_SEPARATOR\_CHAR}{TOKEN\_SEPARATOR\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::pop3\+::\+T\+O\+K\+E\+N\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR \{\textquotesingle{} \textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character used by P\+O\+P3 to separate tokens. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/pop3.\+hpp\end{DoxyCompactItemize}

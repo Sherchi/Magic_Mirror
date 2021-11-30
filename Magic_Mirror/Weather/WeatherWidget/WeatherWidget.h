@@ -8,11 +8,13 @@
 #include "../getWeather.h"
 #include "../../Utils/ClickableLabel.h"
 
+#include "filesystem"
 #include <QWidget>
 #include <QString>
 #include <QPixmap>
 #include <QLabel>
 #include <QHBoxLayout>
+#include <QVBoxLayout>
 
 class WeatherWidget : public QWidget{
     Q_OBJECT
@@ -26,6 +28,7 @@ private slots:
     void changeUnits();
 
 private:
+    QVBoxLayout *mainVbox;
     QHBoxLayout *hbox;
     getWeather *weather;
     QPixmap *image;

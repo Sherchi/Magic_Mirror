@@ -24,7 +24,7 @@ private:
     QString img;
     QPixmap imgPM;
 
-
+//General Getter Functions and Constructor
 public:
     articleData();
     articleData(QJsonObject data);

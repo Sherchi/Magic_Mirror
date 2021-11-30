@@ -10,11 +10,16 @@
 #include "../UserAccountInfoWidget/UserAccountInfo.h"
 #include "../LoginPopupWidget/LoginPopup.h"
 #include "../../Utils/ClickableLabel.h"
+#include "../../MailClient/Email.h"
 
+#include "filesystem"
+#include <vector>
 #include <QWidget>
 #include <QPixmap>
 #include <QLabel>
 #include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QTimer>
 
 class UserSystemWidget : public QWidget{
     Q_OBJECT
@@ -25,13 +30,19 @@ public:
 
 private slots:
     void handleUserSystemClick();
+    void scrollEmails();
 
 private:
-    QHBoxLayout *hbox;
+    QTimer *timer;
+    int index;
+    std::vector<Email*> emails;
+    QVBoxLayout *vbox;
     AdminAccountInfo *adminAccountInfo;
     UserAccountInfo *userAccountInfo;
     LoginPopup *loginPopup;
     UserSystem *userSystem;
+    QLabel *senderLabel;
+    QLabel *subjectLabel;
 };
 
 

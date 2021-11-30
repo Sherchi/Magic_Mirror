@@ -1,0 +1,416 @@
+\hypertarget{classmailio_1_1smtp}{}\doxysection{mailio\+::smtp Class Reference}
+\label{classmailio_1_1smtp}\index{mailio::smtp@{mailio::smtp}}
+
+
+{\ttfamily \#include $<$smtp.\+hpp$>$}
+
+Inheritance diagram for mailio\+::smtp\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1smtp}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1smtp_af070b8d7dc1daee30254d46bbd317204}{auth\+\_\+method\+\_\+t}} \{ {\bfseries N\+O\+NE}, 
+{\bfseries L\+O\+G\+IN}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1smtp_acb8da2a70509a71ad1b1ffe7fb4978b9}{smtp}} (const std\+::string \&hostname, unsigned port, std\+::chrono\+::milliseconds timeout=std\+::chrono\+::milliseconds(0))
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1smtp_a1185ce7bfd33fba9985e444b11bd1854}{$\sim$smtp}} ()
+\item 
+\mbox{\Hypertarget{classmailio_1_1smtp_aa5de318deaaa4bc3de5459ea51b7cf10}\label{classmailio_1_1smtp_aa5de318deaaa4bc3de5459ea51b7cf10}} 
+{\bfseries smtp} (const \mbox{\hyperlink{classmailio_1_1smtp}{smtp}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1smtp_ae5f709e797715ec6cf2422e9e278d953}\label{classmailio_1_1smtp_ae5f709e797715ec6cf2422e9e278d953}} 
+{\bfseries smtp} (\mbox{\hyperlink{classmailio_1_1smtp}{smtp}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1smtp_a0dee43a3438c9e736759bb651b57e517}\label{classmailio_1_1smtp_a0dee43a3438c9e736759bb651b57e517}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1smtp}{smtp}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1smtp_afe74ab7fbcda6e66bea257572b547cb3}\label{classmailio_1_1smtp_afe74ab7fbcda6e66bea257572b547cb3}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1smtp}{smtp}} \&\&)=delete
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1smtp_af31d002cef9ec533f4d2540287268866}{authenticate}} (const std\+::string \&username, const std\+::string \&password, \mbox{\hyperlink{classmailio_1_1smtp_af070b8d7dc1daee30254d46bbd317204}{auth\+\_\+method\+\_\+t}} method)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1smtp_af1290abf3cbdc9e08f10d991a35d2a36}{submit}} (const \mbox{\hyperlink{classmailio_1_1message}{message}} \&msg)
+\item 
+void \mbox{\hyperlink{classmailio_1_1smtp_acd343c86e05c5b7c7418f374eed00311}{source\+\_\+hostname}} (const std\+::string \&src\+\_\+host)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1smtp_a1acd59a25b7b11e175d0e5a05c0dcd7b}{source\+\_\+hostname}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1smtp_aab82eaef85692c47e6bb7a7873ddc8cc}{smtp\+\_\+status\+\_\+t}} \{ {\bfseries P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+C\+O\+M\+P\+L\+E\+T\+I\+ON} = 2, 
+{\bfseries P\+O\+S\+I\+T\+I\+V\+E\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+TE} = 3, 
+{\bfseries T\+R\+A\+N\+S\+I\+E\+N\+T\+\_\+\+N\+E\+G\+A\+T\+I\+VE} = 4, 
+{\bfseries P\+E\+R\+M\+A\+N\+E\+N\+T\+\_\+\+N\+E\+G\+A\+T\+I\+VE} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1smtp_a0ada8b3a8dd6a7cc949e175fb5152e01}{connect}} ()
+\item 
+void \mbox{\hyperlink{classmailio_1_1smtp_a13dacaae728146162ba8c9211498aa6b}{auth\+\_\+login}} (const std\+::string \&username, const std\+::string \&password)
+\item 
+void \mbox{\hyperlink{classmailio_1_1smtp_afe820d4949a8b2982573a512940c69f8}{ehlo}} ()
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1smtp_a3b9a4052fd222c35ef588351fc0903c1}{read\+\_\+hostname}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::tuple$<$ int, bool, std\+::string $>$ \mbox{\hyperlink{classmailio_1_1smtp_a3a54c153c42d7d8b60cb147c9c28fe21}{parse\+\_\+line}} (const std\+::string \&response)
+\item 
+static bool \mbox{\hyperlink{classmailio_1_1smtp_a1b88e1afc2ddd3b49af241b9e5ce28b5}{positive\+\_\+completion}} (int status)
+\item 
+static bool \mbox{\hyperlink{classmailio_1_1smtp_a70b7c3514af39438d684121c19a955c0}{positive\+\_\+intermediate}} (int status)
+\item 
+static bool \mbox{\hyperlink{classmailio_1_1smtp_add89a616c63c8486afb587a107ebb7b5}{transient\+\_\+negative}} (int status)
+\item 
+static bool \mbox{\hyperlink{classmailio_1_1smtp_a702b50a344f9f7c3229081c604e9dbc1}{permanent\+\_\+negative}} (int status)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1smtp_af26a1fcfc78f6e3ae697bd00cf8854cb}{\+\_\+src\+\_\+host}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} $>$ \mbox{\hyperlink{classmailio_1_1smtp_ac9c1dd67170fe3c4ef14c325cdf267b4}{\+\_\+dlg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{classmailio_1_1smtp_a8fbfbd2639f1cef3457327c83ffb8336}{S\+E\+R\+V\+I\+C\+E\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+S\+T\+A\+T\+US}} = 220
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+S\+M\+TP client implementation. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1smtp_af070b8d7dc1daee30254d46bbd317204}\label{classmailio_1_1smtp_af070b8d7dc1daee30254d46bbd317204}} 
+\index{mailio::smtp@{mailio::smtp}!auth\_method\_t@{auth\_method\_t}}
+\index{auth\_method\_t@{auth\_method\_t}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{auth\_method\_t}{auth\_method\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1smtp_af070b8d7dc1daee30254d46bbd317204}{mailio\+::smtp\+::auth\+\_\+method\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Available authentication methods. \mbox{\Hypertarget{classmailio_1_1smtp_aab82eaef85692c47e6bb7a7873ddc8cc}\label{classmailio_1_1smtp_aab82eaef85692c47e6bb7a7873ddc8cc}} 
+\index{mailio::smtp@{mailio::smtp}!smtp\_status\_t@{smtp\_status\_t}}
+\index{smtp\_status\_t@{smtp\_status\_t}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{smtp\_status\_t}{smtp\_status\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1smtp_aab82eaef85692c47e6bb7a7873ddc8cc}{mailio\+::smtp\+::smtp\+\_\+status\+\_\+t}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+S\+M\+TP response status. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1smtp_acb8da2a70509a71ad1b1ffe7fb4978b9}\label{classmailio_1_1smtp_acb8da2a70509a71ad1b1ffe7fb4978b9}} 
+\index{mailio::smtp@{mailio::smtp}!smtp@{smtp}}
+\index{smtp@{smtp}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{smtp()}{smtp()}}
+{\footnotesize\ttfamily mailio\+::smtp\+::smtp (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{unsigned}]{port,  }\item[{std\+::chrono\+::milliseconds}]{timeout = {\ttfamily std\+:\+:chrono\+:\+:milliseconds(0)} }\end{DoxyParamCaption})}
+
+Making a connection to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & Hostname of the server. \\
+\hline
+{\em port} & Port of the server. \\
+\hline
+{\em timeout} & Network timeout after which I/O operations fail. If zero, then no timeout is set i.\+e. I/O operations are synchronous. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Empty source hostname not allowed. \\
+\hline
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_af3b07a5985f57968359ba875dfddc489}{dialog\+::dialog}}}, {\ttfamily read\+\_\+hostname}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_a1185ce7bfd33fba9985e444b11bd1854}\label{classmailio_1_1smtp_a1185ce7bfd33fba9985e444b11bd1854}} 
+\index{mailio::smtp@{mailio::smtp}!````~smtp@{$\sim$smtp}}
+\index{````~smtp@{$\sim$smtp}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{$\sim$smtp()}{~smtp()}}
+{\footnotesize\ttfamily virtual mailio\+::smtp\+::$\sim$smtp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sending the quit command and closing the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1smtp_a13dacaae728146162ba8c9211498aa6b}\label{classmailio_1_1smtp_a13dacaae728146162ba8c9211498aa6b}} 
+\index{mailio::smtp@{mailio::smtp}!auth\_login@{auth\_login}}
+\index{auth\_login@{auth\_login}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{auth\_login()}{auth\_login()}}
+{\footnotesize\ttfamily void mailio\+::smtp\+::auth\+\_\+login (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Authenticating with the login method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Authentication rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Username rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Password rejection. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+line(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_af31d002cef9ec533f4d2540287268866}\label{classmailio_1_1smtp_af31d002cef9ec533f4d2540287268866}} 
+\index{mailio::smtp@{mailio::smtp}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily std\+::string mailio\+::smtp\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{classmailio_1_1smtp_af070b8d7dc1daee30254d46bbd317204}{auth\+\_\+method\+\_\+t}}}]{method }\end{DoxyParamCaption})}
+
+Authenticating with the given credentials.
+
+The method should be called only once on an existing object -\/ it is not possible to authenticate again within the same connection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+{\em method} & Authentication method to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The server greeting message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1smtp_a0ada8b3a8dd6a7cc949e175fb5152e01}{connect()}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1smtp_afe820d4949a8b2982573a512940c69f8}{ehlo()}}}, {\ttfamily auth\+\_\+login(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_a0ada8b3a8dd6a7cc949e175fb5152e01}\label{classmailio_1_1smtp_a0ada8b3a8dd6a7cc949e175fb5152e01}} 
+\index{mailio::smtp@{mailio::smtp}!connect@{connect}}
+\index{connect@{connect}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily std\+::string mailio\+::smtp\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initializing the connection to the server.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Connection rejection. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+line(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_afe820d4949a8b2982573a512940c69f8}\label{classmailio_1_1smtp_afe820d4949a8b2982573a512940c69f8}} 
+\index{mailio::smtp@{mailio::smtp}!ehlo@{ehlo}}
+\index{ehlo@{ehlo}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{ehlo()}{ehlo()}}
+{\footnotesize\ttfamily void mailio\+::smtp\+::ehlo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Issuing {\ttfamily E\+H\+LO} and/or {\ttfamily H\+E\+LO} commands.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Initial message rejection. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+line(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_a3a54c153c42d7d8b60cb147c9c28fe21}\label{classmailio_1_1smtp_a3a54c153c42d7d8b60cb147c9c28fe21}} 
+\index{mailio::smtp@{mailio::smtp}!parse\_line@{parse\_line}}
+\index{parse\_line@{parse\_line}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{parse\_line()}{parse\_line()}}
+{\footnotesize\ttfamily static std\+::tuple$<$int, bool, std\+::string$>$ mailio\+::smtp\+::parse\+\_\+line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Parsing the response line into three tokens.
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & Response line to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple with a status number, flag if the line is the last one and status message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Parsing server failure. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_a702b50a344f9f7c3229081c604e9dbc1}\label{classmailio_1_1smtp_a702b50a344f9f7c3229081c604e9dbc1}} 
+\index{mailio::smtp@{mailio::smtp}!permanent\_negative@{permanent\_negative}}
+\index{permanent\_negative@{permanent\_negative}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{permanent\_negative()}{permanent\_negative()}}
+{\footnotesize\ttfamily static bool mailio\+::smtp\+::permanent\+\_\+negative (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checking if the status is 5XX.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Status to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if does, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1smtp_a1b88e1afc2ddd3b49af241b9e5ce28b5}\label{classmailio_1_1smtp_a1b88e1afc2ddd3b49af241b9e5ce28b5}} 
+\index{mailio::smtp@{mailio::smtp}!positive\_completion@{positive\_completion}}
+\index{positive\_completion@{positive\_completion}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{positive\_completion()}{positive\_completion()}}
+{\footnotesize\ttfamily static bool mailio\+::smtp\+::positive\+\_\+completion (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checking if the status is 2XX.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Status to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if does, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1smtp_a70b7c3514af39438d684121c19a955c0}\label{classmailio_1_1smtp_a70b7c3514af39438d684121c19a955c0}} 
+\index{mailio::smtp@{mailio::smtp}!positive\_intermediate@{positive\_intermediate}}
+\index{positive\_intermediate@{positive\_intermediate}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{positive\_intermediate()}{positive\_intermediate()}}
+{\footnotesize\ttfamily static bool mailio\+::smtp\+::positive\+\_\+intermediate (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checking if the status is 3XX.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Status to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if does, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1smtp_a3b9a4052fd222c35ef588351fc0903c1}\label{classmailio_1_1smtp_a3b9a4052fd222c35ef588351fc0903c1}} 
+\index{mailio::smtp@{mailio::smtp}!read\_hostname@{read\_hostname}}
+\index{read\_hostname@{read\_hostname}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{read\_hostname()}{read\_hostname()}}
+{\footnotesize\ttfamily std\+::string mailio\+::smtp\+::read\+\_\+hostname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reading the source hostname.
+
+\begin{DoxyReturn}{Returns}
+Source hostname. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Reading hostname failure. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_a1acd59a25b7b11e175d0e5a05c0dcd7b}\label{classmailio_1_1smtp_a1acd59a25b7b11e175d0e5a05c0dcd7b}} 
+\index{mailio::smtp@{mailio::smtp}!source\_hostname@{source\_hostname}}
+\index{source\_hostname@{source\_hostname}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{source\_hostname()}{source\_hostname()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::smtp\+::source\+\_\+hostname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting source hostname.
+
+\begin{DoxyReturn}{Returns}
+Source hostname. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1smtp_acd343c86e05c5b7c7418f374eed00311}\label{classmailio_1_1smtp_acd343c86e05c5b7c7418f374eed00311}} 
+\index{mailio::smtp@{mailio::smtp}!source\_hostname@{source\_hostname}}
+\index{source\_hostname@{source\_hostname}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{source\_hostname()}{source\_hostname()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::smtp\+::source\+\_\+hostname (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{src\+\_\+host }\end{DoxyParamCaption})}
+
+Setting the source hostname.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+\_\+host} & Source hostname to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1smtp_af1290abf3cbdc9e08f10d991a35d2a36}\label{classmailio_1_1smtp_af1290abf3cbdc9e08f10d991a35d2a36}} 
+\index{mailio::smtp@{mailio::smtp}!submit@{submit}}
+\index{submit@{submit}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{submit()}{submit()}}
+{\footnotesize\ttfamily std\+::string mailio\+::smtp\+::submit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{msg }\end{DoxyParamCaption})}
+
+Submitting a message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Mail message to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The S\+M\+TP server\textquotesingle{}s reply on accepting the message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail sender rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail recipient rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail group recipient rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail cc recipient rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail group cc recipient rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail bcc recipient rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail group bcc recipient rejection. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1smtp__error}{smtp\+\_\+error}}} & Mail message rejection. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+line(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1smtp_add89a616c63c8486afb587a107ebb7b5}\label{classmailio_1_1smtp_add89a616c63c8486afb587a107ebb7b5}} 
+\index{mailio::smtp@{mailio::smtp}!transient\_negative@{transient\_negative}}
+\index{transient\_negative@{transient\_negative}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{transient\_negative()}{transient\_negative()}}
+{\footnotesize\ttfamily static bool mailio\+::smtp\+::transient\+\_\+negative (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checking if the status is 4XX.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Status to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if does, false if not. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1smtp_ac9c1dd67170fe3c4ef14c325cdf267b4}\label{classmailio_1_1smtp_ac9c1dd67170fe3c4ef14c325cdf267b4}} 
+\index{mailio::smtp@{mailio::smtp}!\_dlg@{\_dlg}}
+\index{\_dlg@{\_dlg}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{\_dlg}{\_dlg}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmailio_1_1dialog}{dialog}}$>$ mailio\+::smtp\+::\+\_\+dlg\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dialog to use for send/receive operations. \mbox{\Hypertarget{classmailio_1_1smtp_af26a1fcfc78f6e3ae697bd00cf8854cb}\label{classmailio_1_1smtp_af26a1fcfc78f6e3ae697bd00cf8854cb}} 
+\index{mailio::smtp@{mailio::smtp}!\_src\_host@{\_src\_host}}
+\index{\_src\_host@{\_src\_host}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{\_src\_host}{\_src\_host}}
+{\footnotesize\ttfamily std\+::string mailio\+::smtp\+::\+\_\+src\+\_\+host\hspace{0.3cm}{\ttfamily [protected]}}
+
+Name of the host which client is connecting from. \mbox{\Hypertarget{classmailio_1_1smtp_a8fbfbd2639f1cef3457327c83ffb8336}\label{classmailio_1_1smtp_a8fbfbd2639f1cef3457327c83ffb8336}} 
+\index{mailio::smtp@{mailio::smtp}!SERVICE\_READY\_STATUS@{SERVICE\_READY\_STATUS}}
+\index{SERVICE\_READY\_STATUS@{SERVICE\_READY\_STATUS}!mailio::smtp@{mailio::smtp}}
+\doxysubsubsection{\texorpdfstring{SERVICE\_READY\_STATUS}{SERVICE\_READY\_STATUS}}
+{\footnotesize\ttfamily const uint16\+\_\+t mailio\+::smtp\+::\+S\+E\+R\+V\+I\+C\+E\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+S\+T\+A\+T\+US = 220\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Server status when ready. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/smtp.\+hpp\end{DoxyCompactItemize}

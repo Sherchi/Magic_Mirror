@@ -53,9 +53,10 @@ MainWindow::MainWindow(int screenWidth, int screenHeight, QWidget *parent) : QMa
  * @authors Nolan Morris.
  *
  * */
+
 void MainWindow::configure(){
     configureWeather();
-    configureNews();
+//    configureNews();
     configureClock();
     configureCalendar();
     configureUserSystem();
@@ -122,7 +123,6 @@ void MainWindow::configureWeather() {
  *
  * @authors Nolan Morris, Darwin Shiyi Liao.
  * */
-//TODO clickability of the news articles
 void MainWindow::configureNews(){ //we can use the news object and have a thing where we return an accumulation of headlines
     newsWidget = new NewsWidget;
     gridLayout->addWidget(newsWidget, 2, 1, Qt::AlignBottom);
@@ -176,7 +176,7 @@ void MainWindow::configureClock() { //configures the digital clock
  * @authors Nolan Morris, Yifei Zhang.
  * */
 void MainWindow::configureCalendar(){ //responsible for drawing the calendar to the screen
-    calendarWidget = new CalendarWidget();
+    calendarWidget = new calendar::calendarWidget();
     gridLayout->addWidget(calendarWidget, 2, 2, Qt::AlignRight);
 }
 

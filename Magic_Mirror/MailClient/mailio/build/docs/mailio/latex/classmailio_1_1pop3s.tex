@@ -1,0 +1,156 @@
+\hypertarget{classmailio_1_1pop3s}{}\doxysection{mailio\+::pop3s Class Reference}
+\label{classmailio_1_1pop3s}\index{mailio::pop3s@{mailio::pop3s}}
+
+
+{\ttfamily \#include $<$pop3.\+hpp$>$}
+
+Inheritance diagram for mailio\+::pop3s\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1pop3s}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1pop3s_a6e86232b317ce04ee339235ef2414334}{auth\+\_\+method\+\_\+t}} \{ {\bfseries L\+O\+G\+IN}, 
+{\bfseries S\+T\+A\+R\+T\+\_\+\+T\+LS}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1pop3s_af0a45a1b45c7c4c2ea0248fc9623962b}{pop3s}} (const std\+::string \&hostname, unsigned port, std\+::chrono\+::milliseconds timeout=std\+::chrono\+::milliseconds(0))
+\item 
+\mbox{\hyperlink{classmailio_1_1pop3s_a79bc916d3b9530578ec0d9a4fac0914e}{$\sim$pop3s}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3s_ae009e2cbbcf96beefcac44b5564e6aba}\label{classmailio_1_1pop3s_ae009e2cbbcf96beefcac44b5564e6aba}} 
+{\bfseries pop3s} (const \mbox{\hyperlink{classmailio_1_1pop3s}{pop3s}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3s_a830aa3460a21522fc848b6490f775836}\label{classmailio_1_1pop3s_a830aa3460a21522fc848b6490f775836}} 
+{\bfseries pop3s} (\mbox{\hyperlink{classmailio_1_1pop3s}{pop3s}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3s_a35dfa23b8abf0c55ef5596dca79ba32a}\label{classmailio_1_1pop3s_a35dfa23b8abf0c55ef5596dca79ba32a}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1pop3s}{pop3s}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1pop3s_a5f98e696034eece0363ea81287a44378}\label{classmailio_1_1pop3s_a5f98e696034eece0363ea81287a44378}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1pop3s}{pop3s}} \&\&)=delete
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1pop3s_aa1facfdfab5dfab2c3ccfb3a3b211db1}{authenticate}} (const std\+::string \&username, const std\+::string \&password, \mbox{\hyperlink{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}{auth\+\_\+method\+\_\+t}} method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmailio_1_1pop3s_afde660741244339783484b3eba5ea41b}{start\+\_\+tls}} ()
+\item 
+void \mbox{\hyperlink{classmailio_1_1pop3s_a4658094c3c317309f65ed1dff7c78aa2}{switch\+\_\+to\+\_\+ssl}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Secure version of P\+O\+P3 client. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3s_a6e86232b317ce04ee339235ef2414334}\label{classmailio_1_1pop3s_a6e86232b317ce04ee339235ef2414334}} 
+\index{mailio::pop3s@{mailio::pop3s}!auth\_method\_t@{auth\_method\_t}}
+\index{auth\_method\_t@{auth\_method\_t}!mailio::pop3s@{mailio::pop3s}}
+\doxysubsubsection{\texorpdfstring{auth\_method\_t}{auth\_method\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1pop3s_a6e86232b317ce04ee339235ef2414334}{mailio\+::pop3s\+::auth\+\_\+method\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Available authentication methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3s_af0a45a1b45c7c4c2ea0248fc9623962b}\label{classmailio_1_1pop3s_af0a45a1b45c7c4c2ea0248fc9623962b}} 
+\index{mailio::pop3s@{mailio::pop3s}!pop3s@{pop3s}}
+\index{pop3s@{pop3s}!mailio::pop3s@{mailio::pop3s}}
+\doxysubsubsection{\texorpdfstring{pop3s()}{pop3s()}}
+{\footnotesize\ttfamily mailio\+::pop3s\+::pop3s (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{unsigned}]{port,  }\item[{std\+::chrono\+::milliseconds}]{timeout = {\ttfamily std\+:\+:chrono\+:\+:milliseconds(0)} }\end{DoxyParamCaption})}
+
+Making a connection to server.
+
+Parent constructor is called to do all the work.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & Hostname of the server. \\
+\hline
+{\em port} & Port of the server. \\
+\hline
+{\em timeout} & Network timeout after which I/O operations fail. If zero, then no timeout is set i.\+e. I/O operations are synchronous. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily pop3\+::pop3(const string\&, unsigned)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3s_a79bc916d3b9530578ec0d9a4fac0914e}\label{classmailio_1_1pop3s_a79bc916d3b9530578ec0d9a4fac0914e}} 
+\index{mailio::pop3s@{mailio::pop3s}!````~pop3s@{$\sim$pop3s}}
+\index{````~pop3s@{$\sim$pop3s}!mailio::pop3s@{mailio::pop3s}}
+\doxysubsubsection{\texorpdfstring{$\sim$pop3s()}{~pop3s()}}
+{\footnotesize\ttfamily mailio\+::pop3s\+::$\sim$pop3s (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Sending the quit command and closing the connection.
+
+Parent destructor is called to do all the work. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1pop3s_aa1facfdfab5dfab2c3ccfb3a3b211db1}\label{classmailio_1_1pop3s_aa1facfdfab5dfab2c3ccfb3a3b211db1}} 
+\index{mailio::pop3s@{mailio::pop3s}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!mailio::pop3s@{mailio::pop3s}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily std\+::string mailio\+::pop3s\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{classmailio_1_1pop3_aa46ed363c0f6436c95a74fd2bca775cc}{auth\+\_\+method\+\_\+t}}}]{method }\end{DoxyParamCaption})}
+
+Authenticating with the given credentials.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+{\em method} & Authentication method to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The server greeting message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1pop3s_afde660741244339783484b3eba5ea41b}{start\+\_\+tls()}}}, {\ttfamily pop3\+::auth\+\_\+login(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3s_afde660741244339783484b3eba5ea41b}\label{classmailio_1_1pop3s_afde660741244339783484b3eba5ea41b}} 
+\index{mailio::pop3s@{mailio::pop3s}!start\_tls@{start\_tls}}
+\index{start\_tls@{start\_tls}!mailio::pop3s@{mailio::pop3s}}
+\doxysubsubsection{\texorpdfstring{start\_tls()}{start\_tls()}}
+{\footnotesize\ttfamily void mailio\+::pop3s\+::start\+\_\+tls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Switching to T\+LS layer.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1pop3__error}{pop3\+\_\+error}}} & Start T\+LS failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+status(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}, {\ttfamily \mbox{\hyperlink{classmailio_1_1pop3s_a4658094c3c317309f65ed1dff7c78aa2}{switch\+\_\+to\+\_\+ssl()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1pop3s_a4658094c3c317309f65ed1dff7c78aa2}\label{classmailio_1_1pop3s_a4658094c3c317309f65ed1dff7c78aa2}} 
+\index{mailio::pop3s@{mailio::pop3s}!switch\_to\_ssl@{switch\_to\_ssl}}
+\index{switch\_to\_ssl@{switch\_to\_ssl}!mailio::pop3s@{mailio::pop3s}}
+\doxysubsubsection{\texorpdfstring{switch\_to\_ssl()}{switch\_to\_ssl()}}
+{\footnotesize\ttfamily void mailio\+::pop3s\+::switch\+\_\+to\+\_\+ssl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Replacing a T\+CP socket with an S\+SL one.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily dialog\+\_\+ssl\+::dialog\+\_\+ssl(dialog\&\&)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/pop3.\+hpp\end{DoxyCompactItemize}

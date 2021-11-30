@@ -1,5 +1,10 @@
 {
    "admin" : true,
-   "password" : "M",
-   "username" : "nmorri47"
+   "calendar_file_path" : "",
+   "email" : "meijerp.fm@gmail.com",
+   "email_imap_server" : "imap.gmail.com",
+   "email_password" : "CS3307123$",
+   "has_inbox" : true,
+   "password" : "CS3307123$",
+   "username" : "meijerp.fm@gmail.com"
 }

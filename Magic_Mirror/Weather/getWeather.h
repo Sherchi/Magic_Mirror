@@ -25,17 +25,25 @@ Q_OBJECT public:
     explicit getWeather(QWidget *parent = nullptr);
 
 public:
-    void fetchWeather(QString url);
+    void fetchWeather(QString url, QString city);
+    void fetchForecast(QString url, QString city);
     double getTemperature();
     QString getWeatherDescription();
     QString convert(QString);
+    QVector<double> getForecastTempMins();
+    QVector<double> getForecastTempMaxes();
+    QVector<QString> getForecastDescriptions();
 
 private slots:
     void parseWeather();
+    void parseForecast();
 
 private:
     bool celsius;
     double tempResult;
     QString weatherResult;
+    QVector<QString> forecastDescriptionResult;
+    QVector<double> forecastTempMinResults;
+    QVector<double> forecastTempMaxResults;
 };
 #endif // MAINWINDOW_H

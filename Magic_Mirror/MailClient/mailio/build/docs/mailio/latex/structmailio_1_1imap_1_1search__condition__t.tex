@@ -1,0 +1,112 @@
+\hypertarget{structmailio_1_1imap_1_1search__condition__t}{}\doxysection{mailio\+::imap\+::search\+\_\+condition\+\_\+t Struct Reference}
+\label{structmailio_1_1imap_1_1search__condition__t}\index{mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}}
+
+
+{\ttfamily \#include $<$imap.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_a418038aa2d5e25de107cf473dc644d23}{key\+\_\+type}} \{ \newline
+{\bfseries A\+LL}, 
+{\bfseries S\+I\+D\+\_\+\+L\+I\+ST}, 
+{\bfseries U\+I\+D\+\_\+\+L\+I\+ST}, 
+{\bfseries S\+U\+B\+J\+E\+CT}, 
+\newline
+{\bfseries F\+R\+OM}, 
+{\bfseries TO}, 
+{\bfseries B\+E\+F\+O\+R\+E\+\_\+\+D\+A\+TE}, 
+{\bfseries O\+N\+\_\+\+D\+A\+TE}, 
+\newline
+{\bfseries S\+I\+N\+C\+E\+\_\+\+D\+A\+TE}
+ \}
+\item 
+typedef std\+::variant$<$ std\+::monostate, std\+::string, std\+::list$<$ \mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}} $>$, boost\+::gregorian\+::date $>$ \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{value\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_a517e6200bcb006db5a9eb56a1ef31eed}{search\+\_\+condition\+\_\+t}} (\mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_a418038aa2d5e25de107cf473dc644d23}{key\+\_\+type}} condition\+\_\+key, \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{value\+\_\+type}} condition\+\_\+value=\mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{value\+\_\+type}}())
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmailio_1_1imap_1_1search__condition__t_a0e6a38104eb65a172bb0d79b93017617}\label{structmailio_1_1imap_1_1search__condition__t_a0e6a38104eb65a172bb0d79b93017617}} 
+enum \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_a418038aa2d5e25de107cf473dc644d23}{mailio\+::imap\+::search\+\_\+condition\+\_\+t\+::key\+\_\+type}} {\bfseries key}
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{value\+\_\+type}} \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_a232f1bad7cae8921d386c077e91534da}{value}}
+\item 
+std\+::string \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_afc679d5b1bc0330e86ae457d0e1b0574}{imap\+\_\+string}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Condition used by I\+M\+AP searching.
+
+It consists of key and value. Each key except the A\+LL has a value of the appropriate type\+: string, list of I\+Ds, date.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Since both key and value types are known at compile time, perhaps they should be checked then instead at runtime.\end{DoxyRefDesc}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}\label{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}} 
+\index{mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily typedef std\+::variant$<$ std\+::monostate, std\+::string, std\+::list$<$\mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}}$>$, boost\+::gregorian\+::date $>$ \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{mailio\+::imap\+::search\+\_\+condition\+\_\+t\+::value\+\_\+type}}}
+
+Condition value type to be used as message search criteria.
+
+Key A\+LL uses null because it does not need the value. Single ID can be given or range of I\+Ds, or more than one range. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1search__condition__t_a418038aa2d5e25de107cf473dc644d23}\label{structmailio_1_1imap_1_1search__condition__t_a418038aa2d5e25de107cf473dc644d23}} 
+\index{mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}!key\_type@{key\_type}}
+\index{key\_type@{key\_type}!mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}}
+\doxysubsubsection{\texorpdfstring{key\_type}{key\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_a418038aa2d5e25de107cf473dc644d23}{mailio\+::imap\+::search\+\_\+condition\+\_\+t\+::key\+\_\+type}}}
+
+Condition key to be used as message search criteria. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1search__condition__t_a517e6200bcb006db5a9eb56a1ef31eed}\label{structmailio_1_1imap_1_1search__condition__t_a517e6200bcb006db5a9eb56a1ef31eed}} 
+\index{mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}!search\_condition\_t@{search\_condition\_t}}
+\index{search\_condition\_t@{search\_condition\_t}!mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}}
+\doxysubsubsection{\texorpdfstring{search\_condition\_t()}{search\_condition\_t()}}
+{\footnotesize\ttfamily mailio\+::imap\+::search\+\_\+condition\+\_\+t\+::search\+\_\+condition\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_a418038aa2d5e25de107cf473dc644d23}{key\+\_\+type}}}]{condition\+\_\+key,  }\item[{\mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{value\+\_\+type}}}]{condition\+\_\+value = {\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{value\+\_\+type}}()} }\end{DoxyParamCaption})}
+
+Creating the I\+M\+AP string of the given condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition\+\_\+key} & Key to search for. \\
+\hline
+{\em condition\+\_\+value} & Value to search for, default (empty) value is meant for the A\+LL key. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Invaid search condition. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1search__condition__t_afc679d5b1bc0330e86ae457d0e1b0574}\label{structmailio_1_1imap_1_1search__condition__t_afc679d5b1bc0330e86ae457d0e1b0574}} 
+\index{mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}!imap\_string@{imap\_string}}
+\index{imap\_string@{imap\_string}!mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}}
+\doxysubsubsection{\texorpdfstring{imap\_string}{imap\_string}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::search\+\_\+condition\+\_\+t\+::imap\+\_\+string}
+
+String used to send over I\+M\+AP. \mbox{\Hypertarget{structmailio_1_1imap_1_1search__condition__t_a232f1bad7cae8921d386c077e91534da}\label{structmailio_1_1imap_1_1search__condition__t_a232f1bad7cae8921d386c077e91534da}} 
+\index{mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}!value@{value}}
+\index{value@{value}!mailio::imap::search\_condition\_t@{mailio::imap::search\_condition\_t}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t_ad8aee495ef02d8bb266cfb8977a687e1}{value\+\_\+type}} mailio\+::imap\+::search\+\_\+condition\+\_\+t\+::value}
+
+Condition value itself. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/imap.\+hpp\end{DoxyCompactItemize}

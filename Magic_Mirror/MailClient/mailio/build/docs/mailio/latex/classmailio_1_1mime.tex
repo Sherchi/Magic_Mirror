@@ -1,0 +1,1327 @@
+\hypertarget{classmailio_1_1mime}{}\doxysection{mailio\+::mime Class Reference}
+\label{classmailio_1_1mime}\index{mailio::mime@{mailio::mime}}
+
+
+{\ttfamily \#include $<$mime.\+hpp$>$}
+
+Inheritance diagram for mailio\+::mime\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1mime}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1mime_1_1attr__comp__t}{attr\+\_\+comp\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} \{ \newline
+{\bfseries N\+O\+NE}, 
+{\bfseries T\+E\+XT}, 
+{\bfseries I\+M\+A\+GE}, 
+{\bfseries A\+U\+D\+IO}, 
+\newline
+{\bfseries V\+I\+D\+EO}, 
+{\bfseries A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}, 
+{\bfseries M\+U\+L\+T\+I\+P\+A\+RT}, 
+{\bfseries M\+E\+S\+S\+A\+GE}
+ \}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} \{ \newline
+{\bfseries N\+O\+NE}, 
+{\bfseries B\+I\+T\+\_\+7}, 
+{\bfseries B\+I\+T\+\_\+8}, 
+{\bfseries B\+A\+S\+E\+\_\+64}, 
+\newline
+{\bfseries Q\+U\+O\+T\+E\+D\+\_\+\+P\+R\+I\+N\+T\+A\+B\+LE}, 
+{\bfseries B\+I\+N\+A\+RY}
+ \}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} \{ {\bfseries N\+O\+NE}, 
+{\bfseries I\+N\+L\+I\+NE}, 
+{\bfseries A\+T\+T\+A\+C\+H\+M\+E\+NT}
+ \}
+\item 
+typedef \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{q\+\_\+codec\+::codec\+\_\+method\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a94c6706543515cf89a11bbf069f9e515}{header\+\_\+codec\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_a6025fcd39bc02f393d2a58296de3a0db}{mime}} ()
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_a567fcad62600817b1dab80614d7442da}{mime}} (const \mbox{\hyperlink{classmailio_1_1mime}{mime}} \&)=default
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_aaf4a2886abb7aed9ba78ef2b593724e6}{mime}} (\mbox{\hyperlink{classmailio_1_1mime}{mime}} \&\&)=default
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1mime_aa05d41c7cc1a60c3ef761e340f46a412}{$\sim$mime}} ()=default
+\item 
+\mbox{\hyperlink{classmailio_1_1mime}{mime}} \& \mbox{\hyperlink{classmailio_1_1mime_a25746ed5622dbb09b0e62ad6540eb2cb}{operator=}} (const \mbox{\hyperlink{classmailio_1_1mime}{mime}} \&)=default
+\item 
+\mbox{\hyperlink{classmailio_1_1mime}{mime}} \& \mbox{\hyperlink{classmailio_1_1mime_aff06cbf2b8e0de54381bab732a63ffe1}{operator=}} (\mbox{\hyperlink{classmailio_1_1mime}{mime}} \&\&)=default
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_abb9e24afcf6973dae459d762d2f2edda}{format}} (std\+::string \&mime\+\_\+str, bool dot\+\_\+escape=true) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a317bbce9a26e9fbc09c355156a703f38}{parse}} (const std\+::string \&mime\+\_\+string, bool dot\+\_\+escape=false)
+\item 
+\mbox{\hyperlink{classmailio_1_1mime}{mime}} \& \mbox{\hyperlink{classmailio_1_1mime_a60ff1c34cbd5fa56c75119e71643e184}{parse\+\_\+by\+\_\+line}} (const std\+::string \&line, bool dot\+\_\+escape=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a37e0c25917cc768edfeacc5e5fa5b902}{content\+\_\+type}} (const \mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} \&cont\+\_\+type)
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_aba634b8455c40102d41cc529c4866354}{content\+\_\+type}} (\mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} media\+\_\+type, const std\+::string \&media\+\_\+subtype, const std\+::string \&charset=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a6d487b06aa50b0f2426410ed03389acb}{content\+\_\+type}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_ae63b9c6bdcd687c62eadbb3f390b78ab}{name}} (const std\+::string \&mime\+\_\+name)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a2c2cd678d7a5d239b72727ad5df819bf}{name}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a9c245748916339b8a2656453b93b2833}{content\+\_\+transfer\+\_\+encoding}} (\mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} encoding)
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a59fe909c0d8b90202ad5b040dc4797ba}{content\+\_\+transfer\+\_\+encoding}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a1848bac81b3b3c37d5e2b5b8d630297f}{content\+\_\+disposition}} (\mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} disposition)
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_ac4d8aaa3330b9909b3b8da4d189cfd7c}{content\+\_\+disposition}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a6eb50283fc4964723dcc3c89d3c29dfa}{boundary}} (const std\+::string \&bound)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a529dc5768ead453d3d5e6545c57be8ea}{boundary}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_ac31f918d3398c400170ed6c3f1bb5751}{content}} (const std\+::string \&content\+\_\+str)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_acd23fae2aa8d4a2af46cbeb4b60ff7c2}{content}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a7cfec56952d772f3d7a1b0b5c2bdfce5}{add\+\_\+part}} (const \mbox{\hyperlink{classmailio_1_1mime}{mime}} \&part)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classmailio_1_1mime}{mime}} $>$ \mbox{\hyperlink{classmailio_1_1mime_afbe65315445e7a9ec1dd04959273bb0a}{parts}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_ab9c24449bc20235176bb0289f6bbd57c}{line\+\_\+policy}} (\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} encoder\+\_\+line\+\_\+policy, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a01e23a762bf7cc0788c66f3d87b275eb}{decoder\+\_\+line\+\_\+policy}})
+\item 
+\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a11854ad963e953466f1c2521052e1071}{line\+\_\+policy}} () const
+\item 
+\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a01e23a762bf7cc0788c66f3d87b275eb}{decoder\+\_\+line\+\_\+policy}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a0420475874ff84c5325ad1fda23c2f9a}{strict\+\_\+mode}} (bool mode)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1mime_ab0d048ebb5e72b51a86e5f947ac2f566}{strict\+\_\+mode}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a0b2d135c100f3a441bbf4c7c8cab4f9f}{strict\+\_\+codec\+\_\+mode}} (bool mode)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1mime_ade6823c332d9932759f3ea5b871b97f1}{strict\+\_\+codec\+\_\+mode}} () const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a4c2b0d8df5daba5b8852ee195a3c2ee4}{header\+\_\+codec}} (\mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{header\+\_\+codec\+\_\+t}} hdr\+\_\+codec)
+\item 
+\mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{header\+\_\+codec\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a7f329bb3cfd8a6bff03c38f955f7726a}{header\+\_\+codec}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1mime_ac2f33ef1871d763375071debd7e3a498}{mime\+\_\+parsing\+\_\+status\+\_\+t}} \{ {\bfseries N\+O\+NE}, 
+{\bfseries B\+E\+G\+IN}, 
+{\bfseries E\+ND}
+ \}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string, \mbox{\hyperlink{structmailio_1_1mime_1_1attr__comp__t}{attr\+\_\+comp\+\_\+t}} $>$ \mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classmailio_1_1mime_a0d37ed58e19f4e55710c84895df888ce}{format\+\_\+header}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_acf5c8a0f14e47320ec515174a46b6ac9}{format\+\_\+content}} (bool dot\+\_\+escape) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_af4db71e3405d2154d032eeece28f9a77}{format\+\_\+content\+\_\+type}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a587c8308fb250244b8cfe3463d4aa69e}{format\+\_\+transfer\+\_\+encoding}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a3c6773b2f9f7c4fb11f7aa8d55dc5c0c}{format\+\_\+content\+\_\+disposition}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a68a704c0b1e727a2aed317b407a70e35}{format\+\_\+mime\+\_\+name}} (const std\+::string \&\mbox{\hyperlink{classmailio_1_1mime_ae63b9c6bdcd687c62eadbb3f390b78ab}{name}}) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a9508d6b6a998c8e7db1caed55e7be9d0}{parse\+\_\+header}} ()
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a334f1181ce11f7692083e2e40ad3c871}{parse\+\_\+content}} ()
+\item 
+virtual void \mbox{\hyperlink{classmailio_1_1mime_a8e97e1c1dd7f87b3be893ccec3e418f7}{parse\+\_\+header\+\_\+line}} (const std\+::string \&header\+\_\+line)
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_af0c3749d9417525c86c4df9f24dc371f}{parse\+\_\+header\+\_\+name\+\_\+value}} (const std\+::string \&header\+\_\+line, std\+::string \&header\+\_\+name, std\+::string \&header\+\_\+value) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a28460d27807b56751814ab719900d977}{parse\+\_\+content\+\_\+type}} (const std\+::string \&content\+\_\+type\+\_\+hdr, \mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} \&media\+\_\+type, std\+::string \&media\+\_\+subtype, \mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&attributes) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a1641295291b3a4d78bf2197c47a4a4c4}{parse\+\_\+content\+\_\+transfer\+\_\+encoding}} (const std\+::string \&transfer\+\_\+encoding\+\_\+hdr, \mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} \&encoding, \mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&attributes) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a8aa7d567441d01369cee1e0c7a01b64d}{parse\+\_\+content\+\_\+disposition}} (const std\+::string \&content\+\_\+disp\+\_\+hdr, \mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} \&disposition, \mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&attributes) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a7e7b53df03ad3555e722e6074a6a801d}{parse\+\_\+header\+\_\+value\+\_\+attributes}} (const std\+::string \&header, std\+::string \&value, \mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&attributes) const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_ab666756a5c95bbefbf5d5f7fcc1a110b}{make\+\_\+boundary}} () const
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a4b98ce31d10c27c10e9b64218a544641}{mime\+\_\+type\+\_\+as\+\_\+str}} (\mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} media\+\_\+type\+\_\+val) const
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_afb654d80fdef1df40c0692b04595448f}{mime\+\_\+type\+\_\+as\+\_\+enum}} (const std\+::string \&media\+\_\+type\+\_\+val) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1mime_a896d7e868c7cc8a36273e328cb95d403}{strip\+\_\+body}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a4e1b69fc88f704a018350d04a60c03eb}{\+\_\+boundary}}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_ac71dc3bf07dfbbf3a381a33cf39fb1b1}{\+\_\+version}}
+\item 
+\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a3cf63543d3dad9fef631ae9ef7687897}{\+\_\+line\+\_\+policy}}
+\item 
+\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a2bb3eaa4790ec364ccacf5b7d576039a}{\+\_\+decoder\+\_\+line\+\_\+policy}}
+\item 
+bool \mbox{\hyperlink{classmailio_1_1mime_aa2903934235b8c38017ed6ed51ab2b86}{\+\_\+strict\+\_\+mode}}
+\item 
+bool \mbox{\hyperlink{classmailio_1_1mime_a4a5549de771de549826e5065e8ab7816}{\+\_\+strict\+\_\+codec\+\_\+mode}}
+\item 
+\mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{header\+\_\+codec\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_ab4c8d57487442a0babcfc97f47983c18}{\+\_\+header\+\_\+codec}}
+\item 
+\mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_ac93b8f05f130c40cbaa85cf7146813b3}{\+\_\+content\+\_\+type}}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_afba6beba3786d20171346468a9f1dd5d}{\+\_\+name}}
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_ab39de3fe1aabb5ace43b51113f3b7440}{\+\_\+encoding}}
+\item 
+\mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} \mbox{\hyperlink{classmailio_1_1mime_a34148c4a1ff4242f3090ac23e7c1e7db}{\+\_\+disposition}}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1mime_a711590572ad5dacd7a637293bbb01a12}{\+\_\+content}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classmailio_1_1mime}{mime}} $>$ \mbox{\hyperlink{classmailio_1_1mime_a1695c29c9a490edef70f1bdf1f2de666}{\+\_\+parts}}
+\item 
+bool \mbox{\hyperlink{classmailio_1_1mime_a71a751f64844ae08b81a60613962ab3c}{\+\_\+parsing\+\_\+header}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1mime_a1a3818fde6941d3dfb515111c20e10f4}{\+\_\+parsed\+\_\+headers}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmailio_1_1mime_a8410036831a58ca48775289ee49c0f71}{\+\_\+parsed\+\_\+body}}
+\item 
+\mbox{\Hypertarget{classmailio_1_1mime_af4d4dee22b4646fc684ebc8aa448e76d}\label{classmailio_1_1mime_af4d4dee22b4646fc684ebc8aa448e76d}} 
+enum \mbox{\hyperlink{classmailio_1_1mime_ac2f33ef1871d763375071debd7e3a498}{mailio\+::mime\+::mime\+\_\+parsing\+\_\+status\+\_\+t}} {\bfseries \+\_\+mime\+\_\+status}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_ae3883200be56d83e323ec4067d38fbb4}{C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_aecf78c164faf4c0f49c7c01a498d2cf5}{C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_ac80a4c0c05f5e441184bbf1e7567b59a}{C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+A\+S\+E64}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a674106e8cd9468f27fe48e196a8e2d7e}{C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+I\+T7}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a0a66f9614aa395412aadafca0b37cb6c}{C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+I\+T8}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_af51596cd0fcd142eddf47f8c8e4e9e07}{C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+Q\+U\+O\+T\+E\+D\+\_\+\+P\+R\+I\+N\+T\+A\+B\+LE}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_ae6ce6ae18401ef2d182bb8eaba4ebfd2}{C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+I\+N\+A\+RY}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a8163bb0153db11330675a5f5e6eb4f7e}{C\+O\+N\+T\+E\+N\+T\+\_\+\+D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a1684d0ee8c3cdf48f42b9fbe7505d8ce}{C\+O\+N\+T\+E\+N\+T\+\_\+\+D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+A\+T\+T\+A\+C\+H\+M\+E\+NT}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a681f6e38990f40bdc5e64621d03d54b3}{C\+O\+N\+T\+E\+N\+T\+\_\+\+D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+I\+N\+L\+I\+NE}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a92a7b06f02e581689ee9300c61aba2d5}{N\+E\+W\+\_\+\+L\+I\+N\+E\+\_\+\+I\+N\+D\+E\+NT}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1mime_aae1250f0cb71d5f053e4a16f663c87e8}{C\+O\+N\+T\+E\+N\+T\+\_\+\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}} \{\textquotesingle{}/\textquotesingle{}\}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1mime_a48a6dbd2f99f52005512f13f11decc05}{H\+E\+A\+D\+E\+R\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR}} \{\textquotesingle{}\+:\textquotesingle{}\}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_ae4f4e3f9bbdbadc49659bc41c90c383a}{H\+E\+A\+D\+E\+R\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1mime_a4149397f899dccf36dbce9c324512e4a}{N\+A\+M\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR}} \{\textquotesingle{}=\textquotesingle{}\}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_ae5978cd1de68676f40f1bb95ca8541b6}{N\+A\+M\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1mime_a9e8f09b0c31f80fd6277b0ed96bb07e5}{A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR}} \{\textquotesingle{};\textquotesingle{}\}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_aa8f1dfbe7065c35442c6c1e29ede2a84}{A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_af967276771e9c697013d57b485689cd7}{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a5bc34421d1c6e1afffacaf03771135ea}{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a2b5a5044fca7266adb2e08fca8bd69b6}{B\+O\+U\+N\+D\+A\+R\+Y\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a0b6dace620dc2653f8f9894e60055bc6}{Q\+T\+E\+XT}}
+\item 
+static const boost\+::regex \mbox{\hyperlink{classmailio_1_1mime_a7d66d0af99e04d21d7b1eac0f4e830af}{H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX}}
+\item 
+static const boost\+::regex \mbox{\hyperlink{classmailio_1_1mime_af8e0151e96725cef29b394b346278ec1}{H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+R\+E\+G\+EX}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a9dec5e2cda80ee2bf44b0964d1e2282b}{C\+O\+N\+T\+E\+N\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+L\+P\+H\+A\+B\+ET}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1mime_a14e298fbfc14469426a67e178587c273}{C\+O\+N\+T\+E\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+L\+P\+H\+A\+B\+ET}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mime part implementation. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}\label{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}} 
+\index{mailio::mime@{mailio::mime}!attributes\_t@{attributes\_t}}
+\index{attributes\_t@{attributes\_t}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{attributes\_t}{attributes\_t}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, std\+::string, \mbox{\hyperlink{structmailio_1_1mime_1_1attr__comp__t}{attr\+\_\+comp\+\_\+t}}$>$ \mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{mailio\+::mime\+::attributes\+\_\+t}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Attributes map which used the appropriate comparator. \mbox{\Hypertarget{classmailio_1_1mime_a94c6706543515cf89a11bbf069f9e515}\label{classmailio_1_1mime_a94c6706543515cf89a11bbf069f9e515}} 
+\index{mailio::mime@{mailio::mime}!header\_codec\_t@{header\_codec\_t}}
+\index{header\_codec\_t@{header\_codec\_t}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{header\_codec\_t}{header\_codec\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{q\+\_\+codec\+::codec\+\_\+method\+\_\+t}} \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{mailio\+::mime\+::header\+\_\+codec\+\_\+t}}}
+
+Codec used for header fields. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}\label{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}} 
+\index{mailio::mime@{mailio::mime}!content\_disposition\_t@{content\_disposition\_t}}
+\index{content\_disposition\_t@{content\_disposition\_t}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_disposition\_t}{content\_disposition\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{mailio\+::mime\+::content\+\_\+disposition\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Content disposition.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000035}{Todo}}]Content disposition should be struct to keep this enum and filename?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}\label{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}} 
+\index{mailio::mime@{mailio::mime}!content\_transfer\_encoding\_t@{content\_transfer\_encoding\_t}}
+\index{content\_transfer\_encoding\_t@{content\_transfer\_encoding\_t}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_transfer\_encoding\_t}{content\_transfer\_encoding\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{mailio\+::mime\+::content\+\_\+transfer\+\_\+encoding\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Content transfer encodings.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000034}{Todo}}]What is a differrence between A\+S\+C\+II and 7bit?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}\label{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}} 
+\index{mailio::mime@{mailio::mime}!media\_type\_t@{media\_type\_t}}
+\index{media\_type\_t@{media\_type\_t}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{media\_type\_t}{media\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{mailio\+::mime\+::media\+\_\+type\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Top level media types.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000033}{Todo}}]Mixed subtype is missing.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1mime_ac2f33ef1871d763375071debd7e3a498}\label{classmailio_1_1mime_ac2f33ef1871d763375071debd7e3a498}} 
+\index{mailio::mime@{mailio::mime}!mime\_parsing\_status\_t@{mime\_parsing\_status\_t}}
+\index{mime\_parsing\_status\_t@{mime\_parsing\_status\_t}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{mime\_parsing\_status\_t}{mime\_parsing\_status\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1mime_ac2f33ef1871d763375071debd7e3a498}{mailio\+::mime\+::mime\+\_\+parsing\+\_\+status\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [protected]}}
+
+Status of mime parsing -\/ is parsing of the mime part started or stopped. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1mime_a6025fcd39bc02f393d2a58296de3a0db}\label{classmailio_1_1mime_a6025fcd39bc02f393d2a58296de3a0db}} 
+\index{mailio::mime@{mailio::mime}!mime@{mime}}
+\index{mime@{mime}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{mime()}{mime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily mailio\+::mime\+::mime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default default constructor. \mbox{\Hypertarget{classmailio_1_1mime_a567fcad62600817b1dab80614d7442da}\label{classmailio_1_1mime_a567fcad62600817b1dab80614d7442da}} 
+\index{mailio::mime@{mailio::mime}!mime@{mime}}
+\index{mime@{mime}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{mime()}{mime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily mailio\+::mime\+::mime (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1mime}{mime}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default copy constructor. \mbox{\Hypertarget{classmailio_1_1mime_aaf4a2886abb7aed9ba78ef2b593724e6}\label{classmailio_1_1mime_aaf4a2886abb7aed9ba78ef2b593724e6}} 
+\index{mailio::mime@{mailio::mime}!mime@{mime}}
+\index{mime@{mime}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{mime()}{mime()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily mailio\+::mime\+::mime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1mime}{mime}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default move constructor. \mbox{\Hypertarget{classmailio_1_1mime_aa05d41c7cc1a60c3ef761e340f46a412}\label{classmailio_1_1mime_aa05d41c7cc1a60c3ef761e340f46a412}} 
+\index{mailio::mime@{mailio::mime}!````~mime@{$\sim$mime}}
+\index{````~mime@{$\sim$mime}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{$\sim$mime()}{~mime()}}
+{\footnotesize\ttfamily virtual mailio\+::mime\+::$\sim$mime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1mime_a7cfec56952d772f3d7a1b0b5c2bdfce5}\label{classmailio_1_1mime_a7cfec56952d772f3d7a1b0b5c2bdfce5}} 
+\index{mailio::mime@{mailio::mime}!add\_part@{add\_part}}
+\index{add\_part@{add\_part}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{add\_part()}{add\_part()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::add\+\_\+part (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1mime}{mime}} \&}]{part }\end{DoxyParamCaption})}
+
+Adding a mime part.
+
+
+\begin{DoxyParams}{Parameters}
+{\em part} & Mime part to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_a529dc5768ead453d3d5e6545c57be8ea}\label{classmailio_1_1mime_a529dc5768ead453d3d5e6545c57be8ea}} 
+\index{mailio::mime@{mailio::mime}!boundary@{boundary}}
+\index{boundary@{boundary}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{boundary()}{boundary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::boundary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the boundary of the mime part.
+
+\begin{DoxyReturn}{Returns}
+Boundary of the mime part. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a6eb50283fc4964723dcc3c89d3c29dfa}\label{classmailio_1_1mime_a6eb50283fc4964723dcc3c89d3c29dfa}} 
+\index{mailio::mime@{mailio::mime}!boundary@{boundary}}
+\index{boundary@{boundary}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{boundary()}{boundary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::boundary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{bound }\end{DoxyParamCaption})}
+
+Setting the boundary of the mime part.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bound} & String to be used as the boundary. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_acd23fae2aa8d4a2af46cbeb4b60ff7c2}\label{classmailio_1_1mime_acd23fae2aa8d4a2af46cbeb4b60ff7c2}} 
+\index{mailio::mime@{mailio::mime}!content@{content}}
+\index{content@{content}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content()}{content()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the content as a string.
+
+\begin{DoxyReturn}{Returns}
+Content as string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_ac31f918d3398c400170ed6c3f1bb5751}\label{classmailio_1_1mime_ac31f918d3398c400170ed6c3f1bb5751}} 
+\index{mailio::mime@{mailio::mime}!content@{content}}
+\index{content@{content}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content()}{content()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::content (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{content\+\_\+str }\end{DoxyParamCaption})}
+
+Setting the content given as string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+\_\+str} & Content to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_ac4d8aaa3330b9909b3b8da4d189cfd7c}\label{classmailio_1_1mime_ac4d8aaa3330b9909b3b8da4d189cfd7c}} 
+\index{mailio::mime@{mailio::mime}!content\_disposition@{content\_disposition}}
+\index{content\_disposition@{content\_disposition}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_disposition()}{content\_disposition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} mailio\+::mime\+::content\+\_\+disposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the content disposition.
+
+\begin{DoxyReturn}{Returns}
+Content disposition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a1848bac81b3b3c37d5e2b5b8d630297f}\label{classmailio_1_1mime_a1848bac81b3b3c37d5e2b5b8d630297f}} 
+\index{mailio::mime@{mailio::mime}!content\_disposition@{content\_disposition}}
+\index{content\_disposition@{content\_disposition}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_disposition()}{content\_disposition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::content\+\_\+disposition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}}}]{disposition }\end{DoxyParamCaption})}
+
+Setting the content disposition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposition} & Content disposition to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_a59fe909c0d8b90202ad5b040dc4797ba}\label{classmailio_1_1mime_a59fe909c0d8b90202ad5b040dc4797ba}} 
+\index{mailio::mime@{mailio::mime}!content\_transfer\_encoding@{content\_transfer\_encoding}}
+\index{content\_transfer\_encoding@{content\_transfer\_encoding}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_transfer\_encoding()}{content\_transfer\_encoding()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} mailio\+::mime\+::content\+\_\+transfer\+\_\+encoding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the content transfer encoding.
+
+\begin{DoxyReturn}{Returns}
+Content transfer encoding. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a9c245748916339b8a2656453b93b2833}\label{classmailio_1_1mime_a9c245748916339b8a2656453b93b2833}} 
+\index{mailio::mime@{mailio::mime}!content\_transfer\_encoding@{content\_transfer\_encoding}}
+\index{content\_transfer\_encoding@{content\_transfer\_encoding}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_transfer\_encoding()}{content\_transfer\_encoding()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::content\+\_\+transfer\+\_\+encoding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}}}]{encoding }\end{DoxyParamCaption})}
+
+Setting the content transfer encoding.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoding} & Content transfer encoding to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_a6d487b06aa50b0f2426410ed03389acb}\label{classmailio_1_1mime_a6d487b06aa50b0f2426410ed03389acb}} 
+\index{mailio::mime@{mailio::mime}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_type()}{content\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} mailio\+::mime\+::content\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the content type.
+
+\begin{DoxyReturn}{Returns}
+Content type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a37e0c25917cc768edfeacc5e5fa5b902}\label{classmailio_1_1mime_a37e0c25917cc768edfeacc5e5fa5b902}} 
+\index{mailio::mime@{mailio::mime}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_type()}{content\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::content\+\_\+type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} \&}]{cont\+\_\+type }\end{DoxyParamCaption})}
+
+Setting the content type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cont\+\_\+type} & Content type to be set. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Bad content type. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_aba634b8455c40102d41cc529c4866354}\label{classmailio_1_1mime_aba634b8455c40102d41cc529c4866354}} 
+\index{mailio::mime@{mailio::mime}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{content\_type()}{content\_type()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::content\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}}}]{media\+\_\+type,  }\item[{const std\+::string \&}]{media\+\_\+subtype,  }\item[{const std\+::string \&}]{charset = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Setting the content type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em media\+\_\+type} & Media type to set. \\
+\hline
+{\em media\+\_\+subtype} & Media subtype to set. \\
+\hline
+{\em charset} & Charset to set. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a37e0c25917cc768edfeacc5e5fa5b902}{content\+\_\+type(const content\+\_\+type\+\_\+t\&)}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a01e23a762bf7cc0788c66f3d87b275eb}\label{classmailio_1_1mime_a01e23a762bf7cc0788c66f3d87b275eb}} 
+\index{mailio::mime@{mailio::mime}!decoder\_line\_policy@{decoder\_line\_policy}}
+\index{decoder\_line\_policy@{decoder\_line\_policy}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{decoder\_line\_policy()}{decoder\_line\_policy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} mailio\+::mime\+::decoder\+\_\+line\+\_\+policy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the message decoder line policy.
+
+\begin{DoxyReturn}{Returns}
+Decoder line policy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_abb9e24afcf6973dae459d762d2f2edda}\label{classmailio_1_1mime_abb9e24afcf6973dae459d762d2f2edda}} 
+\index{mailio::mime@{mailio::mime}!format@{format}}
+\index{format@{format}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::format (\begin{DoxyParamCaption}\item[{std\+::string \&}]{mime\+\_\+str,  }\item[{bool}]{dot\+\_\+escape = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Formatting the mime part to a string.
+
+If a line contains leading dot, then it can be escaped as required by mail protocols.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+str} & String to store the message. \\
+\hline
+{\em dot\+\_\+escape} & Flag if the leading dot should be escaped. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Formatting failure, non multipart message with boundary. \\
+\hline
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a0d37ed58e19f4e55710c84895df888ce}{format\+\_\+header()}}}, {\ttfamily format\+\_\+content(bool)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_acf5c8a0f14e47320ec515174a46b6ac9}\label{classmailio_1_1mime_acf5c8a0f14e47320ec515174a46b6ac9}} 
+\index{mailio::mime@{mailio::mime}!format\_content@{format\_content}}
+\index{format\_content@{format\_content}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{format\_content()}{format\_content()}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::format\+\_\+content (\begin{DoxyParamCaption}\item[{bool}]{dot\+\_\+escape }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting content by using the codec.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dot\+\_\+escape} & Flag if leading dots in lines should be escaped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Formatted content. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily bit7\+::encode(const string\&)}, {\ttfamily bit8\+::encode(const string\&)}, {\ttfamily base64\+::encode(const string\&)}, {\ttfamily quoted\+\_\+printable\+::encode(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a3c6773b2f9f7c4fb11f7aa8d55dc5c0c}\label{classmailio_1_1mime_a3c6773b2f9f7c4fb11f7aa8d55dc5c0c}} 
+\index{mailio::mime@{mailio::mime}!format\_content\_disposition@{format\_content\_disposition}}
+\index{format\_content\_disposition@{format\_content\_disposition}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{format\_content\_disposition()}{format\_content\_disposition()}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::format\+\_\+content\+\_\+disposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting content disposition to a string.
+
+\begin{DoxyReturn}{Returns}
+Content disposition as string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_af4db71e3405d2154d032eeece28f9a77}\label{classmailio_1_1mime_af4db71e3405d2154d032eeece28f9a77}} 
+\index{mailio::mime@{mailio::mime}!format\_content\_type@{format\_content\_type}}
+\index{format\_content\_type@{format\_content\_type}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{format\_content\_type()}{format\_content\_type()}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::format\+\_\+content\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting content type to a string.
+
+\begin{DoxyReturn}{Returns}
+Content type as string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a0d37ed58e19f4e55710c84895df888ce}\label{classmailio_1_1mime_a0d37ed58e19f4e55710c84895df888ce}} 
+\index{mailio::mime@{mailio::mime}!format\_header@{format\_header}}
+\index{format\_header@{format\_header}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{format\_header()}{format\_header()}}
+{\footnotesize\ttfamily virtual std\+::string mailio\+::mime\+::format\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Formatting header.
+
+\begin{DoxyReturn}{Returns}
+Mime header as string. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classmailio_1_1message_a4c2c9865ecdcdd2eea00184204e7bb58}{mailio\+::message}}.
+
+\mbox{\Hypertarget{classmailio_1_1mime_a68a704c0b1e727a2aed317b407a70e35}\label{classmailio_1_1mime_a68a704c0b1e727a2aed317b407a70e35}} 
+\index{mailio::mime@{mailio::mime}!format\_mime\_name@{format\_mime\_name}}
+\index{format\_mime\_name@{format\_mime\_name}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{format\_mime\_name()}{format\_mime\_name()}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::format\+\_\+mime\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formats mime name.
+
+The name has to fit to mandatory line policy, otherwise the rest is truncated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Mime name to format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Formatted name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a587c8308fb250244b8cfe3463d4aa69e}\label{classmailio_1_1mime_a587c8308fb250244b8cfe3463d4aa69e}} 
+\index{mailio::mime@{mailio::mime}!format\_transfer\_encoding@{format\_transfer\_encoding}}
+\index{format\_transfer\_encoding@{format\_transfer\_encoding}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{format\_transfer\_encoding()}{format\_transfer\_encoding()}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::format\+\_\+transfer\+\_\+encoding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting transfer encoding to a string.
+
+\begin{DoxyReturn}{Returns}
+Transfer encoding as string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a7f329bb3cfd8a6bff03c38f955f7726a}\label{classmailio_1_1mime_a7f329bb3cfd8a6bff03c38f955f7726a}} 
+\index{mailio::mime@{mailio::mime}!header\_codec@{header\_codec}}
+\index{header\_codec@{header\_codec}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{header\_codec()}{header\_codec()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{header\+\_\+codec\+\_\+t}} mailio\+::mime\+::header\+\_\+codec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the headers codec.
+
+\begin{DoxyReturn}{Returns}
+Codec set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a4c2b0d8df5daba5b8852ee195a3c2ee4}\label{classmailio_1_1mime_a4c2b0d8df5daba5b8852ee195a3c2ee4}} 
+\index{mailio::mime@{mailio::mime}!header\_codec@{header\_codec}}
+\index{header\_codec@{header\_codec}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{header\_codec()}{header\_codec()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::header\+\_\+codec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{header\+\_\+codec\+\_\+t}}}]{hdr\+\_\+codec }\end{DoxyParamCaption})}
+
+Setting the headers codec.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hdr\+\_\+codec} & Codec to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_a11854ad963e953466f1c2521052e1071}\label{classmailio_1_1mime_a11854ad963e953466f1c2521052e1071}} 
+\index{mailio::mime@{mailio::mime}!line\_policy@{line\_policy}}
+\index{line\_policy@{line\_policy}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{line\_policy()}{line\_policy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} mailio\+::mime\+::line\+\_\+policy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the encoder message line policy.
+
+\begin{DoxyReturn}{Returns}
+Encoder line policy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_ab9c24449bc20235176bb0289f6bbd57c}\label{classmailio_1_1mime_ab9c24449bc20235176bb0289f6bbd57c}} 
+\index{mailio::mime@{mailio::mime}!line\_policy@{line\_policy}}
+\index{line\_policy@{line\_policy}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{line\_policy()}{line\_policy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::line\+\_\+policy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{encoder\+\_\+line\+\_\+policy,  }\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{decoder\+\_\+line\+\_\+policy }\end{DoxyParamCaption})}
+
+Setting the message decoding and encoding line policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+line\+\_\+policy} & Encoder line policy to set. \\
+\hline
+{\em decoder\+\_\+line\+\_\+policy} & Decoder line policy to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_ab666756a5c95bbefbf5d5f7fcc1a110b}\label{classmailio_1_1mime_ab666756a5c95bbefbf5d5f7fcc1a110b}} 
+\index{mailio::mime@{mailio::mime}!make\_boundary@{make\_boundary}}
+\index{make\_boundary@{make\_boundary}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{make\_boundary()}{make\_boundary()}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::make\+\_\+boundary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creating the random boundary for the mime part.
+
+\begin{DoxyReturn}{Returns}
+Boundary for the mime part. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_afb654d80fdef1df40c0692b04595448f}\label{classmailio_1_1mime_afb654d80fdef1df40c0692b04595448f}} 
+\index{mailio::mime@{mailio::mime}!mime\_type\_as\_enum@{mime\_type\_as\_enum}}
+\index{mime\_type\_as\_enum@{mime\_type\_as\_enum}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{mime\_type\_as\_enum()}{mime\_type\_as\_enum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} mailio\+::mime\+::mime\+\_\+type\+\_\+as\+\_\+enum (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{media\+\_\+type\+\_\+val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Top level mime type string represented as the enum.
+
+
+\begin{DoxyParams}{Parameters}
+{\em media\+\_\+type\+\_\+val} & Mime type string to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enum value of the mime type string. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Bad media type. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a4b98ce31d10c27c10e9b64218a544641}\label{classmailio_1_1mime_a4b98ce31d10c27c10e9b64218a544641}} 
+\index{mailio::mime@{mailio::mime}!mime\_type\_as\_str@{mime\_type\_as\_str}}
+\index{mime\_type\_as\_str@{mime\_type\_as\_str}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{mime\_type\_as\_str()}{mime\_type\_as\_str()}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::mime\+\_\+type\+\_\+as\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}}}]{media\+\_\+type\+\_\+val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Top level mime type represented as a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em media\+\_\+type\+\_\+val} & Mime type to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mime type string representation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a2c2cd678d7a5d239b72727ad5df819bf}\label{classmailio_1_1mime_a2c2cd678d7a5d239b72727ad5df819bf}} 
+\index{mailio::mime@{mailio::mime}!name@{name}}
+\index{name@{name}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getting the mime name.
+
+\begin{DoxyReturn}{Returns}
+Mime name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_ae63b9c6bdcd687c62eadbb3f390b78ab}\label{classmailio_1_1mime_ae63b9c6bdcd687c62eadbb3f390b78ab}} 
+\index{mailio::mime@{mailio::mime}!name@{name}}
+\index{name@{name}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime\+\_\+name }\end{DoxyParamCaption})}
+
+Setting the mime name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mime\+\_\+name} & Mime name to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_a25746ed5622dbb09b0e62ad6540eb2cb}\label{classmailio_1_1mime_a25746ed5622dbb09b0e62ad6540eb2cb}} 
+\index{mailio::mime@{mailio::mime}!operator=@{operator=}}
+\index{operator=@{operator=}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime}{mime}}\& mailio\+::mime\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmailio_1_1mime}{mime}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default copy assignment operator. \mbox{\Hypertarget{classmailio_1_1mime_aff06cbf2b8e0de54381bab732a63ffe1}\label{classmailio_1_1mime_aff06cbf2b8e0de54381bab732a63ffe1}} 
+\index{mailio::mime@{mailio::mime}!operator=@{operator=}}
+\index{operator=@{operator=}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime}{mime}}\& mailio\+::mime\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1mime}{mime}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default move assignment operator. \mbox{\Hypertarget{classmailio_1_1mime_a317bbce9a26e9fbc09c355156a703f38}\label{classmailio_1_1mime_a317bbce9a26e9fbc09c355156a703f38}} 
+\index{mailio::mime@{mailio::mime}!parse@{parse}}
+\index{parse@{parse}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime\+\_\+string,  }\item[{bool}]{dot\+\_\+escape = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Parsing the mime part from a string.
+
+If a line contains leading dot, then it can be escaped as required by mail protocols.
+
+Essentially, the method goes line by line and calls the parsing by line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mime\+\_\+string} & String to parse. \\
+\hline
+{\em dot\+\_\+escape} & Flag if the leading dot should be escaped. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a60ff1c34cbd5fa56c75119e71643e184}{parse\+\_\+by\+\_\+line(const std\+::string\&, bool)}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a60ff1c34cbd5fa56c75119e71643e184}\label{classmailio_1_1mime_a60ff1c34cbd5fa56c75119e71643e184}} 
+\index{mailio::mime@{mailio::mime}!parse\_by\_line@{parse\_by\_line}}
+\index{parse\_by\_line@{parse\_by\_line}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_by\_line()}{parse\_by\_line()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime}{mime}}\& mailio\+::mime\+::parse\+\_\+by\+\_\+line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line,  }\item[{bool}]{dot\+\_\+escape = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Parsing a line of mime part.
+
+The method is used to parse message string line by line, as received over the protocols. For each line a C\+R\+LF is appended. If the line is C\+R\+LF only, then the parsing ends.
+
+If a message with mime parts is parsed but the message also contains a content, then the content is stored instead to be skipped.
+
+The method relies on the virtual {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a8e97e1c1dd7f87b3be893ccec3e418f7}{parse\+\_\+header\+\_\+line()}}} which should specify headers of interest to the class. The message class uses it for its own headers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & String to be parsed. If it\textquotesingle{}s C\+R\+LF, then message parsing ends; any further parsing is undefined. \\
+\hline
+{\em dot\+\_\+escape} & Flag if the leading dot should be escaped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mime itself. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a9508d6b6a998c8e7db1caed55e7be9d0}{parse\+\_\+header()}}}, {\ttfamily parse\+\_\+content}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000036}{Todo}}]Determine a default charset.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1mime_a334f1181ce11f7692083e2e40ad3c871}\label{classmailio_1_1mime_a334f1181ce11f7692083e2e40ad3c871}} 
+\index{mailio::mime@{mailio::mime}!parse\_content@{parse\_content}}
+\index{parse\_content@{parse\_content}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_content()}{parse\_content()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse\+\_\+content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing the content by using the appropriate codec.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily bit7\+::decode(const string\&)}, {\ttfamily bit8\+::decode(const string\&)}, {\ttfamily base64\+::decode(const string\&)}, {\ttfamily quoted\+\_\+printable\+::decode(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a8aa7d567441d01369cee1e0c7a01b64d}\label{classmailio_1_1mime_a8aa7d567441d01369cee1e0c7a01b64d}} 
+\index{mailio::mime@{mailio::mime}!parse\_content\_disposition@{parse\_content\_disposition}}
+\index{parse\_content\_disposition@{parse\_content\_disposition}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_content\_disposition()}{parse\_content\_disposition()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse\+\_\+content\+\_\+disposition (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{content\+\_\+disp\+\_\+hdr,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} \&}]{disposition,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&}]{attributes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing the content disposition value and attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+\_\+disp\+\_\+hdr} & Content disposition header without name. \\
+\hline
+{\em disposition} & Content disposition value parsed. \\
+\hline
+{\em attributes} & Content disposition attributes parsed in the the key/value format. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing content disposition failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+header\+\_\+value\+\_\+attributes(const string\&, string\&, map$<$string, string$>$\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a1641295291b3a4d78bf2197c47a4a4c4}\label{classmailio_1_1mime_a1641295291b3a4d78bf2197c47a4a4c4}} 
+\index{mailio::mime@{mailio::mime}!parse\_content\_transfer\_encoding@{parse\_content\_transfer\_encoding}}
+\index{parse\_content\_transfer\_encoding@{parse\_content\_transfer\_encoding}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_content\_transfer\_encoding()}{parse\_content\_transfer\_encoding()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse\+\_\+content\+\_\+transfer\+\_\+encoding (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{transfer\+\_\+encoding\+\_\+hdr,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} \&}]{encoding,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&}]{attributes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing the content transfer encoding value and attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transfer\+\_\+encoding\+\_\+hdr} & Content transfer encoding header without name \\
+\hline
+{\em encoding} & Content transfer encoding value parsed. \\
+\hline
+{\em attributes} & Content transfer encoding attributes parsed in the the key/value format. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing content transfer encoding failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+header\+\_\+value\+\_\+attributes(const string\&, string\&, map$<$string, string$>$\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a28460d27807b56751814ab719900d977}\label{classmailio_1_1mime_a28460d27807b56751814ab719900d977}} 
+\index{mailio::mime@{mailio::mime}!parse\_content\_type@{parse\_content\_type}}
+\index{parse\_content\_type@{parse\_content\_type}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_content\_type()}{parse\_content\_type()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse\+\_\+content\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{content\+\_\+type\+\_\+hdr,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a95141c826202270eebc331485b4c1512}{media\+\_\+type\+\_\+t}} \&}]{media\+\_\+type,  }\item[{std\+::string \&}]{media\+\_\+subtype,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&}]{attributes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing the content type and its attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+\_\+type\+\_\+hdr} & Content type header line to be parsed. \\
+\hline
+{\em media\+\_\+type} & Media type parsed from the header. \\
+\hline
+{\em media\+\_\+subtype} & Media subtype parsed from the header. \\
+\hline
+{\em attributes} & Attributes parsed from the header. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing content type value failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+header\+\_\+value\+\_\+attributes(const string\&, string\&, map$<$string, string$>$\&)}, {\ttfamily mime\+\_\+type\+\_\+as\+\_\+enum(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a9508d6b6a998c8e7db1caed55e7be9d0}\label{classmailio_1_1mime_a9508d6b6a998c8e7db1caed55e7be9d0}} 
+\index{mailio::mime@{mailio::mime}!parse\_header@{parse\_header}}
+\index{parse\_header@{parse\_header}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_header()}{parse\_header()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing header by going through header lines and calling {\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a8e97e1c1dd7f87b3be893ccec3e418f7}{parse\+\_\+header\+\_\+line()}}}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily parse\+\_\+header\+\_\+line(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a8e97e1c1dd7f87b3be893ccec3e418f7}\label{classmailio_1_1mime_a8e97e1c1dd7f87b3be893ccec3e418f7}} 
+\index{mailio::mime@{mailio::mime}!parse\_header\_line@{parse\_header\_line}}
+\index{parse\_header\_line@{parse\_header\_line}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_header\_line()}{parse\_header\_line()}}
+{\footnotesize\ttfamily virtual void mailio\+::mime\+::parse\+\_\+header\+\_\+line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{header\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Parsing a header line for a specific header.
+
+
+\begin{DoxyParams}{Parameters}
+{\em header\+\_\+line} & Header line to be parsed. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily parse\+\_\+header\+\_\+name\+\_\+value(const string\&, string\&, string\&)}, {\ttfamily parse\+\_\+content\+\_\+type(const string\&, media\+\_\+type\+\_\+t\&, string\&, map$<$string, string$>$\&)}, {\ttfamily parse\+\_\+content\+\_\+transfer\+\_\+encoding(const string\&, content\+\_\+transfer\+\_\+encoding\+\_\+t\& encoding, map$<$string, string$>$\&)}, {\ttfamily parse\+\_\+content\+\_\+disposition(const string\&, content\+\_\+disposition\+\_\+t\& disposition, map$<$string, string$>$\&)}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classmailio_1_1message_a27d7f54cfe7bd7c238ce62209c2c66b1}{mailio\+::message}}.
+
+\mbox{\Hypertarget{classmailio_1_1mime_af0c3749d9417525c86c4df9f24dc371f}\label{classmailio_1_1mime_af0c3749d9417525c86c4df9f24dc371f}} 
+\index{mailio::mime@{mailio::mime}!parse\_header\_name\_value@{parse\_header\_name\_value}}
+\index{parse\_header\_name\_value@{parse\_header\_name\_value}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_header\_name\_value()}{parse\_header\_name\_value()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse\+\_\+header\+\_\+name\+\_\+value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{header\+\_\+line,  }\item[{std\+::string \&}]{header\+\_\+name,  }\item[{std\+::string \&}]{header\+\_\+value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a header for the name and value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em header\+\_\+line} & Header to parse. \\
+\hline
+{\em header\+\_\+name} & Header name parsed. \\
+\hline
+{\em header\+\_\+value} & Header value parsed. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing failure of header name. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing failure of header line. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing failure, header name or value empty. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1mime_a7e7b53df03ad3555e722e6074a6a801d}\label{classmailio_1_1mime_a7e7b53df03ad3555e722e6074a6a801d}} 
+\index{mailio::mime@{mailio::mime}!parse\_header\_value\_attributes@{parse\_header\_value\_attributes}}
+\index{parse\_header\_value\_attributes@{parse\_header\_value\_attributes}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parse\_header\_value\_attributes()}{parse\_header\_value\_attributes()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::parse\+\_\+header\+\_\+value\+\_\+attributes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{header,  }\item[{std\+::string \&}]{value,  }\item[{\mbox{\hyperlink{classmailio_1_1mime_a323bc4a0f2122dd62194bef9d97c2779}{attributes\+\_\+t}} \&}]{attributes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing value and attributes of the so called content headers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em header} & Header (without name) to be parsed. \\
+\hline
+{\em value} & Header value parsed. \\
+\hline
+{\em attributes} & Header attributes parsed in the the key/value format. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing header value failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing attribute name failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1mime__error}{mime\+\_\+error}}} & Parsing attribute value failure. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000037}{Todo}}]Allowed characters are more strict than required?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1mime_afbe65315445e7a9ec1dd04959273bb0a}\label{classmailio_1_1mime_afbe65315445e7a9ec1dd04959273bb0a}} 
+\index{mailio::mime@{mailio::mime}!parts@{parts}}
+\index{parts@{parts}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{parts()}{parts()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classmailio_1_1mime}{mime}}$>$ mailio\+::mime\+::parts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returning the mime parts.
+
+\begin{DoxyReturn}{Returns}
+Vector of mime parts. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_ade6823c332d9932759f3ea5b871b97f1}\label{classmailio_1_1mime_ade6823c332d9932759f3ea5b871b97f1}} 
+\index{mailio::mime@{mailio::mime}!strict\_codec\_mode@{strict\_codec\_mode}}
+\index{strict\_codec\_mode@{strict\_codec\_mode}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{strict\_codec\_mode()}{strict\_codec\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mailio\+::mime\+::strict\+\_\+codec\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returning the strict mode status of codecs.
+
+\begin{DoxyReturn}{Returns}
+True if strict mode enabled, false if disabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a0b2d135c100f3a441bbf4c7c8cab4f9f}\label{classmailio_1_1mime_a0b2d135c100f3a441bbf4c7c8cab4f9f}} 
+\index{mailio::mime@{mailio::mime}!strict\_codec\_mode@{strict\_codec\_mode}}
+\index{strict\_codec\_mode@{strict\_codec\_mode}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{strict\_codec\_mode()}{strict\_codec\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::strict\+\_\+codec\+\_\+mode (\begin{DoxyParamCaption}\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+Enabling/disabling the strict mode for codecs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & True to enable strict mode, false to disable. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_ab0d048ebb5e72b51a86e5f947ac2f566}\label{classmailio_1_1mime_ab0d048ebb5e72b51a86e5f947ac2f566}} 
+\index{mailio::mime@{mailio::mime}!strict\_mode@{strict\_mode}}
+\index{strict\_mode@{strict\_mode}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{strict\_mode()}{strict\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mailio\+::mime\+::strict\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returning the strict mode status of the mime part.
+
+\begin{DoxyReturn}{Returns}
+True if strict mode enabled, false if disabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1mime_a0420475874ff84c5325ad1fda23c2f9a}\label{classmailio_1_1mime_a0420475874ff84c5325ad1fda23c2f9a}} 
+\index{mailio::mime@{mailio::mime}!strict\_mode@{strict\_mode}}
+\index{strict\_mode@{strict\_mode}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{strict\_mode()}{strict\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mime\+::strict\+\_\+mode (\begin{DoxyParamCaption}\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+Enabling/disabling the strict mode for the mime part.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & True to enable strict mode, false to disable. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1mime_a896d7e868c7cc8a36273e328cb95d403}\label{classmailio_1_1mime_a896d7e868c7cc8a36273e328cb95d403}} 
+\index{mailio::mime@{mailio::mime}!strip\_body@{strip\_body}}
+\index{strip\_body@{strip\_body}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{strip\_body()}{strip\_body()}}
+{\footnotesize\ttfamily void mailio\+::mime\+::strip\+\_\+body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Removing trailing empty lines from the body. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1mime_a4e1b69fc88f704a018350d04a60c03eb}\label{classmailio_1_1mime_a4e1b69fc88f704a018350d04a60c03eb}} 
+\index{mailio::mime@{mailio::mime}!\_boundary@{\_boundary}}
+\index{\_boundary@{\_boundary}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_boundary}{\_boundary}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::\+\_\+boundary\hspace{0.3cm}{\ttfamily [protected]}}
+
+Boundary for the mime part. \mbox{\Hypertarget{classmailio_1_1mime_a711590572ad5dacd7a637293bbb01a12}\label{classmailio_1_1mime_a711590572ad5dacd7a637293bbb01a12}} 
+\index{mailio::mime@{mailio::mime}!\_content@{\_content}}
+\index{\_content@{\_content}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_content}{\_content}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::\+\_\+content\hspace{0.3cm}{\ttfamily [protected]}}
+
+Raw representation of the content.
+
+The content is in the form as presented to the user, thus no limits such as line policy are applied here. For such purpose, the format method is used, \mbox{\Hypertarget{classmailio_1_1mime_ac93b8f05f130c40cbaa85cf7146813b3}\label{classmailio_1_1mime_ac93b8f05f130c40cbaa85cf7146813b3}} 
+\index{mailio::mime@{mailio::mime}!\_content\_type@{\_content\_type}}
+\index{\_content\_type@{\_content\_type}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_content\_type}{\_content\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1mime_1_1content__type__t}{content\+\_\+type\+\_\+t}} mailio\+::mime\+::\+\_\+content\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+Content type as a pair of top level media type and media subtype. \mbox{\Hypertarget{classmailio_1_1mime_a2bb3eaa4790ec364ccacf5b7d576039a}\label{classmailio_1_1mime_a2bb3eaa4790ec364ccacf5b7d576039a}} 
+\index{mailio::mime@{mailio::mime}!\_decoder\_line\_policy@{\_decoder\_line\_policy}}
+\index{\_decoder\_line\_policy@{\_decoder\_line\_policy}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_decoder\_line\_policy}{\_decoder\_line\_policy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} mailio\+::mime\+::\+\_\+decoder\+\_\+line\+\_\+policy\hspace{0.3cm}{\ttfamily [protected]}}
+
+Decoder line policy to be applied for the mime part. \mbox{\Hypertarget{classmailio_1_1mime_a34148c4a1ff4242f3090ac23e7c1e7db}\label{classmailio_1_1mime_a34148c4a1ff4242f3090ac23e7c1e7db}} 
+\index{mailio::mime@{mailio::mime}!\_disposition@{\_disposition}}
+\index{\_disposition@{\_disposition}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_disposition}{\_disposition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a71d7c80e9037643c8bc0af6306ed2895}{content\+\_\+disposition\+\_\+t}} mailio\+::mime\+::\+\_\+disposition\hspace{0.3cm}{\ttfamily [protected]}}
+
+Content disposition of the mime part. \mbox{\Hypertarget{classmailio_1_1mime_ab39de3fe1aabb5ace43b51113f3b7440}\label{classmailio_1_1mime_ab39de3fe1aabb5ace43b51113f3b7440}} 
+\index{mailio::mime@{mailio::mime}!\_encoding@{\_encoding}}
+\index{\_encoding@{\_encoding}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_encoding}{\_encoding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1mime_a6a5a0e83b90709a804c067c2d224a2d2}{content\+\_\+transfer\+\_\+encoding\+\_\+t}} mailio\+::mime\+::\+\_\+encoding\hspace{0.3cm}{\ttfamily [protected]}}
+
+Content transfer encoding of the mime part. \mbox{\Hypertarget{classmailio_1_1mime_ab4c8d57487442a0babcfc97f47983c18}\label{classmailio_1_1mime_ab4c8d57487442a0babcfc97f47983c18}} 
+\index{mailio::mime@{mailio::mime}!\_header\_codec@{\_header\_codec}}
+\index{\_header\_codec@{\_header\_codec}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_header\_codec}{\_header\_codec}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1q__codec_a421b7c20c44e249d4ce53c83b5c2dccd}{header\+\_\+codec\+\_\+t}} mailio\+::mime\+::\+\_\+header\+\_\+codec\hspace{0.3cm}{\ttfamily [protected]}}
+
+Codec used for headers. \mbox{\Hypertarget{classmailio_1_1mime_a3cf63543d3dad9fef631ae9ef7687897}\label{classmailio_1_1mime_a3cf63543d3dad9fef631ae9ef7687897}} 
+\index{mailio::mime@{mailio::mime}!\_line\_policy@{\_line\_policy}}
+\index{\_line\_policy@{\_line\_policy}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_line\_policy}{\_line\_policy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} mailio\+::mime\+::\+\_\+line\+\_\+policy\hspace{0.3cm}{\ttfamily [protected]}}
+
+Encoder line policy to be applied for the mime part. \mbox{\Hypertarget{classmailio_1_1mime_afba6beba3786d20171346468a9f1dd5d}\label{classmailio_1_1mime_afba6beba3786d20171346468a9f1dd5d}} 
+\index{mailio::mime@{mailio::mime}!\_name@{\_name}}
+\index{\_name@{\_name}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_name}{\_name}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+Name of mime.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000038}{Todo}}]Should it contain filename of the attachment?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1mime_a8410036831a58ca48775289ee49c0f71}\label{classmailio_1_1mime_a8410036831a58ca48775289ee49c0f71}} 
+\index{mailio::mime@{mailio::mime}!\_parsed\_body@{\_parsed\_body}}
+\index{\_parsed\_body@{\_parsed\_body}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_parsed\_body}{\_parsed\_body}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::mime\+::\+\_\+parsed\+\_\+body\hspace{0.3cm}{\ttfamily [protected]}}
+
+Representation of the body in lines. \mbox{\Hypertarget{classmailio_1_1mime_a1a3818fde6941d3dfb515111c20e10f4}\label{classmailio_1_1mime_a1a3818fde6941d3dfb515111c20e10f4}} 
+\index{mailio::mime@{mailio::mime}!\_parsed\_headers@{\_parsed\_headers}}
+\index{\_parsed\_headers@{\_parsed\_headers}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_parsed\_headers}{\_parsed\_headers}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ mailio\+::mime\+::\+\_\+parsed\+\_\+headers\hspace{0.3cm}{\ttfamily [protected]}}
+
+Representation of the header in lines. \mbox{\Hypertarget{classmailio_1_1mime_a71a751f64844ae08b81a60613962ab3c}\label{classmailio_1_1mime_a71a751f64844ae08b81a60613962ab3c}} 
+\index{mailio::mime@{mailio::mime}!\_parsing\_header@{\_parsing\_header}}
+\index{\_parsing\_header@{\_parsing\_header}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_parsing\_header}{\_parsing\_header}}
+{\footnotesize\ttfamily bool mailio\+::mime\+::\+\_\+parsing\+\_\+header\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag if the header is being parsed. \mbox{\Hypertarget{classmailio_1_1mime_a1695c29c9a490edef70f1bdf1f2de666}\label{classmailio_1_1mime_a1695c29c9a490edef70f1bdf1f2de666}} 
+\index{mailio::mime@{mailio::mime}!\_parts@{\_parts}}
+\index{\_parts@{\_parts}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_parts}{\_parts}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classmailio_1_1mime}{mime}}$>$ mailio\+::mime\+::\+\_\+parts\hspace{0.3cm}{\ttfamily [protected]}}
+
+Keeps containing mime parts, if any; otherwise, it\textquotesingle{}s empty vector. \mbox{\Hypertarget{classmailio_1_1mime_a4a5549de771de549826e5065e8ab7816}\label{classmailio_1_1mime_a4a5549de771de549826e5065e8ab7816}} 
+\index{mailio::mime@{mailio::mime}!\_strict\_codec\_mode@{\_strict\_codec\_mode}}
+\index{\_strict\_codec\_mode@{\_strict\_codec\_mode}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_strict\_codec\_mode}{\_strict\_codec\_mode}}
+{\footnotesize\ttfamily bool mailio\+::mime\+::\+\_\+strict\+\_\+codec\+\_\+mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+Strict mode for encoding/decoding. \mbox{\Hypertarget{classmailio_1_1mime_aa2903934235b8c38017ed6ed51ab2b86}\label{classmailio_1_1mime_aa2903934235b8c38017ed6ed51ab2b86}} 
+\index{mailio::mime@{mailio::mime}!\_strict\_mode@{\_strict\_mode}}
+\index{\_strict\_mode@{\_strict\_mode}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_strict\_mode}{\_strict\_mode}}
+{\footnotesize\ttfamily bool mailio\+::mime\+::\+\_\+strict\+\_\+mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+Strict mode for mime part. \mbox{\Hypertarget{classmailio_1_1mime_ac71dc3bf07dfbbf3a381a33cf39fb1b1}\label{classmailio_1_1mime_ac71dc3bf07dfbbf3a381a33cf39fb1b1}} 
+\index{mailio::mime@{mailio::mime}!\_version@{\_version}}
+\index{\_version@{\_version}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{\_version}{\_version}}
+{\footnotesize\ttfamily std\+::string mailio\+::mime\+::\+\_\+version\hspace{0.3cm}{\ttfamily [protected]}}
+
+Mime version, should always be 1.\+0. \mbox{\Hypertarget{classmailio_1_1mime_a5bc34421d1c6e1afffacaf03771135ea}\label{classmailio_1_1mime_a5bc34421d1c6e1afffacaf03771135ea}} 
+\index{mailio::mime@{mailio::mime}!ATTRIBUTE\_FILENAME@{ATTRIBUTE\_FILENAME}}
+\index{ATTRIBUTE\_FILENAME@{ATTRIBUTE\_FILENAME}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_FILENAME}{ATTRIBUTE\_FILENAME}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Attribute filename part. \mbox{\Hypertarget{classmailio_1_1mime_af967276771e9c697013d57b485689cd7}\label{classmailio_1_1mime_af967276771e9c697013d57b485689cd7}} 
+\index{mailio::mime@{mailio::mime}!ATTRIBUTE\_NAME@{ATTRIBUTE\_NAME}}
+\index{ATTRIBUTE\_NAME@{ATTRIBUTE\_NAME}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_NAME}{ATTRIBUTE\_NAME}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Attribute name part. \mbox{\Hypertarget{classmailio_1_1mime_a9e8f09b0c31f80fd6277b0ed96bb07e5}\label{classmailio_1_1mime_a9e8f09b0c31f80fd6277b0ed96bb07e5}} 
+\index{mailio::mime@{mailio::mime}!ATTRIBUTES\_SEPARATOR\_CHAR@{ATTRIBUTES\_SEPARATOR\_CHAR}}
+\index{ATTRIBUTES\_SEPARATOR\_CHAR@{ATTRIBUTES\_SEPARATOR\_CHAR}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTES\_SEPARATOR\_CHAR}{ATTRIBUTES\_SEPARATOR\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::mime\+::\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR \{\textquotesingle{};\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Separator of multiple attributes. \mbox{\Hypertarget{classmailio_1_1mime_aa8f1dfbe7065c35442c6c1e29ede2a84}\label{classmailio_1_1mime_aa8f1dfbe7065c35442c6c1e29ede2a84}} 
+\index{mailio::mime@{mailio::mime}!ATTRIBUTES\_SEPARATOR\_STR@{ATTRIBUTES\_SEPARATOR\_STR}}
+\index{ATTRIBUTES\_SEPARATOR\_STR@{ATTRIBUTES\_SEPARATOR\_STR}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTES\_SEPARATOR\_STR}{ATTRIBUTES\_SEPARATOR\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Semicolon string used to separate header attributes. \mbox{\Hypertarget{classmailio_1_1mime_a2b5a5044fca7266adb2e08fca8bd69b6}\label{classmailio_1_1mime_a2b5a5044fca7266adb2e08fca8bd69b6}} 
+\index{mailio::mime@{mailio::mime}!BOUNDARY\_DELIMITER@{BOUNDARY\_DELIMITER}}
+\index{BOUNDARY\_DELIMITER@{BOUNDARY\_DELIMITER}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{BOUNDARY\_DELIMITER}{BOUNDARY\_DELIMITER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+B\+O\+U\+N\+D\+A\+R\+Y\+\_\+\+D\+E\+L\+I\+M\+I\+T\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Boundary special characters. \mbox{\Hypertarget{classmailio_1_1mime_a9dec5e2cda80ee2bf44b0964d1e2282b}\label{classmailio_1_1mime_a9dec5e2cda80ee2bf44b0964d1e2282b}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_ATTR\_ALPHABET@{CONTENT\_ATTR\_ALPHABET}}
+\index{CONTENT\_ATTR\_ALPHABET@{CONTENT\_ATTR\_ALPHABET}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_ATTR\_ALPHABET}{CONTENT\_ATTR\_ALPHABET}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+L\+P\+H\+A\+B\+ET\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content type attribute value allowed characters. \mbox{\Hypertarget{classmailio_1_1mime_a1684d0ee8c3cdf48f42b9fbe7505d8ce}\label{classmailio_1_1mime_a1684d0ee8c3cdf48f42b9fbe7505d8ce}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_DISPOSITION\_ATTACHMENT@{CONTENT\_DISPOSITION\_ATTACHMENT}}
+\index{CONTENT\_DISPOSITION\_ATTACHMENT@{CONTENT\_DISPOSITION\_ATTACHMENT}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_DISPOSITION\_ATTACHMENT}{CONTENT\_DISPOSITION\_ATTACHMENT}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+A\+T\+T\+A\+C\+H\+M\+E\+NT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content disposition attachment string. \mbox{\Hypertarget{classmailio_1_1mime_a8163bb0153db11330675a5f5e6eb4f7e}\label{classmailio_1_1mime_a8163bb0153db11330675a5f5e6eb4f7e}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_DISPOSITION\_HEADER@{CONTENT\_DISPOSITION\_HEADER}}
+\index{CONTENT\_DISPOSITION\_HEADER@{CONTENT\_DISPOSITION\_HEADER}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_DISPOSITION\_HEADER}{CONTENT\_DISPOSITION\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content disposition header name. \mbox{\Hypertarget{classmailio_1_1mime_a681f6e38990f40bdc5e64621d03d54b3}\label{classmailio_1_1mime_a681f6e38990f40bdc5e64621d03d54b3}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_DISPOSITION\_INLINE@{CONTENT\_DISPOSITION\_INLINE}}
+\index{CONTENT\_DISPOSITION\_INLINE@{CONTENT\_DISPOSITION\_INLINE}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_DISPOSITION\_INLINE}{CONTENT\_DISPOSITION\_INLINE}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+D\+I\+S\+P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+I\+N\+L\+I\+NE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content disposition inline string. \mbox{\Hypertarget{classmailio_1_1mime_a14e298fbfc14469426a67e178587c273}\label{classmailio_1_1mime_a14e298fbfc14469426a67e178587c273}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_HEADER\_VALUE\_ALPHABET@{CONTENT\_HEADER\_VALUE\_ALPHABET}}
+\index{CONTENT\_HEADER\_VALUE\_ALPHABET@{CONTENT\_HEADER\_VALUE\_ALPHABET}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_HEADER\_VALUE\_ALPHABET}{CONTENT\_HEADER\_VALUE\_ALPHABET}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+L\+P\+H\+A\+B\+ET\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content header value allowed characters. \mbox{\Hypertarget{classmailio_1_1mime_aae1250f0cb71d5f053e4a16f663c87e8}\label{classmailio_1_1mime_aae1250f0cb71d5f053e4a16f663c87e8}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_SUBTYPE\_SEPARATOR@{CONTENT\_SUBTYPE\_SEPARATOR}}
+\index{CONTENT\_SUBTYPE\_SEPARATOR@{CONTENT\_SUBTYPE\_SEPARATOR}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_SUBTYPE\_SEPARATOR}{CONTENT\_SUBTYPE\_SEPARATOR}}
+{\footnotesize\ttfamily const char mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR \{\textquotesingle{}/\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content type and subtype separator. \mbox{\Hypertarget{classmailio_1_1mime_ac80a4c0c05f5e441184bbf1e7567b59a}\label{classmailio_1_1mime_ac80a4c0c05f5e441184bbf1e7567b59a}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_TRANSFER\_ENCODING\_BASE64@{CONTENT\_TRANSFER\_ENCODING\_BASE64}}
+\index{CONTENT\_TRANSFER\_ENCODING\_BASE64@{CONTENT\_TRANSFER\_ENCODING\_BASE64}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TRANSFER\_ENCODING\_BASE64}{CONTENT\_TRANSFER\_ENCODING\_BASE64}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+A\+S\+E64\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content transfer encoding \mbox{\hyperlink{classmailio_1_1base64}{base64}} string. \mbox{\Hypertarget{classmailio_1_1mime_ae6ce6ae18401ef2d182bb8eaba4ebfd2}\label{classmailio_1_1mime_ae6ce6ae18401ef2d182bb8eaba4ebfd2}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_TRANSFER\_ENCODING\_BINARY@{CONTENT\_TRANSFER\_ENCODING\_BINARY}}
+\index{CONTENT\_TRANSFER\_ENCODING\_BINARY@{CONTENT\_TRANSFER\_ENCODING\_BINARY}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TRANSFER\_ENCODING\_BINARY}{CONTENT\_TRANSFER\_ENCODING\_BINARY}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+I\+N\+A\+RY\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content transfer encoding binary string. \mbox{\Hypertarget{classmailio_1_1mime_a674106e8cd9468f27fe48e196a8e2d7e}\label{classmailio_1_1mime_a674106e8cd9468f27fe48e196a8e2d7e}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_TRANSFER\_ENCODING\_BIT7@{CONTENT\_TRANSFER\_ENCODING\_BIT7}}
+\index{CONTENT\_TRANSFER\_ENCODING\_BIT7@{CONTENT\_TRANSFER\_ENCODING\_BIT7}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TRANSFER\_ENCODING\_BIT7}{CONTENT\_TRANSFER\_ENCODING\_BIT7}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+I\+T7\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content transfer encoding seven bit string. \mbox{\Hypertarget{classmailio_1_1mime_a0a66f9614aa395412aadafca0b37cb6c}\label{classmailio_1_1mime_a0a66f9614aa395412aadafca0b37cb6c}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_TRANSFER\_ENCODING\_BIT8@{CONTENT\_TRANSFER\_ENCODING\_BIT8}}
+\index{CONTENT\_TRANSFER\_ENCODING\_BIT8@{CONTENT\_TRANSFER\_ENCODING\_BIT8}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TRANSFER\_ENCODING\_BIT8}{CONTENT\_TRANSFER\_ENCODING\_BIT8}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+B\+I\+T8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content transfer encoding eight bit string. \mbox{\Hypertarget{classmailio_1_1mime_aecf78c164faf4c0f49c7c01a498d2cf5}\label{classmailio_1_1mime_aecf78c164faf4c0f49c7c01a498d2cf5}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_TRANSFER\_ENCODING\_HEADER@{CONTENT\_TRANSFER\_ENCODING\_HEADER}}
+\index{CONTENT\_TRANSFER\_ENCODING\_HEADER@{CONTENT\_TRANSFER\_ENCODING\_HEADER}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TRANSFER\_ENCODING\_HEADER}{CONTENT\_TRANSFER\_ENCODING\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content transfer encoding header name. \mbox{\Hypertarget{classmailio_1_1mime_af51596cd0fcd142eddf47f8c8e4e9e07}\label{classmailio_1_1mime_af51596cd0fcd142eddf47f8c8e4e9e07}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_TRANSFER\_ENCODING\_QUOTED\_PRINTABLE@{CONTENT\_TRANSFER\_ENCODING\_QUOTED\_PRINTABLE}}
+\index{CONTENT\_TRANSFER\_ENCODING\_QUOTED\_PRINTABLE@{CONTENT\_TRANSFER\_ENCODING\_QUOTED\_PRINTABLE}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TRANSFER\_ENCODING\_QUOTED\_PRINTABLE}{CONTENT\_TRANSFER\_ENCODING\_QUOTED\_PRINTABLE}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+Q\+U\+O\+T\+E\+D\+\_\+\+P\+R\+I\+N\+T\+A\+B\+LE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content transfer encoding quoted printable string. \mbox{\Hypertarget{classmailio_1_1mime_ae3883200be56d83e323ec4067d38fbb4}\label{classmailio_1_1mime_ae3883200be56d83e323ec4067d38fbb4}} 
+\index{mailio::mime@{mailio::mime}!CONTENT\_TYPE\_HEADER@{CONTENT\_TYPE\_HEADER}}
+\index{CONTENT\_TYPE\_HEADER@{CONTENT\_TYPE\_HEADER}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{CONTENT\_TYPE\_HEADER}{CONTENT\_TYPE\_HEADER}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+C\+O\+N\+T\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+E\+A\+D\+ER\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Content type header name. \mbox{\Hypertarget{classmailio_1_1mime_a7d66d0af99e04d21d7b1eac0f4e830af}\label{classmailio_1_1mime_a7d66d0af99e04d21d7b1eac0f4e830af}} 
+\index{mailio::mime@{mailio::mime}!HEADER\_NAME\_REGEX@{HEADER\_NAME\_REGEX}}
+\index{HEADER\_NAME\_REGEX@{HEADER\_NAME\_REGEX}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{HEADER\_NAME\_REGEX}{HEADER\_NAME\_REGEX}}
+{\footnotesize\ttfamily const boost\+::regex mailio\+::mime\+::\+H\+E\+A\+D\+E\+R\+\_\+\+N\+A\+M\+E\+\_\+\+R\+E\+G\+EX\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Allowed characters for the header name. They consist of the printable A\+S\+C\+II characters without the colon. \mbox{\Hypertarget{classmailio_1_1mime_a48a6dbd2f99f52005512f13f11decc05}\label{classmailio_1_1mime_a48a6dbd2f99f52005512f13f11decc05}} 
+\index{mailio::mime@{mailio::mime}!HEADER\_SEPARATOR\_CHAR@{HEADER\_SEPARATOR\_CHAR}}
+\index{HEADER\_SEPARATOR\_CHAR@{HEADER\_SEPARATOR\_CHAR}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{HEADER\_SEPARATOR\_CHAR}{HEADER\_SEPARATOR\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::mime\+::\+H\+E\+A\+D\+E\+R\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR \{\textquotesingle{}\+:\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Header name and value separator character. \mbox{\Hypertarget{classmailio_1_1mime_ae4f4e3f9bbdbadc49659bc41c90c383a}\label{classmailio_1_1mime_ae4f4e3f9bbdbadc49659bc41c90c383a}} 
+\index{mailio::mime@{mailio::mime}!HEADER\_SEPARATOR\_STR@{HEADER\_SEPARATOR\_STR}}
+\index{HEADER\_SEPARATOR\_STR@{HEADER\_SEPARATOR\_STR}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{HEADER\_SEPARATOR\_STR}{HEADER\_SEPARATOR\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+H\+E\+A\+D\+E\+R\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Colon string used to separate header name from the header value. \mbox{\Hypertarget{classmailio_1_1mime_af8e0151e96725cef29b394b346278ec1}\label{classmailio_1_1mime_af8e0151e96725cef29b394b346278ec1}} 
+\index{mailio::mime@{mailio::mime}!HEADER\_VALUE\_REGEX@{HEADER\_VALUE\_REGEX}}
+\index{HEADER\_VALUE\_REGEX@{HEADER\_VALUE\_REGEX}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{HEADER\_VALUE\_REGEX}{HEADER\_VALUE\_REGEX}}
+{\footnotesize\ttfamily const boost\+::regex mailio\+::mime\+::\+H\+E\+A\+D\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+R\+E\+G\+EX\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Allowed characters for the header value. They consist of the printable A\+S\+C\+II characters with the space. \mbox{\Hypertarget{classmailio_1_1mime_a4149397f899dccf36dbce9c324512e4a}\label{classmailio_1_1mime_a4149397f899dccf36dbce9c324512e4a}} 
+\index{mailio::mime@{mailio::mime}!NAME\_VALUE\_SEPARATOR\_CHAR@{NAME\_VALUE\_SEPARATOR\_CHAR}}
+\index{NAME\_VALUE\_SEPARATOR\_CHAR@{NAME\_VALUE\_SEPARATOR\_CHAR}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{NAME\_VALUE\_SEPARATOR\_CHAR}{NAME\_VALUE\_SEPARATOR\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::mime\+::\+N\+A\+M\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR \{\textquotesingle{}=\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Attribute name and value separator. \mbox{\Hypertarget{classmailio_1_1mime_ae5978cd1de68676f40f1bb95ca8541b6}\label{classmailio_1_1mime_ae5978cd1de68676f40f1bb95ca8541b6}} 
+\index{mailio::mime@{mailio::mime}!NAME\_VALUE\_SEPARATOR\_STR@{NAME\_VALUE\_SEPARATOR\_STR}}
+\index{NAME\_VALUE\_SEPARATOR\_STR@{NAME\_VALUE\_SEPARATOR\_STR}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{NAME\_VALUE\_SEPARATOR\_STR}{NAME\_VALUE\_SEPARATOR\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+N\+A\+M\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Attribute name and value separator as string. \mbox{\Hypertarget{classmailio_1_1mime_a92a7b06f02e581689ee9300c61aba2d5}\label{classmailio_1_1mime_a92a7b06f02e581689ee9300c61aba2d5}} 
+\index{mailio::mime@{mailio::mime}!NEW\_LINE\_INDENT@{NEW\_LINE\_INDENT}}
+\index{NEW\_LINE\_INDENT@{NEW\_LINE\_INDENT}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{NEW\_LINE\_INDENT}{NEW\_LINE\_INDENT}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+N\+E\+W\+\_\+\+L\+I\+N\+E\+\_\+\+I\+N\+D\+E\+NT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Indentation used by headers for the continuation. \mbox{\Hypertarget{classmailio_1_1mime_a0b6dace620dc2653f8f9894e60055bc6}\label{classmailio_1_1mime_a0b6dace620dc2653f8f9894e60055bc6}} 
+\index{mailio::mime@{mailio::mime}!QTEXT@{QTEXT}}
+\index{QTEXT@{QTEXT}!mailio::mime@{mailio::mime}}
+\doxysubsubsection{\texorpdfstring{QTEXT}{QTEXT}}
+{\footnotesize\ttfamily const std\+::string mailio\+::mime\+::\+Q\+T\+E\+XT\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Alphanumerics plus some special character allowed in the quoted text. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/mime.\+hpp\end{DoxyCompactItemize}

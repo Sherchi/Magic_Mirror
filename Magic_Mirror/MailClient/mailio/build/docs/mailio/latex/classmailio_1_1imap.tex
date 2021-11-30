@@ -1,0 +1,1283 @@
+\hypertarget{classmailio_1_1imap}{}\doxysection{mailio\+::imap Class Reference}
+\label{classmailio_1_1imap}\index{mailio::imap@{mailio::imap}}
+
+
+{\ttfamily \#include $<$imap.\+hpp$>$}
+
+Inheritance diagram for mailio\+::imap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmailio_1_1imap}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__folder__t}{mailbox\+\_\+folder\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t}{search\+\_\+condition\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmailio_1_1imap_1_1tag__result__response__t}{tag\+\_\+result\+\_\+response\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}{auth\+\_\+method\+\_\+t}} \{ {\bfseries L\+O\+G\+IN}
+ \}
+\item 
+typedef std\+::pair$<$ unsigned long, std\+::optional$<$ unsigned long $>$ $>$ \mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1imap_af256361c738d239a843acf4ebf357442}{imap}} (const std\+::string \&hostname, unsigned port, std\+::chrono\+::milliseconds timeout=std\+::chrono\+::milliseconds(0))
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1imap_a8d756d681b48b8ac054a0fdfccc510f7}{$\sim$imap}} ()
+\item 
+\mbox{\Hypertarget{classmailio_1_1imap_ac3ec7023a6e49f8784dc6e7c3b7d3332}\label{classmailio_1_1imap_ac3ec7023a6e49f8784dc6e7c3b7d3332}} 
+{\bfseries imap} (const \mbox{\hyperlink{classmailio_1_1imap}{imap}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1imap_a961aa34fe0e0b62c11b8b2d3600578ac}\label{classmailio_1_1imap_a961aa34fe0e0b62c11b8b2d3600578ac}} 
+{\bfseries imap} (\mbox{\hyperlink{classmailio_1_1imap}{imap}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1imap_ab4b15b3ea40bb34fb8961d1bd8e762e3}\label{classmailio_1_1imap_ab4b15b3ea40bb34fb8961d1bd8e762e3}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1imap}{imap}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1imap_a37306089cb0acb3703e657194bb4f582}\label{classmailio_1_1imap_a37306089cb0acb3703e657194bb4f582}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1imap}{imap}} \&\&)=delete
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1imap_aa15d02d5164f806e8ad4471f3b192f24}{authenticate}} (const std\+::string \&username, const std\+::string \&password, \mbox{\hyperlink{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}{auth\+\_\+method\+\_\+t}} method)
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} \mbox{\hyperlink{classmailio_1_1imap_a45cc1824fe6b1576588d50f38bdbaae1}{select}} (const std\+::list$<$ std\+::string $>$ \&folder\+\_\+name, bool read\+\_\+only=false)
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} \mbox{\hyperlink{classmailio_1_1imap_a5df2d8c910831f5abd910b93eab611f2}{select}} (const std\+::string \&mailbox, bool read\+\_\+only=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_aa334ff5507f0a42665423d81d9444e04}{fetch}} (const std\+::string \&mailbox, unsigned long message\+\_\+no, \mbox{\hyperlink{classmailio_1_1message}{message}} \&msg, bool header\+\_\+only=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_ac61509a521f94d15febcf55fc3499612}{fetch}} (unsigned long message\+\_\+no, \mbox{\hyperlink{classmailio_1_1message}{message}} \&msg, bool is\+\_\+uid=false, bool header\+\_\+only=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a1b047a3246b743cc9b933dfd146f47a2}{fetch}} (const std\+::list$<$ \mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}} $>$ \&messages\+\_\+range, std\+::map$<$ unsigned long, \mbox{\hyperlink{classmailio_1_1message}{message}} $>$ \&found\+\_\+messages, bool is\+\_\+uids=false, bool header\+\_\+only=false, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} line\+\_\+policy=codec\+::line\+\_\+len\+\_\+policy\+\_\+t\+::\+R\+E\+C\+O\+M\+M\+E\+N\+D\+ED)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a8d3906c092c402caf3a733b621c28c52}{append}} (const std\+::list$<$ std\+::string $>$ \&folder\+\_\+name, const \mbox{\hyperlink{classmailio_1_1message}{message}} \&msg)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a7156549d4922a999be6a6478e5a2432e}{append}} (const std\+::string \&folder\+\_\+name, const \mbox{\hyperlink{classmailio_1_1message}{message}} \&msg)
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} \mbox{\hyperlink{classmailio_1_1imap_ab242ee70e15cf2b2dc2064cb467e6f0a}{statistics}} (const std\+::string \&mailbox, unsigned int info=mailbox\+\_\+stat\+\_\+t\+::\+D\+E\+F\+A\+U\+LT)
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} \mbox{\hyperlink{classmailio_1_1imap_aa97f2d10d2effb63aad4e0e7ee5ba551}{statistics}} (const std\+::list$<$ std\+::string $>$ \&folder\+\_\+name, unsigned int info=mailbox\+\_\+stat\+\_\+t\+::\+D\+E\+F\+A\+U\+LT)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a5aadc54103afb88ac1fa2d36710cb696}{remove}} (const std\+::string \&mailbox, unsigned long message\+\_\+no, bool is\+\_\+uid=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a1bfb542c9957e74214700485ee6badb8}{remove}} (const std\+::list$<$ std\+::string $>$ \&mailbox, unsigned long message\+\_\+no, bool is\+\_\+uid=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a48f71d7ba8627463f89cf4a6153a73fd}{remove}} (unsigned long message\+\_\+no, bool is\+\_\+uid=false)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a5269ed06e177d775d43ad8c5780577fe}{search}} (const std\+::list$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t}{search\+\_\+condition\+\_\+t}} $>$ \&conditions, std\+::list$<$ unsigned long $>$ \&results, bool want\+\_\+uids=false)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1imap_ae1eaa1bda16c50d0ca6d96133d33ddea}{create\+\_\+folder}} (const std\+::string \&folder\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1imap_ad71de47b18934ba398466084152e1976}{create\+\_\+folder}} (const std\+::list$<$ std\+::string $>$ \&folder\+\_\+name)
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__folder__t}{mailbox\+\_\+folder\+\_\+t}} \mbox{\hyperlink{classmailio_1_1imap_a90d32910c18048d971797ef3ff38c605}{list\+\_\+folders}} (const std\+::string \&folder\+\_\+name)
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__folder__t}{mailbox\+\_\+folder\+\_\+t}} \mbox{\hyperlink{classmailio_1_1imap_adec6536227b4f6a957a0b6bc48472ace}{list\+\_\+folders}} (const std\+::list$<$ std\+::string $>$ \&folder\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1imap_ae3eee907cf3102e698ffc41765bfac39}{delete\+\_\+folder}} (const std\+::string \&folder\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1imap_af591f2ed907f916f5aa3494e92bc7290}{delete\+\_\+folder}} (const std\+::list$<$ std\+::string $>$ \&folder\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1imap_ad037023bdadb3a454094f31f8e71bd26}{rename\+\_\+folder}} (const std\+::string \&old\+\_\+name, const std\+::string \&new\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1imap_a7b8ade149f0a82ed54b0890d9d821fb7}{rename\+\_\+folder}} (const std\+::list$<$ std\+::string $>$ \&old\+\_\+name, const std\+::list$<$ std\+::string $>$ \&new\+\_\+name)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}{folder\+\_\+delimiter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1imap_adbff135c992ab7bd078ccc3ce78cbbde}{atom\+\_\+state\+\_\+t}} \{ {\bfseries N\+O\+NE}, 
+{\bfseries P\+L\+A\+IN}, 
+{\bfseries Q\+U\+O\+T\+ED}
+ \}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1imap_a6c2f255cbea61bea52031446553ec48f}{string\+\_\+literal\+\_\+state\+\_\+t}} \{ \newline
+{\bfseries N\+O\+NE}, 
+{\bfseries S\+I\+ZE}, 
+{\bfseries W\+A\+I\+T\+I\+NG}, 
+{\bfseries R\+E\+A\+D\+I\+NG}, 
+\newline
+{\bfseries D\+O\+NE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1imap_a500ee348338e6bcd6e03aed5a684e22e}{connect}} ()
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a49db87437dd17e1939ba7789e190e722}{auth\+\_\+login}} (const std\+::string \&username, const std\+::string \&password)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a5ba26b824d9b8be809f408ee0e22d920}{search}} (const std\+::string \&conditions, std\+::list$<$ unsigned long $>$ \&results, bool want\+\_\+uids=false)
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1tag__result__response__t}{tag\+\_\+result\+\_\+response\+\_\+t}} \mbox{\hyperlink{classmailio_1_1imap_a9b1b49bb670f3f41969394da4cb92276}{parse\+\_\+tag\+\_\+result}} (const std\+::string \&line) const
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a1bba546d0b50d6ce20f56b799baef74a}{parse\+\_\+response}} (const std\+::string \&response)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_a885390b5d25d62f863709eb2c2c92da2}{reset\+\_\+response\+\_\+parser}} ()
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1imap_abe42356fda200812ae6de4f9c56a9917}{format}} (const std\+::string \&command)
+\item 
+void \mbox{\hyperlink{classmailio_1_1imap_aee3415dc07f31fecb8ef12d70c391043}{trim\+\_\+eol}} (std\+::string \&line)
+\item 
+std\+::string \mbox{\hyperlink{classmailio_1_1imap_ad71176a1d12bcc42a7c16f412384e5b3}{folder\+\_\+tree\+\_\+to\+\_\+string}} (const std\+::list$<$ std\+::string $>$ \&folder\+\_\+tree, std\+::string delimiter) const
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}} $>$ $>$ $\ast$ \mbox{\hyperlink{classmailio_1_1imap_a0153326674238e595952897c33042976}{find\+\_\+last\+\_\+token\+\_\+list}} (std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}} $>$$>$ \&token\+\_\+list)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classmailio_1_1imap_a5ed0338e6a062e80b0dc29c274c88f22}{messages\+\_\+range\+\_\+to\+\_\+string}} (\mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}} id\+\_\+pair)
+\item 
+static std\+::string \mbox{\hyperlink{classmailio_1_1imap_a9fbd4227ea58ab0714011a9bf2495bee}{messages\+\_\+range\+\_\+list\+\_\+to\+\_\+string}} (std\+::list$<$ \mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}} $>$ ranges)
+\item 
+static std\+::string \mbox{\hyperlink{classmailio_1_1imap_abd3d0a47b53ec49dd9e34dd8dd086d0f}{imap\+\_\+date\+\_\+to\+\_\+string}} (const boost\+::gregorian\+::date \&gregorian\+\_\+date)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmailio_1_1dialog}{dialog}} $>$ \mbox{\hyperlink{classmailio_1_1imap_abe64cba02a2e4f5596970e14611f90b4}{\+\_\+dlg}}
+\item 
+unsigned \mbox{\hyperlink{classmailio_1_1imap_a68437a1149be52605073552f2214413c}{\+\_\+tag}}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}} $>$ $>$ \mbox{\hyperlink{classmailio_1_1imap_a332662a1df8da663b8e6f269186cdfd2}{\+\_\+optional\+\_\+part}}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}} $>$ $>$ \mbox{\hyperlink{classmailio_1_1imap_a6c32a0ade3136071a75cabfc8debcd7e}{\+\_\+mandatory\+\_\+part}}
+\item 
+bool \mbox{\hyperlink{classmailio_1_1imap_a509acb3f9ca711078f8c0f548c0781ee}{\+\_\+optional\+\_\+part\+\_\+state}}
+\item 
+\mbox{\Hypertarget{classmailio_1_1imap_ac0aecc3a1b8f0697e5f4b9aaf3351149}\label{classmailio_1_1imap_ac0aecc3a1b8f0697e5f4b9aaf3351149}} 
+enum \mbox{\hyperlink{classmailio_1_1imap_adbff135c992ab7bd078ccc3ce78cbbde}{mailio\+::imap\+::atom\+\_\+state\+\_\+t}} {\bfseries \+\_\+atom\+\_\+state}
+\item 
+unsigned int \mbox{\hyperlink{classmailio_1_1imap_a0999011e200eacc3c0779e03d2303aa5}{\+\_\+parenthesis\+\_\+list\+\_\+counter}}
+\item 
+\mbox{\Hypertarget{classmailio_1_1imap_a54213aedd286c59a926431258c5b65d4}\label{classmailio_1_1imap_a54213aedd286c59a926431258c5b65d4}} 
+enum \mbox{\hyperlink{classmailio_1_1imap_a6c2f255cbea61bea52031446553ec48f}{mailio\+::imap\+::string\+\_\+literal\+\_\+state\+\_\+t}} {\bfseries \+\_\+literal\+\_\+state}
+\item 
+std\+::string\+::size\+\_\+type \mbox{\hyperlink{classmailio_1_1imap_a0bf994ab01d9c25548662ba32b089797}{\+\_\+literal\+\_\+bytes\+\_\+read}}
+\item 
+std\+::string\+::size\+\_\+type \mbox{\hyperlink{classmailio_1_1imap_a64ef2a9cbd8fcf1fe64b35641b881b23}{\+\_\+eols\+\_\+no}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1imap_a50c88da5890b822d51c8d3253ccf7748}{U\+N\+T\+A\+G\+G\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1imap_ac05bec11b80b6f840030ae808be2a25b}{C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1imap_ac644fd762200465756cbde9d232d65a2}{R\+A\+N\+G\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1imap_a60022dfdc62018b98ebc0712a19b79ed}{R\+A\+N\+G\+E\+\_\+\+A\+LL}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1imap_a19af956a93d2bd9e1a28055ec8aa36c4}{L\+I\+S\+T\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_a1ff40a61d2a54ef02b947e85b3b979e2}{T\+O\+K\+E\+N\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR}} \{\textquotesingle{} \textquotesingle{}\}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1imap_a200433d1d945c15c1a235f556d3c1349}{T\+O\+K\+E\+N\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_a6104889c43061028de5e05a4c3e130ab}{Q\+U\+O\+T\+E\+D\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR}} \{\textquotesingle{}\char`\"{}\textquotesingle{}\}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1imap_a0d401666fb53e823d4f7dd7e12cecd98}{Q\+U\+O\+T\+E\+D\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_a3a3c63313cad4a6ec343dbe4a8bc2a98}{O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+B\+E\+G\+IN}} \{\textquotesingle{}\mbox{[}\textquotesingle{}\}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_ad71c6ee2ffac596a939eb3dc27db067b}{O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+E\+ND}} \{\textquotesingle{}\mbox{]}\textquotesingle{}\}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_ad4b86636c2fbcaf414d07dba87033b29}{L\+I\+S\+T\+\_\+\+B\+E\+G\+IN}} \{\textquotesingle{}(\textquotesingle{}\}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_a69a560feb0074a22a791f6569cfc69e5}{L\+I\+S\+T\+\_\+\+E\+ND}} \{\textquotesingle{})\textquotesingle{}\}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_aa4431b17c65cb625ea38e5b71bbad025}{S\+T\+R\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+L\+\_\+\+B\+E\+G\+IN}} \{\textquotesingle{}\{\textquotesingle{}\}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_ae696871ea0a8ae45ceb677b9f84bf3d9}{S\+T\+R\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+L\+\_\+\+E\+ND}} \{\textquotesingle{}\}\textquotesingle{}\}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1imap_a922e5e46d297a034c1d2727080402033}{Q\+U\+O\+T\+E\+D\+\_\+\+A\+T\+OM}} \{\textquotesingle{}\char`\"{}\textquotesingle{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I\+M\+AP client implementation. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}\label{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}} 
+\index{mailio::imap@{mailio::imap}!messages\_range\_t@{messages\_range\_t}}
+\index{messages\_range\_t@{messages\_range\_t}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{messages\_range\_t}{messages\_range\_t}}
+{\footnotesize\ttfamily typedef std\+::pair$<$unsigned long, std\+::optional$<$unsigned long$>$ $>$ \mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{mailio\+::imap\+::messages\+\_\+range\+\_\+t}}}
+
+Single message ID or range of message I\+Ds to be searched for. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1imap_adbff135c992ab7bd078ccc3ce78cbbde}\label{classmailio_1_1imap_adbff135c992ab7bd078ccc3ce78cbbde}} 
+\index{mailio::imap@{mailio::imap}!atom\_state\_t@{atom\_state\_t}}
+\index{atom\_state\_t@{atom\_state\_t}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{atom\_state\_t}{atom\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1imap_adbff135c992ab7bd078ccc3ce78cbbde}{mailio\+::imap\+::atom\+\_\+state\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [protected]}}
+
+Parser state if an atom is reached. \mbox{\Hypertarget{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}\label{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}} 
+\index{mailio::imap@{mailio::imap}!auth\_method\_t@{auth\_method\_t}}
+\index{auth\_method\_t@{auth\_method\_t}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{auth\_method\_t}{auth\_method\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}{mailio\+::imap\+::auth\+\_\+method\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Available authentication methods. \mbox{\Hypertarget{classmailio_1_1imap_a6c2f255cbea61bea52031446553ec48f}\label{classmailio_1_1imap_a6c2f255cbea61bea52031446553ec48f}} 
+\index{mailio::imap@{mailio::imap}!string\_literal\_state\_t@{string\_literal\_state\_t}}
+\index{string\_literal\_state\_t@{string\_literal\_state\_t}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{string\_literal\_state\_t}{string\_literal\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1imap_a6c2f255cbea61bea52031446553ec48f}{mailio\+::imap\+::string\+\_\+literal\+\_\+state\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [protected]}}
+
+Parser state if a string literal is reached. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1imap_af256361c738d239a843acf4ebf357442}\label{classmailio_1_1imap_af256361c738d239a843acf4ebf357442}} 
+\index{mailio::imap@{mailio::imap}!imap@{imap}}
+\index{imap@{imap}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{imap()}{imap()}}
+{\footnotesize\ttfamily mailio\+::imap\+::imap (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hostname,  }\item[{unsigned}]{port,  }\item[{std\+::chrono\+::milliseconds}]{timeout = {\ttfamily std\+:\+:chrono\+:\+:milliseconds(0)} }\end{DoxyParamCaption})}
+
+Creating a connection to a server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & Hostname of the server. \\
+\hline
+{\em port} & Port of the server. \\
+\hline
+{\em timeout} & Network timeout after which I/O operations fail. If zero, then no timeout is set i.\+e. I/O operations are synchronous. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily dialog\+::dialog(const string\&, unsigned)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_a8d756d681b48b8ac054a0fdfccc510f7}\label{classmailio_1_1imap_a8d756d681b48b8ac054a0fdfccc510f7}} 
+\index{mailio::imap@{mailio::imap}!````~imap@{$\sim$imap}}
+\index{````~imap@{$\sim$imap}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{$\sim$imap()}{~imap()}}
+{\footnotesize\ttfamily virtual mailio\+::imap\+::$\sim$imap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sending the logout command and closing the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1imap_a8d3906c092c402caf3a733b621c28c52}\label{classmailio_1_1imap_a8d3906c092c402caf3a733b621c28c52}} 
+\index{mailio::imap@{mailio::imap}!append@{append}}
+\index{append@{append}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::append (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{folder\+\_\+name,  }\item[{const \mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{msg }\end{DoxyParamCaption})}
+
+Appending a message to the given folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to append the message. \\
+\hline
+{\em msg} & Message to append. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily append(const string\&, const message\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_a7156549d4922a999be6a6478e5a2432e}\label{classmailio_1_1imap_a7156549d4922a999be6a6478e5a2432e}} 
+\index{mailio::imap@{mailio::imap}!append@{append}}
+\index{append@{append}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::append (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{folder\+\_\+name,  }\item[{const \mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{msg }\end{DoxyParamCaption})}
+
+Appending a message to the given folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to append the message. \\
+\hline
+{\em msg} & Message to append. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & {\ttfamily Message appending failure.}, {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}, {\ttfamily message\+::format(std\+::string\&, bool)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_a49db87437dd17e1939ba7789e190e722}\label{classmailio_1_1imap_a49db87437dd17e1939ba7789e190e722}} 
+\index{mailio::imap@{mailio::imap}!auth\_login@{auth\_login}}
+\index{auth\_login@{auth\_login}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{auth\_login()}{auth\_login()}}
+{\footnotesize\ttfamily void mailio\+::imap\+::auth\+\_\+login (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Performing an authentication by using the login method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Authentication failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000024}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_aa15d02d5164f806e8ad4471f3b192f24}\label{classmailio_1_1imap_aa15d02d5164f806e8ad4471f3b192f24}} 
+\index{mailio::imap@{mailio::imap}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::authenticate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{classmailio_1_1imap_a12beaa30e9119156cc3c9bd729eae50f}{auth\+\_\+method\+\_\+t}}}]{method }\end{DoxyParamCaption})}
+
+Authenticating with the given credentials.
+
+The method should be called only once on an existing object -\/ it is not possible to authenticate again within the same connection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Username to authenticate. \\
+\hline
+{\em password} & Password to authenticate. \\
+\hline
+{\em method} & Authentication method to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The server greeting message.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a500ee348338e6bcd6e03aed5a684e22e}{connect()}}}, {\ttfamily auth\+\_\+login(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_a500ee348338e6bcd6e03aed5a684e22e}\label{classmailio_1_1imap_a500ee348338e6bcd6e03aed5a684e22e}} 
+\index{mailio::imap@{mailio::imap}!connect@{connect}}
+\index{connect@{connect}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initiating a session to the server.
+
+\begin{DoxyReturn}{Returns}
+The server greeting message. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Connection to server failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000023}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_ad71de47b18934ba398466084152e1976}\label{classmailio_1_1imap_ad71de47b18934ba398466084152e1976}} 
+\index{mailio::imap@{mailio::imap}!create\_folder@{create\_folder}}
+\index{create\_folder@{create\_folder}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{create\_folder()}{create\_folder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mailio\+::imap\+::create\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{folder\+\_\+name }\end{DoxyParamCaption})}
+
+Creating folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to be created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if created, false if not. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}{folder\+\_\+delimiter()}}}, {\ttfamily create\+\_\+folder(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000018}{Todo}}]Return status really needed?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_ae1eaa1bda16c50d0ca6d96133d33ddea}\label{classmailio_1_1imap_ae1eaa1bda16c50d0ca6d96133d33ddea}} 
+\index{mailio::imap@{mailio::imap}!create\_folder@{create\_folder}}
+\index{create\_folder@{create\_folder}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{create\_folder()}{create\_folder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool mailio\+::imap\+::create\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{folder\+\_\+name }\end{DoxyParamCaption})}
+
+Creating folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to be created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if created, false if not. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Creating folder failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000017}{Todo}}]Return status really needed?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_af591f2ed907f916f5aa3494e92bc7290}\label{classmailio_1_1imap_af591f2ed907f916f5aa3494e92bc7290}} 
+\index{mailio::imap@{mailio::imap}!delete\_folder@{delete\_folder}}
+\index{delete\_folder@{delete\_folder}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{delete\_folder()}{delete\_folder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mailio\+::imap\+::delete\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{folder\+\_\+name }\end{DoxyParamCaption})}
+
+Deleting a folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if deleted, false if not. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily delete\+\_\+folder(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000020}{Todo}}]Return status really needed?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_ae3eee907cf3102e698ffc41765bfac39}\label{classmailio_1_1imap_ae3eee907cf3102e698ffc41765bfac39}} 
+\index{mailio::imap@{mailio::imap}!delete\_folder@{delete\_folder}}
+\index{delete\_folder@{delete\_folder}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{delete\_folder()}{delete\_folder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool mailio\+::imap\+::delete\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{folder\+\_\+name }\end{DoxyParamCaption})}
+
+Deleting a folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if deleted, false if not. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Deleting folder failure. \\
+\hline
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}{folder\+\_\+delimiter()}}}, {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]Return status really needed?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a1b047a3246b743cc9b933dfd146f47a2}\label{classmailio_1_1imap_a1b047a3246b743cc9b933dfd146f47a2}} 
+\index{mailio::imap@{mailio::imap}!fetch@{fetch}}
+\index{fetch@{fetch}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::fetch (\begin{DoxyParamCaption}\item[{const std\+::list$<$ \mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}} $>$ \&}]{messages\+\_\+range,  }\item[{std\+::map$<$ unsigned long, \mbox{\hyperlink{classmailio_1_1message}{message}} $>$ \&}]{found\+\_\+messages,  }\item[{bool}]{is\+\_\+uids = {\ttfamily false},  }\item[{bool}]{header\+\_\+only = {\ttfamily false},  }\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}}}]{line\+\_\+policy = {\ttfamily codec\+:\+:line\+\_\+len\+\_\+policy\+\_\+t\+:\+:RECOMMENDED} }\end{DoxyParamCaption})}
+
+Fetching messages from an already selected mailbox.
+
+A mailbox must already be selected before calling this method.
+
+Some servers report success if a message with the given number does not exist, so the method returns with the empty {\ttfamily msg}. Other considers fetching non-\/existing message to be an error, and an exception is thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em messages\+\_\+range} & Range of message numbers or U\+I\+Ds to fetch. \\
+\hline
+{\em found\+\_\+messages} & Map of messages to store the results, indexed by message number or uid. It does not clear the map first, so that results can be accumulated. \\
+\hline
+{\em is\+\_\+uids} & Using message U\+ID numbers instead of a message sequence numbers. \\
+\hline
+{\em header\+\_\+only} & Flag if only the message headers should be fetched. \\
+\hline
+{\em line\+\_\+policy} & Decoder line policy to use while parsing each message. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Fetching message failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily parse\+\_\+response(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}, {\ttfamily message\+::parse(const string\&, bool)}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_aa334ff5507f0a42665423d81d9444e04}\label{classmailio_1_1imap_aa334ff5507f0a42665423d81d9444e04}} 
+\index{mailio::imap@{mailio::imap}!fetch@{fetch}}
+\index{fetch@{fetch}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::fetch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mailbox,  }\item[{unsigned long}]{message\+\_\+no,  }\item[{\mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{msg,  }\item[{bool}]{header\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Fetching a message from the mailbox.
+
+Some servers report success if a message with the given number does not exist, so the method returns with the empty {\ttfamily msg}. Other considers fetching non-\/existing message to be an error, and an exception is thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mailbox} & Mailbox to fetch from. \\
+\hline
+{\em message\+\_\+no} & Number of the message to fetch. \\
+\hline
+{\em msg} & Message to store the result. \\
+\hline
+{\em header\+\_\+only} & Flag if only the message header should be fetched. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Fetching message failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily fetch(const list$<$messages\+\_\+range\+\_\+t$>$\&, map$<$unsigned long, message$>$\&, bool, bool, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}})}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000009}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_ac61509a521f94d15febcf55fc3499612}\label{classmailio_1_1imap_ac61509a521f94d15febcf55fc3499612}} 
+\index{mailio::imap@{mailio::imap}!fetch@{fetch}}
+\index{fetch@{fetch}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::fetch (\begin{DoxyParamCaption}\item[{unsigned long}]{message\+\_\+no,  }\item[{\mbox{\hyperlink{classmailio_1_1message}{message}} \&}]{msg,  }\item[{bool}]{is\+\_\+uid = {\ttfamily false},  }\item[{bool}]{header\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Fetching a message from an already selected mailbox.
+
+A mailbox must already be selected before calling this method.
+
+Some servers report success if a message with the given number does not exist, so the method returns with the empty {\ttfamily msg}. Other considers fetching non-\/existing message to be an error, and an exception is thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+no} & Number of the message to fetch. \\
+\hline
+{\em msg} & Message to store the result. \\
+\hline
+{\em is\+\_\+uid} & Using a message uid number instead of a message sequence number. \\
+\hline
+{\em header\+\_\+only} & Flag if only the message header should be fetched. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily fetch(const list$<$messages\+\_\+range\+\_\+t$>$\&, map$<$unsigned long, message$>$\&, bool, bool, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{codec\+::line\+\_\+len\+\_\+policy\+\_\+t}})}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000010}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a0153326674238e595952897c33042976}\label{classmailio_1_1imap_a0153326674238e595952897c33042976}} 
+\index{mailio::imap@{mailio::imap}!find\_last\_token\_list@{find\_last\_token\_list}}
+\index{find\_last\_token\_list@{find\_last\_token\_list}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{find\_last\_token\_list()}{find\_last\_token\_list()}}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}}$>$ $>$$\ast$ mailio\+::imap\+::find\+\_\+last\+\_\+token\+\_\+list (\begin{DoxyParamCaption}\item[{std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}} $>$$>$ \&}]{token\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Finding last token of the list at the given depth in terms of parenthesis count.
+
+When a new token is found, this method enables to find the last current token and append the new one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em token\+\_\+list} & Token sequence to traverse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Last token of the given sequence at the current depth of parenthesis count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}\label{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}} 
+\index{mailio::imap@{mailio::imap}!folder\_delimiter@{folder\_delimiter}}
+\index{folder\_delimiter@{folder\_delimiter}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{folder\_delimiter()}{folder\_delimiter()}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::folder\+\_\+delimiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determining folder delimiter of a mailbox.
+
+It is required to know the folder delimiter string in case one wants to deal with the folder names as strings.
+
+\begin{DoxyReturn}{Returns}
+Folder delimiter. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Determining folder delimiter failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_ad71176a1d12bcc42a7c16f412384e5b3}\label{classmailio_1_1imap_ad71176a1d12bcc42a7c16f412384e5b3}} 
+\index{mailio::imap@{mailio::imap}!folder\_tree\_to\_string@{folder\_tree\_to\_string}}
+\index{folder\_tree\_to\_string@{folder\_tree\_to\_string}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{folder\_tree\_to\_string()}{folder\_tree\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::folder\+\_\+tree\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{folder\+\_\+tree,  }\item[{std\+::string}]{delimiter }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting folder tree to string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+tree} & Folders to format into string. \\
+\hline
+{\em delimiter} & Delimiter of the folders. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Formatted string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1imap_abe42356fda200812ae6de4f9c56a9917}\label{classmailio_1_1imap_abe42356fda200812ae6de4f9c56a9917}} 
+\index{mailio::imap@{mailio::imap}!format@{format}}
+\index{format@{format}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily std\+::string mailio\+::imap\+::format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Formatting a tagged command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New tag as string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1imap_abd3d0a47b53ec49dd9e34dd8dd086d0f}\label{classmailio_1_1imap_abd3d0a47b53ec49dd9e34dd8dd086d0f}} 
+\index{mailio::imap@{mailio::imap}!imap\_date\_to\_string@{imap\_date\_to\_string}}
+\index{imap\_date\_to\_string@{imap\_date\_to\_string}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{imap\_date\_to\_string()}{imap\_date\_to\_string()}}
+{\footnotesize\ttfamily static std\+::string mailio\+::imap\+::imap\+\_\+date\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const boost\+::gregorian\+::date \&}]{gregorian\+\_\+date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Converting gregorian date to string required by I\+M\+AP searching condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gregorian\+\_\+date} & Gregorian date to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Date as string required by I\+M\+AP search condition. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000027}{Todo}}]Static method of {\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t}{search\+\_\+condition\+\_\+t}}} structure?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_adec6536227b4f6a957a0b6bc48472ace}\label{classmailio_1_1imap_adec6536227b4f6a957a0b6bc48472ace}} 
+\index{mailio::imap@{mailio::imap}!list\_folders@{list\_folders}}
+\index{list\_folders@{list\_folders}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{list\_folders()}{list\_folders()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__folder__t}{mailbox\+\_\+folder\+\_\+t}} mailio\+::imap\+::list\+\_\+folders (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{folder\+\_\+name }\end{DoxyParamCaption})}
+
+Listing folders.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Subfolder tree of the folder. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}{folder\+\_\+delimiter()}}}, {\ttfamily list\+\_\+folders(const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_a90d32910c18048d971797ef3ff38c605}\label{classmailio_1_1imap_a90d32910c18048d971797ef3ff38c605}} 
+\index{mailio::imap@{mailio::imap}!list\_folders@{list\_folders}}
+\index{list\_folders@{list\_folders}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{list\_folders()}{list\_folders()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__folder__t}{mailbox\+\_\+folder\+\_\+t}} mailio\+::imap\+::list\+\_\+folders (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{folder\+\_\+name }\end{DoxyParamCaption})}
+
+Listing folders.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Subfolder tree of the folder. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Listing folders failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}{folder\+\_\+delimiter()}}}, {\ttfamily parse\+\_\+tag\+\_\+result}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_a9fbd4227ea58ab0714011a9bf2495bee}\label{classmailio_1_1imap_a9fbd4227ea58ab0714011a9bf2495bee}} 
+\index{mailio::imap@{mailio::imap}!messages\_range\_list\_to\_string@{messages\_range\_list\_to\_string}}
+\index{messages\_range\_list\_to\_string@{messages\_range\_list\_to\_string}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{messages\_range\_list\_to\_string()}{messages\_range\_list\_to\_string()}}
+{\footnotesize\ttfamily static std\+::string mailio\+::imap\+::messages\+\_\+range\+\_\+list\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}} $>$}]{ranges }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Formatting list of ranges of I\+Ds to a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ranges} & List of ID ranges to format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of ranges of I\+Ds as I\+M\+AP grammar string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1imap_a5ed0338e6a062e80b0dc29c274c88f22}\label{classmailio_1_1imap_a5ed0338e6a062e80b0dc29c274c88f22}} 
+\index{mailio::imap@{mailio::imap}!messages\_range\_to\_string@{messages\_range\_to\_string}}
+\index{messages\_range\_to\_string@{messages\_range\_to\_string}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{messages\_range\_to\_string()}{messages\_range\_to\_string()}}
+{\footnotesize\ttfamily static std\+::string mailio\+::imap\+::messages\+\_\+range\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1imap_a6a76746b945464a535be74a6817b4b30}{messages\+\_\+range\+\_\+t}}}]{id\+\_\+pair }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Formatting range of I\+Ds to a string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+pair} & Range of I\+Ds to format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Range od I\+Ds as I\+M\+AP grammar string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1imap_a1bba546d0b50d6ce20f56b799baef74a}\label{classmailio_1_1imap_a1bba546d0b50d6ce20f56b799baef74a}} 
+\index{mailio::imap@{mailio::imap}!parse\_response@{parse\_response}}
+\index{parse\_response@{parse\_response}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{parse\_response()}{parse\_response()}}
+{\footnotesize\ttfamily void mailio\+::imap\+::parse\+\_\+response (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a response (without tag and result) into optional and mandatory part.
+
+This is the main function that deals with the I\+M\+AP grammar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & Response to parse without tag and result. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parser failure. \\
+\hline
+{\em $\ast$} & {\ttfamily std\+::stoul}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000026}{Todo}}]Perhaps the error should point to a part of the string where the parsing fails.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a9b1b49bb670f3f41969394da4cb92276}\label{classmailio_1_1imap_a9b1b49bb670f3f41969394da4cb92276}} 
+\index{mailio::imap@{mailio::imap}!parse\_tag\_result@{parse\_tag\_result}}
+\index{parse\_tag\_result@{parse\_tag\_result}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{parse\_tag\_result()}{parse\_tag\_result()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1tag__result__response__t}{tag\+\_\+result\+\_\+response\+\_\+t}} mailio\+::imap\+::parse\+\_\+tag\+\_\+result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parsing a line into tag, result and response which is the rest of the line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Response line to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple with the tag, result and response. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_a1bfb542c9957e74214700485ee6badb8}\label{classmailio_1_1imap_a1bfb542c9957e74214700485ee6badb8}} 
+\index{mailio::imap@{mailio::imap}!remove@{remove}}
+\index{remove@{remove}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::remove (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{mailbox,  }\item[{unsigned long}]{message\+\_\+no,  }\item[{bool}]{is\+\_\+uid = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Removing a message from the given mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mailbox} & Mailbox to use. \\
+\hline
+{\em message\+\_\+no} & Number of the message to remove. \\
+\hline
+{\em is\+\_\+uid} & Using a message uid number instead of a message sequence number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily remove(const string\&, bool)}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a5aadc54103afb88ac1fa2d36710cb696}\label{classmailio_1_1imap_a5aadc54103afb88ac1fa2d36710cb696}} 
+\index{mailio::imap@{mailio::imap}!remove@{remove}}
+\index{remove@{remove}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::remove (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mailbox,  }\item[{unsigned long}]{message\+\_\+no,  }\item[{bool}]{is\+\_\+uid = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Removing a message from the given mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mailbox} & Mailbox to use. \\
+\hline
+{\em message\+\_\+no} & Number of the message to remove. \\
+\hline
+{\em is\+\_\+uid} & Using a message uid number instead of a message sequence number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Deleting message failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily select(const string\&)}, {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a48f71d7ba8627463f89cf4a6153a73fd}{remove(unsigned long, bool)}}}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000013}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a48f71d7ba8627463f89cf4a6153a73fd}\label{classmailio_1_1imap_a48f71d7ba8627463f89cf4a6153a73fd}} 
+\index{mailio::imap@{mailio::imap}!remove@{remove}}
+\index{remove@{remove}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::remove (\begin{DoxyParamCaption}\item[{unsigned long}]{message\+\_\+no,  }\item[{bool}]{is\+\_\+uid = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Removing a message from an already selected mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+no} & Number of the message to remove. \\
+\hline
+{\em is\+\_\+uid} & Using a message uid number instead of a message sequence number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Deleting message failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]Add server error messages to exceptions. 
+
+Catch exceptions of {\ttfamily stoul} function.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a7b8ade149f0a82ed54b0890d9d821fb7}\label{classmailio_1_1imap_a7b8ade149f0a82ed54b0890d9d821fb7}} 
+\index{mailio::imap@{mailio::imap}!rename\_folder@{rename\_folder}}
+\index{rename\_folder@{rename\_folder}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{rename\_folder()}{rename\_folder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mailio\+::imap\+::rename\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{old\+\_\+name,  }\item[{const std\+::list$<$ std\+::string $>$ \&}]{new\+\_\+name }\end{DoxyParamCaption})}
+
+Renaming a folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+\_\+name} & Old name of the folder. \\
+\hline
+{\em new\+\_\+name} & New name of the folder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if renaming is successful, false if not. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily rename\+\_\+folder(const string\&, const string\&)}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000022}{Todo}}]Return status really needed?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_ad037023bdadb3a454094f31f8e71bd26}\label{classmailio_1_1imap_ad037023bdadb3a454094f31f8e71bd26}} 
+\index{mailio::imap@{mailio::imap}!rename\_folder@{rename\_folder}}
+\index{rename\_folder@{rename\_folder}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{rename\_folder()}{rename\_folder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool mailio\+::imap\+::rename\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{old\+\_\+name,  }\item[{const std\+::string \&}]{new\+\_\+name }\end{DoxyParamCaption})}
+
+Renaming a folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+\_\+name} & Old name of the folder. \\
+\hline
+{\em new\+\_\+name} & New name of the folder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if renaming is successful, false if not. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Renaming folder failure. \\
+\hline
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_a48220d1d63a0ed53f766f5659782a601}{folder\+\_\+delimiter()}}}, {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000021}{Todo}}]Return status really needed?\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a885390b5d25d62f863709eb2c2c92da2}\label{classmailio_1_1imap_a885390b5d25d62f863709eb2c2c92da2}} 
+\index{mailio::imap@{mailio::imap}!reset\_response\_parser@{reset\_response\_parser}}
+\index{reset\_response\_parser@{reset\_response\_parser}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{reset\_response\_parser()}{reset\_response\_parser()}}
+{\footnotesize\ttfamily void mailio\+::imap\+::reset\+\_\+response\+\_\+parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Resetting the parser state to the initial one. \mbox{\Hypertarget{classmailio_1_1imap_a5269ed06e177d775d43ad8c5780577fe}\label{classmailio_1_1imap_a5269ed06e177d775d43ad8c5780577fe}} 
+\index{mailio::imap@{mailio::imap}!search@{search}}
+\index{search@{search}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::search (\begin{DoxyParamCaption}\item[{const std\+::list$<$ \mbox{\hyperlink{structmailio_1_1imap_1_1search__condition__t}{search\+\_\+condition\+\_\+t}} $>$ \&}]{conditions,  }\item[{std\+::list$<$ unsigned long $>$ \&}]{results,  }\item[{bool}]{want\+\_\+uids = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Searching a mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conditions} & List of conditions taken in conjuction way. \\
+\hline
+{\em results} & Store resulting list of message sequence numbers or U\+I\+Ds here. Does not clear the list first, so that results can be accumulated. \\
+\hline
+{\em want\+\_\+uids} & Return a list of message U\+I\+Ds instead of message sequence numbers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Search mailbox failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a5ba26b824d9b8be809f408ee0e22d920}\label{classmailio_1_1imap_a5ba26b824d9b8be809f408ee0e22d920}} 
+\index{mailio::imap@{mailio::imap}!search@{search}}
+\index{search@{search}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::imap\+::search (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{conditions,  }\item[{std\+::list$<$ unsigned long $>$ \&}]{results,  }\item[{bool}]{want\+\_\+uids = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Searching a mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em conditions} & String of search keys. \\
+\hline
+{\em results} & Store resulting list of indexes here. \\
+\hline
+{\em want\+\_\+uids} & Return a list of message uids instead of message sequence numbers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Search mailbox failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000025}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a45cc1824fe6b1576588d50f38bdbaae1}\label{classmailio_1_1imap_a45cc1824fe6b1576588d50f38bdbaae1}} 
+\index{mailio::imap@{mailio::imap}!select@{select}}
+\index{select@{select}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} mailio\+::imap\+::select (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{folder\+\_\+name,  }\item[{bool}]{read\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Selecting a mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Folder to list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mailbox statistics. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Selecting mailbox failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Add server error messages to exceptions. 
+
+Catch exceptions of {\ttfamily stoul} function.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a5df2d8c910831f5abd910b93eab611f2}\label{classmailio_1_1imap_a5df2d8c910831f5abd910b93eab611f2}} 
+\index{mailio::imap@{mailio::imap}!select@{select}}
+\index{select@{select}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} mailio\+::imap\+::select (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mailbox,  }\item[{bool}]{read\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Selecting a mailbox.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mailbox} & Mailbox to select. \\
+\hline
+{\em read\+\_\+only} & Flag if the selected mailbox is only readable of also writable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mailbox statistics. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Selecting mailbox failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Add server error messages to exceptions.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_aa97f2d10d2effb63aad4e0e7ee5ba551}\label{classmailio_1_1imap_aa97f2d10d2effb63aad4e0e7ee5ba551}} 
+\index{mailio::imap@{mailio::imap}!statistics@{statistics}}
+\index{statistics@{statistics}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{statistics()}{statistics()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} mailio\+::imap\+::statistics (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{folder\+\_\+name,  }\item[{unsigned int}]{info = {\ttfamily mailbox\+\_\+stat\+\_\+t\+:\+:DEFAULT} }\end{DoxyParamCaption})}
+
+Overload of the {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_ab242ee70e15cf2b2dc2064cb467e6f0a}{statistics(const std\+::string\&, unsigned int)}}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+\_\+name} & Name of the folder to query for the statistics. \\
+\hline
+{\em info} & Statistics information to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mailbox statistics. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $\ast$} & {\ttfamily \mbox{\hyperlink{classmailio_1_1imap_ab242ee70e15cf2b2dc2064cb467e6f0a}{statistics(const std\+::string\&, unsigned int)}}}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmailio_1_1imap_ab242ee70e15cf2b2dc2064cb467e6f0a}\label{classmailio_1_1imap_ab242ee70e15cf2b2dc2064cb467e6f0a}} 
+\index{mailio::imap@{mailio::imap}!statistics@{statistics}}
+\index{statistics@{statistics}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{statistics()}{statistics()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t}{mailbox\+\_\+stat\+\_\+t}} mailio\+::imap\+::statistics (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mailbox,  }\item[{unsigned int}]{info = {\ttfamily mailbox\+\_\+stat\+\_\+t\+:\+:DEFAULT} }\end{DoxyParamCaption})}
+
+Getting the mailbox statistics.
+
+The server might not support unseen, uidnext, or uidvalidity, which will cause an exception, so those parameters are optional.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mailbox} & Mailbox name. \\
+\hline
+{\em info} & Statistics information to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mailbox statistics. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Parsing failure. \\
+\hline
+{\em \mbox{\hyperlink{classmailio_1_1imap__error}{imap\+\_\+error}}} & Getting statistics failure. \\
+\hline
+{\em $\ast$} & {\ttfamily parse\+\_\+tag\+\_\+result(const string\&)}, {\ttfamily parse\+\_\+response(const string\&)}, {\ttfamily dialog\+::send(const string\&)}, {\ttfamily \mbox{\hyperlink{classmailio_1_1dialog_aa782455f81d8bf53a1c62ff529a242c9}{dialog\+::receive()}}}. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000012}{Todo}}]Add server error messages to exceptions. 
+
+Exceptions by {\ttfamily stoul()} should be rethrown as parsing failure.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_aee3415dc07f31fecb8ef12d70c391043}\label{classmailio_1_1imap_aee3415dc07f31fecb8ef12d70c391043}} 
+\index{mailio::imap@{mailio::imap}!trim\_eol@{trim\_eol}}
+\index{trim\_eol@{trim\_eol}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{trim\_eol()}{trim\_eol()}}
+{\footnotesize\ttfamily void mailio\+::imap\+::trim\+\_\+eol (\begin{DoxyParamCaption}\item[{std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Trimming trailing CR character.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Line to trim. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1imap_abe64cba02a2e4f5596970e14611f90b4}\label{classmailio_1_1imap_abe64cba02a2e4f5596970e14611f90b4}} 
+\index{mailio::imap@{mailio::imap}!\_dlg@{\_dlg}}
+\index{\_dlg@{\_dlg}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_dlg}{\_dlg}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmailio_1_1dialog}{dialog}}$>$ mailio\+::imap\+::\+\_\+dlg\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dialog to use for send/receive operations. \mbox{\Hypertarget{classmailio_1_1imap_a64ef2a9cbd8fcf1fe64b35641b881b23}\label{classmailio_1_1imap_a64ef2a9cbd8fcf1fe64b35641b881b23}} 
+\index{mailio::imap@{mailio::imap}!\_eols\_no@{\_eols\_no}}
+\index{\_eols\_no@{\_eols\_no}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_eols\_no}{\_eols\_no}}
+{\footnotesize\ttfamily std\+::string\+::size\+\_\+type mailio\+::imap\+::\+\_\+eols\+\_\+no\hspace{0.3cm}{\ttfamily [protected]}}
+
+Keeping the number of end-\/of-\/line characters to be counted as additionals to a formatted line.
+
+If CR is removed, then two characters are counted as additional when a literal is read. If CR is not removed, then only LF was removed during network read, so one character is counted as additional when a literal is read.
+
+This is necessary for cases when the protocol returns literal with lines ended with LF only. Not sure is that is the specification violation, perhaps C\+R\+LF at the end of each line read from network is necessary.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000028}{Todo}}]Check if this is breaking protocol, so it has to be added to a strict mode.\end{DoxyRefDesc}
+\mbox{\Hypertarget{classmailio_1_1imap_a0bf994ab01d9c25548662ba32b089797}\label{classmailio_1_1imap_a0bf994ab01d9c25548662ba32b089797}} 
+\index{mailio::imap@{mailio::imap}!\_literal\_bytes\_read@{\_literal\_bytes\_read}}
+\index{\_literal\_bytes\_read@{\_literal\_bytes\_read}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_literal\_bytes\_read}{\_literal\_bytes\_read}}
+{\footnotesize\ttfamily std\+::string\+::size\+\_\+type mailio\+::imap\+::\+\_\+literal\+\_\+bytes\+\_\+read\hspace{0.3cm}{\ttfamily [protected]}}
+
+Keeping the number of bytes read so far while parsing a string literal. \mbox{\Hypertarget{classmailio_1_1imap_a6c32a0ade3136071a75cabfc8debcd7e}\label{classmailio_1_1imap_a6c32a0ade3136071a75cabfc8debcd7e}} 
+\index{mailio::imap@{mailio::imap}!\_mandatory\_part@{\_mandatory\_part}}
+\index{\_mandatory\_part@{\_mandatory\_part}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_mandatory\_part}{\_mandatory\_part}}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}}$>$ $>$ mailio\+::imap\+::\+\_\+mandatory\+\_\+part\hspace{0.3cm}{\ttfamily [protected]}}
+
+Mandatory part of the response, which is any text outside of the square brackets. \mbox{\Hypertarget{classmailio_1_1imap_a332662a1df8da663b8e6f269186cdfd2}\label{classmailio_1_1imap_a332662a1df8da663b8e6f269186cdfd2}} 
+\index{mailio::imap@{mailio::imap}!\_optional\_part@{\_optional\_part}}
+\index{\_optional\_part@{\_optional\_part}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_optional\_part}{\_optional\_part}}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmailio_1_1imap_1_1response__token__t}{response\+\_\+token\+\_\+t}}$>$ $>$ mailio\+::imap\+::\+\_\+optional\+\_\+part\hspace{0.3cm}{\ttfamily [protected]}}
+
+Optional part of the response, determined by the square brackets. \mbox{\Hypertarget{classmailio_1_1imap_a509acb3f9ca711078f8c0f548c0781ee}\label{classmailio_1_1imap_a509acb3f9ca711078f8c0f548c0781ee}} 
+\index{mailio::imap@{mailio::imap}!\_optional\_part\_state@{\_optional\_part\_state}}
+\index{\_optional\_part\_state@{\_optional\_part\_state}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_optional\_part\_state}{\_optional\_part\_state}}
+{\footnotesize\ttfamily bool mailio\+::imap\+::\+\_\+optional\+\_\+part\+\_\+state\hspace{0.3cm}{\ttfamily [protected]}}
+
+Parser state if an optional part is reached. \mbox{\Hypertarget{classmailio_1_1imap_a0999011e200eacc3c0779e03d2303aa5}\label{classmailio_1_1imap_a0999011e200eacc3c0779e03d2303aa5}} 
+\index{mailio::imap@{mailio::imap}!\_parenthesis\_list\_counter@{\_parenthesis\_list\_counter}}
+\index{\_parenthesis\_list\_counter@{\_parenthesis\_list\_counter}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_parenthesis\_list\_counter}{\_parenthesis\_list\_counter}}
+{\footnotesize\ttfamily unsigned int mailio\+::imap\+::\+\_\+parenthesis\+\_\+list\+\_\+counter\hspace{0.3cm}{\ttfamily [protected]}}
+
+Counting open parenthesis of a parenthized list, thus it also keeps parser state if a parenthesized list is reached. \mbox{\Hypertarget{classmailio_1_1imap_a68437a1149be52605073552f2214413c}\label{classmailio_1_1imap_a68437a1149be52605073552f2214413c}} 
+\index{mailio::imap@{mailio::imap}!\_tag@{\_tag}}
+\index{\_tag@{\_tag}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{\_tag}{\_tag}}
+{\footnotesize\ttfamily unsigned mailio\+::imap\+::\+\_\+tag\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tag used to identify requests and responses. \mbox{\Hypertarget{classmailio_1_1imap_ac05bec11b80b6f840030ae808be2a25b}\label{classmailio_1_1imap_ac05bec11b80b6f840030ae808be2a25b}} 
+\index{mailio::imap@{mailio::imap}!CONTINUE\_RESPONSE@{CONTINUE\_RESPONSE}}
+\index{CONTINUE\_RESPONSE@{CONTINUE\_RESPONSE}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{CONTINUE\_RESPONSE}{CONTINUE\_RESPONSE}}
+{\footnotesize\ttfamily const std\+::string mailio\+::imap\+::\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Continuation response character as defined by the protocol. \mbox{\Hypertarget{classmailio_1_1imap_ad4b86636c2fbcaf414d07dba87033b29}\label{classmailio_1_1imap_ad4b86636c2fbcaf414d07dba87033b29}} 
+\index{mailio::imap@{mailio::imap}!LIST\_BEGIN@{LIST\_BEGIN}}
+\index{LIST\_BEGIN@{LIST\_BEGIN}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{LIST\_BEGIN}{LIST\_BEGIN}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+L\+I\+S\+T\+\_\+\+B\+E\+G\+IN \{\textquotesingle{}(\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character which begins the list. \mbox{\Hypertarget{classmailio_1_1imap_a69a560feb0074a22a791f6569cfc69e5}\label{classmailio_1_1imap_a69a560feb0074a22a791f6569cfc69e5}} 
+\index{mailio::imap@{mailio::imap}!LIST\_END@{LIST\_END}}
+\index{LIST\_END@{LIST\_END}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{LIST\_END}{LIST\_END}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+L\+I\+S\+T\+\_\+\+E\+ND \{\textquotesingle{})\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character which ends the list. \mbox{\Hypertarget{classmailio_1_1imap_a19af956a93d2bd9e1a28055ec8aa36c4}\label{classmailio_1_1imap_a19af956a93d2bd9e1a28055ec8aa36c4}} 
+\index{mailio::imap@{mailio::imap}!LIST\_SEPARATOR@{LIST\_SEPARATOR}}
+\index{LIST\_SEPARATOR@{LIST\_SEPARATOR}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{LIST\_SEPARATOR}{LIST\_SEPARATOR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::imap\+::\+L\+I\+S\+T\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Comma as a separator of the list members. \mbox{\Hypertarget{classmailio_1_1imap_a3a3c63313cad4a6ec343dbe4a8bc2a98}\label{classmailio_1_1imap_a3a3c63313cad4a6ec343dbe4a8bc2a98}} 
+\index{mailio::imap@{mailio::imap}!OPTIONAL\_BEGIN@{OPTIONAL\_BEGIN}}
+\index{OPTIONAL\_BEGIN@{OPTIONAL\_BEGIN}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{OPTIONAL\_BEGIN}{OPTIONAL\_BEGIN}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+B\+E\+G\+IN \{\textquotesingle{}\mbox{[}\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character which begins the optional section. \mbox{\Hypertarget{classmailio_1_1imap_ad71c6ee2ffac596a939eb3dc27db067b}\label{classmailio_1_1imap_ad71c6ee2ffac596a939eb3dc27db067b}} 
+\index{mailio::imap@{mailio::imap}!OPTIONAL\_END@{OPTIONAL\_END}}
+\index{OPTIONAL\_END@{OPTIONAL\_END}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{OPTIONAL\_END}{OPTIONAL\_END}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+E\+ND \{\textquotesingle{}\mbox{]}\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character which ends the optional section. \mbox{\Hypertarget{classmailio_1_1imap_a922e5e46d297a034c1d2727080402033}\label{classmailio_1_1imap_a922e5e46d297a034c1d2727080402033}} 
+\index{mailio::imap@{mailio::imap}!QUOTED\_ATOM@{QUOTED\_ATOM}}
+\index{QUOTED\_ATOM@{QUOTED\_ATOM}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{QUOTED\_ATOM}{QUOTED\_ATOM}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+Q\+U\+O\+T\+E\+D\+\_\+\+A\+T\+OM \{\textquotesingle{}\char`\"{}\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Delimiter of a quoted atom in the protocol. \mbox{\Hypertarget{classmailio_1_1imap_a0d401666fb53e823d4f7dd7e12cecd98}\label{classmailio_1_1imap_a0d401666fb53e823d4f7dd7e12cecd98}} 
+\index{mailio::imap@{mailio::imap}!QUOTED\_STRING\_SEPARATOR@{QUOTED\_STRING\_SEPARATOR}}
+\index{QUOTED\_STRING\_SEPARATOR@{QUOTED\_STRING\_SEPARATOR}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{QUOTED\_STRING\_SEPARATOR}{QUOTED\_STRING\_SEPARATOR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::imap\+::\+Q\+U\+O\+T\+E\+D\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+String representation of the quoted string delimiter character. \mbox{\Hypertarget{classmailio_1_1imap_a6104889c43061028de5e05a4c3e130ab}\label{classmailio_1_1imap_a6104889c43061028de5e05a4c3e130ab}} 
+\index{mailio::imap@{mailio::imap}!QUOTED\_STRING\_SEPARATOR\_CHAR@{QUOTED\_STRING\_SEPARATOR\_CHAR}}
+\index{QUOTED\_STRING\_SEPARATOR\_CHAR@{QUOTED\_STRING\_SEPARATOR\_CHAR}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{QUOTED\_STRING\_SEPARATOR\_CHAR}{QUOTED\_STRING\_SEPARATOR\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+Q\+U\+O\+T\+E\+D\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR \{\textquotesingle{}\char`\"{}\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Quoted string delimiter. \mbox{\Hypertarget{classmailio_1_1imap_a60022dfdc62018b98ebc0712a19b79ed}\label{classmailio_1_1imap_a60022dfdc62018b98ebc0712a19b79ed}} 
+\index{mailio::imap@{mailio::imap}!RANGE\_ALL@{RANGE\_ALL}}
+\index{RANGE\_ALL@{RANGE\_ALL}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{RANGE\_ALL}{RANGE\_ALL}}
+{\footnotesize\ttfamily const std\+::string mailio\+::imap\+::\+R\+A\+N\+G\+E\+\_\+\+A\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character to mark all messages until the end of range. \mbox{\Hypertarget{classmailio_1_1imap_ac644fd762200465756cbde9d232d65a2}\label{classmailio_1_1imap_ac644fd762200465756cbde9d232d65a2}} 
+\index{mailio::imap@{mailio::imap}!RANGE\_SEPARATOR@{RANGE\_SEPARATOR}}
+\index{RANGE\_SEPARATOR@{RANGE\_SEPARATOR}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{RANGE\_SEPARATOR}{RANGE\_SEPARATOR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::imap\+::\+R\+A\+N\+G\+E\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Colon as a separator in the message list range. \mbox{\Hypertarget{classmailio_1_1imap_aa4431b17c65cb625ea38e5b71bbad025}\label{classmailio_1_1imap_aa4431b17c65cb625ea38e5b71bbad025}} 
+\index{mailio::imap@{mailio::imap}!STRING\_LITERAL\_BEGIN@{STRING\_LITERAL\_BEGIN}}
+\index{STRING\_LITERAL\_BEGIN@{STRING\_LITERAL\_BEGIN}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{STRING\_LITERAL\_BEGIN}{STRING\_LITERAL\_BEGIN}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+S\+T\+R\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+L\+\_\+\+B\+E\+G\+IN \{\textquotesingle{}\{\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character which begins the literal string. \mbox{\Hypertarget{classmailio_1_1imap_ae696871ea0a8ae45ceb677b9f84bf3d9}\label{classmailio_1_1imap_ae696871ea0a8ae45ceb677b9f84bf3d9}} 
+\index{mailio::imap@{mailio::imap}!STRING\_LITERAL\_END@{STRING\_LITERAL\_END}}
+\index{STRING\_LITERAL\_END@{STRING\_LITERAL\_END}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{STRING\_LITERAL\_END}{STRING\_LITERAL\_END}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+S\+T\+R\+I\+N\+G\+\_\+\+L\+I\+T\+E\+R\+A\+L\+\_\+\+E\+ND \{\textquotesingle{}\}\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character which ends the literal string. \mbox{\Hypertarget{classmailio_1_1imap_a1ff40a61d2a54ef02b947e85b3b979e2}\label{classmailio_1_1imap_a1ff40a61d2a54ef02b947e85b3b979e2}} 
+\index{mailio::imap@{mailio::imap}!TOKEN\_SEPARATOR\_CHAR@{TOKEN\_SEPARATOR\_CHAR}}
+\index{TOKEN\_SEPARATOR\_CHAR@{TOKEN\_SEPARATOR\_CHAR}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{TOKEN\_SEPARATOR\_CHAR}{TOKEN\_SEPARATOR\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::imap\+::\+T\+O\+K\+E\+N\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+C\+H\+AR \{\textquotesingle{} \textquotesingle{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Character used by I\+M\+AP to separate tokens. \mbox{\Hypertarget{classmailio_1_1imap_a200433d1d945c15c1a235f556d3c1349}\label{classmailio_1_1imap_a200433d1d945c15c1a235f556d3c1349}} 
+\index{mailio::imap@{mailio::imap}!TOKEN\_SEPARATOR\_STR@{TOKEN\_SEPARATOR\_STR}}
+\index{TOKEN\_SEPARATOR\_STR@{TOKEN\_SEPARATOR\_STR}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{TOKEN\_SEPARATOR\_STR}{TOKEN\_SEPARATOR\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::imap\+::\+T\+O\+K\+E\+N\+\_\+\+S\+E\+P\+A\+R\+A\+T\+O\+R\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+String representation of the token separator character. \mbox{\Hypertarget{classmailio_1_1imap_a50c88da5890b822d51c8d3253ccf7748}\label{classmailio_1_1imap_a50c88da5890b822d51c8d3253ccf7748}} 
+\index{mailio::imap@{mailio::imap}!UNTAGGED\_RESPONSE@{UNTAGGED\_RESPONSE}}
+\index{UNTAGGED\_RESPONSE@{UNTAGGED\_RESPONSE}!mailio::imap@{mailio::imap}}
+\doxysubsubsection{\texorpdfstring{UNTAGGED\_RESPONSE}{UNTAGGED\_RESPONSE}}
+{\footnotesize\ttfamily const std\+::string mailio\+::imap\+::\+U\+N\+T\+A\+G\+G\+E\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Untagged response character as defined by the protocol. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/imap.\+hpp\end{DoxyCompactItemize}

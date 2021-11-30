@@ -22,21 +22,29 @@
  * @authors Nolan Morris, Peter Nicolaas Meijer.
  * */
 UserSystemWidget::UserSystemWidget() {
-    userSystem = new UserSystem;
-    hbox = new QHBoxLayout;
+    timer = new QTimer(this);
+    userSystem = &UserSystem::instance();
+    vbox = new QVBoxLayout;
     adminAccountInfo = new AdminAccountInfo(userSystem);
     userAccountInfo = new UserAccountInfo(userSystem);
     loginPopup = new LoginPopup(userSystem);
 
     auto *accountImage = new QPixmap();
-    accountImage->load("/home/nolan/CLionProjects/Magic Mirror/Magic_Mirror/Bootstrapper/Images/Account.png");
+    QString path = QString::fromStdString(std::filesystem::current_path()) + "/Bootstrapper/Images/Account.png";
+    accountImage->load(path);
     auto *accountLabel = new ClickableLabel();
     accountLabel->setPixmap(accountImage->scaled(50, 50, Qt::KeepAspectRatio));
 
     connect(accountLabel, SIGNAL(clicked()), this, SLOT(handleUserSystemClick()));
 
-    hbox->addWidget(accountLabel);
-    this->setLayout(hbox);
+    senderLabel = new QLabel("");
+    subjectLabel = new QLabel("");
+
+    vbox->addWidget(accountLabel);
+    vbox->addWidget(senderLabel, Qt::AlignLeft);
+    vbox->addWidget(subjectLabel, Qt::AlignLeft);
+    vbox->setSpacing(10);
+    this->setLayout(vbox);
 }
 
 /*
@@ -49,18 +57,59 @@ UserSystemWidget::UserSystemWidget() {
  * @authors Nolan Morris, Peter Nicolaas Meijer.
  * */
 void UserSystemWidget::handleUserSystemClick() {
-    if(userSystem->getActiveUser().isActivated()){
-        if(userSystem->getActiveUser().isAdmin()) {
-            adminAccountInfo->setUsername(QString::fromStdString(userSystem->getActiveUser().getUsername()));
+    if(userSystem->getActiveUser()->isActivated()){
+        if(userSystem->getActiveUser()->isAdmin()) {
+            adminAccountInfo->setUsername(QString::fromStdString(userSystem->getActiveUser()->getUsername()));
             adminAccountInfo->show();
         }
         else{
-            userAccountInfo->setUsername(QString::fromStdString(userSystem->getActiveUser().getUsername()));
+            userAccountInfo->setUsername(QString::fromStdString(userSystem->getActiveUser()->getUsername()));
             userAccountInfo->show();
+        }
+
+        if(!userSystem->getActiveUser()->hasInbox()) { //if there is no inbox configured, configure it
+            userSystem->getActiveUser()->configureInbox("imap.gmail.com", userSystem->getActiveUser()->getUsername(), userSystem->getActiveUser()->getPassword());
+            std::cout << "config successful" <<std::endl;
+        }
+
+        userSystem->getActiveUser()->getInbox()->updateInbox();
+
+        if(!userSystem->getActiveUser()->getInbox()->getEmails().empty()){ //if the email list is not empty display the emails
+
+            emails = userSystem->getActiveUser()->getInbox()->getEmails();
+            index = 0;
+
+            connect(timer, SIGNAL(timeout()), this, SLOT(scrollEmails()));
+            timer->start(10000);
+            scrollEmails();
+        }
+        else{ //if there is no valid email then display nothing
+            timer->stop();
+            senderLabel->setText("");
+            subjectLabel->setText("");
         }
     }
     else {
         loginPopup->show();
+    }
+}
+
+/*
+ * @brief A function that scrolls and updates the emails being displayed on screen.
+ *
+ * @param No parameters
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ * */
+void UserSystemWidget::scrollEmails() {
+    senderLabel->setText(QString::fromStdString(emails[index]->getSender()));
+    subjectLabel->setText(QString::fromStdString(emails[index]->getSubject()));
+
+    index++;
+    if(index == emails.size()){
+        index = 0;
     }
 }
 
@@ -74,7 +123,7 @@ void UserSystemWidget::handleUserSystemClick() {
  * @authors Nolan Morris, Peter Nicolaas Meijer.
  * */
 UserSystemWidget::~UserSystemWidget() noexcept {
-    delete hbox;
+    delete vbox;
     delete adminAccountInfo;
     delete userAccountInfo;
     delete loginPopup;

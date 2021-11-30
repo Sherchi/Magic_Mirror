@@ -1,0 +1,108 @@
+\hypertarget{structmailio_1_1imap_1_1mailbox__stat__t}{}\doxysection{mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t Struct Reference}
+\label{structmailio_1_1imap_1_1mailbox__stat__t}\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+
+
+{\ttfamily \#include $<$imap.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_aa23b633fa871a30c044701950c53457a}{stat\+\_\+info\+\_\+t}} \{ {\bfseries D\+E\+F\+A\+U\+LT} = 0, 
+{\bfseries U\+N\+S\+E\+EN} = 1, 
+{\bfseries U\+I\+D\+\_\+\+N\+E\+XT} = 2, 
+{\bfseries U\+I\+D\+\_\+\+V\+A\+L\+I\+D\+I\+TY} = 4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_a6251240663c016e0d776fa451fbc0da2}{mailbox\+\_\+stat\+\_\+t}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_a98e6e4810a1cf1a06cedad43ea4fad96}{messages\+\_\+no}}
+\item 
+unsigned long \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_aa07724cce3ae711e1984c92a826e348c}{messages\+\_\+recent}}
+\item 
+unsigned long \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_a737a02a82fc98d1dcf3c312379819c65}{messages\+\_\+unseen}}
+\item 
+unsigned long \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_a711ed979f53a2dcf13d3c3793bfad4b4}{messages\+\_\+first\+\_\+unseen}}
+\item 
+unsigned long \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_ac6e2958d77064d69dfac5bb1d45af7b5}{uid\+\_\+next}}
+\item 
+unsigned long \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_aa669c8f86fca57342e759b0422ab1400}{uid\+\_\+validity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mailbox statistics structure. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_aa23b633fa871a30c044701950c53457a}\label{structmailio_1_1imap_1_1mailbox__stat__t_aa23b633fa871a30c044701950c53457a}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!stat\_info\_t@{stat\_info\_t}}
+\index{stat\_info\_t@{stat\_info\_t}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{stat\_info\_t}{stat\_info\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structmailio_1_1imap_1_1mailbox__stat__t_aa23b633fa871a30c044701950c53457a}{mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::stat\+\_\+info\+\_\+t}}}
+
+Statistics information to be retrieved. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_a6251240663c016e0d776fa451fbc0da2}\label{structmailio_1_1imap_1_1mailbox__stat__t_a6251240663c016e0d776fa451fbc0da2}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!mailbox\_stat\_t@{mailbox\_stat\_t}}
+\index{mailbox\_stat\_t@{mailbox\_stat\_t}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{mailbox\_stat\_t()}{mailbox\_stat\_t()}}
+{\footnotesize\ttfamily mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::mailbox\+\_\+stat\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setting the number of messages to zero. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_a711ed979f53a2dcf13d3c3793bfad4b4}\label{structmailio_1_1imap_1_1mailbox__stat__t_a711ed979f53a2dcf13d3c3793bfad4b4}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!messages\_first\_unseen@{messages\_first\_unseen}}
+\index{messages\_first\_unseen@{messages\_first\_unseen}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{messages\_first\_unseen}{messages\_first\_unseen}}
+{\footnotesize\ttfamily unsigned long mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::messages\+\_\+first\+\_\+unseen}
+
+The non-\/zero message sequence number of the first unseen message in the mailbox.
+
+Zero indicates the server did not report this and no assumptions can be made about the first unseen message. \mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_a98e6e4810a1cf1a06cedad43ea4fad96}\label{structmailio_1_1imap_1_1mailbox__stat__t_a98e6e4810a1cf1a06cedad43ea4fad96}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!messages\_no@{messages\_no}}
+\index{messages\_no@{messages\_no}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{messages\_no}{messages\_no}}
+{\footnotesize\ttfamily unsigned long mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::messages\+\_\+no}
+
+Number of messages in the mailbox. \mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_aa07724cce3ae711e1984c92a826e348c}\label{structmailio_1_1imap_1_1mailbox__stat__t_aa07724cce3ae711e1984c92a826e348c}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!messages\_recent@{messages\_recent}}
+\index{messages\_recent@{messages\_recent}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{messages\_recent}{messages\_recent}}
+{\footnotesize\ttfamily unsigned long mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::messages\+\_\+recent}
+
+Number of recent messages in the mailbox. \mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_a737a02a82fc98d1dcf3c312379819c65}\label{structmailio_1_1imap_1_1mailbox__stat__t_a737a02a82fc98d1dcf3c312379819c65}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!messages\_unseen@{messages\_unseen}}
+\index{messages\_unseen@{messages\_unseen}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{messages\_unseen}{messages\_unseen}}
+{\footnotesize\ttfamily unsigned long mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::messages\+\_\+unseen}
+
+The non-\/zero number of unseen messages in the mailbox.
+
+Zero indicates the server did not report this and no assumptions can be made about the number of unseen messages. \mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_ac6e2958d77064d69dfac5bb1d45af7b5}\label{structmailio_1_1imap_1_1mailbox__stat__t_ac6e2958d77064d69dfac5bb1d45af7b5}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!uid\_next@{uid\_next}}
+\index{uid\_next@{uid\_next}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{uid\_next}{uid\_next}}
+{\footnotesize\ttfamily unsigned long mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::uid\+\_\+next}
+
+The non-\/zero next unique identifier value of the mailbox.
+
+Zero indicates the server did not report this and no assumptions can be made about the next unique identifier. \mbox{\Hypertarget{structmailio_1_1imap_1_1mailbox__stat__t_aa669c8f86fca57342e759b0422ab1400}\label{structmailio_1_1imap_1_1mailbox__stat__t_aa669c8f86fca57342e759b0422ab1400}} 
+\index{mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}!uid\_validity@{uid\_validity}}
+\index{uid\_validity@{uid\_validity}!mailio::imap::mailbox\_stat\_t@{mailio::imap::mailbox\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{uid\_validity}{uid\_validity}}
+{\footnotesize\ttfamily unsigned long mailio\+::imap\+::mailbox\+\_\+stat\+\_\+t\+::uid\+\_\+validity}
+
+The non-\/zero unique identifier validity value of the mailbox.
+
+Zero indicates the server did not report this and does not support U\+I\+Ds. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/imap.\+hpp\end{DoxyCompactItemize}

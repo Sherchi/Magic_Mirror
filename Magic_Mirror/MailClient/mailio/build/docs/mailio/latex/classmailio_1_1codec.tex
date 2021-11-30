@@ -1,0 +1,534 @@
+\hypertarget{classmailio_1_1codec}{}\doxysection{mailio\+::codec Class Reference}
+\label{classmailio_1_1codec}\index{mailio::codec@{mailio::codec}}
+
+
+{\ttfamily \#include $<$codec.\+hpp$>$}
+
+Inheritance diagram for mailio\+::codec\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.236203cm]{classmailio_1_1codec}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}} \+: std\+::string\+::size\+\_\+type \{ {\bfseries N\+O\+NE} = 2048, 
+{\bfseries R\+E\+C\+O\+M\+M\+E\+N\+D\+ED} = 78, 
+{\bfseries M\+A\+N\+D\+A\+T\+O\+RY} = 998, 
+{\bfseries V\+E\+R\+Y\+L\+A\+R\+GE} = 16384
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1codec_ac50b29775b3284378f5def839dfe1895}{codec}} (\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}} encoder\+\_\+line\+\_\+policy, \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}} decoder\+\_\+line\+\_\+policy)
+\item 
+\mbox{\Hypertarget{classmailio_1_1codec_a8245aaaead063ea1be80576dea86585a}\label{classmailio_1_1codec_a8245aaaead063ea1be80576dea86585a}} 
+{\bfseries codec} (const \mbox{\hyperlink{classmailio_1_1codec}{codec}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1codec_ac41137d0b101272fbdb0c16ab44716e6}\label{classmailio_1_1codec_ac41137d0b101272fbdb0c16ab44716e6}} 
+{\bfseries codec} (\mbox{\hyperlink{classmailio_1_1codec}{codec}} \&\&)=delete
+\item 
+virtual \mbox{\hyperlink{classmailio_1_1codec_a3611127636df38aa0b4bc0664a17240a}{$\sim$codec}} ()=default
+\item 
+\mbox{\Hypertarget{classmailio_1_1codec_a6ed793e7731090660c2b0ef2c89bee89}\label{classmailio_1_1codec_a6ed793e7731090660c2b0ef2c89bee89}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classmailio_1_1codec}{codec}} \&)=delete
+\item 
+\mbox{\Hypertarget{classmailio_1_1codec_ad6e9fb8578fd2e77a46678c175a9bbd5}\label{classmailio_1_1codec_ad6e9fb8578fd2e77a46678c175a9bbd5}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classmailio_1_1codec}{codec}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classmailio_1_1codec_a1b1b59a58bc475d6f9bfda8a9544c57f}{strict\+\_\+mode}} (bool mode)
+\item 
+bool \mbox{\hyperlink{classmailio_1_1codec_a032731c8c0ddee02b32aff185aaad39a}{strict\+\_\+mode}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classmailio_1_1codec_a5ecc8e1c8380e7fd9cf114fdf527d840}{hex\+\_\+digit\+\_\+to\+\_\+int}} (char digit)
+\item 
+static bool \mbox{\hyperlink{classmailio_1_1codec_a3480c8ec40b967a693e3213ffd88af20}{is\+\_\+utf8\+\_\+string}} (const std\+::string \&txt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a278e54326e6698a51298c9007ccbe1b0}{N\+I\+L\+\_\+\+C\+H\+AR}} = \textquotesingle{}\textbackslash{}0\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a4555242544e10de7cc32c5a898a14cd6}{C\+R\+\_\+\+C\+H\+AR}} = \textquotesingle{}\textbackslash{}r\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a2ac360e300cfcd91783630d97509a51e}{L\+F\+\_\+\+C\+H\+AR}} = \textquotesingle{}\textbackslash{}n\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_af998a50a632b2587af67f1bb78a805c7}{P\+L\+U\+S\+\_\+\+C\+H\+AR}} = \textquotesingle{}+\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a3e4c2dcc3577607081c42badcf6c7c70}{M\+I\+N\+U\+S\+\_\+\+C\+H\+AR}} = \textquotesingle{}-\/\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_adc29eebff3f0a10ad0bdd02201bef19e}{A\+S\+T\+E\+R\+I\+S\+K\+\_\+\+C\+H\+AR}} = \textquotesingle{}$\ast$\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_abbae96406d15885ec855996ef681c804}{A\+S\+T\+E\+R\+I\+S\+K\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a718fe3623f1668b43d97c753ec7e6ba1}{S\+L\+A\+S\+H\+\_\+\+C\+H\+AR}} = \textquotesingle{}/\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a366ace8f86bcf52261110ea12e2387e4}{B\+A\+C\+K\+S\+L\+A\+S\+H\+\_\+\+C\+H\+AR}} = \textquotesingle{}\textbackslash{}\textbackslash{}\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_ae54c383aea5e6775d784a74c130b2c03}{E\+Q\+U\+A\+L\+\_\+\+C\+H\+AR}} = \textquotesingle{}=\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a9beaa059a9f26a1150bcd188f17adafa}{E\+Q\+U\+A\+L\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_af6c73582862f3bba942b754f1cd1726f}{S\+P\+A\+C\+E\+\_\+\+C\+H\+AR}} = \textquotesingle{} \textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a35b844bd3bee7bca2abb14910ea1dfa8}{S\+P\+A\+C\+E\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a257a442292a6819404b28089626ecd96}{E\+X\+C\+L\+A\+M\+A\+T\+I\+O\+N\+\_\+\+C\+H\+AR}} = \textquotesingle{}!\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a78cf7ad2569ed0c54489e11b74f274c6}{Q\+U\+E\+S\+T\+I\+O\+N\+\_\+\+M\+A\+R\+K\+\_\+\+C\+H\+AR}} = \textquotesingle{}?\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a758129a74172a8edc07998e7dbef6186}{D\+O\+T\+\_\+\+C\+H\+AR}} = \textquotesingle{}.\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a80e63972b0c55968f2087490eb34b007}{D\+O\+T\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a66c2d2f60ff34cf45d39e1d7201da6f6}{C\+O\+M\+M\+A\+\_\+\+C\+H\+AR}} = \textquotesingle{},\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a20e2fdba73e73fb33b4620ec2238e7f1}{C\+O\+M\+M\+A\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a5f0e64291c09e3c82940c68d28df5412}{C\+O\+L\+O\+N\+\_\+\+C\+H\+AR}} = \textquotesingle{}\+:\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_ab10e5801162c9b13b3f054a17383e34e}{C\+O\+L\+O\+N\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a75b122e0e086b2b1b5b811aeeb8b511e}{S\+E\+M\+I\+C\+O\+L\+O\+N\+\_\+\+C\+H\+AR}} = \textquotesingle{};\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_ae56e53d118bd2a84fcf49d2429b83fa9}{S\+E\+M\+I\+C\+O\+L\+O\+N\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a96e87cf5e4d71992ac13a2ba612df999}{Z\+E\+R\+O\+\_\+\+C\+H\+AR}} = \textquotesingle{}0\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a06af4194fcfe70fc5832bb511fa3f0cf}{N\+I\+N\+E\+\_\+\+C\+H\+AR}} = \textquotesingle{}9\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a20c452622d775cd97cb0f31fff9fe5c2}{A\+\_\+\+C\+H\+AR}} = \textquotesingle{}A\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a0f8eb0c7181fa31b28f4746bc6fd932f}{T\+I\+L\+D\+E\+\_\+\+C\+H\+AR}} = \textquotesingle{}$\sim$\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_aecaa32ca3e57be47c711360d1534ecfe}{Q\+U\+O\+T\+E\+\_\+\+C\+H\+AR}} = \textquotesingle{}\char`\"{}\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a096cfb056155625e48209048a5a4f589}{Q\+U\+O\+T\+E\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_aa654094b12eba3d55e3130fd3fe17941}{L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+E\+S\+I\+S\+\_\+\+C\+H\+AR}} = \textquotesingle{}(\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a46ab37162b716cd2e8a13f216580690d}{R\+I\+G\+H\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+E\+S\+I\+S\+\_\+\+C\+H\+AR}} = \textquotesingle{})\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a4bd8d3e3af3236edbd6ab3ee20f1e121}{L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+K\+E\+T\+\_\+\+C\+H\+AR}} = \textquotesingle{}\mbox{[}\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a5ec2a6f8f62b4291f5b0cda972e88983}{R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+K\+E\+T\+\_\+\+C\+H\+AR}} = \textquotesingle{}\mbox{]}\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_ac31c789fe2fe50cc78d71d37f77ab517}{L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+E\+\_\+\+C\+H\+AR}} = \textquotesingle{}\{\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_ae7e38dc5e8ea4639d4c1adadd6ac585c}{R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+E\+\_\+\+C\+H\+AR}} = \textquotesingle{}\}\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a251ef476b086e1ee549825963a132737}{M\+O\+N\+K\+E\+Y\+\_\+\+C\+H\+AR}} = \textquotesingle{}@\textquotesingle{}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a9c52b91549fd77b3f260bf37feafbd9f}{L\+E\+S\+S\+\_\+\+T\+H\+A\+N\+\_\+\+C\+H\+AR}} = \textquotesingle{}$<$\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a15c3e0cefe7f8d522397cc4cfe125ecf}{L\+E\+S\+S\+\_\+\+T\+H\+A\+N\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_a9bc25e39be1e1d6ee024aef622d16e2b}{G\+R\+E\+A\+T\+E\+R\+\_\+\+T\+H\+A\+N\+\_\+\+C\+H\+AR}} = \textquotesingle{}$>$\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a1720e7a99bf0029d95b09b5358242f80}{G\+R\+E\+A\+T\+E\+R\+\_\+\+T\+H\+A\+N\+\_\+\+S\+TR}}
+\item 
+static const char \mbox{\hyperlink{classmailio_1_1codec_ae4b41624638266093a48e046cbf08988}{U\+N\+D\+E\+R\+S\+C\+O\+R\+E\+\_\+\+C\+H\+AR}} = \textquotesingle{}\+\_\+\textquotesingle{}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a875ff1673b2a0ac36e3a1a17ff79c8f2}{H\+E\+X\+\_\+\+D\+I\+G\+I\+TS}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a4eb27a0236e8cb9ffde2c7060f054e73}{E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+NE}}
+\item 
+static const std\+::string \mbox{\hyperlink{classmailio_1_1codec_a798a18034e40cd65441f5355e71c8fbe}{E\+N\+D\+\_\+\+O\+F\+\_\+\+M\+E\+S\+S\+A\+GE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}} \mbox{\hyperlink{classmailio_1_1codec_adae23f9ef84376eb59962762170e4e53}{\+\_\+line\+\_\+policy}}
+\item 
+\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}} \mbox{\hyperlink{classmailio_1_1codec_a9f0e1e5f65b9c872b1b56f8147cc2a5e}{\+\_\+decoder\+\_\+line\+\_\+policy}}
+\item 
+bool \mbox{\hyperlink{classmailio_1_1codec_a1fb15d347115d37cb5184bddef37c2db}{\+\_\+strict\+\_\+mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for codecs, contains various constants and miscellaneous functions for encoding/decoding purposes.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]{\ttfamily encode()} and {\ttfamily decode()} as abstract methods? \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}\label{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}} 
+\index{mailio::codec@{mailio::codec}!line\_len\_policy\_t@{line\_len\_policy\_t}}
+\index{line\_len\_policy\_t@{line\_len\_policy\_t}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{line\_len\_policy\_t}{line\_len\_policy\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{mailio\+::codec\+::line\+\_\+len\+\_\+policy\+\_\+t}} \+: std\+::string\+::size\+\_\+type\hspace{0.3cm}{\ttfamily [strong]}}
+
+Line length policy.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]No need for {\ttfamily S\+U\+B\+J\+E\+CT} line policy.\end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmailio_1_1codec_ac50b29775b3284378f5def839dfe1895}\label{classmailio_1_1codec_ac50b29775b3284378f5def839dfe1895}} 
+\index{mailio::codec@{mailio::codec}!codec@{codec}}
+\index{codec@{codec}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{codec()}{codec()}}
+{\footnotesize\ttfamily mailio\+::codec\+::codec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}}}]{encoder\+\_\+line\+\_\+policy,  }\item[{\mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}}}]{decoder\+\_\+line\+\_\+policy }\end{DoxyParamCaption})}
+
+Setting the encoder and decoder line policy of the codec.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder\+\_\+line\+\_\+policy} & Encoder line policy to set. \\
+\hline
+{\em decoder\+\_\+line\+\_\+policy} & Decoder line policy to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmailio_1_1codec_a3611127636df38aa0b4bc0664a17240a}\label{classmailio_1_1codec_a3611127636df38aa0b4bc0664a17240a}} 
+\index{mailio::codec@{mailio::codec}!````~codec@{$\sim$codec}}
+\index{````~codec@{$\sim$codec}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{$\sim$codec()}{~codec()}}
+{\footnotesize\ttfamily virtual mailio\+::codec\+::$\sim$codec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmailio_1_1codec_a5ecc8e1c8380e7fd9cf114fdf527d840}\label{classmailio_1_1codec_a5ecc8e1c8380e7fd9cf114fdf527d840}} 
+\index{mailio::codec@{mailio::codec}!hex\_digit\_to\_int@{hex\_digit\_to\_int}}
+\index{hex\_digit\_to\_int@{hex\_digit\_to\_int}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{hex\_digit\_to\_int()}{hex\_digit\_to\_int()}}
+{\footnotesize\ttfamily static int mailio\+::codec\+::hex\+\_\+digit\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{char}]{digit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculating value of the given hex digit. \mbox{\Hypertarget{classmailio_1_1codec_a3480c8ec40b967a693e3213ffd88af20}\label{classmailio_1_1codec_a3480c8ec40b967a693e3213ffd88af20}} 
+\index{mailio::codec@{mailio::codec}!is\_utf8\_string@{is\_utf8\_string}}
+\index{is\_utf8\_string@{is\_utf8\_string}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{is\_utf8\_string()}{is\_utf8\_string()}}
+{\footnotesize\ttfamily static bool mailio\+::codec\+::is\+\_\+utf8\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checking if a string is U\+T\+F-\/8 encoded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt} & String to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it\textquotesingle{}s U\+T\+F-\/8, false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1codec_a032731c8c0ddee02b32aff185aaad39a}\label{classmailio_1_1codec_a032731c8c0ddee02b32aff185aaad39a}} 
+\index{mailio::codec@{mailio::codec}!strict\_mode@{strict\_mode}}
+\index{strict\_mode@{strict\_mode}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{strict\_mode()}{strict\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mailio\+::codec\+::strict\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returning the strict mode status.
+
+\begin{DoxyReturn}{Returns}
+True if strict mode enabled, false if disabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmailio_1_1codec_a1b1b59a58bc475d6f9bfda8a9544c57f}\label{classmailio_1_1codec_a1b1b59a58bc475d6f9bfda8a9544c57f}} 
+\index{mailio::codec@{mailio::codec}!strict\_mode@{strict\_mode}}
+\index{strict\_mode@{strict\_mode}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{strict\_mode()}{strict\_mode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::codec\+::strict\+\_\+mode (\begin{DoxyParamCaption}\item[{bool}]{mode }\end{DoxyParamCaption})}
+
+Enabling/disabling the strict mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & True to enable strict mode, false to disable. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmailio_1_1codec_a9f0e1e5f65b9c872b1b56f8147cc2a5e}\label{classmailio_1_1codec_a9f0e1e5f65b9c872b1b56f8147cc2a5e}} 
+\index{mailio::codec@{mailio::codec}!\_decoder\_line\_policy@{\_decoder\_line\_policy}}
+\index{\_decoder\_line\_policy@{\_decoder\_line\_policy}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{\_decoder\_line\_policy}{\_decoder\_line\_policy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}} mailio\+::codec\+::\+\_\+decoder\+\_\+line\+\_\+policy\hspace{0.3cm}{\ttfamily [protected]}}
+
+Decoder line length policy. \mbox{\Hypertarget{classmailio_1_1codec_adae23f9ef84376eb59962762170e4e53}\label{classmailio_1_1codec_adae23f9ef84376eb59962762170e4e53}} 
+\index{mailio::codec@{mailio::codec}!\_line\_policy@{\_line\_policy}}
+\index{\_line\_policy@{\_line\_policy}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{\_line\_policy}{\_line\_policy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmailio_1_1codec_ad45f8f73b243a94ea3a5add21d66055e}{line\+\_\+len\+\_\+policy\+\_\+t}} mailio\+::codec\+::\+\_\+line\+\_\+policy\hspace{0.3cm}{\ttfamily [protected]}}
+
+Encoder line length policy. \mbox{\Hypertarget{classmailio_1_1codec_a1fb15d347115d37cb5184bddef37c2db}\label{classmailio_1_1codec_a1fb15d347115d37cb5184bddef37c2db}} 
+\index{mailio::codec@{mailio::codec}!\_strict\_mode@{\_strict\_mode}}
+\index{\_strict\_mode@{\_strict\_mode}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{\_strict\_mode}{\_strict\_mode}}
+{\footnotesize\ttfamily bool mailio\+::codec\+::\+\_\+strict\+\_\+mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+Strict mode for encoding/decoding. \mbox{\Hypertarget{classmailio_1_1codec_a20c452622d775cd97cb0f31fff9fe5c2}\label{classmailio_1_1codec_a20c452622d775cd97cb0f31fff9fe5c2}} 
+\index{mailio::codec@{mailio::codec}!A\_CHAR@{A\_CHAR}}
+\index{A\_CHAR@{A\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{A\_CHAR}{A\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+A\+\_\+\+C\+H\+AR = \textquotesingle{}A\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Letter A character. \mbox{\Hypertarget{classmailio_1_1codec_adc29eebff3f0a10ad0bdd02201bef19e}\label{classmailio_1_1codec_adc29eebff3f0a10ad0bdd02201bef19e}} 
+\index{mailio::codec@{mailio::codec}!ASTERISK\_CHAR@{ASTERISK\_CHAR}}
+\index{ASTERISK\_CHAR@{ASTERISK\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{ASTERISK\_CHAR}{ASTERISK\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+A\+S\+T\+E\+R\+I\+S\+K\+\_\+\+C\+H\+AR = \textquotesingle{}$\ast$\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Asterisk character. \mbox{\Hypertarget{classmailio_1_1codec_abbae96406d15885ec855996ef681c804}\label{classmailio_1_1codec_abbae96406d15885ec855996ef681c804}} 
+\index{mailio::codec@{mailio::codec}!ASTERISK\_STR@{ASTERISK\_STR}}
+\index{ASTERISK\_STR@{ASTERISK\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{ASTERISK\_STR}{ASTERISK\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+A\+S\+T\+E\+R\+I\+S\+K\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Asterisk character as string. \mbox{\Hypertarget{classmailio_1_1codec_a366ace8f86bcf52261110ea12e2387e4}\label{classmailio_1_1codec_a366ace8f86bcf52261110ea12e2387e4}} 
+\index{mailio::codec@{mailio::codec}!BACKSLASH\_CHAR@{BACKSLASH\_CHAR}}
+\index{BACKSLASH\_CHAR@{BACKSLASH\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{BACKSLASH\_CHAR}{BACKSLASH\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+B\+A\+C\+K\+S\+L\+A\+S\+H\+\_\+\+C\+H\+AR = \textquotesingle{}\textbackslash{}\textbackslash{}\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Backslash character. \mbox{\Hypertarget{classmailio_1_1codec_a5f0e64291c09e3c82940c68d28df5412}\label{classmailio_1_1codec_a5f0e64291c09e3c82940c68d28df5412}} 
+\index{mailio::codec@{mailio::codec}!COLON\_CHAR@{COLON\_CHAR}}
+\index{COLON\_CHAR@{COLON\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{COLON\_CHAR}{COLON\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+C\+O\+L\+O\+N\+\_\+\+C\+H\+AR = \textquotesingle{}\+:\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Colon character. \mbox{\Hypertarget{classmailio_1_1codec_ab10e5801162c9b13b3f054a17383e34e}\label{classmailio_1_1codec_ab10e5801162c9b13b3f054a17383e34e}} 
+\index{mailio::codec@{mailio::codec}!COLON\_STR@{COLON\_STR}}
+\index{COLON\_STR@{COLON\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{COLON\_STR}{COLON\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+C\+O\+L\+O\+N\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Colon character as string. \mbox{\Hypertarget{classmailio_1_1codec_a66c2d2f60ff34cf45d39e1d7201da6f6}\label{classmailio_1_1codec_a66c2d2f60ff34cf45d39e1d7201da6f6}} 
+\index{mailio::codec@{mailio::codec}!COMMA\_CHAR@{COMMA\_CHAR}}
+\index{COMMA\_CHAR@{COMMA\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{COMMA\_CHAR}{COMMA\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+C\+O\+M\+M\+A\+\_\+\+C\+H\+AR = \textquotesingle{},\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Comma character. \mbox{\Hypertarget{classmailio_1_1codec_a20e2fdba73e73fb33b4620ec2238e7f1}\label{classmailio_1_1codec_a20e2fdba73e73fb33b4620ec2238e7f1}} 
+\index{mailio::codec@{mailio::codec}!COMMA\_STR@{COMMA\_STR}}
+\index{COMMA\_STR@{COMMA\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{COMMA\_STR}{COMMA\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+C\+O\+M\+M\+A\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Comma character as string. \mbox{\Hypertarget{classmailio_1_1codec_a4555242544e10de7cc32c5a898a14cd6}\label{classmailio_1_1codec_a4555242544e10de7cc32c5a898a14cd6}} 
+\index{mailio::codec@{mailio::codec}!CR\_CHAR@{CR\_CHAR}}
+\index{CR\_CHAR@{CR\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{CR\_CHAR}{CR\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+C\+R\+\_\+\+C\+H\+AR = \textquotesingle{}\textbackslash{}r\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Carriage return character. \mbox{\Hypertarget{classmailio_1_1codec_a758129a74172a8edc07998e7dbef6186}\label{classmailio_1_1codec_a758129a74172a8edc07998e7dbef6186}} 
+\index{mailio::codec@{mailio::codec}!DOT\_CHAR@{DOT\_CHAR}}
+\index{DOT\_CHAR@{DOT\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{DOT\_CHAR}{DOT\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+D\+O\+T\+\_\+\+C\+H\+AR = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Dot character. \mbox{\Hypertarget{classmailio_1_1codec_a80e63972b0c55968f2087490eb34b007}\label{classmailio_1_1codec_a80e63972b0c55968f2087490eb34b007}} 
+\index{mailio::codec@{mailio::codec}!DOT\_STR@{DOT\_STR}}
+\index{DOT\_STR@{DOT\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{DOT\_STR}{DOT\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+D\+O\+T\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Dot character string. \mbox{\Hypertarget{classmailio_1_1codec_a4eb27a0236e8cb9ffde2c7060f054e73}\label{classmailio_1_1codec_a4eb27a0236e8cb9ffde2c7060f054e73}} 
+\index{mailio::codec@{mailio::codec}!END\_OF\_LINE@{END\_OF\_LINE}}
+\index{END\_OF\_LINE@{END\_OF\_LINE}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{END\_OF\_LINE}{END\_OF\_LINE}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+NE\hspace{0.3cm}{\ttfamily [static]}}
+
+Carriage return plus line feed string. \mbox{\Hypertarget{classmailio_1_1codec_a798a18034e40cd65441f5355e71c8fbe}\label{classmailio_1_1codec_a798a18034e40cd65441f5355e71c8fbe}} 
+\index{mailio::codec@{mailio::codec}!END\_OF\_MESSAGE@{END\_OF\_MESSAGE}}
+\index{END\_OF\_MESSAGE@{END\_OF\_MESSAGE}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{END\_OF\_MESSAGE}{END\_OF\_MESSAGE}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+E\+N\+D\+\_\+\+O\+F\+\_\+\+M\+E\+S\+S\+A\+GE\hspace{0.3cm}{\ttfamily [static]}}
+
+Dot character is the end of message for S\+M\+TP. \mbox{\Hypertarget{classmailio_1_1codec_ae54c383aea5e6775d784a74c130b2c03}\label{classmailio_1_1codec_ae54c383aea5e6775d784a74c130b2c03}} 
+\index{mailio::codec@{mailio::codec}!EQUAL\_CHAR@{EQUAL\_CHAR}}
+\index{EQUAL\_CHAR@{EQUAL\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{EQUAL\_CHAR}{EQUAL\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+E\+Q\+U\+A\+L\+\_\+\+C\+H\+AR = \textquotesingle{}=\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Equal character. \mbox{\Hypertarget{classmailio_1_1codec_a9beaa059a9f26a1150bcd188f17adafa}\label{classmailio_1_1codec_a9beaa059a9f26a1150bcd188f17adafa}} 
+\index{mailio::codec@{mailio::codec}!EQUAL\_STR@{EQUAL\_STR}}
+\index{EQUAL\_STR@{EQUAL\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{EQUAL\_STR}{EQUAL\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+E\+Q\+U\+A\+L\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Equal character as string. \mbox{\Hypertarget{classmailio_1_1codec_a257a442292a6819404b28089626ecd96}\label{classmailio_1_1codec_a257a442292a6819404b28089626ecd96}} 
+\index{mailio::codec@{mailio::codec}!EXCLAMATION\_CHAR@{EXCLAMATION\_CHAR}}
+\index{EXCLAMATION\_CHAR@{EXCLAMATION\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{EXCLAMATION\_CHAR}{EXCLAMATION\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+E\+X\+C\+L\+A\+M\+A\+T\+I\+O\+N\+\_\+\+C\+H\+AR = \textquotesingle{}!\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Exclamation mark character. \mbox{\Hypertarget{classmailio_1_1codec_a9bc25e39be1e1d6ee024aef622d16e2b}\label{classmailio_1_1codec_a9bc25e39be1e1d6ee024aef622d16e2b}} 
+\index{mailio::codec@{mailio::codec}!GREATER\_THAN\_CHAR@{GREATER\_THAN\_CHAR}}
+\index{GREATER\_THAN\_CHAR@{GREATER\_THAN\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{GREATER\_THAN\_CHAR}{GREATER\_THAN\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+G\+R\+E\+A\+T\+E\+R\+\_\+\+T\+H\+A\+N\+\_\+\+C\+H\+AR = \textquotesingle{}$>$\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Greater than character. \mbox{\Hypertarget{classmailio_1_1codec_a1720e7a99bf0029d95b09b5358242f80}\label{classmailio_1_1codec_a1720e7a99bf0029d95b09b5358242f80}} 
+\index{mailio::codec@{mailio::codec}!GREATER\_THAN\_STR@{GREATER\_THAN\_STR}}
+\index{GREATER\_THAN\_STR@{GREATER\_THAN\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{GREATER\_THAN\_STR}{GREATER\_THAN\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+G\+R\+E\+A\+T\+E\+R\+\_\+\+T\+H\+A\+N\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Greater than character as string. \mbox{\Hypertarget{classmailio_1_1codec_a875ff1673b2a0ac36e3a1a17ff79c8f2}\label{classmailio_1_1codec_a875ff1673b2a0ac36e3a1a17ff79c8f2}} 
+\index{mailio::codec@{mailio::codec}!HEX\_DIGITS@{HEX\_DIGITS}}
+\index{HEX\_DIGITS@{HEX\_DIGITS}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{HEX\_DIGITS}{HEX\_DIGITS}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+H\+E\+X\+\_\+\+D\+I\+G\+I\+TS\hspace{0.3cm}{\ttfamily [static]}}
+
+Hexadecimal alphabet. \mbox{\Hypertarget{classmailio_1_1codec_ac31c789fe2fe50cc78d71d37f77ab517}\label{classmailio_1_1codec_ac31c789fe2fe50cc78d71d37f77ab517}} 
+\index{mailio::codec@{mailio::codec}!LEFT\_BRACE\_CHAR@{LEFT\_BRACE\_CHAR}}
+\index{LEFT\_BRACE\_CHAR@{LEFT\_BRACE\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{LEFT\_BRACE\_CHAR}{LEFT\_BRACE\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+E\+\_\+\+C\+H\+AR = \textquotesingle{}\{\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Left brace character. \mbox{\Hypertarget{classmailio_1_1codec_a4bd8d3e3af3236edbd6ab3ee20f1e121}\label{classmailio_1_1codec_a4bd8d3e3af3236edbd6ab3ee20f1e121}} 
+\index{mailio::codec@{mailio::codec}!LEFT\_BRACKET\_CHAR@{LEFT\_BRACKET\_CHAR}}
+\index{LEFT\_BRACKET\_CHAR@{LEFT\_BRACKET\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{LEFT\_BRACKET\_CHAR}{LEFT\_BRACKET\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+L\+E\+F\+T\+\_\+\+B\+R\+A\+C\+K\+E\+T\+\_\+\+C\+H\+AR = \textquotesingle{}\mbox{[}\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Left bracket chartacter. \mbox{\Hypertarget{classmailio_1_1codec_aa654094b12eba3d55e3130fd3fe17941}\label{classmailio_1_1codec_aa654094b12eba3d55e3130fd3fe17941}} 
+\index{mailio::codec@{mailio::codec}!LEFT\_PARENTHESIS\_CHAR@{LEFT\_PARENTHESIS\_CHAR}}
+\index{LEFT\_PARENTHESIS\_CHAR@{LEFT\_PARENTHESIS\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{LEFT\_PARENTHESIS\_CHAR}{LEFT\_PARENTHESIS\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+L\+E\+F\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+E\+S\+I\+S\+\_\+\+C\+H\+AR = \textquotesingle{}(\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Left parenthesis character. \mbox{\Hypertarget{classmailio_1_1codec_a9c52b91549fd77b3f260bf37feafbd9f}\label{classmailio_1_1codec_a9c52b91549fd77b3f260bf37feafbd9f}} 
+\index{mailio::codec@{mailio::codec}!LESS\_THAN\_CHAR@{LESS\_THAN\_CHAR}}
+\index{LESS\_THAN\_CHAR@{LESS\_THAN\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{LESS\_THAN\_CHAR}{LESS\_THAN\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+L\+E\+S\+S\+\_\+\+T\+H\+A\+N\+\_\+\+C\+H\+AR = \textquotesingle{}$<$\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Less than character. \mbox{\Hypertarget{classmailio_1_1codec_a15c3e0cefe7f8d522397cc4cfe125ecf}\label{classmailio_1_1codec_a15c3e0cefe7f8d522397cc4cfe125ecf}} 
+\index{mailio::codec@{mailio::codec}!LESS\_THAN\_STR@{LESS\_THAN\_STR}}
+\index{LESS\_THAN\_STR@{LESS\_THAN\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{LESS\_THAN\_STR}{LESS\_THAN\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+L\+E\+S\+S\+\_\+\+T\+H\+A\+N\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Less than character as string. \mbox{\Hypertarget{classmailio_1_1codec_a2ac360e300cfcd91783630d97509a51e}\label{classmailio_1_1codec_a2ac360e300cfcd91783630d97509a51e}} 
+\index{mailio::codec@{mailio::codec}!LF\_CHAR@{LF\_CHAR}}
+\index{LF\_CHAR@{LF\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{LF\_CHAR}{LF\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+L\+F\+\_\+\+C\+H\+AR = \textquotesingle{}\textbackslash{}n\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Line feed character. \mbox{\Hypertarget{classmailio_1_1codec_a3e4c2dcc3577607081c42badcf6c7c70}\label{classmailio_1_1codec_a3e4c2dcc3577607081c42badcf6c7c70}} 
+\index{mailio::codec@{mailio::codec}!MINUS\_CHAR@{MINUS\_CHAR}}
+\index{MINUS\_CHAR@{MINUS\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{MINUS\_CHAR}{MINUS\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+M\+I\+N\+U\+S\+\_\+\+C\+H\+AR = \textquotesingle{}-\/\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Minus character. \mbox{\Hypertarget{classmailio_1_1codec_a251ef476b086e1ee549825963a132737}\label{classmailio_1_1codec_a251ef476b086e1ee549825963a132737}} 
+\index{mailio::codec@{mailio::codec}!MONKEY\_CHAR@{MONKEY\_CHAR}}
+\index{MONKEY\_CHAR@{MONKEY\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{MONKEY\_CHAR}{MONKEY\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+M\+O\+N\+K\+E\+Y\+\_\+\+C\+H\+AR = \textquotesingle{}@\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Monkey character. \mbox{\Hypertarget{classmailio_1_1codec_a278e54326e6698a51298c9007ccbe1b0}\label{classmailio_1_1codec_a278e54326e6698a51298c9007ccbe1b0}} 
+\index{mailio::codec@{mailio::codec}!NIL\_CHAR@{NIL\_CHAR}}
+\index{NIL\_CHAR@{NIL\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{NIL\_CHAR}{NIL\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+N\+I\+L\+\_\+\+C\+H\+AR = \textquotesingle{}\textbackslash{}0\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Nil character. \mbox{\Hypertarget{classmailio_1_1codec_a06af4194fcfe70fc5832bb511fa3f0cf}\label{classmailio_1_1codec_a06af4194fcfe70fc5832bb511fa3f0cf}} 
+\index{mailio::codec@{mailio::codec}!NINE\_CHAR@{NINE\_CHAR}}
+\index{NINE\_CHAR@{NINE\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{NINE\_CHAR}{NINE\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+N\+I\+N\+E\+\_\+\+C\+H\+AR = \textquotesingle{}9\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Nine number character. \mbox{\Hypertarget{classmailio_1_1codec_af998a50a632b2587af67f1bb78a805c7}\label{classmailio_1_1codec_af998a50a632b2587af67f1bb78a805c7}} 
+\index{mailio::codec@{mailio::codec}!PLUS\_CHAR@{PLUS\_CHAR}}
+\index{PLUS\_CHAR@{PLUS\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{PLUS\_CHAR}{PLUS\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+P\+L\+U\+S\+\_\+\+C\+H\+AR = \textquotesingle{}+\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Plus character. \mbox{\Hypertarget{classmailio_1_1codec_a78cf7ad2569ed0c54489e11b74f274c6}\label{classmailio_1_1codec_a78cf7ad2569ed0c54489e11b74f274c6}} 
+\index{mailio::codec@{mailio::codec}!QUESTION\_MARK\_CHAR@{QUESTION\_MARK\_CHAR}}
+\index{QUESTION\_MARK\_CHAR@{QUESTION\_MARK\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{QUESTION\_MARK\_CHAR}{QUESTION\_MARK\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+Q\+U\+E\+S\+T\+I\+O\+N\+\_\+\+M\+A\+R\+K\+\_\+\+C\+H\+AR = \textquotesingle{}?\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Question mark character. \mbox{\Hypertarget{classmailio_1_1codec_aecaa32ca3e57be47c711360d1534ecfe}\label{classmailio_1_1codec_aecaa32ca3e57be47c711360d1534ecfe}} 
+\index{mailio::codec@{mailio::codec}!QUOTE\_CHAR@{QUOTE\_CHAR}}
+\index{QUOTE\_CHAR@{QUOTE\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{QUOTE\_CHAR}{QUOTE\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+Q\+U\+O\+T\+E\+\_\+\+C\+H\+AR = \textquotesingle{}\char`\"{}\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Quote character. \mbox{\Hypertarget{classmailio_1_1codec_a096cfb056155625e48209048a5a4f589}\label{classmailio_1_1codec_a096cfb056155625e48209048a5a4f589}} 
+\index{mailio::codec@{mailio::codec}!QUOTE\_STR@{QUOTE\_STR}}
+\index{QUOTE\_STR@{QUOTE\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{QUOTE\_STR}{QUOTE\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+Q\+U\+O\+T\+E\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Quote character as string. \mbox{\Hypertarget{classmailio_1_1codec_ae7e38dc5e8ea4639d4c1adadd6ac585c}\label{classmailio_1_1codec_ae7e38dc5e8ea4639d4c1adadd6ac585c}} 
+\index{mailio::codec@{mailio::codec}!RIGHT\_BRACE\_CHAR@{RIGHT\_BRACE\_CHAR}}
+\index{RIGHT\_BRACE\_CHAR@{RIGHT\_BRACE\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{RIGHT\_BRACE\_CHAR}{RIGHT\_BRACE\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+E\+\_\+\+C\+H\+AR = \textquotesingle{}\}\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Right brace character. \mbox{\Hypertarget{classmailio_1_1codec_a5ec2a6f8f62b4291f5b0cda972e88983}\label{classmailio_1_1codec_a5ec2a6f8f62b4291f5b0cda972e88983}} 
+\index{mailio::codec@{mailio::codec}!RIGHT\_BRACKET\_CHAR@{RIGHT\_BRACKET\_CHAR}}
+\index{RIGHT\_BRACKET\_CHAR@{RIGHT\_BRACKET\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{RIGHT\_BRACKET\_CHAR}{RIGHT\_BRACKET\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+R\+I\+G\+H\+T\+\_\+\+B\+R\+A\+C\+K\+E\+T\+\_\+\+C\+H\+AR = \textquotesingle{}\mbox{]}\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Right bracket chartacter. \mbox{\Hypertarget{classmailio_1_1codec_a46ab37162b716cd2e8a13f216580690d}\label{classmailio_1_1codec_a46ab37162b716cd2e8a13f216580690d}} 
+\index{mailio::codec@{mailio::codec}!RIGHT\_PARENTHESIS\_CHAR@{RIGHT\_PARENTHESIS\_CHAR}}
+\index{RIGHT\_PARENTHESIS\_CHAR@{RIGHT\_PARENTHESIS\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{RIGHT\_PARENTHESIS\_CHAR}{RIGHT\_PARENTHESIS\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+R\+I\+G\+H\+T\+\_\+\+P\+A\+R\+E\+N\+T\+H\+E\+S\+I\+S\+\_\+\+C\+H\+AR = \textquotesingle{})\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Right parenthesis character. \mbox{\Hypertarget{classmailio_1_1codec_a75b122e0e086b2b1b5b811aeeb8b511e}\label{classmailio_1_1codec_a75b122e0e086b2b1b5b811aeeb8b511e}} 
+\index{mailio::codec@{mailio::codec}!SEMICOLON\_CHAR@{SEMICOLON\_CHAR}}
+\index{SEMICOLON\_CHAR@{SEMICOLON\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{SEMICOLON\_CHAR}{SEMICOLON\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+S\+E\+M\+I\+C\+O\+L\+O\+N\+\_\+\+C\+H\+AR = \textquotesingle{};\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Semicolon character. \mbox{\Hypertarget{classmailio_1_1codec_ae56e53d118bd2a84fcf49d2429b83fa9}\label{classmailio_1_1codec_ae56e53d118bd2a84fcf49d2429b83fa9}} 
+\index{mailio::codec@{mailio::codec}!SEMICOLON\_STR@{SEMICOLON\_STR}}
+\index{SEMICOLON\_STR@{SEMICOLON\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{SEMICOLON\_STR}{SEMICOLON\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+S\+E\+M\+I\+C\+O\+L\+O\+N\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Semicolon character as string. \mbox{\Hypertarget{classmailio_1_1codec_a718fe3623f1668b43d97c753ec7e6ba1}\label{classmailio_1_1codec_a718fe3623f1668b43d97c753ec7e6ba1}} 
+\index{mailio::codec@{mailio::codec}!SLASH\_CHAR@{SLASH\_CHAR}}
+\index{SLASH\_CHAR@{SLASH\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{SLASH\_CHAR}{SLASH\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+S\+L\+A\+S\+H\+\_\+\+C\+H\+AR = \textquotesingle{}/\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Slash character. \mbox{\Hypertarget{classmailio_1_1codec_af6c73582862f3bba942b754f1cd1726f}\label{classmailio_1_1codec_af6c73582862f3bba942b754f1cd1726f}} 
+\index{mailio::codec@{mailio::codec}!SPACE\_CHAR@{SPACE\_CHAR}}
+\index{SPACE\_CHAR@{SPACE\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{SPACE\_CHAR}{SPACE\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+S\+P\+A\+C\+E\+\_\+\+C\+H\+AR = \textquotesingle{} \textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Space character. \mbox{\Hypertarget{classmailio_1_1codec_a35b844bd3bee7bca2abb14910ea1dfa8}\label{classmailio_1_1codec_a35b844bd3bee7bca2abb14910ea1dfa8}} 
+\index{mailio::codec@{mailio::codec}!SPACE\_STR@{SPACE\_STR}}
+\index{SPACE\_STR@{SPACE\_STR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{SPACE\_STR}{SPACE\_STR}}
+{\footnotesize\ttfamily const std\+::string mailio\+::codec\+::\+S\+P\+A\+C\+E\+\_\+\+S\+TR\hspace{0.3cm}{\ttfamily [static]}}
+
+Space character as string. \mbox{\Hypertarget{classmailio_1_1codec_a0f8eb0c7181fa31b28f4746bc6fd932f}\label{classmailio_1_1codec_a0f8eb0c7181fa31b28f4746bc6fd932f}} 
+\index{mailio::codec@{mailio::codec}!TILDE\_CHAR@{TILDE\_CHAR}}
+\index{TILDE\_CHAR@{TILDE\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{TILDE\_CHAR}{TILDE\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+T\+I\+L\+D\+E\+\_\+\+C\+H\+AR = \textquotesingle{}$\sim$\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Tilde character. \mbox{\Hypertarget{classmailio_1_1codec_ae4b41624638266093a48e046cbf08988}\label{classmailio_1_1codec_ae4b41624638266093a48e046cbf08988}} 
+\index{mailio::codec@{mailio::codec}!UNDERSCORE\_CHAR@{UNDERSCORE\_CHAR}}
+\index{UNDERSCORE\_CHAR@{UNDERSCORE\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{UNDERSCORE\_CHAR}{UNDERSCORE\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+U\+N\+D\+E\+R\+S\+C\+O\+R\+E\+\_\+\+C\+H\+AR = \textquotesingle{}\+\_\+\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Underscore character. \mbox{\Hypertarget{classmailio_1_1codec_a96e87cf5e4d71992ac13a2ba612df999}\label{classmailio_1_1codec_a96e87cf5e4d71992ac13a2ba612df999}} 
+\index{mailio::codec@{mailio::codec}!ZERO\_CHAR@{ZERO\_CHAR}}
+\index{ZERO\_CHAR@{ZERO\_CHAR}!mailio::codec@{mailio::codec}}
+\doxysubsubsection{\texorpdfstring{ZERO\_CHAR}{ZERO\_CHAR}}
+{\footnotesize\ttfamily const char mailio\+::codec\+::\+Z\+E\+R\+O\+\_\+\+C\+H\+AR = \textquotesingle{}0\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Zero number character. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/codec.\+hpp\end{DoxyCompactItemize}

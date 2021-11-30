@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['operator_3d_249',['operator=',['../structmailio_1_1mailboxes.html#a9e2e2bc820a19e17debd85d40adbd1da',1,'mailio::mailboxes::operator=(const mailboxes &amp;)=default'],['../structmailio_1_1mailboxes.html#a727ecedcc71ee44ac7cf4a4b67bb44b0',1,'mailio::mailboxes::operator=(mailboxes &amp;&amp;)=default'],['../classmailio_1_1message.html#a5bcdff09c959a2f82dc69ca031eeac2a',1,'mailio::message::operator=(const message &amp;)=default'],['../classmailio_1_1message.html#a3a893534cf3b954d00bab8b90746c220',1,'mailio::message::operator=(message &amp;&amp;)=default'],['../structmailio_1_1mime_1_1content__type__t.html#ae5fb390cad480da942dbbfb8916b24d6',1,'mailio::mime::content_type_t::operator=()'],['../classmailio_1_1mime.html#a25746ed5622dbb09b0e62ad6540eb2cb',1,'mailio::mime::operator=(const mime &amp;)=default'],['../classmailio_1_1mime.html#aff06cbf2b8e0de54381bab732a63ffe1',1,'mailio::mime::operator=(mime &amp;&amp;)=default']]],
+  ['optional_5fbegin_250',['OPTIONAL_BEGIN',['../classmailio_1_1imap.html#a3a3c63313cad4a6ec343dbe4a8bc2a98',1,'mailio::imap']]],
+  ['optional_5fend_251',['OPTIONAL_END',['../classmailio_1_1imap.html#ad71c6ee2ffac596a939eb3dc27db067b',1,'mailio::imap']]]
+];

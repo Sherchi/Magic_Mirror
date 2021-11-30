@@ -46,6 +46,13 @@ NewsWidget::NewsWidget() {
 
     newsApi->get("https://gnews.io/api/v4/top-headlines?&lang=en&country=ca&max=10&token=9aadf377ffbec1aa1d09e593b43262c5");
 
+    for(int i = 0; i < 10; i++){
+        sleep(1);
+        if(newsApi->isDone() == 1){
+            break;
+        }
+    }
+
     QJsonArray storiesArray = newsApi->getJsonArr();
 
     for(int i = 0; i < 10; i++){

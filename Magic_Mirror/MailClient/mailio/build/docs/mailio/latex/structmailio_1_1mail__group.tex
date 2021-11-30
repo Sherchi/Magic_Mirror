@@ -1,0 +1,116 @@
+\hypertarget{structmailio_1_1mail__group}{}\doxysection{mailio\+::mail\+\_\+group Struct Reference}
+\label{structmailio_1_1mail__group}\index{mailio::mail\_group@{mailio::mail\_group}}
+
+
+{\ttfamily \#include $<$mailboxes.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__group_a9d7d6c3a54391108617919e44c5c3dae}{mail\+\_\+group}} ()=default
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__group_abf3b9e0e66a09724a48a0aa467ebe398}{mail\+\_\+group}} (const std\+::string \&group\+\_\+name, const std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$ \&group\+\_\+mails)
+\item 
+\mbox{\hyperlink{structmailio_1_1mail__group_a2c9608a20ecab855166f39588a1e605c}{$\sim$mail\+\_\+group}} ()=default
+\item 
+void \mbox{\hyperlink{structmailio_1_1mail__group_aed3e923969e5a6267c2d95daf03a95ab}{add}} (const std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$ \&mails)
+\item 
+void \mbox{\hyperlink{structmailio_1_1mail__group_abbe19429caf4dd4168176be1ffd040d3}{add}} (const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&mail)
+\item 
+void \mbox{\hyperlink{structmailio_1_1mail__group_a86927b452da4266781394caa5e5b1990}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structmailio_1_1mail__group_a9a823e5d10c0af153d01823684af2f17}{name}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$ \mbox{\hyperlink{structmailio_1_1mail__group_a15692cb93dd2ea78e5501a2ec6b6ea11}{members}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mail group with the name and members. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmailio_1_1mail__group_a9d7d6c3a54391108617919e44c5c3dae}\label{structmailio_1_1mail__group_a9d7d6c3a54391108617919e44c5c3dae}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!mail\_group@{mail\_group}}
+\index{mail\_group@{mail\_group}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{mail\_group()}{mail\_group()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mailio\+::mail\+\_\+group\+::mail\+\_\+group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor. \mbox{\Hypertarget{structmailio_1_1mail__group_abf3b9e0e66a09724a48a0aa467ebe398}\label{structmailio_1_1mail__group_abf3b9e0e66a09724a48a0aa467ebe398}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!mail\_group@{mail\_group}}
+\index{mail\_group@{mail\_group}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{mail\_group()}{mail\_group()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mailio\+::mail\+\_\+group\+::mail\+\_\+group (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group\+\_\+name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$ \&}]{group\+\_\+mails }\end{DoxyParamCaption})}
+
+Setting a group name and members.
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+\_\+name} & Name of a group. \\
+\hline
+{\em group\+\_\+mails} & Members of a group. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structmailio_1_1mail__group_a2c9608a20ecab855166f39588a1e605c}\label{structmailio_1_1mail__group_a2c9608a20ecab855166f39588a1e605c}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!````~mail\_group@{$\sim$mail\_group}}
+\index{````~mail\_group@{$\sim$mail\_group}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{$\sim$mail\_group()}{~mail\_group()}}
+{\footnotesize\ttfamily mailio\+::mail\+\_\+group\+::$\sim$mail\+\_\+group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmailio_1_1mail__group_abbe19429caf4dd4168176be1ffd040d3}\label{structmailio_1_1mail__group_abbe19429caf4dd4168176be1ffd040d3}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!add@{add}}
+\index{add@{add}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mailio\+::mail\+\_\+group\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} \&}]{mail }\end{DoxyParamCaption})}
+
+Adding a mail to members.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & Mail to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structmailio_1_1mail__group_aed3e923969e5a6267c2d95daf03a95ab}\label{structmailio_1_1mail__group_aed3e923969e5a6267c2d95daf03a95ab}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!add@{add}}
+\index{add@{add}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mailio\+::mail\+\_\+group\+::add (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}} $>$ \&}]{mails }\end{DoxyParamCaption})}
+
+Adding a list of mails to members.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mails} & Mail list to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structmailio_1_1mail__group_a86927b452da4266781394caa5e5b1990}\label{structmailio_1_1mail__group_a86927b452da4266781394caa5e5b1990}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!clear@{clear}}
+\index{clear@{clear}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void mailio\+::mail\+\_\+group\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clearing the group name and members. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmailio_1_1mail__group_a15692cb93dd2ea78e5501a2ec6b6ea11}\label{structmailio_1_1mail__group_a15692cb93dd2ea78e5501a2ec6b6ea11}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!members@{members}}
+\index{members@{members}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{members}{members}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmailio_1_1mail__address}{mail\+\_\+address}}$>$ mailio\+::mail\+\_\+group\+::members}
+
+Mail group members. \mbox{\Hypertarget{structmailio_1_1mail__group_a9a823e5d10c0af153d01823684af2f17}\label{structmailio_1_1mail__group_a9a823e5d10c0af153d01823684af2f17}} 
+\index{mailio::mail\_group@{mailio::mail\_group}!name@{name}}
+\index{name@{name}!mailio::mail\_group@{mailio::mail\_group}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string mailio\+::mail\+\_\+group\+::name}
+
+Mail group name. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/nolan/\+C\+Lion\+Projects/\+Magic Mirror/\+Magic\+\_\+\+Mirror/\+Mail\+Client/mailio/include/mailio/mailboxes.\+hpp\end{DoxyCompactItemize}

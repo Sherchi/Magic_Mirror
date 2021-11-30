@@ -7,7 +7,7 @@
 
 #include "../Webcam/Camera.h"
 #include "../Date_and_Time/ClockWidget/ClockWidget.h"
-#include "../Date_and_Time/CalendarWidget/CalendarWidget.h"
+#include "../Date_and_Time/CalendarWidget/calendarWidget.h"
 #include "../News/NewsWidget/NewsWidget.h"
 #include "../Weather/WeatherWidget/WeatherWidget.h"
 #include "../User_System/UserSystemWidget/UserSystemWidget.h"
@@ -64,7 +64,7 @@ private :
     WeatherWidget *weather;
 
     ClockWidget *clockWidget;
-    CalendarWidget *calendarWidget;
+    calendar::calendarWidget *calendarWidget;
 
     Camera *camera;
     QGraphicsScene *scene;

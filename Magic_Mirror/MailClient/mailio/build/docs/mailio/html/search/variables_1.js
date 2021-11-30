@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['a_5fchar_653',['A_CHAR',['../classmailio_1_1codec.html#a20c452622d775cd97cb0f31fff9fe5c2',1,'mailio::codec']]],
+  ['address_654',['address',['../structmailio_1_1mail__address.html#a896c02db0c442a53148ee7a6d2a4d717',1,'mailio::mail_address']]],
+  ['address_5fbegin_5fchar_655',['ADDRESS_BEGIN_CHAR',['../classmailio_1_1message.html#a9d16690b3db9e33211ddfea8870936a5',1,'mailio::message']]],
+  ['address_5fbegin_5fstr_656',['ADDRESS_BEGIN_STR',['../classmailio_1_1message.html#ae35cdb7081940863ab5af183913261ee',1,'mailio::message']]],
+  ['address_5fend_5fchar_657',['ADDRESS_END_CHAR',['../classmailio_1_1message.html#a460a138e15216c49981bba459c003b9a',1,'mailio::message']]],
+  ['address_5fend_5fstr_658',['ADDRESS_END_STR',['../classmailio_1_1message.html#aa1b8fa146adc66c3970b59c3e4948f50',1,'mailio::message']]],
+  ['address_5fseparator_659',['ADDRESS_SEPARATOR',['../classmailio_1_1message.html#a9ae5d38be3aa4b1cff036d2b9bc639bd',1,'mailio::message']]],
+  ['addresses_660',['addresses',['../structmailio_1_1mailboxes.html#a156c8b896cb56a41f7b3b5b4fa1275fb',1,'mailio::mailboxes']]],
+  ['asterisk_5fchar_661',['ASTERISK_CHAR',['../classmailio_1_1codec.html#adc29eebff3f0a10ad0bdd02201bef19e',1,'mailio::codec']]],
+  ['asterisk_5fstr_662',['ASTERISK_STR',['../classmailio_1_1codec.html#abbae96406d15885ec855996ef681c804',1,'mailio::codec']]],
+  ['atext_663',['ATEXT',['../classmailio_1_1message.html#aa8efc55f939879557fb2018427a662f4',1,'mailio::message']]],
+  ['atom_664',['atom',['../structmailio_1_1imap_1_1response__token__t.html#a9e71bf62b4de29e04b27d3026e92b01f',1,'mailio::imap::response_token_t']]],
+  ['attr_5fboundary_665',['ATTR_BOUNDARY',['../structmailio_1_1mime_1_1content__type__t.html#aaab32fdb6b7982d422b100906571066d',1,'mailio::mime::content_type_t']]],
+  ['attr_5fcharset_666',['ATTR_CHARSET',['../structmailio_1_1mime_1_1content__type__t.html#aa84fa7d3e8d04089ef3e1340d9aed244',1,'mailio::mime::content_type_t']]],
+  ['attribute_5ffilename_667',['ATTRIBUTE_FILENAME',['../classmailio_1_1mime.html#a5bc34421d1c6e1afffacaf03771135ea',1,'mailio::mime']]],
+  ['attribute_5fname_668',['ATTRIBUTE_NAME',['../classmailio_1_1mime.html#af967276771e9c697013d57b485689cd7',1,'mailio::mime']]],
+  ['attributes_5fseparator_5fchar_669',['ATTRIBUTES_SEPARATOR_CHAR',['../classmailio_1_1mime.html#a9e8f09b0c31f80fd6277b0ed96bb07e5',1,'mailio::mime']]],
+  ['attributes_5fseparator_5fstr_670',['ATTRIBUTES_SEPARATOR_STR',['../classmailio_1_1mime.html#aa8f1dfbe7065c35442c6c1e29ede2a84',1,'mailio::mime']]]
+];

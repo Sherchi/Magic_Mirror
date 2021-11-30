@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/smtps_attachment.dir/smtps_attachment.cpp.o -o smtps_attachment  ../libmailio.a -lpthread /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0 /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0 /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0 /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 

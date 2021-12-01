@@ -18,7 +18,15 @@ using namespace event;
 
 int calendarWidget::currentId = 1;
 
-/// Constructor. 600:300 is probably the best for this calendar widget since QCalendarWidget has fixed size
+/**
+ * @brief Constructor. 600:300 is probably the best for this calendar widget since QCalendarWidget has fixed size
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 calendarWidget::calendarWidget(QWidget *parent, string path) : QWidget(parent)
 {
 	eventFilePath = path;
@@ -85,7 +93,15 @@ calendarWidget::calendarWidget(QWidget *parent, string path) : QWidget(parent)
 	}
 }
 
-/// Create the QGroupBox that contains the calendar and a way to change the date, the Calendar is also clickable.
+/**
+ * @brief Create the QGroupBox that contains the calendar and a way to change the date, the Calendar is also clickable.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 void calendarWidget::createCalendarBox()
 {
 	eventMap = new QMap<QDate, QVector<Event>>();
@@ -114,7 +130,15 @@ void calendarWidget::createCalendarBox()
 	connect(calendar, &QCalendarWidget::selectionChanged, this, &calendarWidget::dateChanged);
 }
 
-/// Create the QGroupBox that contains the information of the day selected, event display will be implemented later
+/**
+ * @brief Create the QGroupBox that contains the information of the day selected
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 void calendarWidget::createInformationBox()
 {
 	informationGroupBox = new QGroupBox(calendar->selectedDate().toString("On ddd, MMM dd yyyy"));
@@ -147,14 +171,30 @@ void calendarWidget::createInformationBox()
 	connect(deleteEventButton, SIGNAL(clicked(bool)), this, SLOT(deleteClicked()));
 }
 
-/// Called when insert event button is clicked.
+/**
+ * @brief Called when insert event button is clicked.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 void calendarWidget::insertClicked() {
 	std::cout << "box clicked" << std::endl;
 	addEvent->show();
 	connect(addEvent, SIGNAL(eventCreated()), this, SLOT(handleEventCreated()));
 }
 
-/// Called when delete event button is clicked.
+/**
+ * @brief Called when delete event button is clicked.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 void calendarWidget::deleteClicked() {
 	const QVector<Event> &l = eventMap->value(calendar->selectedDate());
 	const Event &e = l.at(eventList->currentIndex());
@@ -169,7 +209,15 @@ void calendarWidget::deleteClicked() {
 	deleteEvent(de);
 }
 
-/// calls the new event method when an event created signal is released
+/**
+ * @brief Calls the new event method when an event created signal is released
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 void calendarWidget::handleEventCreated() { 
 	insertEvent(*addEvent->getNewEvent());
    	std::cout << "Event Created Signal heard and processed" << std::endl;
@@ -179,7 +227,15 @@ void calendarWidget::handleEventCreated() {
 	connect(this, &calendarWidget::eventUpdated, this, &calendarWidget::dateChanged);
 }
 
-/// A private method to insert given Event object in the QMap member of this class.
+/**
+ * @brief A private method to insert given Event object in the QMap member of this class.
+ *
+ * @param e The Event object to be inserted
+ *
+ * @return true if successful, false otherwise
+ *
+ * @authors Yifei Zhang.
+ */
 bool calendarWidget::insertEvent(Event &e)
 {
 	/// Checks if the id already exists.
@@ -253,7 +309,15 @@ bool calendarWidget::insertEvent(Event &e)
 	else return false;
 }
 
-/// A private method to Delete given Event object in the QMap member of this class.
+/**
+ * @brief A private method to Delete given Event object in the QMap member of this class.
+ *
+ * @param e The Event object to be deleted
+ *
+ * @return true if successful, false otherwise
+ *
+ * @authors Yifei Zhang.
+ */
 bool calendarWidget::deleteEvent(Event &e)
 {
 	/// Also removes the event data stored locally;
@@ -301,7 +365,15 @@ bool calendarWidget::deleteEvent(Event &e)
 	return false;	
 }	
 
-/// Called when the date menu has changed
+/**
+ * @brief Called when the date menu has changed
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 void calendarWidget::dateChanged()
 {
 	dateSelection->setDate(calendar->selectedDate());

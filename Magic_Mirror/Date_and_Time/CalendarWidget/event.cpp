@@ -32,7 +32,10 @@ Event::Event()
 /**
  * @brief Constructor that specifies data
  *
- * @param No parameters.
+ * @param m The event message
+ * @param type The event type
+ * @param t The event time
+ * @param d The event date
  *
  * @return No return.
  *
@@ -51,7 +54,7 @@ Event::Event(QString &m, QString &type, QTime &t, QDate &d)
 /**
  * @brief Copy constructor
  *
- * @param No parameters.
+ * @param e The event to copy from
  *
  * @return No return.
  *
@@ -72,7 +75,7 @@ Event::Event(const Event &e)
 /**
  * @brief Copy constructor
  *
- * @param No parameters.
+ * @param e The event to copy from
  *
  * @return No return.
  *
@@ -93,7 +96,7 @@ void Event::operator = (const Event &e)
 /**
  * @brief == operator
  *
- * @param No parameters.
+ * @param e The event to compare from
  *
  * @return No return.
  *
@@ -121,7 +124,7 @@ Event::~Event(){};
  *
  * @param No parameters.
  *
- * @return No return.
+ * @return The event message
  *
  * @authors Yifei Zhang.
  */
@@ -136,7 +139,7 @@ QString Event::getMessage() const
  *
  * @param No parameters.
  *
- * @return No return.
+ * @return The event type
  *
  * @authors Yifei Zhang.
  */
@@ -151,7 +154,7 @@ QString Event::getType() const
  *
  * @param No parameters.
  *
- * @return No return.
+ * @return The event time
  *
  * @authors Yifei Zhang.
  */
@@ -166,7 +169,7 @@ QTime Event::getTime() const
  *
  * @param No parameters.
  *
- * @return No return.
+ * @return The event date
  *
  * @authors Yifei Zhang.
  */
@@ -181,7 +184,7 @@ QDate Event::getDate() const
  *
  * @param No parameters.
  *
- * @return No return.
+ * @return The event id
  *
  * @authors Yifei Zhang.
  */
@@ -193,7 +196,7 @@ int Event::getId() const
 /**
  * @brief Setter for message
  *
- * @param No parameters.
+ * @param m The message to set for event
  *
  * @return No return.
  *
@@ -207,7 +210,7 @@ void Event::setMessage(QString &m)
 /**
  * @brief Setter for type
  *
- * @param No parameters.
+ * @param t The type to set for event
  *
  * @return No return.
  *
@@ -221,7 +224,7 @@ void Event::setType(QString &t)
 /**
  * @brief Setter for time
  *
- * @param No parameters.
+ * @param t The time to set for event
  *
  * @return No return.
  *
@@ -236,7 +239,7 @@ void Event::setTime(QTime &t)
 /**
  * @brief Setter for date
  *
- * @param No parameters.
+ * @param d The date to set for event
  *
  * @return No return.
  *
@@ -250,7 +253,7 @@ void Event::setDate(QDate &d){
 /**
  * @brief Setter for notified
  *
- * @param No parameters.
+ * @param b The notified status to set for event
  *
  * @return No return.
  *
@@ -264,7 +267,7 @@ void Event::setNotified(bool b)
 /**
  * @brief Setter for id
  *
- * @param No parameters.
+ * @param i The time to set for event
  *
  * @return No return.
  *
@@ -280,7 +283,7 @@ void Event::setId(int &i)
  *
  * @param No parameters.
  *
- * @return No return.
+ * @return The event's notified status
  *
  * @authors Yifei Zhang.
  */
@@ -294,7 +297,7 @@ bool Event::hasNotified() const
  *
  * @param No parameters.
  *
- * @return No return.
+ * @return true if the event time has passed, false otherwise
  *
  * @authors Yifei Zhang.
  */

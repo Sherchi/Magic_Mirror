@@ -4,6 +4,16 @@
 
 #include "AddEvent.h"
 
+
+/**
+ * @brief Default constructor
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ */
 AddEvent::AddEvent() {
     auto *vbox = new QVBoxLayout();
     auto *line1Layout = new QHBoxLayout();
@@ -38,10 +48,29 @@ AddEvent::AddEvent() {
     this->setLayout(vbox);
 }
 
+
+/**
+ * @brief Returns the new Event object
+ *
+ * @param No parameters.
+ *
+ * @return The new event object
+ *
+ * @authors Nolan Morris.
+ */
 event::Event* AddEvent::getNewEvent() {
     return newEvent;
 }
 
+/**
+ * @brief Handles the insert event button
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ */
 void AddEvent::handleButton() {
     newEvent = new event::Event();
 
@@ -80,6 +109,15 @@ void AddEvent::handleButton() {
 
 }
 
+/**
+ * @brief Destructor
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Nolan Morris.
+ */
 AddEvent::~AddEvent() noexcept {
     delete newEvent;
     delete time;

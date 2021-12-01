@@ -10,6 +10,15 @@
 #include <QTime>
 #include <QTimer>
 
+/**
+ * @brief Default constructor
+ *
+ * @param parent The parent widget
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 DigitalClock::DigitalClock(QWidget *parent) : QLCDNumber(parent){
 	setSegmentStyle(Filled);
 	setDigitCount(8);

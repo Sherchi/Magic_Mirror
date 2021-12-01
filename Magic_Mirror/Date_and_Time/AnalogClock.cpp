@@ -11,6 +11,15 @@
 #include <QTime>
 #include <QTimer>
 
+/**
+ * @brief Constructor
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 AnalogClock::AnalogClock(QWidget *parent) : QWidget(parent){
 	QTimer *timer = new QTimer(this);
 

@@ -1,3 +1,10 @@
+/**
+ * calendarWidget.cpp
+ *
+ * Author: Yifei Zhang
+ *
+ * Last update on: 2021/11/30
+ */
 #include "DigitalClock.h"
 
 #include <QTime>
@@ -17,6 +24,15 @@ DigitalClock::DigitalClock(QWidget *parent) : QLCDNumber(parent){
 	resize(300, 120);
 }
 
+/**
+ * @brief Display the current time.
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ * /
 void DigitalClock::showTime(){
 	QTime time = QTime::currentTime();
 

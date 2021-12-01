@@ -1,26 +1,24 @@
-//
-// calendarWidget.h
-//
-// Author: Yifei Zhang
-//
-// Last update on: 2021/11/07
-//
+/**
+ * calendarWidget.h
+ *
+ * Author: Yifei Zhang
+ *
+ * Last update on: 2021/11/30
+ */
 #pragma once
 
-<<<<<<< HEAD
 #include "../AddEventWidget/AddEvent.h"
-
-=======
->>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
 #include <QCalendarWidget>
 #include <QGroupBox>
 #include <QCheckBox>
+#include <QComboBox>
 #include <QGridLayout>
 #include <QDateEdit>
 #include <QLabel>
 #include <QTextEdit>
 #include <QMap>
 #include <QVector>
+#include <string>
 #include "event.h"
 
 namespace calendar
@@ -29,27 +27,25 @@ namespace calendar
 	{
 		Q_OBJECT
 		public:
-		calendarWidget(QWidget *parent = nullptr);
+		calendarWidget(QWidget *parent = nullptr, std::string path = "");
 		bool insertEvent(event::Event &e);
 		bool deleteEvent(event::Event &e);
 
 		private slots:
 		void dateChanged();
-<<<<<<< HEAD
-        void boxClicked();
-        void handleEventCreated();
-=======
->>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
+	        	void insertClicked();
+		void deleteClicked();
+	        	void handleEventCreated();
 		
 		signals:
 		void eventUpdated();
 
 		private:
-<<<<<<< HEAD
-        AddEvent *addEvent;
-=======
->>>>>>> a017f19a296b9f840446b1f4066b6a43d4fec8f3
+		bool hasRead = false;
+	        	AddEvent *addEvent;
+		std::string eventFilePath;
 		static int currentId;
+		QComboBox *eventList;
 		QCalendarWidget *calendar;
 		QGroupBox *calendarGroupBox, *informationGroupBox;
 		QDateEdit *dateSelection;

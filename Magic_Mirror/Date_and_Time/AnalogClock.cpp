@@ -1,3 +1,10 @@
+/**
+ * calendarWidget.cpp
+ *
+ * Author: Yifei Zhang
+ *
+ * Last update on: 2021/11/30
+ */
 #include "AnalogClock.h"
 
 #include <QPainter>
@@ -15,6 +22,15 @@ AnalogClock::AnalogClock(QWidget *parent) : QWidget(parent){
 	resize(200, 200);
 }
 
+/**
+ * @brief Paints the analog clock widget
+ *
+ * @param No parameters.
+ *
+ * @return No return.
+ *
+ * @authors Yifei Zhang.
+ */
 void AnalogClock::paintEvent(QPaintEvent*){
 	static const QPoint hourHand[3] = {
 		QPoint(7, 8),

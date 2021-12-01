@@ -1,6 +1,6 @@
-//
-// Created by nolan on 2021-11-29.
-//
+/**
+ * Created by nolan on 2021-11-29.
+ */
 
 #ifndef MAGIC_MIRROR_ADDEVENT_H
 #define MAGIC_MIRROR_ADDEVENT_H

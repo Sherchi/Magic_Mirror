@@ -1,12 +1,10 @@
-//
-// Created by nolan on 2021-11-29.
-//
+/**
+ * Created by nolan on 2021-11-29.
+ */
 
 #include "AddEvent.h"
 
 AddEvent::AddEvent() {
-    newEvent = new event::Event();
-
     auto *vbox = new QVBoxLayout();
     auto *line1Layout = new QHBoxLayout();
     auto *line2Layout = new QHBoxLayout();
@@ -45,6 +43,8 @@ event::Event* AddEvent::getNewEvent() {
 }
 
 void AddEvent::handleButton() {
+    newEvent = new event::Event();
+
     QStringList timePieces = timeBox->text().split(":");
     if(timePieces.size() == 3) { //ensures the right format is followed
         int hours = timePieces[0].toInt();

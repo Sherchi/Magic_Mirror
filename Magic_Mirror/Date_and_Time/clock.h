@@ -1,10 +1,10 @@
-//
-// clock.h
-//
-// Author: Yifei Zhang
-//
-// Last update on: 2021/11/07
-//
+/**
+ * calendarWidget.cpp
+ *
+ * Author: Yifei Zhang
+ *
+ * Last update on: 2021/11/30
+ */
 #pragma once
 
 #include "AnalogClock.h"
